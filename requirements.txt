@@ -1,0 +1,4 @@
+numpy>=1.22
+openpyxl>=3.0
+matplotlib>=3.5
+pytest>=7

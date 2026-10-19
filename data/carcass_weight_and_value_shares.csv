@@ -1,0 +1,17 @@
+animal,part,share_of_live_weight_pct,share_of_value_pct
+Fed steer,Rib and loin (middle meats),20.6,43.4
+Fed steer,Chuck and round,32.8,41.6
+Fed steer,"Brisket, plate, flank",9.3,8.9
+Fed steer,"By-products (hide, offal, fat, bone)",37.0,6.0
+Broiler,Breast and tenders,26.1,54.8
+Broiler,Wings,7.6,19.9
+Broiler,Whole legs (leg quarters),23.0,16.3
+Broiler,"Backs, necks, frames (MSC)",12.1,2.1
+Broiler,Giblets and paws,7.5,5.4
+Broiler,"Feathers, blood, viscera, head",13.5,1.5
+Hog,"Loin, butt, ribs",30.8,43.0
+Hog,Ham,18.9,22.3
+Hog,Belly,12.5,16.5
+Hog,"Picnic, jowl, trim (sausage)",11.1,10.0
+Hog,"Feet, tails",1.8,1.2
+Hog,"By-products (offal, lard, blood)",24.9,7.0

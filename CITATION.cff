@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this model or its results, please cite the working paper below."
+title: "Joint-production displacement model"
+version: 1.0.0
+date-released: 2026-10-19
+license: MIT
+authors:
+  - family-names: "van der Meer"
+    given-names: "Lodewijk"
+    affiliation: "The Mulder Institute"
+keywords:
+  - equilibrium displacement model
+  - joint products
+  - alternative proteins
+  - precision fermentation
+  - elasticity
+preferred-citation:
+  type: report
+  title: "Elasticity and joint production in animal-product markets: what replacement by novel ingredients, meat alternatives and blends actually displaces"
+  authors:
+    - family-names: "van der Meer"
+      given-names: "Lodewijk"
+      affiliation: "The Mulder Institute"
+  year: 2026
+  month: 10
+  institution:
+    name: "The Mulder Institute"

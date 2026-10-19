@@ -1,0 +1,1850 @@
+{
+"dairy_2026": {
+"Fluid milk": {
+"cap": 1e-06,
+"SR": {
+"A": -0.02663416144733599,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.0460196262588008,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1e-09,
+"Other manufactured": 0.10025476339270453,
+"Butter & powder": 0.16099509202867804,
+"Cheese route": 0.7121159821312814
+}
+},
+"LR": {
+"A": -0.10047175951965648,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.1930042639115843,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1e-09,
+"Other manufactured": 0.0910683782281733,
+"Butter & powder": 0.14692305876702752,
+"Cheese route": 0.6615368024851427
+}
+},
+"limit": {
+"A": -0.17415532836823266,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.3756334097655374,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1e-09,
+"Other manufactured": 0.08195177476220473,
+"Butter & powder": 0.13298206317014533,
+"Cheese route": 0.6109108326994173
+}
+}
+},
+"Other dairy": {
+"cap": 1e-06,
+"SR": {
+"A": -0.011940456746061034,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.0202222825928149,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19859989130510497,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.1428076311598034,
+"Cheese route": 0.6466520197890306
+}
+},
+"LR": {
+"A": -0.043827716407524475,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.077555750227004,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19461521349245642,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.1367831527855992,
+"Cheese route": 0.6247739163144199
+}
+},
+"limit": {
+"A": -0.07419261026094737,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.137100703910544,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19074795107481513,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.13108520204641724,
+"Cheese route": 0.6039742356178203
+}
+}
+},
+"Butter (fat)": {
+"cap": 1e-06,
+"SR": {
+"A": -0.0050295923286638455,
+"P_k": 1e-06,
+"Q_k": -0.23839442210464867,
+"sub_share": 0.9998086933282723,
+"max_other": 1.3130155936665229,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.19355090350590431,
+"Other manufactured": 0.08340336854360357,
+"Butter & powder": 0.09900872512639568,
+"Cheese route": 0.6190074104954326
+}
+},
+"LR": {
+"A": -0.018906505569517895,
+"P_k": 1e-06,
+"Q_k": -0.25414046064283513,
+"sub_share": 0.9998126485543276,
+"max_other": 1.3407350140776795,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.19194021502806088,
+"Other manufactured": 0.08184983968206418,
+"Butter & powder": 0.09696174011643144,
+"Cheese route": 0.6103416996039256
+}
+},
+"limit": {
+"A": -0.032815467734291115,
+"P_k": 1e-06,
+"Q_k": -0.2698551380166422,
+"sub_share": 0.9998165959028148,
+"max_other": 1.369591230545142,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.19031226233216839,
+"Other manufactured": 0.08029613138187065,
+"Butter & powder": 0.09491883205783652,
+"Cheese route": 0.6016573064938333
+}
+}
+},
+"Milk powder (nonfat solids)": {
+"cap": 0.6,
+"SR": {
+"A": -0.006490613568781001,
+"P_k": 0.6,
+"Q_k": -0.30936593641086474,
+"sub_share": 0.5856195618465189,
+"max_other": 1.8531902579908706,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.19460158295969843,
+"Other manufactured": 0.08442551418118859,
+"Butter & powder": 0.08978242826658758,
+"Cheese route": 0.6246998610237444
+}
+},
+"LR": {
+"A": -0.024443469900919723,
+"P_k": 0.6,
+"Q_k": -0.32955795672393073,
+"sub_share": 0.5977347740343585,
+"max_other": 1.9471433766131305,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.19252263224121652,
+"Other manufactured": 0.08240971540294033,
+"Butter & powder": 0.08715746562588901,
+"Cheese route": 0.6134667168290344
+}
+},
+"limit": {
+"A": -0.04243409484003946,
+"P_k": 0.6,
+"Q_k": -0.34925670455955227,
+"sub_share": 0.6095540227357313,
+"max_other": 2.046368440915647,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.19040913714201502,
+"Other manufactured": 0.08038812535650826,
+"Butter & powder": 0.0845966284072582,
+"Cheese route": 0.6021720142541791
+}
+}
+},
+"Cheese": {
+"cap": 1e-06,
+"SR": {
+"A": -0.068865372899646,
+"P_k": 1e-06,
+"Q_k": -0.6072111603286601,
+"sub_share": 0.9998031392480454,
+"max_other": 1.8644922116173706,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.24973849031298756,
+"Other manufactured": 0.147991482064401,
+"Butter & powder": 0.2977313509201615,
+"Cheese route": 0.23567330380280396
+}
+},
+"LR": {
+"A": -0.2791440914634995,
+"P_k": 1e-06,
+"Q_k": -0.714516953351384,
+"sub_share": 0.9998569195416027,
+"max_other": 2.306462783986917,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.2301694327166587,
+"Other manufactured": 0.12316904989436406,
+"Butter & powder": 0.1962275979363081,
+"Cheese route": 0.17128982798916964
+}
+},
+"limit": {
+"A": -0.46519580940285077,
+"P_k": 1e-06,
+"Q_k": -0.8343593797170886,
+"sub_share": 0.9999169830357442,
+"max_other": 3.3155488770333084,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.20018874442784027,
+"Other manufactured": 0.08997743534903282,
+"Butter & powder": 0.14525363865052926,
+"Cheese route": 0.09938437216974683
+}
+}
+},
+"Whey protein": {
+"cap": 0.06,
+"SR": {
+"A": -0.012161810275306273,
+"P_k": 0.06,
+"Q_k": -0.07088568872486178,
+"sub_share": 0.9863448641479509,
+"max_other": 1.1430259535272813,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19876498488049008,
+"Other manufactured": 0.08854399538885194,
+"Butter & powder": 0.14306062269026873,
+"Cheese route": 0.5574685867650829
+}
+},
+"LR": {
+"A": -0.043709715426579754,
+"P_k": 0.06,
+"Q_k": -0.09916969285878618,
+"sub_share": 0.9867605524160161,
+"max_other": 1.2091141197517372,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.1946022144526796,
+"Other manufactured": 0.08442613060481081,
+"Butter & powder": 0.1367637552312015,
+"Cheese route": 0.5404981842847283
+}
+},
+"limit": {
+"A": -0.07261526094308435,
+"P_k": 0.06,
+"Q_k": -0.12516492469396545,
+"sub_share": 0.9871426027384654,
+"max_other": 1.2752306742037396,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19073039940274017,
+"Other manufactured": 0.08069362037828659,
+"Butter & powder": 0.1310596740922682,
+"Cheese route": 0.5249010451836207
+}
+}
+},
+"Whey carbohydrate": {
+"cap": 0.5,
+"SR": {
+"A": -0.00152245320204214,
+"P_k": 0.5,
+"Q_k": -0.008573485164848349,
+"sub_share": 0.7521433712912121,
+"max_other": 1.0157785488405477,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19106421041986998,
+"Other manufactured": 0.08101173038634371,
+"Butter & powder": 0.1315456970906532,
+"Cheese route": 0.594855908901091
+}
+},
+"LR": {
+"A": -0.005698950135654801,
+"P_k": 0.5,
+"Q_k": -0.01276785561121796,
+"sub_share": 0.7531919639028045,
+"max_other": 1.0236388254607522,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19057711854412257,
+"Other manufactured": 0.08054778209396456,
+"Butter & powder": 0.13083686259298893,
+"Cheese route": 0.5923392866332692
+}
+},
+"limit": {
+"A": -0.009857389663715743,
+"P_k": 0.5,
+"Q_k": -0.016943701654222876,
+"sub_share": 0.7542359254135558,
+"max_other": 1.031558439064783,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19009095676975735,
+"Other manufactured": 0.08008619535430536,
+"Butter & powder": 0.13013167920475524,
+"Cheese route": 0.5898337790074663
+}
+}
+},
+"Cull cows": {
+"cap": 0.15,
+"SR": {
+"A": -0.004116516906429002,
+"P_k": 0.15,
+"Q_k": -0.004116516906429002,
+"sub_share": 0.7816860252024401,
+"max_other": 1.0088403109467703,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.1895261475168608,
+"Other manufactured": 0.07955178670759312,
+"Butter & powder": 0.12931529530672467,
+"Cheese route": 0.5974902535623924
+}
+},
+"LR": {
+"A": -0.015373741998133905,
+"P_k": 0.15,
+"Q_k": -0.015373741998133905,
+"sub_share": 0.7841537933667707,
+"max_other": 1.033626933262236,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18822452223724723,
+"Other manufactured": 0.07832778448785072,
+"Butter & powder": 0.12744566330405704,
+"Cheese route": 0.5906282879727112
+}
+},
+"limit": {
+"A": -0.026514958097758834,
+"P_k": 0.15,
+"Q_k": -0.026514958097758834,
+"sub_share": 0.7865961304594918,
+"max_other": 1.0590740298521573,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18692784528396642,
+"Other manufactured": 0.077118910354496,
+"Butter & powder": 0.12559939896234126,
+"Cheese route": 0.5838388873014374
+}
+}
+},
+"Calves": {
+"cap": 0.05,
+"SR": {
+"A": -0.003055721368225184,
+"P_k": 0.05,
+"Q_k": -0.003055721368225184,
+"sub_share": 0.8347837015312399,
+"max_other": 1.0065509761520017,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18964836392252582,
+"Other manufactured": 0.07966725635447452,
+"Butter & powder": 0.12949168665936167,
+"Cheese route": 0.5981369716954128
+}
+},
+"LR": {
+"A": -0.011460231499770934,
+"P_k": 0.05,
+"Q_k": -0.011460231499770934,
+"sub_share": 0.8361765196497037,
+"max_other": 1.024906791715441,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.1886779936184197,
+"Other manufactured": 0.07875301617577701,
+"Butter & powder": 0.12809516270568594,
+"Cheese route": 0.5930135960003464
+}
+},
+"limit": {
+"A": -0.019853569406006022,
+"P_k": 0.05,
+"Q_k": -0.019853569406006022,
+"sub_share": 0.8375674862768144,
+"max_other": 1.0437470631479726,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18770415398577375,
+"Other manufactured": 0.07784139737147051,
+"Butter & powder": 0.1267027941549529,
+"Cheese route": 0.5878980850817968
+}
+}
+}
+},
+"dairy_2019": {
+"Fluid milk": {
+"cap": 1e-06,
+"SR": {
+"A": -0.029919542980616942,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.0519305649515505,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1e-09,
+"Other manufactured": 0.10287442953660648,
+"Butter & powder": 0.16108246476862909,
+"Cheese route": 0.7061235617141475
+}
+},
+"LR": {
+"A": -0.10720802320544442,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.20804432284275,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1e-09,
+"Other manufactured": 0.09167289520234839,
+"Butter & powder": 0.14593462622138914,
+"Cheese route": 0.6551844543708181
+}
+},
+"limit": {
+"A": -0.1772669667883009,
+"P_k": 1e-06,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999999979047,
+"max_other": 1.3843155858991494,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 1.0000000000000003e-09,
+"Other manufactured": 0.08177175383679172,
+"Butter & powder": 0.1324300382748463,
+"Cheese route": 0.608531240100061
+}
+}
+},
+"Other dairy": {
+"cap": 1e-06,
+"SR": {
+"A": -0.013357146903780093,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.0226649606840483,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19955468390448264,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.14275997742098218,
+"Cheese route": 0.6443281907707551
+}
+},
+"LR": {
+"A": -0.046578038942182154,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.0827414126451094,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19482492725791542,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.13635986909048076,
+"Cheese route": 0.6222371637094217
+}
+},
+"limit": {
+"A": -0.07534316201494384,
+"P_k": 1e-06,
+"Q_k": -0.9999999875,
+"sub_share": 0.9999999999999503,
+"max_other": 1.139459841768683,
+"argmax_other": "Calves",
+"routes": {
+"Fluid": 0.19067637536562734,
+"Other manufactured": 1e-09,
+"Butter & powder": 0.13088132256239798,
+"Cheese route": 0.6030991390570308
+}
+}
+},
+"Butter (fat)": {
+"cap": 1e-06,
+"SR": {
+"A": -0.009722957830542,
+"P_k": 1e-06,
+"Q_k": -0.4237957409281382,
+"sub_share": 0.999855264033986,
+"max_other": 1.7354956758056246,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.19688368910555828,
+"Other manufactured": 0.08666950100701465,
+"Butter & powder": 0.07490655367934204,
+"Cheese route": 0.631817298377543
+}
+},
+"LR": {
+"A": -0.034828106865286035,
+"P_k": 1e-06,
+"Q_k": -0.447772219537527,
+"sub_share": 0.9998612866531154,
+"max_other": 1.8108469645669258,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.193564832766232,
+"Other manufactured": 0.08341687428705166,
+"Butter & powder": 0.0717896114601215,
+"Cheese route": 0.6164005746213088
+}
+},
+"limit": {
+"A": -0.05771329737657016,
+"P_k": 1e-06,
+"Q_k": -0.4693350498871486,
+"sub_share": 0.9998667029912133,
+"max_other": 1.8844282061352264,
+"argmax_other": "Milk powder (nonfat solids)",
+"routes": {
+"Fluid": 0.1905054135180826,
+"Other manufactured": 0.08047960903056096,
+"Butter & powder": 0.06898644351467069,
+"Cheese route": 0.6023152365601155
+}
+}
+},
+"Milk powder (nonfat solids)": {
+"cap": 0.6,
+"SR": {
+"A": -0.004020246735172206,
+"P_k": 0.6,
+"Q_k": -0.17210345938752547,
+"sub_share": 0.5032620756325153,
+"max_other": 1.3699557941263183,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.19280123394320245,
+"Other manufactured": 0.08267828421110061,
+"Butter & powder": 0.10762655027962169,
+"Cheese route": 0.612873684830903
+}
+},
+"LR": {
+"A": -0.01451517533718949,
+"P_k": 0.6,
+"Q_k": -0.18488991997257265,
+"sub_share": 0.5109339519835436,
+"max_other": 1.4059597686136078,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.1914559744277263,
+"Other manufactured": 0.08138595462396744,
+"Butter & powder": 0.10596431040356556,
+"Cheese route": 0.6066785852075512
+}
+},
+"limit": {
+"A": -0.024235649689584138,
+"P_k": 0.6,
+"Q_k": -0.19660864262922506,
+"sub_share": 0.517965185577535,
+"max_other": 1.4403059041570032,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.19020277157968143,
+"Other manufactured": 0.08019222753522613,
+"Butter & powder": 0.10444087645820074,
+"Cheese route": 0.6009284747373076
+}
+}
+},
+"Cheese": {
+"cap": 1e-06,
+"SR": {
+"A": -0.09306431914545144,
+"P_k": 1e-06,
+"Q_k": -0.9222304916013611,
+"sub_share": 0.9999610229152252,
+"max_other": 5.488585461361425,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.27691433872860705,
+"Other manufactured": 0.18671174352409964,
+"Butter & powder": 0.39664789356265845,
+"Cheese route": 0.04666170503918339
+}
+},
+"LR": {
+"A": -0.3582577071554338,
+"P_k": 1e-06,
+"Q_k": -0.9498110434882939,
+"sub_share": 0.9999748459357273,
+"max_other": 7.349558015920584,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.24772570062195734,
+"Other manufactured": 0.14532130255731238,
+"Butter & powder": 0.2185819157582728,
+"Cheese route": 0.03011337390702365
+}
+},
+"limit": {
+"A": -0.5418818015288922,
+"P_k": 1e-06,
+"Q_k": -0.9768772178126813,
+"sub_share": 0.9999884111567617,
+"max_other": 12.320829315349105,
+"argmax_other": "Whey protein",
+"routes": {
+"Fluid": 0.2032547135748739,
+"Other manufactured": 0.09310774169701685,
+"Butter & powder": 0.14788207388682578,
+"Cheese route": 0.01387366931239122
+}
+}
+},
+"Whey protein": {
+"cap": 0.06,
+"SR": {
+"A": -0.00294423380839981,
+"P_k": 0.06,
+"Q_k": -0.016026254332033307,
+"sub_share": 0.9855385984169103,
+"max_other": 1.0298103519220443,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19204538873878477,
+"Other manufactured": 0.08195078595406083,
+"Butter & powder": 0.1326753440979746,
+"Cheese route": 0.59038424740078
+}
+},
+"LR": {
+"A": -0.010493973778519017,
+"P_k": 0.06,
+"Q_k": -0.02317801313304857,
+"sub_share": 0.9856437073758659,
+"max_other": 1.0435599578498314,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.1910484903289214,
+"Other manufactured": 0.08099673409724689,
+"Butter & powder": 0.13136760967514188,
+"Cheese route": 0.5860931921201709
+}
+},
+"limit": {
+"A": -0.01732649425501931,
+"P_k": 0.06,
+"Q_k": -0.02965526896107762,
+"sub_share": 0.9857389032061388,
+"max_other": 1.056259953703395,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19014363899814601,
+"Other manufactured": 0.08013614335182796,
+"Butter & powder": 0.13018688477165327,
+"Cheese route": 0.5822068386233534
+}
+}
+},
+"Whey carbohydrate": {
+"cap": 0.5,
+"SR": {
+"A": -0.0005644585577699868,
+"P_k": 0.5,
+"Q_k": -0.003051317444701107,
+"sub_share": 0.7507628293611752,
+"max_other": 1.005571796320719,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19038957482304986,
+"Other manufactured": 0.08036954392868648,
+"Butter & powder": 0.13050721315731445,
+"Cheese route": 0.5981692095331793
+}
+},
+"LR": {
+"A": -0.002030598218669022,
+"P_k": 0.5,
+"Q_k": -0.004474071570488847,
+"sub_share": 0.7511185178926222,
+"max_other": 1.0081862532238137,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19020122773434076,
+"Other manufactured": 0.0801907630009423,
+"Butter & powder": 0.13026185398834123,
+"Cheese route": 0.5973155570577067
+}
+},
+"limit": {
+"A": -0.0033819015642542194,
+"P_k": 0.5,
+"Q_k": -0.005785523477672472,
+"sub_share": 0.7514463808694181,
+"max_other": 1.0106055249101187,
+"argmax_other": "Cheese",
+"routes": {
+"Fluid": 0.19002752759427347,
+"Other manufactured": 0.08002608113501809,
+"Butter & powder": 0.13003580379305785,
+"Cheese route": 0.5965286859133965
+}
+}
+},
+"Cull cows": {
+"cap": 0.15,
+"SR": {
+"A": -0.0036273556325567835,
+"P_k": 0.15,
+"Q_k": -0.0036273556325567835,
+"sub_share": 0.7815787930374039,
+"max_other": 1.0077728022585826,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18953610822507824,
+"Other manufactured": 0.07956119406848594,
+"Butter & powder": 0.1293974661907713,
+"Cheese route": 0.5978778758831077
+}
+},
+"LR": {
+"A": -0.012980647951303714,
+"P_k": 0.15,
+"Q_k": -0.012980647951303714,
+"sub_share": 0.7836291879462601,
+"max_other": 1.0282291468225002,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18833657447115965,
+"Other manufactured": 0.07843273975593563,
+"Butter & powder": 0.12784666573092668,
+"Cheese route": 0.5924033720906743
+}
+},
+"limit": {
+"A": -0.021507201402816367,
+"P_k": 0.15,
+"Q_k": -0.021507201402816367,
+"sub_share": 0.785498348151168,
+"max_other": 1.0474127286378523,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18723880148771935,
+"Other manufactured": 0.07740785855190882,
+"Butter & powder": 0.1264365520120141,
+"Cheese route": 0.5874095865455413
+}
+}
+},
+"Calves": {
+"cap": 0.05,
+"SR": {
+"A": -0.002694015164902641,
+"P_k": 0.05,
+"Q_k": -0.002694015164902641,
+"sub_share": 0.8347237586023051,
+"max_other": 1.0057643638746367,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.1896555398632641,
+"Other manufactured": 0.07967403905109931,
+"Butter & powder": 0.12955244273326783,
+"Cheese route": 0.5984239631874662
+}
+},
+"LR": {
+"A": -0.009677522817728601,
+"P_k": 0.05,
+"Q_k": -0.009677522817728601,
+"sub_share": 0.8358810843520567,
+"max_other": 1.0209359350112577,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.1887607477220804,
+"Other manufactured": 0.07883075483439671,
+"Butter & powder": 0.12839386073271347,
+"Cheese route": 0.5943371138930809
+}
+},
+"limit": {
+"A": -0.016092378219146886,
+"P_k": 0.05,
+"Q_k": -0.016092378219146886,
+"sub_share": 0.836944171514851,
+"max_other": 1.035169915849294,
+"argmax_other": "Butter (fat)",
+"routes": {
+"Fluid": 0.18793642061260932,
+"Other manufactured": 0.07805828853075765,
+"Butter & powder": 0.1273316500779794,
+"Cheese route": 0.5905812625595067
+}
+}
+}
+},
+"beef": {
+"Middle meats (whole cut)": {
+"cap": 1e-06,
+"SR": {
+"A": -0.07098090631278664,
+"P_k": 1e-06,
+"Q_k": -0.07098090631278664,
+"sub_share": 0.9999990709809063,
+"max_other": 1.0904809186909352,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"LR": {
+"A": -0.21759925915170797,
+"P_k": 1e-06,
+"Q_k": -0.21759925915170797,
+"sub_share": 0.9999992175992591,
+"max_other": 1.3346806045894148,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"limit": {
+"A": -0.4107033981363357,
+"P_k": 1e-06,
+"Q_k": -0.4107033981363357,
+"sub_share": 0.9999994107033982,
+"max_other": 1.862924989838018,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+}
+},
+"End meats (whole cut)": {
+"cap": 1e-06,
+"SR": {
+"A": -0.03840525290086294,
+"P_k": 1e-06,
+"Q_k": -0.03840525290086294,
+"sub_share": 0.9999961718223602,
+"max_other": 1.0471510077239021,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"LR": {
+"A": -0.12444407068762664,
+"P_k": 1e-06,
+"Q_k": -0.12444407068762664,
+"sub_share": 0.9999965143490631,
+"max_other": 1.1692336397024596,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"limit": {
+"A": -0.25629000953598147,
+"P_k": 1e-06,
+"Q_k": -0.25629000953598147,
+"sub_share": 0.9999970392371998,
+"max_other": 1.4167390481413134,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+}
+},
+"Minced beef (grinding material)": {
+"cap": 0.3,
+"SR": {
+"A": -0.024649940415673255,
+"P_k": 0.3,
+"Q_k": -0.024649940415673255,
+"sub_share": 0.649479371809255,
+"max_other": 1.0281201535176292,
+"argmax_other": "End meats (whole cut)",
+"routes": {}
+},
+"LR": {
+"A": -0.08387707545920442,
+"P_k": 0.3,
+"Q_k": -0.08387707545920442,
+"sub_share": 0.670764378538269,
+"max_other": 1.1022335098318532,
+"argmax_other": "End meats (whole cut)",
+"routes": {}
+},
+"limit": {
+"A": -0.18695988111891282,
+"P_k": 0.3,
+"Q_k": -0.18695988111891282,
+"sub_share": 0.7078102057676275,
+"max_other": 1.258564803092882,
+"argmax_other": "End meats (whole cut)",
+"routes": {}
+}
+},
+"Drop credit": {
+"cap": 0.4,
+"SR": {
+"A": -0.004764469755395906,
+"P_k": 0.4,
+"Q_k": -0.004764469755395906,
+"sub_share": 0.8992892453152529,
+"max_other": 1.0056344683852965,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"LR": {
+"A": -0.015894259977721426,
+"P_k": 0.4,
+"Q_k": -0.015894259977721426,
+"sub_share": 0.9004155008986904,
+"max_other": 1.019028097485953,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+},
+"limit": {
+"A": -0.03447303272885516,
+"P_k": 0.4,
+"Q_k": -0.03447303272885516,
+"sub_share": 0.9022955405154666,
+"max_other": 1.0421355850161336,
+"argmax_other": "Minced beef (grinding material)",
+"routes": {}
+}
+}
+},
+"eggs_2019-21": {
+"Shell eggs": {
+"cap": 1e-06,
+"SR": {
+"A": -0.02054933343244225,
+"P_k": 1e-06,
+"Q_k": -0.9999999999985602,
+"sub_share": 0.9999999999999654,
+"max_other": 361.08872764565285,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 9.791316314065749e-13,
+"Products: whole": 0.9791316314065748,
+"Products: separated": 0.00031903516000380156
+}
+},
+"LR": {
+"A": -0.43990699914801246,
+"P_k": 1e-06,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.999999999964723,
+"max_other": 1.1229178122794665,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 1e-09,
+"Products: whole": 0.3258970579015165,
+"Products: separated": 0.23419594195047103
+}
+},
+"limit": {
+"A": -0.6799208654925779,
+"P_k": 1e-06,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.999999999964723,
+"max_other": 1.2558811071901508,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 1e-09,
+"Products: whole": 0.20484304922594937,
+"Products: separated": 0.11523608428147276
+}
+}
+},
+"Whole egg products": {
+"cap": 0.5,
+"SR": {
+"A": -0.014660057418259598,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.0029580821115431,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.7768037178638988,
+"Products: whole": 1e-09,
+"Products: separated": 0.20853622371784164
+}
+},
+"LR": {
+"A": -0.149651567873347,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.0329531323358772,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.7104664902575547,
+"Products: whole": 9.999999999999999e-10,
+"Products: separated": 0.13988194086909822
+}
+},
+"limit": {
+"A": -0.20478454798900358,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.0468947886514157,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.6800088393921133,
+"Products: whole": 1e-09,
+"Products: separated": 0.11520661161888306
+}
+}
+},
+"Egg white": {
+"cap": 0.35,
+"SR": {
+"A": -0.0027282228751137616,
+"P_k": 0.35,
+"Q_k": -0.30527705227805524,
+"sub_share": 0.8561487264944391,
+"max_other": 1.4394227271160172,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6969453175935535,
+"Products: whole": 0.22029437595376475,
+"Products: separated": 0.08003208357756804
+}
+},
+"LR": {
+"A": -0.030132692806467354,
+"P_k": 0.35,
+"Q_k": -0.35470178338721337,
+"sub_share": 0.8663827493319399,
+"max_other": 1.5496711043911862,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.685647802374773,
+"Products: whole": 0.20988115026496665,
+"Products: separated": 0.07433835455379302
+}
+},
+"limit": {
+"A": -0.0435570997271737,
+"P_k": 0.35,
+"Q_k": -0.3781275278317904,
+"sub_share": 0.8712333493908816,
+"max_other": 1.608046737482072,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6800016864922886,
+"Products: whole": 0.20480150498675992,
+"Products: separated": 0.07163970879377775
+}
+}
+},
+"Egg yolk": {
+"cap": 0.5,
+"SR": {
+"A": -0.0031041694694649014,
+"P_k": 0.5,
+"Q_k": -0.34847477142993444,
+"sub_share": 0.6742373857149673,
+"max_other": 1.330594861105394,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.6993170630510939,
+"Products: whole": 0.22252306114816967,
+"Products: separated": 0.07505570633127155
+}
+},
+"LR": {
+"A": -0.03667344960492258,
+"P_k": 0.5,
+"Q_k": -0.43227944299755183,
+"sub_share": 0.7161397214987759,
+"max_other": 1.4585128279930408,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.6869032637596044,
+"Products: whole": 0.21102187846879097,
+"Products: separated": 0.06540140816668202
+}
+},
+"limit": {
+"A": -0.05458941154705488,
+"P_k": 0.5,
+"Q_k": -0.47390138059865117,
+"sub_share": 0.7369506902993256,
+"max_other": 1.5344587755419128,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.6800021282740765,
+"Products: whole": 0.20480189922383335,
+"Products: separated": 0.06060656095503539
+}
+}
+},
+"Spent hen": {
+"cap": 1e-06,
+"SR": {
+"A": -2.8987860237972285e-05,
+"P_k": 1e-06,
+"Q_k": -2.8987860237972285e-05,
+"sub_share": 1.0,
+"max_other": 1.000071286163306,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6799890209721422,
+"Products: whole": 0.20479020274826057,
+"Products: separated": 0.1151917884193592
+}
+},
+"LR": {
+"A": -0.0003349312948184302,
+"P_k": 1e-06,
+"Q_k": -0.0003349312948184302,
+"sub_share": 1.0,
+"max_other": 1.0008241413791505,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6798731281304332,
+"Products: whole": 0.20468680348117993,
+"Products: separated": 0.1151051370935684
+}
+},
+"limit": {
+"A": -0.999999999,
+"P_k": 1e-06,
+"Q_k": -0.999999999,
+"sub_share": 1.0,
+"max_other": 2.152677508273763e+33,
+"argmax_other": "Shell eggs",
+"routes": {
+"Shell": 6.801498238790537e-10,
+"Products: whole": 2.0473375465793562e-10,
+"Products: separated": 1.1511642188652703e-10
+}
+}
+}
+},
+"eggs_2025": {
+"Shell eggs": {
+"cap": 1e-06,
+"SR": {
+"A": -0.02056781599266677,
+"P_k": 1e-06,
+"Q_k": -0.9999999999985602,
+"sub_share": 0.9999999999999654,
+"max_other": 361.095543845079,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 9.791131548685993e-13,
+"Products: whole": 0.9791131548685994,
+"Products: separated": 0.0003190291377548107
+}
+},
+"LR": {
+"A": -0.4462822197252372,
+"P_k": 1e-06,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.999999999964723,
+"max_other": 1.1254917247011207,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 1e-09,
+"Products: whole": 0.3287329433734332,
+"Products: separated": 0.22498483590132967
+}
+},
+"limit": {
+"A": -0.6799698961696985,
+"P_k": 1e-06,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.999999999964723,
+"max_other": 1.2559195866501136,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 1e-09,
+"Products: whole": 0.20481683383899832,
+"Products: separated": 0.11521326899130317
+}
+}
+},
+"Whole egg products": {
+"cap": 0.5,
+"SR": {
+"A": -0.01514027799422335,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.0030558721185276,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.7801371703127897,
+"Products: whole": 1e-09,
+"Products: separated": 0.20472255069298692
+}
+},
+"LR": {
+"A": -0.1508387797357731,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.033241805191547,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.7107089365868868,
+"Products: whole": 1e-09,
+"Products: separated": 0.13845228267734006
+}
+},
+"limit": {
+"A": -0.20479411084948418,
+"P_k": 0.5,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607,
+"max_other": 1.046897306555466,
+"argmax_other": "Spent hen",
+"routes": {
+"Shell": 0.6800034567196646,
+"Products: whole": 1e-09,
+"Products: separated": 0.11520243143085125
+}
+}
+},
+"Egg white": {
+"cap": 0.35,
+"SR": {
+"A": -0.0016889010235983104,
+"P_k": 0.35,
+"Q_k": -0.18718615905235847,
+"sub_share": 0.8316964963851139,
+"max_other": 1.2302940102916091,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6904282650690073,
+"Products: whole": 0.21424667943022596,
+"Products: separated": 0.0936361544771683
+}
+},
+"LR": {
+"A": -0.018812370754552443,
+"P_k": 0.35,
+"Q_k": -0.22089204525811745,
+"sub_share": 0.838675731303481,
+"max_other": 1.2835191758904563,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.683497516095261,
+"Products: whole": 0.20793687676392175,
+"Products: separated": 0.08975323638626487
+}
+},
+"limit": {
+"A": -0.027351023101348737,
+"P_k": 0.35,
+"Q_k": -0.23742881233520474,
+"sub_share": 0.8420998804718715,
+"max_other": 1.3113529807784605,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6800004101087587,
+"Products: whole": 0.20480036597090814,
+"Products: separated": 0.08784820081898441
+}
+}
+},
+"Egg yolk": {
+"cap": 0.5,
+"SR": {
+"A": -0.004504358613230286,
+"P_k": 0.5,
+"Q_k": -0.5115261989488598,
+"sub_share": 0.7557630994744299,
+"max_other": 1.61227511044691,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.7082104667421858,
+"Products: whole": 0.2310129927634925,
+"Products: separated": 0.05627218188109136
+}
+},
+"LR": {
+"A": -0.05186488598321648,
+"P_k": 0.5,
+"Q_k": -0.6131736188929244,
+"sub_share": 0.8065868094464622,
+"max_other": 1.8836025807412662,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.689853793973481,
+"Products: whole": 0.21371892093976735,
+"Products: separated": 0.0445623991035351
+}
+},
+"limit": {
+"A": -0.0757706961582072,
+"P_k": 0.5,
+"Q_k": -0.6577509714312353,
+"sub_share": 0.8288754857156176,
+"max_other": 2.0438005762032034,
+"argmax_other": "Egg white",
+"routes": {
+"Shell": 0.6800011708827395,
+"Products: whole": 0.20480104486793166,
+"Products: separated": 0.039427088091121686
+}
+}
+},
+"Spent hen": {
+"cap": 1e-06,
+"SR": {
+"A": -1.1327478624645337e-05,
+"P_k": 1e-06,
+"Q_k": -1.1327478624645337e-05,
+"sub_share": 1.0,
+"max_other": 1.0000266452223863,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6799956361416167,
+"Products: whole": 0.2047961058275914,
+"Products: separated": 0.11519693055216722
+}
+},
+"LR": {
+"A": -0.000129529858383437,
+"P_k": 1e-06,
+"Q_k": -0.000129529858383437,
+"sub_share": 1.0,
+"max_other": 1.0003047557771607,
+"argmax_other": "Egg yolk",
+"routes": {
+"Shell": 0.6799500966193084,
+"Products: whole": 0.204755470691772,
+"Products: separated": 0.11516490283053625
+}
+},
+"limit": {
+"A": -0.999999999,
+"P_k": 1e-06,
+"Q_k": -0.999999999,
+"sub_share": 1.0,
+"max_other": 2.1537732616058934e+33,
+"argmax_other": "Shell eggs",
+"routes": {
+"Shell": 6.8005637763793e-10,
+"Products: whole": 2.0477341594876672e-10,
+"Products: separated": 1.1517020683681966e-10
+}
+}
+}
+},
+"broiler": {
+"Breast meat": {
+"cap": 1e-06,
+"SR": {
+"A": -0.07108008205732586,
+"P_k": 1e-06,
+"Q_k": -0.07108008205732586,
+"sub_share": 0.9999852776114572,
+"max_other": 1.076519063359897,
+"argmax_other": "Wings",
+"routes": {}
+},
+"LR": {
+"A": -0.3027102318199939,
+"P_k": 1e-06,
+"Q_k": -0.3027102318199939,
+"sub_share": 0.9999889487019324,
+"max_other": 1.4341240121880705,
+"argmax_other": "Wings",
+"routes": {}
+},
+"limit": {
+"A": -0.6339940204621908,
+"P_k": 1e-06,
+"Q_k": -0.6339940204621908,
+"sub_share": 0.9999941991961463,
+"max_other": 2.7321957998139696,
+"argmax_other": "Wings",
+"routes": {}
+}
+},
+"Wings": {
+"cap": 1e-06,
+"SR": {
+"A": -0.01994139040291376,
+"P_k": 1e-06,
+"Q_k": -0.01994139040291376,
+"sub_share": 0.9999990199413904,
+"max_other": 1.025498288147429,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"LR": {
+"A": -0.0860694244712219,
+"P_k": 1e-06,
+"Q_k": -0.0860694244712219,
+"sub_share": 0.9999990860694246,
+"max_other": 1.1190731901700965,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"limit": {
+"A": -0.1911562004080185,
+"P_k": 1e-06,
+"Q_k": -0.1911562004080185,
+"sub_share": 0.9999991911562004,
+"max_other": 1.3036745102980956,
+"argmax_other": "Breast meat",
+"routes": {}
+}
+},
+"Dark meat": {
+"cap": 0.25,
+"SR": {
+"A": -0.011746196081065197,
+"P_k": 0.25,
+"Q_k": -0.011746196081065197,
+"sub_share": 0.8764682745101331,
+"max_other": 1.0148792699762545,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"LR": {
+"A": -0.05126227931877647,
+"P_k": 0.25,
+"Q_k": -0.05126227931877647,
+"sub_share": 0.8814077849148471,
+"max_other": 1.0679902552842309,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"limit": {
+"A": -0.11623344047560003,
+"P_k": 0.25,
+"Q_k": -0.11623344047560003,
+"sub_share": 0.88952918005945,
+"max_other": 1.1670193162133815,
+"argmax_other": "Breast meat",
+"routes": {}
+}
+},
+"Backs & necks (MSC)": {
+"cap": 0.5,
+"SR": {
+"A": -0.0009502971224237822,
+"P_k": 0.5,
+"Q_k": -0.0009502971224237822,
+"sub_share": 0.875118787140303,
+"max_other": 1.0011891426463573,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"LR": {
+"A": -0.0042511168785015485,
+"P_k": 0.5,
+"Q_k": -0.0042511168785015485,
+"sub_share": 0.8755313896098127,
+"max_other": 1.0053394274115675,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"limit": {
+"A": -0.01009325210766443,
+"P_k": 0.5,
+"Q_k": -0.01009325210766443,
+"sub_share": 0.876261656513458,
+"max_other": 1.0127614085128074,
+"argmax_other": "Breast meat",
+"routes": {}
+}
+},
+"Giblets & paws": {
+"cap": 0.15,
+"SR": {
+"A": -0.004227942690792297,
+"P_k": 0.15,
+"Q_k": -0.004227942690792297,
+"sub_share": 0.9775951287105428,
+"max_other": 1.0053101814402434,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"LR": {
+"A": -0.01870066217564137,
+"P_k": 0.15,
+"Q_k": -0.01870066217564137,
+"sub_share": 0.9779207648989519,
+"max_other": 1.0238777791605524,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"limit": {
+"A": -0.04350142559730852,
+"P_k": 0.15,
+"Q_k": -0.04350142559730852,
+"sub_share": 0.9784787820759394,
+"max_other": 1.0571694176756443,
+"argmax_other": "Breast meat",
+"routes": {}
+}
+},
+"Rendering": {
+"cap": 1e-06,
+"SR": {
+"A": -0.001358830698138913,
+"P_k": 1e-06,
+"Q_k": -0.001358830698138913,
+"sub_share": 1.0,
+"max_other": 1.0017011387298072,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"LR": {
+"A": -0.006057644513517424,
+"P_k": 1e-06,
+"Q_k": -0.006057644513517424,
+"sub_share": 1.0,
+"max_other": 1.0076239988976226,
+"argmax_other": "Breast meat",
+"routes": {}
+},
+"limit": {
+"A": -0.014294105433491744,
+"P_k": 1e-06,
+"Q_k": -0.014294105433491744,
+"sub_share": 1.0,
+"max_other": 1.0181594767748687,
+"argmax_other": "Breast meat",
+"routes": {}
+}
+}
+},
+"pork": {
+"Fresh pork cuts": {
+"cap": 1e-06,
+"SR": {
+"A": -0.1446597843559121,
+"P_k": 1e-06,
+"Q_k": -0.1446597843559121,
+"sub_share": 0.999996594829269,
+"max_other": 1.2316334562223867,
+"argmax_other": "Ham",
+"routes": {}
+},
+"LR": {
+"A": -0.2718649931190862,
+"P_k": 1e-06,
+"Q_k": -0.2718649931190862,
+"sub_share": 0.9999971012423263,
+"max_other": 1.5265725594692927,
+"argmax_other": "Ham",
+"routes": {}
+},
+"limit": {
+"A": -0.39622800056372864,
+"P_k": 1e-06,
+"Q_k": -0.39622800056372864,
+"sub_share": 0.9999975963403764,
+"max_other": 1.9596087753770617,
+"argmax_other": "Ham",
+"routes": {}
+}
+},
+"Ham": {
+"cap": 1e-06,
+"SR": {
+"A": -0.06909511400162893,
+"P_k": 1e-06,
+"Q_k": -0.06909511400162893,
+"sub_share": 0.9999705622027527,
+"max_other": 1.093624831903992,
+"argmax_other": "Belly",
+"routes": {}
+},
+"LR": {
+"A": -0.13814773542332848,
+"P_k": 1e-06,
+"Q_k": -0.13814773542332848,
+"sub_share": 0.9999727458383736,
+"max_other": 1.2042286798250306,
+"argmax_other": "Belly",
+"routes": {}
+},
+"limit": {
+"A": -0.21639589736318054,
+"P_k": 1e-06,
+"Q_k": -0.21639589736318054,
+"sub_share": 0.9999752202625181,
+"max_other": 1.3563729609163777,
+"argmax_other": "Belly",
+"routes": {}
+}
+},
+"Belly": {
+"cap": 1e-06,
+"SR": {
+"A": -0.049196360646425186,
+"P_k": 1e-06,
+"Q_k": -0.049196360646425186,
+"sub_share": 0.9999849307778462,
+"max_other": 1.0695774041885766,
+"argmax_other": "Ham",
+"routes": {}
+},
+"LR": {
+"A": -0.09842533176997081,
+"P_k": 1e-06,
+"Q_k": -0.09842533176997081,
+"sub_share": 0.9999857110044583,
+"max_other": 1.1481476265100938,
+"argmax_other": "Ham",
+"routes": {}
+},
+"limit": {
+"A": -0.15443759700422155,
+"P_k": 1e-06,
+"Q_k": -0.15443759700422155,
+"sub_share": 0.999986598739037,
+"max_other": 1.2506595803813783,
+"argmax_other": "Ham",
+"routes": {}
+}
+},
+"Sausage & trim": {
+"cap": 0.3,
+"SR": {
+"A": -0.020030950683932458,
+"P_k": 0.3,
+"Q_k": -0.020030950683932458,
+"sub_share": 0.7689223910345147,
+"max_other": 1.0273462832590439,
+"argmax_other": "Ham",
+"routes": {}
+},
+"LR": {
+"A": -0.040465420057038015,
+"P_k": 0.3,
+"Q_k": -0.040465420057038015,
+"sub_share": 0.7737408578284518,
+"max_other": 1.0566208086432927,
+"argmax_other": "Ham",
+"routes": {}
+},
+"limit": {
+"A": -0.06427512220798803,
+"P_k": 0.3,
+"Q_k": -0.06427512220798803,
+"sub_share": 0.7793552076357868,
+"max_other": 1.0926198810720418,
+"argmax_other": "Ham",
+"routes": {}
+}
+},
+"Variety meats & drop": {
+"cap": 0.4,
+"SR": {
+"A": -0.013795668295569774,
+"P_k": 0.4,
+"Q_k": -0.013795668295569774,
+"sub_share": 0.9002031383516734,
+"max_other": 1.0186948853550117,
+"argmax_other": "Ham",
+"routes": {}
+},
+"LR": {
+"A": -0.027743772821448465,
+"P_k": 0.4,
+"Q_k": -0.027743772821448465,
+"sub_share": 0.9016145872906776,
+"max_other": 1.038227087328574,
+"argmax_other": "Ham",
+"routes": {}
+},
+"limit": {
+"A": -0.043858395833859865,
+"P_k": 0.4,
+"Q_k": -0.043858395833859865,
+"sub_share": 0.9032452724860115,
+"max_other": 1.0616231464729033,
+"argmax_other": "Ham",
+"routes": {}
+}
+}
+},
+"pollock": {
+"Flesh (fillets, surimi, mince)": {
+"cap": 1e-06,
+"SR": {
+"A": -1.6421821680268067e-09,
+"P_k": 1e-06,
+"Q_k": -1.6421821680268067e-09,
+"sub_share": 0.9999997488113573,
+"max_other": 1.0000000016421822,
+"argmax_other": "Roe",
+"routes": {}
+},
+"LR": {
+"A": -0.07688623345008416,
+"P_k": 1e-06,
+"Q_k": -0.07688623345008416,
+"sub_share": 0.9999997681243055,
+"max_other": 1.0832900951498556,
+"argmax_other": "Roe",
+"routes": {}
+},
+"limit": {
+"A": -0.9048018935307611,
+"P_k": 1e-06,
+"Q_k": -0.9048018935307611,
+"sub_share": 0.9999999760873168,
+"max_other": 10.504410613704046,
+"argmax_other": "Roe",
+"routes": {}
+}
+},
+"Roe": {
+"cap": 0.3,
+"SR": {
+"A": -5.5789595165833816e-11,
+"P_k": 0.3,
+"Q_k": -5.5789595165833816e-11,
+"sub_share": 0.7000000000167369,
+"max_other": 1.0000000000507179,
+"argmax_other": "Flesh (fillets, surimi, mince)",
+"routes": {}
+},
+"LR": {
+"A": -0.0026786195748280672,
+"P_k": 0.3,
+"Q_k": -0.0026786195748280672,
+"sub_share": 0.7008035858724484,
+"max_other": 1.0024413511613062,
+"argmax_other": "Flesh (fillets, surimi, mince)",
+"routes": {}
+},
+"limit": {
+"A": -0.06718742734923944,
+"P_k": 0.3,
+"Q_k": -0.06718742734923944,
+"sub_share": 0.7201562282047719,
+"max_other": 1.0652698722690481,
+"argmax_other": "Flesh (fillets, surimi, mince)",
+"routes": {}
+}
+},
+"Meal & oil": {
+"cap": 1e-06,
+"SR": {
+"A": -1.2334266941138594e-10,
+"P_k": 1e-06,
+"Q_k": -1.2334266941138594e-10,
+"sub_share": 1.0,
+"max_other": 1.0000000001233427,
+"argmax_other": "Roe",
+"routes": {}
+},
+"LR": {
+"A": -0.0058793976953237514,
+"P_k": 1e-06,
+"Q_k": -0.0058793976953237514,
+"sub_share": 1.0,
+"max_other": 1.0059141694495553,
+"argmax_other": "Roe",
+"routes": {}
+},
+"limit": {
+"A": -0.12583924168554894,
+"P_k": 1e-06,
+"Q_k": -0.12583924168554894,
+"sub_share": 1.0,
+"max_other": 1.143954347628451,
+"argmax_other": "Roe",
+"routes": {}
+}
+}
+},
+"salmon": {
+"Salmon flesh": {
+"cap": 1e-06,
+"SR": {
+"A": -0.28803771200968553,
+"P_k": 1e-06,
+"Q_k": -0.28803771200968553,
+"sub_share": 0.999999288037712,
+"max_other": 1.119904535028976,
+"argmax_other": "Salmon by-products",
+"routes": {}
+},
+"LR": {
+"A": -0.8910859204568766,
+"P_k": 1e-06,
+"Q_k": -0.8910859204568766,
+"sub_share": 0.9999998910859205,
+"max_other": 2.0939774067841808,
+"argmax_other": "Salmon by-products",
+"routes": {}
+},
+"limit": {
+"A": -0.999973323417999,
+"P_k": 1e-06,
+"Q_k": -0.999973323417999,
+"sub_share": 0.9999999999733235,
+"max_other": 33.467499999999994,
+"argmax_other": "Salmon by-products",
+"routes": {}
+}
+},
+"Salmon by-products": {
+"cap": 0.3,
+"SR": {
+"A": -0.0019213535021511685,
+"P_k": 0.3,
+"Q_k": -0.0019213535021511685,
+"sub_share": 0.973051876544558,
+"max_other": 1.0019250522079528,
+"argmax_other": "Salmon flesh",
+"routes": {}
+},
+"LR": {
+"A": -0.009388356184812707,
+"P_k": 0.3,
+"Q_k": -0.009388356184812707,
+"sub_share": 0.97325348561699,
+"max_other": 1.0094773327604498,
+"argmax_other": "Salmon flesh",
+"routes": {}
+},
+"limit": {
+"A": -0.021104976702298606,
+"P_k": 0.3,
+"Q_k": -0.021104976702298606,
+"sub_share": 0.973569834370962,
+"max_other": 1.0215600000000002,
+"argmax_other": "Salmon flesh",
+"routes": {}
+}
+}
+}
+}

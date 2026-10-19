@@ -1,0 +1,6186 @@
+{
+"curves": [
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 1.0,
+"A": 3.523910052649626e-10,
+"Q_k": 3.580933327640423e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 1.0,
+"A": 6.124998286338723e-10,
+"Q_k": 6.224094573070715e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.020728316431090077,
+"Q_k": -0.04666486318684915,
+"sub_share": 0.07318387128320723
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.07612001267118385,
+"Q_k": -0.13122820761490483,
+"sub_share": 0.1553949096554522
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.04094203032315091,
+"Q_k": -0.09280111171634986,
+"sub_share": 0.14387754233991448
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.13741090483998653,
+"Q_k": -0.2376625978684591,
+"sub_share": 0.2805831458702174
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.06059974085482067,
+"Q_k": -0.13832001887191747,
+"sub_share": 0.21199964614099281
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.18757831762687371,
+"Q_k": -0.3254494256926397,
+"sub_share": 0.3831281880842652
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.0796587098694086,
+"Q_k": -0.18312328527020338,
+"sub_share": 0.27746979142635947
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.22919966604738384,
+"Q_k": -0.39886032741329014,
+"sub_share": 0.4682899326373438
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.09807551798946923,
+"Q_k": -0.22710329911625182,
+"sub_share": 0.3402108820112395
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.26412326065232117,
+"Q_k": -0.46095707401511,
+"sub_share": 0.5398419267581458
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.11580694011180404,
+"Q_k": -0.2701439665149633,
+"sub_share": 0.40015212516771786
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.293709525144894,
+"Q_k": -0.5139931758498215,
+"sub_share": 0.6005648412215968
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.13281105110393332,
+"Q_k": -0.312122259818142,
+"sub_share": 0.4572327911279983
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.31898240840648207,
+"Q_k": -0.5596657892854413,
+"sub_share": 0.6525560334933772
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.14904855028770103,
+"Q_k": -0.3529106060934132,
+"sub_share": 0.5114067427108191
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.3407275855044698,
+"Q_k": -0.599278900437516,
+"sub_share": 0.6974303254798823
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.1644842610177364,
+"Q_k": -0.39238017439590755,
+"sub_share": 0.5626476998495956
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.35955800291771123,
+"Q_k": -0.6338520495741169,
+"sub_share": 0.7364542077689611
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.1790887224976565,
+"Q_k": -0.4304050159010766,
+"sub_share": 0.6109551608377455
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.3759587619914053,
+"Q_k": -0.6641946027943963,
+"sub_share": 0.7706381544908727
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.19283975115833574,
+"Q_k": -0.46686687109678526,
+"sub_share": 0.6563609157685518
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.3903185733132204,
+"Q_k": -0.6909576465755811,
+"sub_share": 0.8008020406873303
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.20572381824702024,
+"Q_k": -0.501660304129733,
+"sub_share": 0.6989362422224975
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.4029522701612842,
+"Q_k": -0.7146710058693845,
+"sub_share": 0.8276231657086355
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.2177370801140872,
+"Q_k": -0.5346976917429358,
+"sub_share": 0.738800325519011
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.4141172369809314,
+"Q_k": -0.7357701622171469,
+"sub_share": 0.8516733177714728
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.22888591708178718,
+"Q_k": -0.565913525467301,
+"sub_share": 0.7761315232714364
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.42402561140648865,
+"Q_k": -0.7546161806072533,
+"sub_share": 0.8734498652130819
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.23918688787799192,
+"Q_k": -0.5952675149486163,
+"sub_share": 0.8111856193501907
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.43285349415592544,
+"Q_k": -0.7715107080121624,
+"sub_share": 0.8934059761812304
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.24866608175269822,
+"Q_k": -0.6227461167426751,
+"sub_share": 0.8443316878739918
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.4407480022570964,
+"Q_k": -0.786707437005157,
+"sub_share": 0.9119879350644357
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.2573579331060767,
+"Q_k": -0.648362332086405,
+"sub_share": 0.8761358622964761
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.4478327413484411,
+"Q_k": -0.8004209913664823,
+"sub_share": 0.9296984252148173
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.26530363378310007,
+"Q_k": -0.6721538663996635,
+"sub_share": 0.9076004052979766
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.4542121007379709,
+"Q_k": -0.812833901398168,
+"sub_share": 0.9472494262389237
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.27254931997577514,
+"Q_k": -0.6941799608031642,
+"sub_share": 0.941129267166681
+},
+{
+"branch": "dairy_2026",
+"stream": "Cheese",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.4599746590324343,
+"Q_k": -0.8241021422031153,
+"sub_share": 0.9661394465205447
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 1.0,
+"A": -7.547411584596375e-10,
+"Q_k": -7.547411584596375e-10,
+"sub_share": 7.547411584596375e-10
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 1.0,
+"A": -8.34389224380061e-09,
+"Q_k": -8.34389224380061e-09,
+"sub_share": 8.34389224380061e-09
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.03764557888520015,
+"Q_k": -0.05054580090681615,
+"sub_share": 0.06982757288186123
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999948437277
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.07508285485797583,
+"Q_k": -0.10058179342157558,
+"sub_share": 0.13769941972601882
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999949540447
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999950681033
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999950681033
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999951862626
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999951862626
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999953089409
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999953089409
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999954366307
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999954366307
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999955699183
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999955699183
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999957095099
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999957095099
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999958562698
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999958562698
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999960112722
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999960112722
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999996175881
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.999999996175881
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999963518692
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999963518692
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999965416128
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999965416128
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999967484166
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999967484166
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999969771096
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999969771096
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999972352339
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999972352339
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999975357605
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999975357605
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999979046991
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999979046991
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.10047175951965648,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999984120589
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.17415532836823266,
+"Q_k": -0.9999999947368421,
+"sub_share": 0.9999999984120589
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 1.0,
+"A": 3.523910052649626e-10,
+"Q_k": 3.580933327640423e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 1.0,
+"A": 6.124998286338723e-10,
+"Q_k": 6.224101234408863e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.002592791300926045,
+"Q_k": -0.005803176748296113,
+"sub_share": 0.07942796242280926
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.004605416299298781,
+"Q_k": -0.007914486592169645,
+"sub_share": 0.08138292019321784
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.005153319503159004,
+"Q_k": -0.011543441454891723,
+"sub_share": 0.15604099485378928
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.009111262915694196,
+"Q_k": -0.015660720222960278,
+"sub_share": 0.15955638909440545
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.007681976849777561,
+"Q_k": -0.01722142408130478,
+"sub_share": 0.22983448434962067
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.013520946329936612,
+"Q_k": -0.02324442088130041,
+"sub_share": 0.23455447372453456
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.010179155422134212,
+"Q_k": -0.022837757927632096,
+"sub_share": 0.30079961653762566
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.01783771531969358,
+"Q_k": -0.03067104414023325,
+"sub_share": 0.3064046598843738
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.012645246535667676,
+"Q_k": -0.028393078744175737,
+"sub_share": 0.36892279277475215
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.022064669560981187,
+"Q_k": -0.03794579593452363,
+"sub_share": 0.37512746459625934
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.015080640510879206,
+"Q_k": -0.03388802424537929,
+"sub_share": 0.43418491011117566
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.026204768232266362,
+"Q_k": -0.045073646944032375,
+"sub_share": 0.4407359044798744
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.017485726454564032,
+"Q_k": -0.03932323364031287,
+"sub_share": 0.49656045929240406
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.030260838022911463,
+"Q_k": -0.05205934598223794,
+"sub_share": 0.5032347776191767
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.019860892051212886,
+"Q_k": -0.04469934717977375,
+"sub_share": 0.5560163777207429
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.03423558059389675,
+"Q_k": -0.05890743246990737,
+"sub_share": 0.5626196990459648
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.022206523364485253,
+"Q_k": -0.050017005720058516,
+"sub_share": 0.612510565527997
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.03813157953439328,
+"Q_k": -0.06562224806661854,
+"sub_share": 0.6188758021354696
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.0245230046486149,
+"Q_k": -0.05527685030340701,
+"sub_share": 0.6659899272528126
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.041951306853745374,
+"Q_k": -0.07220794752627191,
+"sub_share": 0.6719759740824208
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.026810718169606895,
+"Q_k": -0.06047952175507654,
+"sub_share": 0.7163877264928172
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.045697129045010554,
+"Q_k": -0.07866850883680798,
+"sub_share": 0.7218784210529605
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.02907004403606428,
+"Q_k": -0.06562566029694872,
+"sub_share": 0.7636199119457967
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.04937131275287876,
+"Q_k": -0.08500774269905564,
+"sub_share": 0.7685232340408148
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.03130136003945827,
+"Q_k": -0.07071590517755277,
+"sub_share": 0.8075798403852713
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.05297603007605778,
+"Q_k": -0.09122930139483376,
+"sub_share": 0.8118274014878032
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.0335050415036513,
+"Q_k": -0.07575089431834547,
+"sub_share": 0.8481303748192546
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.05651336353148362,
+"Q_k": -0.0973366870900858,
+"sub_share": 0.8516772825060687
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.03568146114347792,
+"Q_k": -0.08073126397604458,
+"sub_share": 0.8850914079970056
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.05998531070552526,
+"Q_k": -0.10333325961497908,
+"sub_share": 0.8879166574518724
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.037830988932137766,
+"Q_k": -0.08565764842081136,
+"sub_share": 0.9182187338864769
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.06339378861507572,
+"Q_k": -0.10922224375927125,
+"sub_share": 0.9203264153680397
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.03995399197721605,
+"Q_k": -0.09053067963002148,
+"sub_share": 0.9471646070248074
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.06674063779964556,
+"Q_k": -0.1150067361181576,
+"sub_share": 0.9485865374121982
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.0420508344050603,
+"Q_k": -0.09535098699734923,
+"sub_share": 0.9713924863588834
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.07002762616374514,
+"Q_k": -0.1206897115208253,
+"sub_share": 0.972193767183861
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "LR",
+"cap": 0.06,
+"A": -0.043709715426579754,
+"Q_k": -0.09916969285878618,
+"sub_share": 0.9867605524160161
+},
+{
+"branch": "dairy_2026",
+"stream": "Whey protein",
+"horizon": "limit",
+"cap": 0.06,
+"A": -0.07261526094308435,
+"Q_k": -0.12516492469396545,
+"sub_share": 0.9871426027384654
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 3.523910052649626e-10,
+"Q_k": 4.510480877684131e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 1.0,
+"A": 6.124998286338723e-10,
+"Q_k": 7.839857651958937e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.001221494287724001,
+"Q_k": -0.016266448053235183,
+"sub_share": 0.04608067468787877
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.002202557464369148,
+"Q_k": -0.01806494086223842,
+"sub_share": 0.047824660184305055
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.0024069977076457416,
+"Q_k": -0.032073326990297635,
+"sub_share": 0.09136813423565258
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.004327431004337523,
+"Q_k": -0.03549898603079038,
+"sub_share": 0.09458393875084052
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.0035578790593384646,
+"Q_k": -0.04743724867137278,
+"sub_share": 0.13593791160352425
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.00637859987903866,
+"Q_k": -0.05233417893782044,
+"sub_share": 0.14037987806385135
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.004675450096904399,
+"Q_k": -0.062374180695465964,
+"sub_share": 0.1798683916979434
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.008359780032332953,
+"Q_k": -0.0686004548463165,
+"sub_share": 0.1853144493127541
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.005760967340825207,
+"Q_k": -0.07689946613371912,
+"sub_share": 0.2232419546984443
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.010274444723139764,
+"Q_k": -0.0843258086594304,
+"sub_share": 0.22949097210487004
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.006815634234911938,
+"Q_k": -0.09102784420402898,
+"sub_share": 0.2661464425799185
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.012125843815600668,
+"Q_k": -0.09953644812530393,
+"sub_share": 0.27301581609866865
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.007840603267862178,
+"Q_k": -0.10477347102946422,
+"sub_share": 0.30867707705384456
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.013917021274395536,
+"Q_k": -0.11425693287126326,
+"sub_share": 0.316000513466816
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.008836978051676603,
+"Q_k": -0.11814994034543758,
+"sub_share": 0.3509390234560279
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.015650831055572745,
+"Q_k": -0.12851030076253778,
+"sub_share": 0.3585644758513078
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.009805815350735214,
+"Q_k": -0.1311703040418004,
+"sub_share": 0.39305090239495294
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.017329951560666634,
+"Q_k": -0.1423181829039788,
+"sub_share": 0.40083861389593634
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.01074812705665984,
+"Q_k": -0.14384709244452099,
+"sub_share": 0.43514973282466546
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.01895689880228435,
+"Q_k": -0.1557009084499691,
+"sub_share": 0.44297033482068304
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.011664882105260954,
+"Q_k": -0.15619233425816748,
+"sub_share": 0.4773981115202953
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.020534038412232558,
+"Q_k": -0.16867760025369305,
+"sub_share": 0.4851307072910351
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.012557008332828357,
+"Q_k": -0.16821757610469057,
+"sub_share": 0.5199950301243852
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.022063596608304703,
+"Q_k": -0.18126626227024367,
+"sub_share": 0.5275251654456877
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.013425394269952706,
+"Q_k": -0.17993390160711464,
+"sub_share": 0.5631929038310978
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.0235476702228532,
+"Q_k": -0.1934838595256514,
+"sub_share": 0.5704102705570312
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.014270890871715514,
+"Q_k": -0.19135194997726357,
+"sub_share": 0.6073258643395959
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.02498823588480681,
+"Q_k": -0.2053463913744631,
+"sub_share": 0.6141214723665255
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.01509431318376997,
+"Q_k": -0.20248193407678639,
+"sub_share": 0.6528600992358554
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.026387158436758318,
+"Q_k": -0.21686895868966094,
+"sub_share": 0.6591224154263019
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.015896441944323714,
+"Q_k": -0.21333365792864623,
+"sub_share": 0.7004919038921309
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.027746198659957644,
+"Q_k": -0.22806582555954547,
+"sub_share": 0.7061008936794078
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.016678025122472517,
+"Q_k": -0.223916533663587,
+"sub_share": 0.7513644715015152
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.02906702037225206,
+"Q_k": -0.2389504760051755,
+"sub_share": 0.7561809279287628
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.01743977939369934,
+"Q_k": -0.23423959789213178,
+"sub_share": 0.8076496836157926
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.03035119695714905,
+"Q_k": -0.24953566617808753,
+"sub_share": 0.8114918822540862
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.018182391553648314,
+"Q_k": -0.24431152749772989,
+"sub_share": 0.8747652653228666
+},
+{
+"branch": "dairy_2026",
+"stream": "Butter (fat)",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.031600217376187345,
+"Q_k": -0.25983347245049515,
+"sub_share": 0.8773376039631477
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 3.523910052649626e-10,
+"Q_k": 4.510480877684131e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 1.0,
+"A": 6.124998286338723e-10,
+"Q_k": 7.839850990620789e-10,
+"sub_share": 0.0
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.0045868619937941,
+"Q_k": -0.061189515387095494,
+"sub_share": 0.10813003961774068
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.008582759312768085,
+"Q_k": -0.07043154493420556,
+"sub_share": 0.11690996768749523
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.008571389838007981,
+"Q_k": -0.11458299902487312,
+"sub_share": 0.20312469912238584
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.015741600417074286,
+"Q_k": -0.12925661931891586,
+"sub_share": 0.2163309573870243
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.01205761878784517,
+"Q_k": -0.1614847324639207,
+"sub_share": 0.28726202259433264
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.02181942537401582,
+"Q_k": -0.17925643944678005,
+"sub_share": 0.3023679735297631
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.015129396989864485,
+"Q_k": -0.20295637327974814,
+"sub_share": 0.3623650986237985
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.027055541385188953,
+"Q_k": -0.22237528942354334,
+"sub_share": 0.3779002315388347
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.017854262414423117,
+"Q_k": -0.23986015568467478,
+"sub_share": 0.42989511676350606
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.0316222746385022,
+"Q_k": -0.26001534944057336,
+"sub_share": 0.44501151208043
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.020286756517032156,
+"Q_k": -0.27289729282713926,
+"sub_share": 0.4910281049789975
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.03564704295325405,
+"Q_k": -0.2932147629259553,
+"sub_share": 0.5052503340481687
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.022471125798646074,
+"Q_k": -0.30264009174247,
+"sub_share": 0.5467160596326054
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.03922621121581704,
+"Q_k": -0.3227595972778926,
+"sub_share": 0.5597937382306302
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.024443469900919723,
+"Q_k": -0.32955795672393073,
+"sub_share": 0.5977347740343585
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.04243409484003946,
+"Q_k": -0.34925670455955227,
+"sub_share": 0.6095540227357313
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.024443469900919723,
+"Q_k": -0.32955795672393073,
+"sub_share": 0.5977347740343585
+},
+{
+"branch": "dairy_2026",
+"stream": "Milk powder (nonfat solids)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.04243409484003946,
+"Q_k": -0.34925670455955227,
+"sub_share": 0.6095540227357313
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.011683348048169506,
+"Q_k": -0.011683348048169506,
+"sub_share": 0.061099180645760975
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.03473081916116416,
+"Q_k": -0.03473081916116416,
+"sub_share": 0.0829942782031059
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.023293537609395676,
+"Q_k": -0.023293537609395676,
+"sub_share": 0.12096418384845614
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.06700575654800422,
+"Q_k": -0.06700575654800422,
+"sub_share": 0.16030518089320384
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.034828610853470554,
+"Q_k": -0.034828610853470554,
+"sub_share": 0.17960431922545
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.09707977651532618,
+"Q_k": -0.09707977651532618,
+"sub_share": 0.23251781003802727
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.04628661145175639,
+"Q_k": -0.04628661145175639,
+"sub_share": 0.23702928916140512
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.12517354805365888,
+"Q_k": -0.12517354805365888,
+"sub_share": 0.3001388384429271
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.05766558799037336,
+"Q_k": -0.05766558799037336,
+"sub_share": 0.29324919099277996
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.1514790380292672,
+"Q_k": -0.1514790380292672,
+"sub_share": 0.36360927852195035
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.0689635975216778,
+"Q_k": -0.0689635975216778,
+"sub_share": 0.34827451826517447
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.17616404288248,
+"Q_k": -0.17616404288248,
+"sub_share": 0.423314830017736
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.08017870924346515,
+"Q_k": -0.08017870924346515,
+"sub_share": 0.4021161610082523
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.19937588680530682,
+"Q_k": -0.19937588680530682,
+"sub_share": 0.4795943264234494
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.0913090082937198,
+"Q_k": -0.0913090082937198,
+"sub_share": 0.4547854049762319
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.2212444600847272,
+"Q_k": -0.2212444600847272,
+"sub_share": 0.5327466760508364
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.1023525996471013,
+"Q_k": -0.1023525996471013,
+"sub_share": 0.5062939298059057
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.2418847311115424,
+"Q_k": -0.2418847311115424,
+"sub_share": 0.5830366021113483
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.11330761209778717,
+"Q_k": -0.11330761209778717,
+"sub_share": 0.5566538060488936
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.26139883553745813,
+"Q_k": -0.26139883553745813,
+"sub_share": 0.6306994177687291
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.12417220231174131,
+"Q_k": -0.12417220231174131,
+"sub_share": 0.6058774910402837
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.2798778234335857,
+"Q_k": -0.2798778234335857,
+"sub_share": 0.6759450205451136
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.13494455893003932,
+"Q_k": -0.13494455893003932,
+"sub_share": 0.6539778235720157
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.29740312809491765,
+"Q_k": -0.29740312809491765,
+"sub_share": 0.7189612512379671
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.1456229067035224,
+"Q_k": -0.1456229067035224,
+"sub_share": 0.7009680173462328
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.3140478069418724,
+"Q_k": -0.3140478069418724,
+"sub_share": 0.7599167324296553
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.15620551063784038,
+"Q_k": -0.15620551063784038,
+"sub_share": 0.7468616531913521
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.32987759477681466,
+"Q_k": -0.32987759477681466,
+"sub_share": 0.7989632784330444
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.16669068012688348,
+"Q_k": -0.16669068012688348,
+"sub_share": 0.7916726700317209
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.34495180172101203,
+"Q_k": -0.34495180172101203,
+"sub_share": 0.8362379504302531
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.17707677305172465,
+"Q_k": -0.17707677305172465,
+"sub_share": 0.8354153546103449
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.3593240819418688,
+"Q_k": -0.3593240819418688,
+"sub_share": 0.8718648163883739
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.18736219982151692,
+"Q_k": -0.18736219982151692,
+"sub_share": 0.8781043299732275
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.3730430943782532,
+"Q_k": -0.3730430943782532,
+"sub_share": 0.9059564641567379
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.1975454273323478,
+"Q_k": -0.1975454273323478,
+"sub_share": 0.9197545427332348
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.38615307278180633,
+"Q_k": -0.38615307278180633,
+"sub_share": 0.9386153072781805
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.2076249828198422,
+"Q_k": -0.2076249828198422,
+"sub_share": 0.960381249140992
+},
+{
+"branch": "beef",
+"stream": "Middle meats (whole cut)",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.3986943192872576,
+"Q_k": -0.3986943192872576,
+"sub_share": 0.969934715964363
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.00614736194763843,
+"Q_k": -0.00614736194763843,
+"sub_share": 0.048547614490713875
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.016198603816398593,
+"Q_k": -0.016198603816398593,
+"sub_share": 0.05817004510789641
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.012271700804274088,
+"Q_k": -0.012271700804274088,
+"sub_share": 0.09688380587357207
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.03187483453331219,
+"Q_k": -0.03187483453331219,
+"sub_share": 0.11480766969395263
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.0183727624157064,
+"Q_k": -0.0183727624157064,
+"sub_share": 0.14502643435129006
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.047053592420782886,
+"Q_k": -0.047053592420782886,
+"sub_share": 0.1700067431246589
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.02445029398770604,
+"Q_k": -0.02445029398770604,
+"sub_share": 0.1929956209858255
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.06175822024687383,
+"Q_k": -0.06175822024687383,
+"sub_share": 0.22385787195831147
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.030504044214439974,
+"Q_k": -0.030504044214439974,
+"sub_share": 0.2408142011960445
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.07601062311346962,
+"Q_k": -0.07601062311346962,
+"sub_share": 0.276449160007504
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.03653376340811132,
+"Q_k": -0.03653376340811132,
+"sub_share": 0.288508306781766
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.08983137740199254,
+"Q_k": -0.08983137740199254,
+"sub_share": 0.3278670390183385
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.042539203629677225,
+"Q_k": -0.042539203629677225,
+"sub_share": 0.33610812470914586
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.10323982996572334,
+"Q_k": -0.10323982996572334,
+"sub_share": 0.3781972136852552
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.048520118820504665,
+"Q_k": -0.048520118820504665,
+"sub_share": 0.38364890413241565
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.11625418857188574,
+"Q_k": -0.11625418857188574,
+"sub_share": 0.4275257836593716
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.05447626493481583,
+"Q_k": -0.05447626493481583,
+"sub_share": 0.43117232047131493
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.12889160448050418,
+"Q_k": -0.12889160448050418,
+"sub_share": 0.47594063600407616
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.06040740007277012,
+"Q_k": -0.06040740007277012,
+"sub_share": 0.4787283674699448
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.14116824794580496,
+"Q_k": -0.14116824794580496,
+"sub_share": 0.5235332531390622
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.06631328461402952,
+"Q_k": -0.06631328461402952,
+"sub_share": 0.5263780556579409
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.1530993773374938,
+"Q_k": -0.1530993773374938,
+"sub_share": 0.5704011710136583
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.07219368135163884,
+"Q_k": -0.07219368135163884,
+"sub_share": 0.5741973906478289
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.16469940250185466,
+"Q_k": -0.16469940250185466,
+"sub_share": 0.6166514854886022
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.0780483556260636,
+"Q_k": -0.0780483556260636,
+"sub_share": 0.6222834789689795
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.17598194291474178,
+"Q_k": -0.17598194291474178,
+"sub_share": 0.6624061189235799
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.08387707545920442,
+"Q_k": -0.08387707545920442,
+"sub_share": 0.670764378538269
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.18695988111891282,
+"Q_k": -0.18695988111891282,
+"sub_share": 0.7078102057676275
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.08387707545920442,
+"Q_k": -0.08387707545920442,
+"sub_share": 0.670764378538269
+},
+{
+"branch": "beef",
+"stream": "Minced beef (grinding material)",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.18695988111891282,
+"Q_k": -0.18695988111891282,
+"sub_share": 0.7078102057676275
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 1.0,
+"A": -9.987697335844814e-10,
+"Q_k": -9.987698446067839e-10,
+"sub_share": 9.987698446067839e-10
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 1.0,
+"A": -4.8704150632516985e-06,
+"Q_k": -4.870415063362721e-06,
+"sub_share": 4.870415063362721e-06
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.04993816201517509,
+"Q_k": -0.06048954962442421,
+"sub_share": 0.07341132329603711
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999985496377
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.09987563503992702,
+"Q_k": -0.12058408545706911,
+"sub_share": 0.14524864446568045
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999985706566
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.14981233318712683,
+"Q_k": -0.1802492843231105,
+"sub_share": 0.2154422542582766
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.999999998592546
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.19974815263661316,
+"Q_k": -0.2394457457887561,
+"sub_share": 0.2839151321267794
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999986153966
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.24968296802033074,
+"Q_k": -0.29812789979071597,
+"sub_share": 0.3505817030519475
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999986393149
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.29961662614416995,
+"Q_k": -0.3562425950851209,
+"sub_share": 0.4153462919962229
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999986644271
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.34954893727568503,
+"Q_k": -0.4137272496850346,
+"sub_share": 0.4781011797428604
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999986908853
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.39947966278142544,
+"Q_k": -0.4705073865995404,
+"sub_share": 0.5387241226732039
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999987188737
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999987486204
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999987486204
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999987804123
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999987804123
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988146175
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988146175
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988517213
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988517213
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988923833
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999988923833
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999989375369
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999989375369
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999989885722
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999989885722
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.99999999904771
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.99999999904771
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999991188786
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999991188786
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999992102473
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999992102473
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.43990699914801246,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999993450428
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.6799208654925779,
+"Q_k": -0.9999999985294118,
+"sub_share": 0.9999999993450428
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 1.0,
+"A": -9.987697335844814e-10,
+"Q_k": -9.987715099413208e-10,
+"sub_share": 9.987715099413208e-10
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 1.0,
+"A": -4.8704150632516985e-06,
+"Q_k": -4.870415065028055e-06,
+"sub_share": 4.870415065028055e-06
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.04993816201517509,
+"Q_k": -0.03459819959667543,
+"sub_share": 0.07341132329603653
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999953134966
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.09987563503992702,
+"Q_k": -0.07007956666971682,
+"sub_share": 0.14524864446567956
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999955118841
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999957124895
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999957124895
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999959154704
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999959154704
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999961210063
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999961210063
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999963293034
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999963293034
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999965406003
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999965406003
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999967551767
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999967551767
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.999999996973364
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.999999996973364
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.149651567873347,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.20478454798900358,
+"Q_k": -0.9999999951171875,
+"sub_share": 0.9999999971955607
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 1.0,
+"A": 3.2636071622960117e-10,
+"Q_k": 8.025293762869978e-10,
+"sub_share": 0.0
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 1.0,
+"A": 4.840985390330843e-10,
+"Q_k": 1.1901035712469366e-09,
+"sub_share": 0.0
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.003313040359760544,
+"Q_k": -0.0387886768415453,
+"sub_share": 0.10997073657091906
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.005147027139731142,
+"Q_k": -0.04468225518211488,
+"sub_share": 0.11542786869477152
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.006405927163542602,
+"Q_k": -0.07504573213185561,
+"sub_share": 0.21026020115165533
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.009853780125917977,
+"Q_k": -0.08554242705053317,
+"sub_share": 0.21922243639032832
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.009297013202542725,
+"Q_k": -0.10897754504205615,
+"sub_share": 0.30174020344586394
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.014174431051567016,
+"Q_k": -0.12305079207907388,
+"sub_share": 0.3127688622167452
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.012003017826390794,
+"Q_k": -0.14077275863370786,
+"sub_share": 0.3851870336593124
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.018154615548637176,
+"Q_k": -0.15760351811346107,
+"sub_share": 0.3972301447984091
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.01453915024197494,
+"Q_k": -0.17060350588462414,
+"sub_share": 0.4612911747147504
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.02183305011880421,
+"Q_k": -0.18953670749395668,
+"sub_share": 0.47358864989124116
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.016919233002712586,
+"Q_k": -0.19862666789294847,
+"sub_share": 0.5306660766869297
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.025242795536114082,
+"Q_k": -0.21913736471914136,
+"sub_share": 0.542678412792514
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.019155821914675686,
+"Q_k": -0.22498511898877493,
+"sub_share": 0.5938559675838371
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.028412253179771252,
+"Q_k": -0.24665204565914234,
+"sub_share": 0.6052104501667863
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.02126032013855661,
+"Q_k": -0.24980892883565353,
+"sub_share": 0.651342696988838
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.0313659579152239,
+"Q_k": -0.27229374061837075,
+"sub_share": 0.6617926931780866
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.02324308515756779,
+"Q_k": -0.27321650236114936,
+"sub_share": 0.7035516128400563
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.034125214402281445,
+"Q_k": -0.29624739815827805,
+"sub_share": 0.7129457060412482
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.02511352793128907,
+"Q_k": -0.29531564634716334,
+"sub_share": 0.75085645746801
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.03670861174620699,
+"Q_k": -0.31867439283579424,
+"sub_share": 0.7591150214890742
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.0268802040163445,
+"Q_k": -0.31620455730189545,
+"sub_share": 0.7935832325020342
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.039132442797616074,
+"Q_k": -0.3397161651581966,
+"sub_share": 0.8006806622146803
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.028550896750763943,
+"Q_k": -0.3359727293160212,
+"sub_share": 0.8320129116938778
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.041411048083329405,
+"Q_k": -0.35949720730378376,
+"sub_share": 0.8379641861905037
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.030132692806467354,
+"Q_k": -0.35470178338721337,
+"sub_share": 0.8663827493319399
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.0435570997271737,
+"Q_k": -0.3781275278317904,
+"sub_share": 0.8712333493908816
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.030132692806467354,
+"Q_k": -0.35470178338721337,
+"sub_share": 0.8663827493319399
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Egg white",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.0435570997271737,
+"Q_k": -0.3781275278317904,
+"sub_share": 0.8712333493908816
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 1.0,
+"A": -4.440892098500626e-16,
+"Q_k": -4.440892098500626e-16,
+"sub_share": 4.440892098500626e-16
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.015442814375747016,
+"Q_k": -0.015442814375747016,
+"sub_share": 0.05502606335950078
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.0739909473064928,
+"Q_k": -0.0739909473064928,
+"sub_share": 0.11122032050002296
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.03087964915726049,
+"Q_k": -0.03087964915726049,
+"sub_share": 0.10921740842690217
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.13850439493156763,
+"Q_k": -0.13850439493156763,
+"sub_share": 0.20814242829142685
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.04630715785825679,
+"Q_k": -0.04630715785825679,
+"sub_share": 0.16257935447151087
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.19519925205555722,
+"Q_k": -0.19519925205555722,
+"sub_share": 0.29331884220508925
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.061721772921842666,
+"Q_k": -0.061721772921842666,
+"sub_share": 0.21511933954548998
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.24537491789491894,
+"Q_k": -0.24537491789491894,
+"sub_share": 0.3687473334187922
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.07711969618590442,
+"Q_k": -0.07711969618590442,
+"sub_share": 0.2668473848243042
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.2900626459961626,
+"Q_k": -0.2900626459961626,
+"sub_share": 0.4360130717410188
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.092496889620036,
+"Q_k": -0.092496889620036,
+"sub_share": 0.3177766899100515
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.33009059617135894,
+"Q_k": -0.33009059617135894,
+"sub_share": 0.49638981319964204
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.10784906647621662,
+"Q_k": -0.10784906647621662,
+"sub_share": 0.3679244087654957
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.3661309627925944,
+"Q_k": -0.3661309627925944,
+"sub_share": 0.5509132688169338
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.12317168301630521,
+"Q_k": -0.12317168301630521,
+"sub_share": 0.41731268038109004
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.39873465723100376,
+"Q_k": -0.39873465723100376,
+"sub_share": 0.6004352457924479
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.1384599310013499,
+"Q_k": -0.1384599310013499,
+"sub_share": 0.4659700278443419
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.42835719680193596,
+"Q_k": -0.42835719680193596,
+"sub_share": 0.6456643152655006
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.1537087311503531,
+"Q_k": -0.1537087311503531,
+"sub_share": 0.5139333058120286
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.4553782819375185,
+"Q_k": -0.4553782819375185,
+"sub_share": 0.6871969641829843
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.16891272779894373,
+"Q_k": -0.16891272779894373,
+"sub_share": 0.5612504921517006
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.48011677715787004,
+"Q_k": -0.48011677715787004,
+"sub_share": 0.7255420510093064
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.18406628501074662,
+"Q_k": -0.18406628501074662,
+"sub_share": 0.6079848313668667
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.5028423006045821,
+"Q_k": -0.5028423006045821,
+"sub_share": 0.7611406958856672
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.1991634844152501,
+"Q_k": -0.1991634844152501,
+"sub_share": 0.6542212477214016
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.5237842805017484,
+"Q_k": -0.5237842805017484,
+"sub_share": 0.794383405228062
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.214198125064625,
+"Q_k": -0.214198125064625,
+"sub_share": 0.7000767976608241
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.5431390983079832,
+"Q_k": -0.5431390983079832,
+"sub_share": 0.8256262945792767
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.22916372561703424,
+"Q_k": -0.22916372561703424,
+"sub_share": 0.7457188595102429
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.5610757715883324,
+"Q_k": -0.5610757715883324,
+"sub_share": 0.855209002095229
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.24405352916409395,
+"Q_k": -0.24405352916409395,
+"sub_share": 0.7913996463421551
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.5777405115580907,
+"Q_k": -0.5777405115580907,
+"sub_share": 0.8834792117926517
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.2588605110237441,
+"Q_k": -0.2588605110237441,
+"sub_share": 0.8375300821184156
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.5932604055910208,
+"Q_k": -0.5932604055910208,
+"sub_share": 0.9108360173951913
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.27357738981517854,
+"Q_k": -0.27357738981517854,
+"sub_share": 0.8848697750268244
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.607746413581965,
+"Q_k": -0.607746413581965,
+"sub_share": 0.9378319961167599
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.28819664211795093,
+"Q_k": -0.28819664211795093,
+"sub_share": 0.935205814352309
+},
+{
+"branch": "broiler",
+"stream": "Breast meat",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.6212958220384608,
+"Q_k": -0.6212958220384608,
+"sub_share": 0.9655272365033402
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.0034694339821081943,
+"Q_k": -0.0034694339821081943,
+"sub_share": 0.07726704389721593
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.008775777386913264,
+"Q_k": -0.008775777386913264,
+"sub_share": 0.08218042849672494
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.006931717839949503,
+"Q_k": -0.006931717839949503,
+"sub_share": 0.15210343620194056
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.017386585646543384,
+"Q_k": -0.017386585646543384,
+"sub_share": 0.16102995882623802
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.010386788469222363,
+"Q_k": -0.010386788469222363,
+"sub_share": 0.22447844506524645
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.02583712578158437,
+"Q_k": -0.02583712578158437,
+"sub_share": 0.2365862761624233
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.013834582917187088,
+"Q_k": -0.013834582917187088,
+"sub_share": 0.2943574689098873
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.03413192039723634,
+"Q_k": -0.03413192039723634,
+"sub_share": 0.30888106134753346
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.01727503839526401,
+"Q_k": -0.01727503839526401,
+"sub_share": 0.3617014137379087
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.042275322119026404,
+"Q_k": -0.042275322119026404,
+"sub_share": 0.37793957434285635
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.020708092291713776,
+"Q_k": -0.020708092291713776,
+"sub_share": 0.4264659245585259
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.05027152153734393,
+"Q_k": -0.05027152153734393,
+"sub_share": 0.44378010220648695
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.024133682184396266,
+"Q_k": -0.024133682184396266,
+"sub_share": 0.4886004241626923
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.058124554709492626,
+"Q_k": -0.058124554709492626,
+"sub_share": 0.5064132305628399
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.027551745853599652,
+"Q_k": -0.027551745853599652,
+"sub_share": 0.5480468927971016
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.06583831024778375,
+"Q_k": -0.06583831024778375,
+"sub_share": 0.5658408799509624
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.03096222129493742,
+"Q_k": -0.03096222129493742,
+"sub_share": 0.6047382920395935
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.07341653602011577,
+"Q_k": -0.07341653602011577,
+"sub_share": 0.6220550213945488
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.03436504673230445,
+"Q_k": -0.03436504673230445,
+"sub_share": 0.6585964881968288
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.08086284548756972,
+"Q_k": -0.08086284548756972,
+"sub_share": 0.6750359426018765
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.037760160630888384,
+"Q_k": -0.037760160630888384,
+"sub_share": 0.7095294516491455
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.08818072370178576,
+"Q_k": -0.08818072370178576,
+"sub_share": 0.7247498655253416
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.04114750171022741,
+"Q_k": -0.04114750171022741,
+"sub_share": 0.757427373220929
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.09537353298327411,
+"Q_k": -0.09537353298327411,
+"sub_share": 0.7711455946044767
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.04452700895731154,
+"Q_k": -0.04452700895731154,
+"sub_share": 0.8021570944038121
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.10244451830031553,
+"Q_k": -0.10244451830031553,
+"sub_share": 0.8141496556177191
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.04789862163971814,
+"Q_k": -0.04789862163971814,
+"sub_share": 0.8435537794120939
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.10939681236674015,
+"Q_k": -0.10939681236674015,
+"sub_share": 0.8536589633041773
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.05126227931877647,
+"Q_k": -0.05126227931877647,
+"sub_share": 0.8814077849148471
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.11623344047560003,
+"Q_k": -0.11623344047560003,
+"sub_share": 0.88952918005945
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.05126227931877647,
+"Q_k": -0.05126227931877647,
+"sub_share": 0.8814077849148471
+},
+{
+"branch": "broiler",
+"stream": "Dark meat",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.11623344047560003,
+"Q_k": -0.11623344047560003,
+"sub_share": 0.88952918005945
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.0004256299487632731,
+"Q_k": -0.0004256299487632731,
+"sub_share": 0.142989924477321
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.0010191204960499078,
+"Q_k": -0.0010191204960499078,
+"sub_share": 0.14349876843530088
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.0008511450213759542,
+"Q_k": -0.0008511450213759542,
+"sub_share": 0.271620484720583
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.0020360452951178054,
+"Q_k": -0.0020360452951178054,
+"sub_share": 0.2724842770201408
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.0012765451078939893,
+"Q_k": -0.0012765451078939893,
+"sub_share": 0.38665895826438546
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.0030507815641411806,
+"Q_k": -0.0030507815641411806,
+"sub_share": 0.38774856122807827
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.001701830098424617,
+"Q_k": -0.001701830098424617,
+"sub_share": 0.48887133701039337
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.0040633364388009685,
+"Q_k": -0.0040633364388009685,
+"sub_share": 0.49008042825666603
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.0021269998831277004,
+"Q_k": -0.0021269998831277004,
+"sub_share": 0.5790223280756944
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.005073717023691859,
+"Q_k": -0.005073717023691859,
+"sub_share": 0.5802654743693699
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.0025520543522148387,
+"Q_k": -0.0025520543522148387,
+"sub_share": 0.6578753546428098
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.006081930392492607,
+"Q_k": -0.006081930392492607,
+"sub_share": 0.659086102124625
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.002976993395951366,
+"Q_k": -0.002976993395951366,
+"sub_share": 0.7261925568113632
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.007087983588132785,
+"Q_k": -0.007087983588132785,
+"sub_share": 0.727321537492891
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.0034018169046545754,
+"Q_k": -0.0034018169046545754,
+"sub_share": 0.7847347924514053
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.008091883622961316,
+"Q_k": -0.008091883622961316,
+"sub_share": 0.7857478468625596
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.003826524768696382,
+"Q_k": -0.003826524768696382,
+"sub_share": 0.8342616380583918
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.00909363747891101,
+"Q_k": -0.00909363747891101,
+"sub_share": 0.8351379539355537
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.0042511168785015485,
+"Q_k": -0.0042511168785015485,
+"sub_share": 0.8755313896098127
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.01009325210766443,
+"Q_k": -0.01009325210766443,
+"sub_share": 0.876261656513458
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.0042511168785015485,
+"Q_k": -0.0042511168785015485,
+"sub_share": 0.8755313896098127
+},
+{
+"branch": "broiler",
+"stream": "Backs & necks (MSC)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.01009325210766443,
+"Q_k": -0.01009325210766443,
+"sub_share": 0.876261656513458
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.016533734704979874,
+"Q_k": -0.016533734704979874,
+"sub_share": 0.060902439951893615
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.03339791959027116,
+"Q_k": -0.03339791959027116,
+"sub_share": 0.07700580357182052
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.03272918324202201,
+"Q_k": -0.03272918324202201,
+"sub_share": 0.12023568226424536
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.06444522430609312,
+"Q_k": -0.06444522430609312,
+"sub_share": 0.14908245479640297
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.048590731720677294,
+"Q_k": -0.048590731720677294,
+"sub_share": 0.17805187143460424
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.09338614253087574,
+"Q_k": -0.09338614253087574,
+"sub_share": 0.21675183506891996
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.06412289216496103,
+"Q_k": -0.06412289216496103,
+"sub_share": 0.23440372349567581
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.12043198717436265,
+"Q_k": -0.12043198717436265,
+"sub_share": 0.2804674995102985
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.07933029342995468,
+"Q_k": -0.07933029342995468,
+"sub_share": 0.2893447143403134
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.1457665345678778,
+"Q_k": -0.1457665345678778,
+"sub_share": 0.34062615174083305
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.09421767189246144,
+"Q_k": -0.09421767189246144,
+"sub_share": 0.3429293337504469
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.16955038077985574,
+"Q_k": -0.16955038077985574,
+"sub_share": 0.3975770252354888
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.108789861972455,
+"Q_k": -0.108789861972455,
+"sub_share": 0.3952134291543133
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.19192449528302413,
+"Q_k": -0.19192449528302413,
+"sub_share": 0.451629652055111
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.12305178654165383,
+"Q_k": -0.12305178654165383,
+"sub_share": 0.4462546746095543
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.2130131394530912,
+"Q_k": -0.2130131394530912,
+"sub_share": 0.503060399139233
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.13700844727452455,
+"Q_k": -0.13700844727452455,
+"sub_share": 0.4961132189367462
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.23292627859121273,
+"Q_k": -0.23292627859121273,
+"sub_share": 0.552118086094593
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.15066491499544732,
+"Q_k": -0.15066491499544732,
+"sub_share": 0.5448525975455568
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.25176158719586805,
+"Q_k": -0.25176158719586805,
+"sub_share": 0.5990289627531276
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.16402632007366003,
+"Q_k": -0.16402632007366003,
+"sub_share": 0.5925410454197414
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.2696061253772015,
+"Q_k": -0.2696061253772015,
+"sub_share": 0.6440013223719522
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.17709784291505093,
+"Q_k": -0.17709784291505093,
+"sub_share": 0.6392534445730439
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.28653774770838614,
+"Q_k": -0.28653774770838614,
+"sub_share": 0.6872300701542722
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.18988470459690476,
+"Q_k": -0.18988470459690476,
+"sub_share": 0.6850743228306092
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.302626293086234,
+"Q_k": -0.302626293086234,
+"sub_share": 0.7289016907393809
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.20239215768842778,
+"Q_k": -0.20239215768842778,
+"sub_share": 0.730102697078705
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.3179345943468572,
+"Q_k": -0.3179345943468572,
+"sub_share": 0.7692003467917364
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.21462547729631432,
+"Q_k": -0.21462547729631432,
+"sub_share": 0.7744603944284236
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.3325193387373373,
+"Q_k": -0.3325193387373373,
+"sub_share": 0.8083165156038116
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.22658995237087676,
+"Q_k": -0.22658995237087676,
+"sub_share": 0.818307581456045
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.3464318043559098,
+"Q_k": -0.3464318043559098,
+"sub_share": 0.846461283359319
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.23829087730436593,
+"Q_k": -0.23829087730436593,
+"sub_share": 0.8618753183232701
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.3597184929517101,
+"Q_k": -0.3597184929517101,
+"sub_share": 0.8838944201802863
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.24973354384915258,
+"Q_k": -0.24973354384915258,
+"sub_share": 0.9055470492734944
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.3724216757296239,
+"Q_k": -0.3724216757296239,
+"sub_share": 0.9209925699684823
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.2609232333794729,
+"Q_k": -0.2609232333794729,
+"sub_share": 0.9501388197842442
+},
+{
+"branch": "pork",
+"stream": "Fresh pork cuts",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.38457986581712933,
+"Q_k": -0.38457986581712933,
+"sub_share": 0.9584812084417045
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.007581270878395108,
+"Q_k": -0.007581270878395108,
+"sub_share": 0.04503455803499585
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.013768433272622893,
+"Q_k": -0.013768433272622893,
+"sub_share": 0.05098822063419191
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.015088180519781114,
+"Q_k": -0.015088180519781114,
+"sub_share": 0.08992071048447157
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.027146653760578454,
+"Q_k": -0.027146653760578454,
+"sub_share": 0.10106299402963037
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.022521290448579423,
+"Q_k": -0.022521290448579423,
+"sub_share": 0.13469044151784457
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.04015116324487478,
+"Q_k": -0.04015116324487478,
+"sub_share": 0.15029722384097033
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.029881165094217677,
+"Q_k": -0.029881165094217677,
+"sub_share": 0.17937937747854793
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.05279754346646959,
+"Q_k": -0.05279754346646959,
+"sub_share": 0.19876427344090797
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.037168371585544424,
+"Q_k": -0.037168371585544424,
+"sub_share": 0.2240275620228465
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.06510051941873729,
+"Q_k": -0.06510051941873729,
+"sub_share": 0.24653884666744585
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.044383479546216575,
+"Q_k": -0.044383479546216575,
+"sub_share": 0.26868045712549943
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.07707401748526999,
+"Q_k": -0.07707401748526999,
+"sub_share": 0.2936980544045392
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.051527060891264576,
+"Q_k": -0.051527060891264576,
+"sub_share": 0.31339025661082764
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.088731218906144,
+"Q_k": -0.088731218906144,
+"sub_share": 0.3403227460201834
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.058599689625023155,
+"Q_k": -0.058599689625023155,
+"sub_share": 0.3582176414520619
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.10008460900472493,
+"Q_k": -0.10008460900472493,
+"sub_share": 0.3864992227413979
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.06560194164061439,
+"Q_k": -0.06560194164061439,
+"sub_share": 0.40323417497571784
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.11114602256202888,
+"Q_k": -0.11114602256202888,
+"sub_share": 0.4323215117728016
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.07253439452116073,
+"Q_k": -0.07253439452116073,
+"sub_share": 0.4485256515221288
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.12192668568580389,
+"Q_k": -0.12192668568580389,
+"sub_share": 0.47789448356176867
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.07939762734290179,
+"Q_k": -0.07939762734290179,
+"sub_share": 0.49419691345994365
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.13243725448621135,
+"Q_k": -0.13243725448621135,
+"sub_share": 0.523338275588512
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.08619222048038244,
+"Q_k": -0.08619222048038244,
+"sub_share": 0.5403790198910798
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.1426878508386742,
+"Q_k": -0.1426878508386742,
+"sub_share": 0.5687948175884903
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.0929187554138673,
+"Q_k": -0.0929187554138673,
+"sub_share": 0.5872403642401453
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.15268809548665052,
+"Q_k": -0.15268809548665052,
+"sub_share": 0.614437896087808
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.0995778145391375,
+"Q_k": -0.0995778145391375,
+"sub_share": 0.6350048210840783
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.16244713871232586,
+"Q_k": -0.16244713871232586,
+"sub_share": 0.660489533250706
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.10616998097981267,
+"Q_k": -0.10616998097981267,
+"sub_share": 0.6839833661613625
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.17197368878117203,
+"Q_k": -0.17197368878117203,
+"sub_share": 0.7072484901681421
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.11269583840233577,
+"Q_k": -0.11269583840233577,
+"sub_share": 0.7346341606764832
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.18127603834662342,
+"Q_k": -0.18127603834662342,
+"sub_share": 0.7551444243570029
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.11915597083375151,
+"Q_k": -0.11915597083375151,
+"sub_share": 0.7876914622930372
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.19036208898352558,
+"Q_k": -0.19036208898352558,
+"sub_share": 0.8048541679703151
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.12555096248240183,
+"Q_k": -0.12555096248240183,
+"sub_share": 0.8444985281454102
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.19923937400327052,
+"Q_k": -0.19923937400327052,
+"sub_share": 0.8576023866420137
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.1318813975616524,
+"Q_k": -0.1318813975616524,
+"sub_share": 0.9082076336523508
+},
+{
+"branch": "pork",
+"stream": "Ham",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.20791507968941159,
+"Q_k": -0.20791507968941159,
+"sub_share": 0.9162472167058975
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.005268098347803507,
+"Q_k": -0.005268098347803507,
+"sub_share": 0.04526041277108044
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.00914970125605774,
+"Q_k": -0.00914970125605774,
+"sub_share": 0.04898595927487497
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.01049831557898706,
+"Q_k": -0.01049831557898706,
+"sub_share": 0.09048357714497472
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.018122611860876603,
+"Q_k": -0.018122611860876603,
+"sub_share": 0.0974915719672863
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.0156908794597177,
+"Q_k": -0.0156908794597177,
+"sub_share": 0.13569574741558837
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.02692387974855337,
+"Q_k": -0.02692387974855337,
+"sub_share": 0.14555924427477984
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.020846018132362865,
+"Q_k": -0.020846018132362865,
+"sub_share": 0.18092629478556818
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.03555845387547851,
+"Q_k": -0.03555845387547851,
+"sub_share": 0.1932334185679356
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.02596396007531787,
+"Q_k": -0.02596396007531787,
+"sub_share": 0.226208353353253
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.044031093763148954,
+"Q_k": -0.044031093763148954,
+"sub_share": 0.24056120740942813
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.031044934063192642,
+"Q_k": -0.031044934063192642,
+"sub_share": 0.27157965096664016
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.05234637849646062,
+"Q_k": -0.05234637849646062,
+"sub_share": 0.28759319600548483
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.03608916912737481,
+"Q_k": -0.03608916912737481,
+"sub_share": 0.3170835949084228
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.0605087152134014,
+"Q_k": -0.0605087152134014,
+"sub_share": 0.3343844780325808
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.04109689451698206,
+"Q_k": -0.04109689451698206,
+"sub_share": 0.36277071635844677
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.06852234711938388,
+"Q_k": -0.06852234711938388,
+"sub_share": 0.38099602130890964
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.04606833966022039,
+"Q_k": -0.04606833966022039,
+"sub_share": 0.4087006323434837
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.07639136105699706,
+"Q_k": -0.07639136105699706,
+"sub_share": 0.4274965106257525
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.05100373412616399,
+"Q_k": -0.05100373412616399,
+"sub_share": 0.45494477524619786
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.08411969465969893,
+"Q_k": -0.08411969465969893,
+"sub_share": 0.473964899940707
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.055903307586967044,
+"Q_k": -0.055903307586967044,
+"sub_share": 0.5015902986212294
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.09171114311590056,
+"Q_k": -0.09171114311590056,
+"sub_share": 0.5204940536671034
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.06076728978052359,
+"Q_k": -0.06076728978052359,
+"sub_share": 0.5487458570243143
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.09916936556798506,
+"Q_k": -0.09916936556798506,
+"sub_share": 0.567196125641885
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.06559591047358637,
+"Q_k": -0.06559591047358637,
+"sub_share": 0.596550514477295
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.10649789116905506,
+"Q_k": -0.10649789116905506,
+"sub_share": 0.6142108428656373
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.07038939942535838,
+"Q_k": -0.07038939942535838,
+"sub_share": 0.6451881865569222
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.1137001248185896,
+"Q_k": -0.1137001248185896,
+"sub_share": 0.6617189328810371
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.07514798635156561,
+"Q_k": -0.07514798635156561,
+"sub_share": 0.6949126129241625
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.12077935259670802,
+"Q_k": -0.12077935259670802,
+"sub_share": 0.7099653501091227
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.07987190088902474,
+"Q_k": -0.07987190088902474,
+"sub_share": 0.7460943938625325
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.12773874691536347,
+"Q_k": -0.12773874691536347,
+"sub_share": 0.7593030553151598
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.08456137256071439,
+"Q_k": -0.08456137256071439,
+"sub_share": 0.7993208554692787
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.134581371403534,
+"Q_k": -0.134581371403534,
+"sub_share": 0.810286058680425
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.08921663074135955,
+"Q_k": -0.08921663074135955,
+"sub_share": 0.8556505638255185
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.14131018554230623,
+"Q_k": -0.14131018554230623,
+"sub_share": 0.8639068358630304
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.09383790462353847,
+"Q_k": -0.09383790462353847,
+"sub_share": 0.9175136863509253
+},
+{
+"branch": "pork",
+"stream": "Belly",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.14792804906467572,
+"Q_k": -0.14792804906467572,
+"sub_share": 0.9224374153862277
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.0029722915486203316,
+"Q_k": -0.0029722915486203316,
+"sub_share": 0.06249076530493684
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.00491017040520525,
+"Q_k": -0.00491017040520525,
+"sub_share": 0.06431296072475176
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.00593178060359012,
+"Q_k": -0.00593178060359012,
+"sub_share": 0.1239937578126218
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.009768041251739135,
+"Q_k": -0.009768041251739135,
+"sub_share": 0.12737439931072428
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.008878517691401466,
+"Q_k": -0.008878517691401466,
+"sub_share": 0.18448941886990627
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.01457446302463894,
+"Q_k": -0.01457446302463894,
+"sub_share": 0.18917613363868918
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.011812553317460894,
+"Q_k": -0.011812553317460894,
+"sub_share": 0.24395557208321575
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.01933026768513546,
+"Q_k": -0.01933026768513546,
+"sub_share": 0.2497072400258022
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.01473393796343525,
+"Q_k": -0.01473393796343525,
+"sub_share": 0.3023669616464283
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.024036269174866343,
+"Q_k": -0.024036269174866343,
+"sub_share": 0.3089536226884089
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.01764272208462181,
+"Q_k": -0.01764272208462181,
+"sub_share": 0.35969467285340984
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.028693263903657007,
+"Q_k": -0.028693263903657007,
+"sub_share": 0.36689747060699246
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.02053895610734391,
+"Q_k": -0.02053895610734391,
+"sub_share": 0.41590539424665096
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.033302031221496,
+"Q_k": -0.033302031221496,
+"sub_share": 0.4235165630353282
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.023422690426373682,
+"Q_k": -0.023422690426373682,
+"sub_share": 0.4709604627153061
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.0378633338752945,
+"Q_k": -0.0378633338752945,
+"sub_share": 0.47878336752111794
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.02629397540237899,
+"Q_k": -0.02629397540237899,
+"sub_share": 0.5248146044133551
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.04237791845100625,
+"Q_k": -0.04237791845100625,
+"sub_share": 0.5326638470462262
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.02915286135939743,
+"Q_k": -0.02915286135939743,
+"sub_share": 0.5774142382909965
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.04684651580164911,
+"Q_k": -0.04684651580164911,
+"sub_share": 0.5851158487117311
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.03199939858233658,
+"Q_k": -0.03199939858233658,
+"sub_share": 0.6286951315080045
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.051269841461753396,
+"Q_k": -0.051269841461753396,
+"sub_share": 0.636086872017923
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.03483363731449973,
+"Q_k": -0.03483363731449973,
+"sub_share": 0.6785790596279149
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.05564859604873584,
+"Q_k": -0.05564859604873584,
+"sub_share": 0.6855108838903652
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.03765562775513964,
+"Q_k": -0.03765562775513964,
+"sub_share": 0.7269688714940847
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.059983465651681334,
+"Q_k": -0.059983465651681334,
+"sub_share": 0.7333036046247722
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.040465420057038015,
+"Q_k": -0.040465420057038015,
+"sub_share": 0.7737408578284518
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.06427512220798803,
+"Q_k": -0.06427512220798803,
+"sub_share": 0.7793552076357868
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.040465420057038015,
+"Q_k": -0.040465420057038015,
+"sub_share": 0.7737408578284518
+},
+{
+"branch": "pork",
+"stream": "Sausage & trim",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.06427512220798803,
+"Q_k": -0.06427512220798803,
+"sub_share": 0.7793552076357868
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 1.0,
+"A": 0.0,
+"Q_k": 0.0,
+"sub_share": 0.0
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 1.0,
+"A": -1.5543122344752192e-15,
+"Q_k": -1.5543122344752192e-15,
+"sub_share": 1.5543122344752192e-15
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.0020450379456162793,
+"Q_k": -0.0020450379456162793,
+"sub_share": 0.05679323341962598
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.29228839405908347,
+"Q_k": -0.29228839405908347,
+"sub_share": 0.3311137266788206
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.004172444959321897,
+"Q_k": -0.004172444959321897,
+"sub_share": 0.113148510791356
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.4580615193369699,
+"Q_k": -0.4580615193369699,
+"sub_share": 0.517367292958824
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.006389310437715068,
+"Q_k": -0.006389310437715068,
+"sub_share": 0.1690458265295113
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.5634374901979394,
+"Q_k": -0.5634374901979394,
+"sub_share": 0.6349038478434834
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.008703687369904456,
+"Q_k": -0.008703687369904456,
+"sub_share": 0.22446308203460344
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.6357807470152245,
+"Q_k": -0.6357807470152245,
+"sub_share": 0.715054446057569
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.011124775854576718,
+"Q_k": -0.011124775854576718,
+"sub_share": 0.2793757283437168
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.6882656770377263,
+"Q_k": -0.6882656770377263,
+"sub_share": 0.7728294592180851
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.01366315256627293,
+"Q_k": -0.01366315256627293,
+"sub_share": 0.3337563208803257
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.7279540553247459,
+"Q_k": -0.7279540553247459,
+"sub_share": 0.816240373112283
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.016331060717184043,
+"Q_k": -0.016331060717184043,
+"sub_share": 0.3875739570512448
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.7589470984111879,
+"Q_k": -0.7589470984111879,
+"sub_share": 0.8499219922822963
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.019142780734973996,
+"Q_k": -0.019142780734973996,
+"sub_share": 0.44079355473592996
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.7837792469145457,
+"Q_k": -0.7837792469145457,
+"sub_share": 0.8767281961631086
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.022115110230616297,
+"Q_k": -0.022115110230616297,
+"sub_share": 0.4933749099698361
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.804096206709318,
+"Q_k": -0.804096206709318,
+"sub_share": 0.898505664673325
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.02526799437548166,
+"Q_k": -0.02526799437548166,
+"sub_share": 0.5452714404227417
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.8210106264195336,
+"Q_k": -0.8210106264195336,
+"sub_share": 0.9164985046574591
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.028625367068424667,
+"Q_k": -0.028625367068424667,
+"sub_share": 0.5964284684051814
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.8353004253051212,
+"Q_k": -0.8353004253051212,
+"sub_share": 0.9315731980646548
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.03221629358590539,
+"Q_k": -0.03221629358590539,
+"sub_share": 0.646780804919501
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.8475251121621994,
+"Q_k": -0.8475251121621994,
+"sub_share": 0.9443501096421508
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.03607655445299485,
+"Q_k": -0.03607655445299485,
+"sub_share": 0.6962492264933057
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.8580969669944987,
+"Q_k": -0.8580969669944987,
+"sub_share": 0.9552836314569495
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.04025089215935407,
+"Q_k": -0.04025089215935407,
+"sub_share": 0.7447351025365316
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.8673262081545234,
+"Q_k": -0.8673262081545234,
+"sub_share": 0.9647126925205245
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.04479628405956726,
+"Q_k": -0.04479628405956726,
+"sub_share": 0.7921117167563764
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.8754505627992368,
+"Q_k": -0.8754505627992368,
+"sub_share": 0.972893354321665
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.04978686042827851,
+"Q_k": -0.04978686042827851,
+"sub_share": 0.8382091238757557
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.8826551614324157,
+"Q_k": -0.8826551614324157,
+"sub_share": 0.9800199308451317
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.05532157061684684,
+"Q_k": -0.05532157061684684,
+"sub_share": 0.8827846782982773
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.8890862474985768,
+"Q_k": -0.8890862474985768,
+"sub_share": 0.9862378659486396
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.06153667061117196,
+"Q_k": -0.06153667061117196,
+"sub_share": 0.9254552080213101
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.8948608278219854,
+"Q_k": -0.8948608278219854,
+"sub_share": 0.9916484986963465
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.0686271899968589,
+"Q_k": -0.0686271899968589,
+"sub_share": 0.9654863762772566
+},
+{
+"branch": "pollock",
+"stream": "Flesh (fillets, surimi, mince)",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.9000735958431252,
+"Q_k": -0.9000735958431252,
+"sub_share": 0.9962970549751978
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 1.0,
+"A": -2.220446049250313e-16,
+"Q_k": -2.220446049250313e-16,
+"sub_share": 2.220446049250313e-16
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 1.0,
+"A": -1.7541523789077473e-14,
+"Q_k": -1.7541523789077473e-14,
+"sub_share": 1.7541523789077473e-14
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.95,
+"A": -0.03867727177302105,
+"Q_k": -0.03867727177302105,
+"sub_share": 0.08674340818436994
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.95,
+"A": -0.944611695999519,
+"Q_k": -0.944611695999519,
+"sub_share": 0.947381111199543
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.9,
+"A": -0.07772651043074918,
+"Q_k": -0.07772651043074918,
+"sub_share": 0.1699538593876743
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.9,
+"A": -0.986943435529529,
+"Q_k": -0.986943435529529,
+"sub_share": 0.9882490919765761
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.85,
+"A": -0.11716965774281785,
+"Q_k": -0.11716965774281785,
+"sub_share": 0.2495942090813952
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.85,
+"A": -0.9950562457853888,
+"Q_k": -0.9950562457853888,
+"sub_share": 0.9957978089175804
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.8,
+"A": -0.15703108850801506,
+"Q_k": -0.15703108850801506,
+"sub_share": 0.32562487080641206
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.8,
+"A": -0.9976234621469325,
+"Q_k": -0.9976234621469325,
+"sub_share": 0.9980987697175461
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.75,
+"A": -0.19733801184625932,
+"Q_k": -0.19733801184625932,
+"sub_share": 0.39800350888469443
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.75,
+"A": -0.9986803436887041,
+"Q_k": -0.9986803436887041,
+"sub_share": 0.999010257766528
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.7,
+"A": -0.23812096054965326,
+"Q_k": -0.23812096054965326,
+"sub_share": 0.4666846723847573
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.7,
+"A": -0.9991928474059363,
+"Q_k": -0.9991928474059363,
+"sub_share": 0.9994349931841553
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.65,
+"A": -0.2794143922466057,
+"Q_k": -0.2794143922466057,
+"sub_share": 0.5316193549602937
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.65,
+"A": -0.9994708712853654,
+"Q_k": -0.9994708712853654,
+"sub_share": 0.9996560663354874
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.6,
+"A": -0.3212574333270364,
+"Q_k": -0.3212574333270364,
+"sub_share": 0.5927544599962219
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.6,
+"A": -0.999634552440785,
+"Q_k": -0.999634552440785,
+"sub_share": 0.999780731464471
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.55,
+"A": -0.36369480574609003,
+"Q_k": -0.36369480574609003,
+"sub_share": 0.6500321431603495
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.55,
+"A": -0.9997371192576388,
+"Q_k": -0.9997371192576388,
+"sub_share": 0.9998554155917013
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.5,
+"A": -0.4067779878435993,
+"Q_k": -0.4067779878435993,
+"sub_share": 0.7033889939217997
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.5,
+"A": -0.9998046293115296,
+"Q_k": -0.9998046293115296,
+"sub_share": 0.9999023146557647
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.45,
+"A": -0.45056667165332254,
+"Q_k": -0.45056667165332254,
+"sub_share": 0.7527550022439952
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.45,
+"A": -0.9998508674903303,
+"Q_k": -0.9998508674903303,
+"sub_share": 0.9999328903706486
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.4,
+"A": -0.4951305850710075,
+"Q_k": -0.4951305850710075,
+"sub_share": 0.798052234028403
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.4,
+"A": -0.9998835935364383,
+"Q_k": -0.9998835935364383,
+"sub_share": 0.9999534374145753
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.35,
+"A": -0.5405517296593846,
+"Q_k": -0.5405517296593846,
+"sub_share": 0.8391931053807846
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.35,
+"A": -0.9999074037266608,
+"Q_k": -0.9999074037266608,
+"sub_share": 0.9999675913043313
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.3,
+"A": -0.5869269895733141,
+"Q_k": -0.5869269895733141,
+"sub_share": 0.8760780968719942
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.3,
+"A": -0.9999251388432607,
+"Q_k": -0.9999251388432607,
+"sub_share": 0.9999775416529781
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.25,
+"A": -0.6343707289544106,
+"Q_k": -0.6343707289544106,
+"sub_share": 0.9085926822386027
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.25,
+"A": -0.9999386191729962,
+"Q_k": -0.9999386191729962,
+"sub_share": 0.999984654793249
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.2,
+"A": -0.6830158865493782,
+"Q_k": -0.6830158865493782,
+"sub_share": 0.9366031773098756
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.2,
+"A": -0.9999490478298798,
+"Q_k": -0.9999490478298798,
+"sub_share": 0.9999898095659759
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.15,
+"A": -0.7330083778107126,
+"Q_k": -0.7330083778107126,
+"sub_share": 0.9599512566716069
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.15,
+"A": -0.9999572417195366,
+"Q_k": -0.9999572417195366,
+"sub_share": 0.9999935862579304
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.1,
+"A": -0.7844763644152792,
+"Q_k": -0.7844763644152792,
+"sub_share": 0.978447636441528
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.1,
+"A": -0.9999637687743651,
+"Q_k": -0.9999637687743651,
+"sub_share": 0.9999963768774365
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "LR",
+"cap": 0.05,
+"A": -0.837402825349467,
+"Q_k": -0.837402825349467,
+"sub_share": 0.9918701412674734
+},
+{
+"branch": "salmon",
+"stream": "Salmon flesh",
+"horizon": "limit",
+"cap": 0.05,
+"A": -0.9999690321697327,
+"Q_k": -0.9999690321697327,
+"sub_share": 0.9999984516084867
+}
+],
+"route_exit": [
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "LR",
+"exit_cap": 0.8659031449323672
+},
+{
+"branch": "dairy_2026",
+"stream": "Fluid milk",
+"horizon": "limit",
+"exit_cap": 0.9735728894023535
+},
+{
+"branch": "dairy_2026",
+"stream": "Other dairy",
+"horizon": "LR",
+"exit_cap": 0.9417638932738781
+},
+{
+"branch": "dairy_2026",
+"stream": "Other dairy",
+"horizon": "limit",
+"exit_cap": 0.9902259403608741
+},
+{
+"branch": "dairy_2019",
+"stream": "Fluid milk",
+"horizon": "LR",
+"exit_cap": 0.8595610182232533
+},
+{
+"branch": "dairy_2019",
+"stream": "Fluid milk",
+"horizon": "limit",
+"exit_cap": 0.9759546533531055
+},
+{
+"branch": "dairy_2019",
+"stream": "Other dairy",
+"horizon": "LR",
+"exit_cap": 0.9392316013655134
+},
+{
+"branch": "dairy_2019",
+"stream": "Other dairy",
+"horizon": "limit",
+"exit_cap": 0.9911554744855539
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "LR",
+"exit_cap": 0.5595152037923753
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Shell eggs",
+"horizon": "limit",
+"exit_cap": 0.9997373124967316
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "LR",
+"exit_cap": 0.8501609704569043
+},
+{
+"branch": "eggs_2019-21",
+"stream": "Whole egg products",
+"horizon": "limit",
+"exit_cap": 0.9999518586346995
+},
+{
+"branch": "eggs_2025",
+"stream": "Shell eggs",
+"horizon": "LR",
+"exit_cap": 0.5534882511540898
+},
+{
+"branch": "eggs_2025",
+"stream": "Shell eggs",
+"horizon": "limit",
+"exit_cap": 0.9998972658993034
+},
+{
+"branch": "eggs_2025",
+"stream": "Whole egg products",
+"horizon": "LR",
+"exit_cap": 0.8490873248591696
+},
+{
+"branch": "eggs_2025",
+"stream": "Whole egg products",
+"horizon": "limit",
+"exit_cap": 0.9999811747755257
+}
+]
+}
