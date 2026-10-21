@@ -1,0 +1,238 @@
+# DAIRY COW (unit: 100 lb raw milk + the pro-rata cattle sales of the cow that produced it)
+# Routes (fungible): fluid, other manufactured, butter/powder, cheese route, cattle.
+# Within cheese route (fixed): cheese, whey protein, whey carbohydrate. Within butter/powder (fixed): fat, nonfat solids.
+# Farm-equivalent values = product price minus make allowance, times yield (the FMMO convention).
+#
+# Tags: [S] sourced (see docs/sources.md), [E] estimate derived from sourced inputs, [A] assumption (judgement).
+# Quantities and prices in [[subs]] are arithmetic expressions over [vars]; see the loader docstring in src/jpdm/params.py.
+
+key = "dairy_{scenario}"
+name = "Dairy cow ({scenario} prices)"
+unit = "per 100 lb milk + pro-rata cattle sales"
+eps_s_sr = 0.12
+eps_s_lr = 0.90
+notes = "Milk is fungible across routes; cheese and whey are joint in fixed proportions; whey outlets are fungible."
+supply_src = "[S] Chavas & Klemme 1986: 0.115 (current year), 0.89 (5-year), 2.46 (10-year); EU medium-run 0.18-0.65 (Bouamra-Mechemache et al. 2005)"
+default_scenario = "2026"
+
+[vars]
+# [E] utilisation shares from NASS volumes and standard yields
+u_fluid = 0.19
+u_cheese = 0.60
+u_bp = 0.13
+u_other = 0.08
+cheese_yield = 10.6       # lb/cwt [S] CoBank/Hoard's (2020 composition)
+protein_frac = 0.13       # [S] 0.8% protein in 6.5%-solids whey
+rec_protein = 0.50        # [E] share of whey protein recovered into WPC/WPI (NASS 2025: ~0.55 bn lb protein in WPC+WPI vs ~1.1 bn lb in liquid whey)
+split_wpc80 = 0.61        # [S] NASS 2025: WPC50-90 381 m lb (x0.8 protein) vs WPI 214 m lb (x0.9): protein basis 305/(305+193)
+# [E] shares of whey solids by outlet
+dry_whey_share = 0.10
+lactose_share = 0.15
+feed_share = 0.25
+prot = "whey_solids*protein_frac*rec_protein"   # lb whey protein recovered per cwt milk in the cheese route
+
+[scenarios.2026]
+price_tag = "USDA AMS announced class prices Sep 2026 (Class I Oct 2026 advance); Dairy Market News Oct 2026 for whey products"
+[scenarios.2026.vars]
+whey_solids = 6.0         # lb/cwt [S] FMMO other-solids factor (6.0 from Dec 2025; 5.9 before)
+cattle_share = 0.078
+# product prices
+p_classI = 18.88
+p_classII = 17.60
+p_cheese = 1.5577
+p_bfat = 1.4762
+p_nfs = 1.5343
+p_wpc80 = 9.50
+p_wpi = 14.0
+p_drywhey = 0.6694
+p_lactose = 0.70
+p_feedwhey = 0.36
+# make allowances
+mk_cheese = 0.2519
+mk_drywhey = 0.2668
+mk_lactose = 0.27
+mk_wpc80 = 1.50
+mk_wpi = 2.50
+mk_feed = 0.10
+
+[scenarios.2019]
+price_tag = "2019-2021 reference levels: USDA AMS class prices and dry whey (2019-21 averages); WPC80 and WPI approximate trade levels"
+[scenarios.2019.vars]
+whey_solids = 5.9         # lb/cwt [S] FMMO other-solids factor (6.0 from Dec 2025; 5.9 before)
+cattle_share = 0.07
+# product prices
+p_classI = 17.60
+p_classII = 16.90
+p_cheese = 1.75
+p_bfat = 2.30
+p_nfs = 1.00
+p_wpc80 = 3.00
+p_wpi = 5.00
+p_drywhey = 0.35
+p_lactose = 0.35
+p_feedwhey = 0.20
+# make allowances
+mk_cheese = 0.2003
+mk_drywhey = 0.1991
+mk_lactose = 0.20
+mk_wpc80 = 1.20
+mk_wpi = 2.00
+mk_feed = 0.10
+
+[raw_shares]
+"Fluid" = "u_fluid"
+"Other manufactured" = "u_other"
+"Butter & powder" = "u_bp"
+"Cheese route" = "u_cheese"
+
+[[subs]]
+name = "Fluid milk (Class I)"
+stream = "Fluid milk"
+qty = "u_fluid"
+price = "p_classI"
+src = "[S] Class I price"
+
+[[subs]]
+name = "Other dairy: yogurt, ice cream, etc. (Class II)"
+stream = "Other dairy"
+qty = "u_other"
+price = "p_classII"
+src = "[S] Class II price"
+
+[[subs]]
+name = "Butter / cream (3.5 lb fat per cwt)"
+stream = "Butter (fat)"
+qty = "u_bp"
+price = "3.5*p_bfat"
+src = "[S] FMMO butterfat price x 3.5"
+
+[[subs]]
+name = "Nonfat dry milk / SMP (also the casein route)"
+stream = "Milk powder (nonfat solids)"
+qty = "u_bp"
+price = "9.3*0.965*p_nfs"
+src = "[S] FMMO nonfat solids price x 9.3 x 0.965"
+
+[[subs]]
+name = "Cheese (cheddar-equivalent)"
+stream = "Cheese"
+qty = "u_cheese*cheese_yield"
+price = "p_cheese-mk_cheese"
+src = "[S] cheese price less make allowance"
+
+[[subs]]
+name = "WPC 80 (whey protein concentrate)"
+stream = "Whey protein"
+qty = "u_cheese*prot*split_wpc80/0.80"
+price = "p_wpc80-mk_wpc80"
+src = "[S] price; [A] processing allowance"
+
+[[subs]]
+name = "WPI (whey protein isolate)"
+stream = "Whey protein"
+qty = "u_cheese*prot*(1-split_wpc80)/0.90"
+price = "p_wpi-mk_wpi"
+src = "[S] price; [A] processing allowance"
+
+[[subs]]
+name = "Dry whey (sweet whey powder)"
+stream = "Whey carbohydrate"
+qty = "u_cheese*whey_solids*dry_whey_share"
+price = "p_drywhey-mk_drywhey"
+src = "[S] price and make allowance"
+
+[[subs]]
+name = "Lactose"
+stream = "Whey carbohydrate"
+qty = "u_cheese*whey_solids*lactose_share"
+price = "p_lactose-mk_lactose"
+src = "[S] price; [A] allowance"
+
+[[subs]]
+name = "Permeate / condensed whey / feed"
+stream = "Whey carbohydrate"
+qty = "u_cheese*whey_solids*feed_share"
+price = "p_feedwhey-mk_feed"
+src = "[S] feed-grade whey price"
+
+# Cattle sales are sized from the value of everything above (total_value() of the [[subs]] so far).
+[derived]
+cattle_val = "total_value()*cattle_share/(1-cattle_share)"
+
+[[derived_subs]]
+name = "Cull cows (manufacturing beef)"
+stream = "Cull cows"
+qty = 1.0
+price = "cattle_val*0.60"
+src = "[S] ERS cattle sales share; [E] 60/40 split"
+
+[[derived_subs]]
+name = "Calves (beef-on-dairy, bull calves)"
+stream = "Calves"
+qty = 1.0
+price = "cattle_val*0.40"
+src = "[E]"
+
+[[streams]]
+name = "Fluid milk"
+route = "Fluid"
+elas = -0.40
+elas_src = "[S] Andreyeva 2010 milk 0.59; Okrent & Alston 2012 milk 0.10; EU 0.53"
+
+[[streams]]
+name = "Other dairy"
+route = "Other manufactured"
+elas = -0.90
+elas_src = "[S] Okrent & Alston other dairy 1.04; yogurt 1.19"
+
+[[streams]]
+name = "Butter (fat)"
+route = "Butter & powder"
+elas = -0.60
+elas_src = "[S] EU butter 0.47; fats & oils 0.48"
+
+[[streams]]
+name = "Milk powder (nonfat solids)"
+route = "Butter & powder"
+elas = -1.00
+floor = 0.60
+floor_note = "feed-grade SMP / export at world price"
+elas_src = "[A] traded commodity, elastic for one supplier"
+
+[[streams]]
+name = "Cheese"
+route = "Cheese route"
+elas = -0.55
+elas_src = "[S] Andreyeva cheese 0.44; Okrent & Alston 0.70; EU 0.60"
+
+[[streams]]
+name = "Whey protein"
+route = "Cheese route"
+elas = -1.50
+floor = 0.06
+floor_note = "protein valued as dry/feed whey (~$0.35-0.70 per lb solids)"
+elas_src = "[A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12"
+
+[[streams]]
+name = "Whey carbohydrate"
+route = "Cheese route"
+elas = -2.00
+floor = 0.50
+floor_note = "feed-grade whey / permeate"
+elas_src = "[A] feed outlet, near-perfect substitutes"
+
+[[streams]]
+name = "Cull cows"
+route = "Cattle sales"
+elas = -0.80
+floor = 0.15
+floor_note = "rendering / pet food"
+elas_src = "[S] beef demand 0.75 (Andreyeva)"
+
+[[streams]]
+name = "Calves"
+route = "Cattle sales"
+elas = -0.60
+floor = 0.05
+floor_note = "bob veal / euthanasia"
+elas_src = "[A] derived from fed-beef demand"

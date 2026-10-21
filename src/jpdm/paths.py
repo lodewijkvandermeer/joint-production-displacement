@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 
 ROOT = Path(os.environ.get("JPDM_ROOT", Path(__file__).resolve().parents[2]))
+PARAMS = ROOT / "data" / "params"
 RESULTS = ROOT / "results"
 TABLES = RESULTS / "tables"
 WORKBOOK = ROOT / "workbook" / "joint_production_displacement_model.xlsx"

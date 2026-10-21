@@ -1,0 +1,114 @@
+# LAYER HEN (one dozen eggs + pro-rata spent hen; ~25 dozen per hen-year)
+# Routes (fungible): shell eggs | egg products whole | separated (white+yolk fixed) | spent hen
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "eggs_{scenario}"
+name = "Layer hen ({scenario} prices)"
+unit = "per dozen eggs + pro-rata spent hen"
+eps_s_sr = 0.03
+eps_s_lr = 1.00
+notes = "Eggs flow between shell and breaking (fungible routes); white and yolk are joint in fixed proportions."
+supply_src = "[S] Chavas 1980 SR 0.03; Chavas & Johnson 1981 LR ~1; Harrington & Dubman 2008: 1.04"
+default_scenario = "2019-21"
+
+[vars]
+shell_share = 0.68        # [S] 32% broken (NASS/AMS)
+breaking_share = 0.32
+sep_share = 0.36          # [E] NASS white/yolk volumes imply ~36% of broken eggs separated
+liquid_per_doz = 1.29     # [S] NASS 2025
+wf = "0.58/0.89"          # [S] USDA egg grading manual composition
+yf = "0.31/0.89"
+
+[scenarios.2019-21]
+price_tag = "USDA AMS Oct 2019 egg-products prices; shell eggs ~2019 annual average (approx.)"
+[scenarios.2019-21.vars]
+p_shell = 0.95
+p_whole = 0.33
+p_white = 0.23
+p_yolk = 0.46
+
+[scenarios.2025]
+price_tag = "USDA AMS Sep 2025 (HPAI-tight market)"
+[scenarios.2025.vars]
+p_shell = 2.08
+p_whole = 1.155
+p_white = 0.914
+p_yolk = 3.57
+
+[raw_shares]
+"Shell" = "shell_share"
+"Products: whole" = "breaking_share*(1-sep_share)"
+"Products: separated" = "breaking_share*sep_share"
+
+[[subs]]
+name = "Shell eggs (table)"
+stream = "Shell eggs"
+qty = "shell_share"
+price = "p_shell"
+src = "[S]"
+
+[[subs]]
+name = "Liquid/frozen whole egg"
+stream = "Whole egg products"
+qty = "breaking_share*(1-sep_share)*liquid_per_doz"
+price = "p_whole"
+src = "[S]"
+
+[[subs]]
+name = "Liquid egg white (albumen): liquid, dried albumen, protein fractions"
+stream = "Egg white"
+qty = "breaking_share*sep_share*liquid_per_doz*wf"
+price = "p_white"
+src = "[S]"
+
+[[subs]]
+name = "Liquid egg yolk"
+stream = "Egg yolk"
+qty = "breaking_share*sep_share*liquid_per_doz*yf"
+price = "p_yolk"
+src = "[S]"
+
+[[subs]]
+name = "Spent hen (soup meat, rendering)"
+stream = "Spent hen"
+qty = "1/25.0"
+price = 0.02
+src = "[S] removal cost 0-5 c/head: nominal $0.02"
+
+[[streams]]
+name = "Shell eggs"
+route = "Shell"
+elas = -0.27
+elas_src = "[S] Andreyeva 2010 eggs 0.27; Okrent & Alston 0.24; Bakhtavoryan 2021 conventional 0.235"
+
+[[streams]]
+name = "Whole egg products"
+route = "Products: whole"
+elas = -0.80
+floor = 0.50
+floor_note = "dried whole-egg inventory / export / feed"
+elas_src = "[A] breaker demand more elastic than table demand (Blakely 1984)"
+
+[[streams]]
+name = "Egg white"
+route = "Products: separated"
+elas = -1.50
+floor = 0.35
+floor_note = "dried albumen at surplus prices / feed"
+elas_src = "[A] ingredient with substitutes"
+
+[[streams]]
+name = "Egg yolk"
+route = "Products: separated"
+elas = -1.00
+floor = 0.50
+floor_note = "industrial yolk (pet food, feed)"
+elas_src = "[A]"
+
+[[streams]]
+name = "Spent hen"
+route = "Spent hen"
+elas = -5.00
+floor = 0.00
+floor_note = "rendering / composting"
+elas_src = "[A] effectively perfectly elastic at ~0"

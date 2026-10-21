@@ -1,0 +1,39 @@
+# FARMED ATLANTIC SALMON (Norway; per kg head-on-gutted, NOK)
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "salmon"
+name = "Farmed Atlantic salmon (Norway)"
+unit = "per kg HOG (NOK)"
+eps_s_sr = 0.10
+eps_s_lr = 0.80
+notes = "Flesh and by-products joint; by-products ~3% of value."
+supply_src = "[S] Asheim et al. 2011 SR 0.09 / LR 0.14; Steen et al. 1997 LR 1.4-1.6; licences cap Norwegian biomass"
+price_tag = "Norwegian spot price 2026 YTD NOK 75/kg; by-product value ~NOK 7/kg (SINTEF)"
+
+[[subs]]
+name = "Salmon HOG, fillets and portions"
+stream = "Salmon flesh"
+qty = 1.0
+price = 75.0
+src = "[S] NOK/kg 2026 YTD"
+
+[[subs]]
+name = "By-products (heads, frames, viscera, trimmings) -> oil, meal, pet food"
+stream = "Salmon by-products"
+qty = 0.33
+price = 7.0
+src = "[S] SINTEF 2023"
+
+[[streams]]
+name = "Salmon flesh"
+route = "Fish"
+elas = -1.00
+elas_src = "[S] salmon ~-1 (Asche et al. 2007)"
+
+[[streams]]
+name = "Salmon by-products"
+route = "Fish"
+elas = -3.00
+floor = 0.30
+floor_note = "ensilage / biogas"
+elas_src = "[A]"

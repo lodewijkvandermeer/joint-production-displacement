@@ -1,4 +1,4 @@
-"""Generate docs/parameters.md and docs/sources.md from params.py and sources.py, so the documentation cannot drift
+"""Generate docs/parameters.md and docs/sources.md from data/params/*.toml and sources.py, so the documentation cannot drift
 from the numbers the model uses. python -m jpdm docs"""
 from . import params
 from .paths import ROOT
@@ -13,7 +13,7 @@ def _esc(s):
 
 def parameters_md():
     out = ["# Parameters", "",
-           "Generated from `src/jpdm/params.py` by `python -m jpdm docs`; do not edit by hand. Tags: **[S]** sourced "
+           "Generated from `data/params/*.toml` by `python -m jpdm docs`; do not edit by hand. Tags: **[S]** sourced "
            "(see [sources.md](sources.md)), **[E]** estimated from sourced inputs, **[A]** assumption. Prices are wholesale or "
            "first-handler, US$ unless stated; quantities are per the unit shown for each animal.", ""]
     for br in params.ALL:

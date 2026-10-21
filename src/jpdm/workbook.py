@@ -1,4 +1,4 @@
-"""Build the editable Excel model from params.py (same defaults as the Python model), with live formulas."""
+"""Build the editable Excel model from data/params/*.toml (same defaults as the Python model), with live formulas."""
 import datetime
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side

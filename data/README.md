@@ -1,7 +1,7 @@
 # Data files
 
 Inputs used for figures that are not computed by the model. Every parameter the model itself uses is in
-`src/jpdm/params.py` (listed in `docs/parameters.md`).
+`data/params/*.toml` (loaded by `src/jpdm/params.py`, listed in `docs/parameters.md`).
 
 | File | Contents | Source | Used in |
 | --- | --- | --- | --- |

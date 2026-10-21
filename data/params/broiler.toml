@@ -1,0 +1,113 @@
+# BROILER (one 6.0 lb live bird; yields Cobb 500; prices AMS 24 Jan 2025)
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "broiler"
+name = "Broiler (Jan 2025 prices)"
+unit = "per 6.0 lb live bird"
+eps_s_sr = 0.10
+eps_s_lr = 0.70
+notes = "Carcass parts in fixed proportions."
+supply_src = "[S] Kapombe & Colyer 1998 SR 0.07 / LR 0.13; Chavas & Johnson 1982 0.02; Lusk & Norwood 2009 LR 0.70; Harrington & Dubman 1.15"
+price_tag = "USDA AMS weekly national composite 24 Jan 2025; Cobb 500 yield poster"
+
+[vars]
+live = 6.0
+
+[[subs]]
+name = "Boneless skinless breast (fillets, whole-muscle nuggets)"
+stream = "Breast meat"
+qty = "live*0.2205"
+price = 1.486
+src = "[S] Cobb yield; AMS price"
+
+[[subs]]
+name = "Tenders"
+stream = "Breast meat"
+qty = "live*0.040"
+price = 1.734
+src = "[S]"
+
+[[subs]]
+name = "Wings"
+stream = "Wings"
+qty = "live*0.0758"
+price = 1.906
+src = "[S]"
+
+[[subs]]
+name = "Leg quarters / dark meat (whole legs)"
+stream = "Dark meat"
+qty = "live*0.2301"
+price = 0.514
+src = "[S] Cobb whole legs 23.01% (leg quarters 31.62% include the back)"
+
+[[subs]]
+name = "Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)"
+stream = "Backs & necks (MSC)"
+qty = "live*0.121"
+price = 0.125
+src = "[S] backs/necks price"
+
+[[subs]]
+name = "Giblets"
+stream = "Giblets & paws"
+qty = "live*0.030"
+price = 0.40
+src = "[A]"
+
+[[subs]]
+name = "Paws (export)"
+stream = "Giblets & paws"
+qty = "live*0.045"
+price = 0.60
+src = "[E] from FAS export unit values"
+
+[[subs]]
+name = "Feathers, blood, viscera, heads -> rendering"
+stream = "Rendering"
+qty = "live*0.135"
+price = 0.08
+src = "[E] rendered meal values"
+
+[[streams]]
+name = "Breast meat"
+route = "Carcass"
+elas = -0.80
+elas_src = "[S] poultry 0.68 (Andreyeva); 0.81 (Okrent & Alston)"
+
+[[streams]]
+name = "Wings"
+route = "Carcass"
+elas = -1.00
+elas_src = "[A]"
+
+[[streams]]
+name = "Dark meat"
+route = "Carcass"
+elas = -1.50
+floor = 0.25
+floor_note = "pet food / rendering; exported at world price"
+elas_src = "[A] export-exposed, elastic"
+
+[[streams]]
+name = "Backs & necks (MSC)"
+route = "Carcass"
+elas = -3.00
+floor = 0.50
+floor_note = "rendering"
+elas_src = "[A] residual raw material"
+
+[[streams]]
+name = "Giblets & paws"
+route = "Carcass"
+elas = -2.00
+floor = 0.15
+floor_note = "rendering"
+elas_src = "[A]"
+
+[[streams]]
+name = "Rendering"
+route = "Carcass"
+elas = -5.00
+floor_note = "already the floor"
+elas_src = "[A]"
