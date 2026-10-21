@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from jpdm import exit_runs, tables
+from jpdm import check, exit_runs, tables
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
@@ -15,7 +15,9 @@ def test_tables_regenerate_identically(tmp_path):
     tables.main(RESULTS, tmp_path)
     for f in (RESULTS / "tables").glob("*.md"):
         assert (tmp_path / f.name).read_text() == f.read_text(), f.name
-    assert json.loads((tmp_path / "numbers.json").read_text()) == json.loads((RESULTS / "tables" / "numbers.json").read_text())
+    # numbers compared with a tolerance: another numpy build changes the last digit
+    assert check.diff_json(json.loads((RESULTS / "tables" / "numbers.json").read_text()),
+                           json.loads((tmp_path / "numbers.json").read_text())) == []
 
 
 @pytest.mark.parametrize("key", ["dairy_2026", "eggs_2019-21"])
