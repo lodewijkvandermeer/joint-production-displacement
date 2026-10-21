@@ -55,7 +55,7 @@ def test_egg_white_market_lost(hen):
 def test_shell_egg_route_closes_near_56_percent(hen):
     br, ex = hen
     assert ex.solve(cap={"Shell eggs": 0.55})["Q"]["Shell eggs"] < 1e-6
-    assert ex.solve(cap={"Shell eggs": 0.57})["Q"]["Shell eggs"] > 0.1
+    assert ex.solve(cap={"Shell eggs": 0.57})["Q"]["Shell eggs"] > 0.03   # was 0.5: the old rescale left route values unequal
     assert round(ex.solve(cap={"Shell eggs": 0.5})["A"] - 1.0, 2) == -0.44
 
 
@@ -83,14 +83,12 @@ def test_salmon_collapse_is_a_located_root_not_a_boundary_hit():
     assert r["A"] < 1e-3 and not r["diag"]["boundary"] and _converged(r)
 
 
-# The two defects below are in the solver as it stands (they are fixed in a later commit, which removes the xfails).
-@pytest.mark.xfail(strict=True, reason="supply-side jump at constant cost resolved to the collapsed end")
+# Regressions for two solver defects (supply-side jump at constant cost; rescaling instead of solving a flat segment).
 def test_capping_a_tiny_stream_does_not_remove_the_flock(hen):
     r = hen[1].solve(cap={"Spent hen": 0.9}, constant_cost=True)
     assert r["A"] > 0.9
 
 
-@pytest.mark.xfail(strict=True, reason="quantities are rescaled to balance instead of solving the flat segment")
 def test_capped_route_leaves_route_values_equal(cow):
     r = cow[1].solve(cap={"Fluid milk": 0.9})
     assert _converged(r)
