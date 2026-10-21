@@ -185,18 +185,28 @@ class Exact:
                 out["sub_share"][k] = 0.0
         out["PA"] = (sum(self.W[r] * v for r in self.fung) if self.fung else 0.0) + self.fixed_value(A, kappa, cap)
         out["revenue"] = out["PA"]   # revenue per animal unit, index
+        out["diag"] = self.residuals(out, kappa, cap, eps_s, constant_cost)
         return out
 
+    def residuals(self, out, kappa, cap, eps_s, constant_cost, edge=2e-9):
+        """How well a solution satisfies the model's own equilibrium conditions (all ~0 for a true equilibrium).
 
-RAW = {
-    "dairy": {"Fluid": 0.19, "Other manufactured": 0.08, "Butter & powder": 0.13, "Cheese route": 0.60},
-    "eggs": {"Shell": 0.68, "Products: whole": 0.32 * 0.64, "Products: separated": 0.32 * 0.36},
-}
+        supply   : A = P_A^eps_s (or P_A = 1 at constant cost)
+        balance  : the raw quantities sent to the fungible routes add up to A
+        value    : every route that receives raw commodity has the common value v
+        boundary : the solution sits on the edge of the solver's search interval, so it is an exit (A ~ 0) or an
+                   unbounded supply rather than a located root
+        """
+        A, v, q = out["A"], out["v"], out["q"]
+        boundary = A <= edge or A >= 1e3 * (1 - 1e-9)
+        supply = abs(out["PA"] - 1.0) if constant_cost else abs(A - out["PA"] ** eps_s)
+        value = max([abs(self.route_value(r, x, kappa, cap) - v) for r, x in q.items() if x > 1e-6] or [0.0])
+        return dict(supply=0.0 if boundary else supply, balance=abs(sum(q.values()) - A) if q else 0.0,
+                    value=value, boundary=boundary)
 
 
 def exact_for(br: M.Branch):
-    key = br.key.split("_")[0]
-    return Exact(br, RAW.get(key))
+    return Exact(br, br.raw_shares)
 
 
 def validate():

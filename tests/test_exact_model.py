@@ -57,3 +57,40 @@ def test_shell_egg_route_closes_near_56_percent(hen):
     assert ex.solve(cap={"Shell eggs": 0.55})["Q"]["Shell eggs"] < 1e-6
     assert ex.solve(cap={"Shell eggs": 0.57})["Q"]["Shell eggs"] > 0.1
     assert round(ex.solve(cap={"Shell eggs": 0.5})["A"] - 1.0, 2) == -0.44
+
+
+def test_exact_model_uses_the_branch_raw_shares():
+    br = params.dairy("2026")
+    assert X.exact_for(br).raw == br.raw_shares
+    assert X.exact_for(params.beef()).raw == {}
+
+
+def _converged(r, tol=1e-6):
+    d = r["diag"]
+    return max(d["supply"], d["balance"], d["value"]) < tol
+
+
+def test_baseline_and_ordinary_runs_satisfy_the_equilibrium_conditions(cow, hen):
+    for br, ex in (cow, hen):
+        assert _converged(ex.solve())
+    assert _converged(cow[1].solve(kappa={"Cheese": -0.10}))
+    assert _converged(cow[1].solve(cap={"Whey protein": 0.06}))
+
+
+def test_salmon_collapse_is_a_located_root_not_a_boundary_hit():
+    ex = X.exact_for(params.salmon())
+    r = ex.solve(cap={"Salmon flesh": 0.25}, constant_cost=True)
+    assert r["A"] < 1e-3 and not r["diag"]["boundary"] and _converged(r)
+
+
+# The two defects below are in the solver as it stands (they are fixed in a later commit, which removes the xfails).
+@pytest.mark.xfail(strict=True, reason="supply-side jump at constant cost resolved to the collapsed end")
+def test_capping_a_tiny_stream_does_not_remove_the_flock(hen):
+    r = hen[1].solve(cap={"Spent hen": 0.9}, constant_cost=True)
+    assert r["A"] > 0.9
+
+
+@pytest.mark.xfail(strict=True, reason="quantities are rescaled to balance instead of solving the flat segment")
+def test_capped_route_leaves_route_values_equal(cow):
+    r = cow[1].solve(cap={"Fluid milk": 0.9})
+    assert _converged(r)
