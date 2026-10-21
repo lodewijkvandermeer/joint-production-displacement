@@ -92,3 +92,24 @@ def test_capping_a_tiny_stream_does_not_remove_the_flock(hen):
 def test_capped_route_leaves_route_values_equal(cow):
     r = cow[1].solve(cap={"Fluid milk": 0.9})
     assert _converged(r)
+
+
+def _all_streams():
+    return [(br.key, k) for br in params.ALL for k in X.exact_for(br).streams]
+
+
+@pytest.mark.parametrize("key,stream", _all_streams())
+def test_exact_and_closed_form_agree_for_every_stream_of_every_branch(key, stream):
+    """A 2% fall in one product's demand: the exact solution must match the closed form at all three horizons."""
+    br = next(b for b in params.ALL if b.key == key)
+    ex = X.exact_for(br)
+    horizons = [("3-5 years", dict(eps_s=br.eps_s_lr or 1e-9), br.DF_stream(stream, br.eps_s_lr)),
+                ("limit", dict(constant_cost=True), br.DF_stream_limit(stream))]
+    if br.eps_s_sr > 0:
+        horizons.append(("<1 year", dict(eps_s=br.eps_s_sr), br.DF_stream(stream, br.eps_s_sr)))
+    for name, kw, df in horizons:
+        r = ex.solve(kappa={stream: -0.02}, **kw)
+        exact, closed = r["A"] - 1.0, df * -0.02
+        assert abs(exact - closed) <= max(1e-4, 0.03 * abs(exact)), (name, exact, closed)
+        d = r["diag"]
+        assert max(d["supply"], d["balance"], d["value"]) < 1e-6 and not d["boundary"], name
