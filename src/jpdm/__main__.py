@@ -5,6 +5,7 @@
   workbook   the Excel model with live formulas -> workbook/joint_production_displacement_model.xlsx
   figures    the paper's figures as PNG -> paper/figures/
   docs       parameter and source tables -> docs/parameters.md, docs/sources.md
+  check      regenerate results, tables and docs in a scratch directory and compare with the repository
   validate   print the exact solution against the closed form for 10% and 25% shifts
   summary    print displacement factors for every product at three horizons
   all        results, tables, workbook, figures and docs, in that order
@@ -28,7 +29,7 @@ def summary():
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="python -m jpdm", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["results", "tables", "workbook", "figures", "docs", "validate", "summary", "all"])
+    ap.add_argument("command", choices=["results", "tables", "workbook", "figures", "docs", "check", "validate", "summary", "all"])
     ap.add_argument("-v", "--verbose", action="store_true", help="print intermediate output")
     a = ap.parse_args(argv)
     t0 = time.time()
@@ -49,6 +50,9 @@ def main(argv=None):
     if a.command in ("docs", "all"):
         from . import docs
         print("docs ..."); docs.main()
+    if a.command == "check":
+        from . import check
+        print("regenerating into a scratch directory and comparing ..."); check.main(a.verbose)
     if a.command == "validate":
         from . import exact_model
         exact_model.validate()

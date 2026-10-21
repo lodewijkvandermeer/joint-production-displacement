@@ -46,6 +46,7 @@ pip install -e ".[test]"
 
 python -m jpdm summary      # every product's factor at three horizons
 pytest                      # about 70 tests, a few seconds
+python -m jpdm check        # regenerate results, tables and docs in a scratch directory and compare with the repository
 python -m jpdm all          # regenerate results, tables, workbook, figures and docs (about two minutes)
 ```
 
@@ -90,7 +91,7 @@ tests/             identities, headline numbers, exact-model checks, output cons
 
 ## Reproducing the results
 
-Every number in the paper and the workbook comes from `data/params/*.toml` through the code above. The exact-model scenarios and the Monte Carlo ranges are deterministic (the Monte Carlo seed is fixed), so `python -m jpdm all` reproduces the committed files in `results/` exactly. The `reproduce` job in [.github/workflows/tests.yml](.github/workflows/tests.yml) regenerates them on every push and fails if the tables change.
+Every number in the paper and the workbook comes from `data/params/*.toml` through the code above. The exact-model scenarios and the Monte Carlo ranges are deterministic (the Monte Carlo seed is fixed), so `python -m jpdm all` reproduces the committed files in `results/` exactly. The `reproduce` job in [.github/workflows/tests.yml](.github/workflows/tests.yml) runs `python -m jpdm check` on every push: it regenerates the results, tables and docs in a scratch directory and fails if they differ from the committed files (numbers within a relative 1e-7, so a different numpy build does not trip it). It installs the versions in [constraints.txt](constraints.txt).
 
 ## The Excel workbook
 
