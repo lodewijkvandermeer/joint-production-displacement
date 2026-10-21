@@ -6,6 +6,7 @@ name = "Farmed Atlantic salmon (Norway)"
 unit = "per kg HOG (NOK)"
 eps_s_sr = 0.10
 eps_s_lr = 0.80
+monte_carlo = { supply_sigma_lr = 0.8 }
 notes = "Flesh and by-products joint; by-products ~3% of value."
 supply_src = "[S] Asheim et al. 2011 SR 0.09 / LR 0.14; Steen et al. 1997 LR 1.4-1.6; licences cap Norwegian biomass"
 price_tag = "Norwegian spot price 2026 YTD NOK 75/kg; by-product value ~NOK 7/kg (SINTEF)"

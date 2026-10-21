@@ -6,6 +6,7 @@ name = "Hog (Sep 2026 prices)"
 unit = "per 280 lb live hog"
 eps_s_sr = 0.40
 eps_s_lr = 1.50
+monte_carlo = { supply_sigma_lr = 0.3 }
 notes = "Carcass primals in fixed proportions."
 supply_src = "[S] Wohlgenant 1993 hog supply 0.40 (SR); Lusk & Norwood 2009 LR 1.56; Harrington & Dubman 0.79"
 price_tag = "USDA AMS pork cutout week ending 25 Sep 2026; hog by-product value 9 Oct 2026"

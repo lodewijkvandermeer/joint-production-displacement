@@ -6,6 +6,8 @@ name = "Alaska pollock (wild, TAC-managed)"
 unit = "per tonne round weight"
 eps_s_sr = 0.00
 eps_s_lr = 0.05
+# quota-managed capture: long-run supply uniform over this range, short-run fixed at 0
+monte_carlo = { supply_lr_uniform = [0.0, 0.17] }
 notes = "Flesh is allocated between fillets and surimi (fungible sub-products); roe and meal are joint by-products."
 supply_src = "[S] quota-managed capture: supply elasticity ~0 (World Bank 2013; estimates 0 to 0.17; can be negative)"
 price_tag = "NOAA 2024 production via SeafoodSource; GAPP surimi prices; EUMOFA fillet import prices"

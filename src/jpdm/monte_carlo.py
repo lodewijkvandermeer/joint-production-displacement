@@ -4,37 +4,36 @@ Value shares (prices) are held at the scenario snapshot; the 2019/2025 scenarios
 import copy, json, math
 import numpy as np
 from . import params
-from .paths import RESULTS
-
-SUPPLY_SIGMA_LR = {"dairy": 0.6, "beef": 0.35, "eggs": 0.4, "broiler": 0.7, "pork": 0.3, "pollock": None, "salmon": 0.8}
-SUPPLY_SIGMA_SR = 0.5
-N = 2000
-SEED = 20261017
-rng = np.random.default_rng(SEED)
+from .paths import RESULTS, MC_SETTINGS
 
 
-def draw_branch(br):
+def settings():
+    with open(MC_SETTINGS, "rb") as f:
+        return params.tomllib.load(f)
+
+
+def draw_branch(br, rng, cfg):
     b = copy.deepcopy(br)
     for st in b.streams:
-        tag = (st.elas_src or "").strip()[:3]
-        sigma = 0.25 if tag == "[S]" else 0.45
+        sigma = cfg["sigma_demand_sourced"] if st.basis == "S" else cfg["sigma_demand_assumed"]
         st.elas = -abs(st.elas) * math.exp(rng.normal(0.0, sigma))
-    key = br.key.split("_")[0]
-    sig = SUPPLY_SIGMA_LR[key]
-    if sig is None:   # pollock: uniform 0 to 0.17 (quota-managed capture)
-        es_lr = rng.uniform(0.0, 0.17); es_sr = 0.0
+    mc = br.monte_carlo
+    if "supply_lr_uniform" in mc:   # e.g. pollock: quota-managed capture
+        es_lr = rng.uniform(*mc["supply_lr_uniform"]); es_sr = 0.0
     else:
-        es_lr = br.eps_s_lr * math.exp(rng.normal(0.0, sig))
-        es_sr = br.eps_s_sr * math.exp(rng.normal(0.0, SUPPLY_SIGMA_SR))
+        es_lr = br.eps_s_lr * math.exp(rng.normal(0.0, mc["supply_sigma_lr"]))
+        es_sr = br.eps_s_sr * math.exp(rng.normal(0.0, cfg["sigma_supply_sr"]))
     return b, es_sr, es_lr
 
 
-def run(br, n=N):
+def run(br, rng, cfg=None):
+    cfg = cfg or settings()
+    n = cfg["n"]
     subs = [s.name for s in br.subs]
     out = {s: {"sr": [], "lr": [], "lim": []} for s in subs}
     bundle = {"sr": [], "lr": []}
     for _ in range(n):
-        b, es_sr, es_lr = draw_branch(br)
+        b, es_sr, es_lr = draw_branch(br, rng, cfg)
         rs = b.results(es_sr) if es_sr > 0 else None
         rl = b.results(es_lr) if es_lr > 0 else None
         for i, s in enumerate(subs):
@@ -51,11 +50,12 @@ def run(br, n=N):
 
 
 def main(out_dir=RESULTS, verbose=False):
-    global rng
-    rng = np.random.default_rng(SEED)   # same draws on every run
+    cfg = settings()
+    # One generator shared by all animals, in params.ALL order, so a given seed gives the same draws on every run.
+    rng = np.random.default_rng(cfg["seed"])
     allres = {}
     for br in params.ALL:
-        r = run(br)
+        r = run(br, rng, cfg)
         allres[br.key] = r
         if not verbose:
             continue
@@ -64,5 +64,6 @@ def main(out_dir=RESULTS, verbose=False):
         for s, d in r.items():
             if s == "__bundle__": continue
             print(f"  {s[:40]:40s} point {base[s]['DF']:.4f}  LR p10 {d['lr']['p10']:.4f} p50 {d['lr']['p50']:.4f} p90 {d['lr']['p90']:.4f} | limit p10 {d['lim']['p10']:.3f} p90 {d['lim']['p90']:.3f} | SR p10 {d['sr']['p10']:.4f} p90 {d['sr']['p90']:.4f}")
-    json.dump(allres, open(out_dir / "mc_results.json", "w"), indent=0)
+    with open(out_dir / "mc_results.json", "w") as f:
+        json.dump(allres, f, indent=0)
     return allres

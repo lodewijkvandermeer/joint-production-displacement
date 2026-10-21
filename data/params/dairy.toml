@@ -11,6 +11,7 @@ name = "Dairy cow ({scenario} prices)"
 unit = "per 100 lb milk + pro-rata cattle sales"
 eps_s_sr = 0.12
 eps_s_lr = 0.90
+monte_carlo = { supply_sigma_lr = 0.6 }
 notes = "Milk is fungible across routes; cheese and whey are joint in fixed proportions; whey outlets are fungible."
 supply_src = "[S] Chavas & Klemme 1986: 0.115 (current year), 0.89 (5-year), 2.46 (10-year); EU medium-run 0.18-0.65 (Bouamra-Mechemache et al. 2005)"
 default_scenario = "2026"

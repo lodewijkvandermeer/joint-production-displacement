@@ -91,6 +91,14 @@ def _read(animal: str) -> dict:
         return tomllib.load(f)
 
 
+def _basis(animal: str, stream: dict) -> str:
+    """'S' or 'A' from the leading tag of elas_src; a missing or malformed tag is an error, not a silent default."""
+    tag = stream.get("elas_src", "")[:3]
+    if tag not in ("[S]", "[A]"):
+        raise ValueError(f"{animal}: stream {stream['name']!r} elas_src must start with [S] or [A], got {tag!r}")
+    return tag[1]
+
+
 def load(animal: str, scenario: Optional[str] = None) -> Branch:
     """Build the Branch for `animal` (the file's stem) at `scenario` (default: the file's default_scenario)."""
     data = _read(animal)
@@ -122,13 +130,13 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
             env.define(name, raw)
         subs += [make_sub(d) for d in data["derived_subs"]]
 
-    streams = [Stream(d["name"], d["route"], d["elas"], d.get("floor"), d.get("floor_note", ""), d.get("elas_src", ""))
-               for d in data["streams"]]
+    streams = [Stream(d["name"], d["route"], d["elas"], d.get("floor"), d.get("floor_note", ""), d.get("elas_src", ""),
+                      _basis(animal, d)) for d in data["streams"]]
     raw_shares = {route: env.value(x) for route, x in data["raw_shares"].items()} if "raw_shares" in data else None
 
     return Branch(meta["key"], meta["name"], meta["unit"], meta["eps_s_sr"], meta["eps_s_lr"], subs, streams,
                   notes=meta.get("notes", ""), supply_src=meta.get("supply_src", ""), price_tag=meta.get("price_tag", ""),
-                  raw_shares=raw_shares)
+                  raw_shares=raw_shares, monte_carlo=dict(data.get("monte_carlo", {})))
 
 
 def dairy(scenario="2026"): return load("dairy", scenario)

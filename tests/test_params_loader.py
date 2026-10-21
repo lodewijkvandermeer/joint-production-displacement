@@ -51,3 +51,18 @@ def test_every_parameter_file_is_loaded():
     used = {"dairy", "eggs", "beef", "broiler", "pork", "pollock", "salmon"}
     assert {p.stem for p in PARAMS.glob("*.toml")} == used
     assert len(params.ALL) == 9
+
+
+def test_every_stream_has_explicit_basis():
+    for br in params.ALL:
+        assert all(st.basis in ("S", "A") and st.elas_src.startswith(f"[{st.basis}]") for st in br.streams)
+
+
+def test_malformed_elas_tag_is_an_error():
+    with pytest.raises(ValueError, match=r"\[S\] or \[A\]"):
+        params._basis("x", {"name": "s", "elas_src": "Source: Andreyeva"})
+
+
+def test_every_animal_has_supply_spread():
+    for br in params.ALL:
+        assert "supply_sigma_lr" in br.monte_carlo or "supply_lr_uniform" in br.monte_carlo

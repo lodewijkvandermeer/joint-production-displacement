@@ -7,6 +7,7 @@ name = "Layer hen ({scenario} prices)"
 unit = "per dozen eggs + pro-rata spent hen"
 eps_s_sr = 0.03
 eps_s_lr = 1.00
+monte_carlo = { supply_sigma_lr = 0.4 }
 notes = "Eggs flow between shell and breaking (fungible routes); white and yolk are joint in fixed proportions."
 supply_src = "[S] Chavas 1980 SR 0.03; Chavas & Johnson 1981 LR ~1; Harrington & Dubman 2008: 1.04"
 default_scenario = "2019-21"
