@@ -16,3 +16,12 @@ def test_draw_does_not_mutate_input():
     before = [s.elas for s in br.streams]
     monte_carlo.draw_branch(br, np.random.default_rng(1), monte_carlo.settings())
     assert [s.elas for s in br.streams] == before
+
+
+def test_short_run_supply_never_exceeds_long_run():
+    cfg = monte_carlo.settings()
+    rng = np.random.default_rng(7)
+    for br in params.ALL:
+        for _ in range(500):
+            _, es_sr, es_lr = monte_carlo.draw_branch(br, rng, cfg)
+            assert es_sr <= es_lr

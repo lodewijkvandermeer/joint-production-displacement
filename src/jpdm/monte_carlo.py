@@ -21,8 +21,12 @@ def draw_branch(br, rng, cfg):
     if "supply_lr_uniform" in mc:   # e.g. pollock: quota-managed capture
         es_lr = rng.uniform(*mc["supply_lr_uniform"]); es_sr = 0.0
     else:
-        es_lr = br.eps_s_lr * math.exp(rng.normal(0.0, mc["supply_sigma_lr"]))
-        es_sr = br.eps_s_sr * math.exp(rng.normal(0.0, cfg["sigma_supply_sr"]))
+        # long-run supply cannot be less elastic than short-run: redraw the pair until it is ordered
+        while True:
+            es_lr = br.eps_s_lr * math.exp(rng.normal(0.0, mc["supply_sigma_lr"]))
+            es_sr = br.eps_s_sr * math.exp(rng.normal(0.0, cfg["sigma_supply_sr"]))
+            if es_sr <= es_lr:
+                break
     return b, es_sr, es_lr
 
 

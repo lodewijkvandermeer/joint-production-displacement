@@ -4,4 +4,4 @@
 | Roe | 7.8% | 0.000 | 0.004 (0.001–0.013) | n/a (quota) | −10.0% | −0.3%; n/a |
 | Fishmeal and fish oil | 11.6% | 0.000 | 0.001 (0.000–0.004) | n/a (quota) | −0.7% to −1.3% | −0.6%; n/a |
 | Headed and gutted | 5.0% | 0.000 | 0.002 (0.001–0.007) | n/a (quota) | −0.5% | −0.5%; n/a (share of the stream) |
-| All products together (bundle) | 100% | 0.000 | 0.040 (0.015–0.122) | n/a (quota) |  |  |
+| All products together (bundle) | 100% | 0.000 | 0.040 (0.014–0.122) | n/a (quota) |  |  |
