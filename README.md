@@ -45,7 +45,7 @@ cd joint-production-displacement
 pip install -e ".[test]"
 
 python -m jpdm summary      # every product's factor at three horizons
-pytest                      # about 70 tests, a few seconds
+pytest                      # about 150 tests, under 10 seconds
 python -m jpdm check        # regenerate results, tables and docs in a scratch directory and compare with the repository
 python -m jpdm all          # regenerate results, tables, workbook, figures and docs (about two minutes)
 ```

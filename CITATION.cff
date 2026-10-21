@@ -3,7 +3,9 @@ message: "If you use this model or its results, please cite the working paper be
 title: "Joint-production displacement model"
 version: 1.0.0
 date-released: 2026-10-19
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 authors:
   - family-names: "van der Meer"
     given-names: "Lodewijk"
