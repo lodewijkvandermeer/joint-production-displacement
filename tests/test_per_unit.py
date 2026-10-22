@@ -82,3 +82,18 @@ def test_committed_per_unit_file_matches_the_model():
         for s in br.subs:
             d = P[br.key]["subs"][s.name]["horizons"]["lr"]
             assert d["D"] == pytest.approx(br.discount(s.name, br.eps_s_lr), rel=1e-9)
+
+
+@pytest.mark.parametrize("br", params.ALL, ids=lambda b: b.key)
+def test_grouped_steps_multiply_to_the_discount(br):
+    for s in br.subs:
+        g = per_unit.grouped_steps(br.steps(s.name, br.eps_s_lr))
+        assert math.prod(g.values()) == pytest.approx(br.discount(s.name, br.eps_s_lr), rel=1e-12)
+
+
+def test_value_share_rule_is_exact_for_fixed_products_with_average_buyers():
+    # a carcass part whose buyers respond like the animal's average: the long-run discount is its value share
+    hen = params.eggs("2019-21")
+    g = per_unit.grouped_steps(hen.steps("Shell eggs (table)", INF))
+    assert g["horizon"] == 1.0
+    assert hen.multiplier("Shell eggs (table)", INF) == pytest.approx(1 / (g["value_share"] * g["price_response"]))

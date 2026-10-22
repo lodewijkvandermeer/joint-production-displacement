@@ -35,6 +35,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.0078205157304423,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.01325088988417829,
 "raw_kg_per_kg": 0.1465961571255606,
 "animals_per_t_protein": 0.4015421177023724
@@ -52,6 +57,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.0078205157304423,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.049066046598087436,
 "raw_kg_per_kg": 0.5428234586125192,
 "animals_per_t_protein": 1.4868498969117403
@@ -67,6 +77,11 @@
 "route_elas": 1.0,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.0078205157304423,
 "horizon": 1.0
 },
 "animals_per_t": 0.0839917393578806,
@@ -112,6 +127,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.007820515730442,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.013250889884178291,
 "raw_kg_per_kg": 0.14659615712556062,
 "animals_per_t_protein": null
@@ -129,6 +149,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.007820515730442,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.049066046598087436,
 "raw_kg_per_kg": 0.5428234586125192,
 "animals_per_t_protein": null
@@ -144,6 +169,11 @@
 "route_elas": 0.9999999999999999,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.922,
+"price_response": 1.007820515730442,
 "horizon": 1.0
 },
 "animals_per_t": 0.0839917393578806,
@@ -189,6 +219,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.25156464573694526,
+"price_response": 1.4211896083873332,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.11653449578783508,
 "raw_kg_per_kg": 1.2892348668189713,
 "animals_per_t_protein": null
@@ -206,6 +241,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.25156464573694526,
+"price_response": 1.4211896083873332,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.4315096609049451,
 "raw_kg_per_kg": 4.773842255435919,
 "animals_per_t_protein": null
@@ -221,6 +261,11 @@
 "route_elas": 1.4101614188289189,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.25156464573694526,
+"price_response": 1.4211896083873332,
 "horizon": 1.0
 },
 "animals_per_t": 0.7386624658394287,
@@ -266,6 +311,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.6704353542630547,
+"price_response": 0.8527137650323999,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.09084077880060734,
 "raw_kg_per_kg": 1.0049822463895548,
 "animals_per_t_protein": 0.25954508228744955
@@ -283,6 +333,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.6704353542630547,
+"price_response": 0.8527137650323999,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.33636970230649166,
 "raw_kg_per_kg": 3.7212976760510084,
 "animals_per_t_protein": 0.9610562923042619
@@ -298,6 +353,11 @@
 "route_elas": 0.8460968512973513,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.6704353542630547,
+"price_response": 0.8527137650323999,
 "horizon": 1.0
 },
 "animals_per_t": 0.5758009524475525,
@@ -343,6 +403,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.7462127809000478,
+"price_response": 1.1533896763358278,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.11578806783739506,
 "raw_kg_per_kg": 1.2809770463961885,
 "animals_per_t_protein": 0.46315227134958026
@@ -360,6 +425,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.7462127809000478,
+"price_response": 1.1533896763358278,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.42874575078883015,
 "raw_kg_per_kg": 4.743264791944453,
 "animals_per_t_protein": 1.7149830031553206
@@ -375,6 +445,11 @@
 "route_elas": 1.1444395686863753,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.7462127809000478,
+"price_response": 1.1533896763358278,
 "horizon": 1.0
 },
 "animals_per_t": 0.7339311774194978,
@@ -420,6 +495,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.19707571785878752,
+"price_response": 0.42290954798980357,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.13544544718900173,
 "raw_kg_per_kg": 1.4984489518525652,
 "animals_per_t_protein": 0.16930680898625214
@@ -437,6 +517,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.19707571785878752,
+"price_response": 0.42290954798980357,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.5015340615885335,
 "raw_kg_per_kg": 5.548530456376405,
 "animals_per_t_protein": 0.6269175769856669
@@ -452,6 +537,11 @@
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.19707571785878752,
+"price_response": 0.42290954798980357,
 "horizon": 1.0
 },
 "animals_per_t": 0.8585309210888276,
@@ -497,6 +587,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.24963927763545501,
+"price_response": 0.42290954798980357,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.1930175211739644,
 "raw_kg_per_kg": 2.13537559434329,
 "animals_per_t_protein": 0.214463912415516
@@ -514,6 +609,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.24963927763545501,
+"price_response": 0.42290954798980357,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.7147147679098199,
 "raw_kg_per_kg": 7.906973745330747,
 "animals_per_t_protein": 0.7941275198997999
@@ -529,6 +629,11 @@
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.24963927763545501,
+"price_response": 0.42290954798980357,
 "horizon": 1.0
 },
 "animals_per_t": 1.2234557430972977,
@@ -574,6 +679,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.13022824102206956,
+"price_response": 0.3171821609923527,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.009817334913935669,
 "raw_kg_per_kg": 0.10861033365887121,
 "animals_per_t_protein": 0.08181112428279724
@@ -591,6 +701,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.13022824102206956,
+"price_response": 0.3171821609923527,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.036352110429304134,
 "raw_kg_per_kg": 0.40216768374952533,
 "animals_per_t_protein": 0.30293425357753445
@@ -606,6 +721,11 @@
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.13022824102206956,
+"price_response": 0.3171821609923527,
 "horizon": 1.0
 },
 "animals_per_t": 0.06222789884208891,
@@ -651,6 +771,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.10292753674421891,
+"price_response": 0.3171821609923527,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.010485479416275053,
 "raw_kg_per_kg": 0.11600209506536166,
 "animals_per_t_protein": null
@@ -668,6 +793,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.10292753674421891,
+"price_response": 0.3171821609923527,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.03882614874466163,
 "raw_kg_per_kg": 0.42953826133208106,
 "animals_per_t_protein": null
@@ -683,6 +813,11 @@
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.10292753674421891,
+"price_response": 0.3171821609923527,
 "horizon": 1.0
 },
 "animals_per_t": 0.06646298187307059,
@@ -728,6 +863,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
+"grouped": {
+"value_share": 0.07316847520912106,
+"price_response": 0.3171821609923527,
+"horizon": 0.15776420378339284
+},
 "animals_per_t": 0.006340057321468638,
 "raw_kg_per_kg": 0.07014080166742799,
 "animals_per_t_protein": null
@@ -745,6 +885,11 @@
 "animal_elas": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
+"grouped": {
+"value_share": 0.07316847520912106,
+"price_response": 0.3171821609923527,
+"horizon": 0.5841770509004678
+},
 "animals_per_t": 0.023476275985144245,
 "raw_kg_per_kg": 0.2597208091775374,
 "animals_per_t_protein": null
@@ -760,6 +905,11 @@
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
 "animal_elas": 1.0078205157304423,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.07316847520912106,
+"price_response": 0.3171821609923527,
 "horizon": 1.0
 },
 "animals_per_t": 0.04018691927208921,
@@ -802,6 +952,11 @@
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
 "horizon": 0.15776420378339284
+},
+"grouped": {
+"value_share": 0.046799999999999994,
+"price_response": 0.8007860237164258,
+"horizon": 0.15776420378339284
 }
 },
 "lr": {
@@ -814,6 +969,11 @@
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
 "horizon": 0.5841770509004678
+},
+"grouped": {
+"value_share": 0.046799999999999994,
+"price_response": 0.8007860237164258,
+"horizon": 0.5841770509004678
 }
 },
 "limit": {
@@ -825,6 +985,11 @@
 "within_stream": 1.0,
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.046799999999999994,
+"price_response": 0.8007860237164258,
 "horizon": 1.0
 }
 }
@@ -860,6 +1025,11 @@
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
 "horizon": 0.15776420378339284
+},
+"grouped": {
+"value_share": 0.031200000000000002,
+"price_response": 1.067714698288568,
+"horizon": 0.15776420378339284
 }
 },
 "lr": {
@@ -872,6 +1042,11 @@
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
 "horizon": 0.5841770509004678
+},
+"grouped": {
+"value_share": 0.031200000000000002,
+"price_response": 1.067714698288568,
+"horizon": 0.5841770509004678
 }
 },
 "limit": {
@@ -883,6 +1058,11 @@
 "within_stream": 1.0,
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.031200000000000002,
+"price_response": 1.067714698288568,
 "horizon": 1.0
 }
 }
@@ -1091,6 +1271,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088646,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.014257913582527879,
 "raw_kg_per_kg": 0.15773697903282635,
 "animals_per_t_protein": 0.43205798734932965
@@ -1108,6 +1293,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088646,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.05117276194537911,
 "raw_kg_per_kg": 0.5661302988904054,
 "animals_per_t_protein": 1.550689755920579
@@ -1123,6 +1313,11 @@
 "route_elas": 1.0,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088646,
 "horizon": 1.0
 },
 "animals_per_t": 0.08504975056982174,
@@ -1168,6 +1363,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088644,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.014257913582527879,
 "raw_kg_per_kg": 0.15773697903282635,
 "animals_per_t_protein": null
@@ -1185,6 +1385,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088644,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.05117276194537911,
 "raw_kg_per_kg": 0.5661302988904054,
 "animals_per_t_protein": null
@@ -1200,6 +1405,11 @@
 "route_elas": 0.9999999999999999,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.93,
+"price_response": 1.0117370089088644,
 "horizon": 1.0
 },
 "animals_per_t": 0.08504975056982174,
@@ -1245,6 +1455,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.4397485976093277,
+"price_response": 1.2820767645104816,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.19527463204873421,
 "raw_kg_per_kg": 2.160346278073946,
 "animals_per_t_protein": null
@@ -1262,6 +1477,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.4397485976093277,
+"price_response": 1.2820767645104816,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.7008558581843849,
 "raw_kg_per_kg": 7.753650993013211,
 "animals_per_t_protein": null
@@ -1277,6 +1497,11 @@
 "route_elas": 1.2672035847469614,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.4397485976093277,
+"price_response": 1.2820767645104816,
 "horizon": 1.0
 },
 "animals_per_t": 1.1648309307127958,
@@ -1322,6 +1547,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.49025140239067233,
+"price_response": 0.7692460587062889,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.06367651045067421,
 "raw_kg_per_kg": 0.7044607428501999,
 "animals_per_t_protein": 0.18193288700192634
@@ -1339,6 +1569,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.49025140239067233,
+"price_response": 0.7692460587062889,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.22853995375577776,
 "raw_kg_per_kg": 2.5283644542434387,
 "animals_per_t_protein": 0.6529712964450793
@@ -1354,6 +1589,11 @@
 "route_elas": 0.7603221508481768,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.49025140239067233,
+"price_response": 0.7692460587062889,
 "horizon": 1.0
 },
 "animals_per_t": 0.3798361730585205,
@@ -1399,6 +1639,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.8811067553358295,
+"price_response": 1.0487025548413007,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.13209317671567575,
 "raw_kg_per_kg": 1.4613623883590563,
 "animals_per_t_protein": 0.528372706862703
@@ -1416,6 +1661,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.8811067553358295,
+"price_response": 1.0487025548413007,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.47409269578990676,
 "raw_kg_per_kg": 5.244943391091172,
 "animals_per_t_protein": 1.896370783159627
@@ -1431,6 +1681,11 @@
 "route_elas": 1.0365367141924586,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.8811067553358295,
+"price_response": 1.0487025548413007,
 "horizon": 1.0
 },
 "animals_per_t": 0.7879478064315614,
@@ -1476,6 +1731,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.04453229648279817,
+"price_response": 0.384524270108477,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.030071587461351534,
 "raw_kg_per_kg": 0.3326855176544016,
 "animals_per_t_protein": 0.03758948432668942
@@ -1493,6 +1753,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.04453229648279817,
+"price_response": 0.384524270108477,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.10792926872310003,
 "raw_kg_per_kg": 1.194034225208534,
 "animals_per_t_protein": 0.13491158590387503
@@ -1508,6 +1773,11 @@
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.04453229648279817,
+"price_response": 0.384524270108477,
 "horizon": 1.0
 },
 "animals_per_t": 0.17937975272628048,
@@ -1553,6 +1823,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.0645883286091932,
+"price_response": 0.384524270108477,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.04906681087493746,
 "raw_kg_per_kg": 0.5428319138974226,
 "animals_per_t_protein": 0.05451867874993051
@@ -1570,6 +1845,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.0645883286091932,
+"price_response": 0.384524270108477,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.17610460449129342,
 "raw_kg_per_kg": 1.9482660029772987,
 "animals_per_t_protein": 0.1956717827681038
@@ -1585,6 +1865,11 @@
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.0645883286091932,
+"price_response": 0.384524270108477,
 "horizon": 1.0
 },
 "animals_per_t": 0.29268798706172033,
@@ -1630,6 +1915,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.04775471791515595,
+"price_response": 0.28839320258135775,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.0035371598378774937,
 "raw_kg_per_kg": 0.039132016332793396,
 "animals_per_t_protein": 0.029476331982312448
@@ -1647,6 +1937,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.04775471791515595,
+"price_response": 0.28839320258135775,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.012695142055586018,
 "raw_kg_per_kg": 0.1404478533727856,
 "animals_per_t_protein": 0.10579285046321682
@@ -1662,6 +1957,11 @@
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.04775471791515595,
+"price_response": 0.28839320258135775,
 "horizon": 1.0
 },
 "animals_per_t": 0.02109947996218217,
@@ -1707,6 +2007,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.03512772490776879,
+"price_response": 0.28839320258135775,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.003516063457134686,
 "raw_kg_per_kg": 0.038898624585281705,
 "animals_per_t_protein": null
@@ -1724,6 +2029,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.03512772490776879,
+"price_response": 0.28839320258135775,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.012619425502570593,
 "raw_kg_per_kg": 0.13961019221946877,
 "animals_per_t_protein": null
@@ -1739,6 +2049,11 @@
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.03512772490776879,
+"price_response": 0.28839320258135775,
 "horizon": 1.0
 },
 "animals_per_t": 0.020973638133381878,
@@ -1784,6 +2099,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
+"grouped": {
+"value_share": 0.027532541143926895,
+"price_response": 0.28839320258135775,
+"horizon": 0.16764203877144615
+},
 "animals_per_t": 0.002344042304756458,
 "raw_kg_per_kg": 0.025932416390187805,
 "animals_per_t_protein": null
@@ -1801,6 +2121,11 @@
 "animal_elas": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
+"grouped": {
+"value_share": 0.027532541143926895,
+"price_response": 0.28839320258135775,
+"horizon": 0.6016803294839618
+},
 "animals_per_t": 0.008412950335047064,
 "raw_kg_per_kg": 0.09307346147964587,
 "animals_per_t_protein": null
@@ -1816,6 +2141,11 @@
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
 "animal_elas": 1.0117370089088646,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.027532541143926895,
+"price_response": 0.28839320258135775,
 "horizon": 1.0
 },
 "animals_per_t": 0.01398242542225459,
@@ -1858,6 +2188,11 @@
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
 "horizon": 0.16764203877144615
+},
+"grouped": {
+"value_share": 0.04200000000000001,
+"price_response": 0.7447636350599486,
+"horizon": 0.16764203877144615
 }
 },
 "lr": {
@@ -1870,6 +2205,11 @@
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
 "horizon": 0.6016803294839618
+},
+"grouped": {
+"value_share": 0.04200000000000001,
+"price_response": 0.7447636350599486,
+"horizon": 0.6016803294839618
 }
 },
 "limit": {
@@ -1881,6 +2221,11 @@
 "within_stream": 1.0,
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.04200000000000001,
+"price_response": 0.7447636350599486,
 "horizon": 1.0
 }
 }
@@ -1916,6 +2261,11 @@
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
 "horizon": 0.16764203877144615
+},
+"grouped": {
+"value_share": 0.028000000000000008,
+"price_response": 0.9930181800799315,
+"horizon": 0.16764203877144615
 }
 },
 "lr": {
@@ -1928,6 +2278,11 @@
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
 "horizon": 0.6016803294839618
+},
+"grouped": {
+"value_share": 0.028000000000000008,
+"price_response": 0.9930181800799315,
+"horizon": 0.6016803294839618
 }
 },
 "limit": {
@@ -1939,6 +2294,11 @@
 "within_stream": 1.0,
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.028000000000000008,
+"price_response": 0.9930181800799315,
 "horizon": 1.0
 }
 }
@@ -2145,6 +2505,11 @@
 "animal_elas": 0.9651843347900257,
 "horizon": 0.1345069109388476
 },
+"grouped": {
+"value_share": 0.4340799650790305,
+"price_response": 0.9651843347900257,
+"horizon": 0.1345069109388476
+},
 "animals_per_t": 0.43129467767640234,
 "raw_kg_per_kg": 0.27388476502187564,
 "animals_per_t_protein": null
@@ -2160,6 +2525,11 @@
 "animal_elas": 0.9651843347900257,
 "horizon": 0.453210457532846
 },
+"grouped": {
+"value_share": 0.4340799650790305,
+"price_response": 0.9651843347900257,
+"horizon": 0.453210457532846
+},
 "animals_per_t": 1.4532134954022635,
 "raw_kg_per_kg": 0.9228331748936957,
 "animals_per_t_protein": null
@@ -2173,6 +2543,11 @@
 "within_stream": 1.0,
 "animal_share": 0.4340799650790305,
 "animal_elas": 0.9651843347900257,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.4340799650790305,
+"price_response": 0.9651843347900257,
 "horizon": 1.0
 },
 "animals_per_t": 3.206487121486916,
@@ -2216,6 +2591,11 @@
 "animal_elas": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
+"grouped": {
+"value_share": 0.21875926969810558,
+"price_response": 1.072427038655584,
+"horizon": 0.1345069109388476
+},
 "animals_per_t": 0.3037194072026775,
 "raw_kg_per_kg": 0.19287072801928057,
 "animals_per_t_protein": null
@@ -2231,6 +2611,11 @@
 "animal_elas": 1.072427038655584,
 "horizon": 0.453210457532846
 },
+"grouped": {
+"value_share": 0.21875926969810558,
+"price_response": 1.072427038655584,
+"horizon": 0.453210457532846
+},
 "animals_per_t": 1.0233586552479157,
 "raw_kg_per_kg": 0.6498627489114811,
 "animals_per_t_protein": null
@@ -2244,6 +2629,11 @@
 "within_stream": 0.8424593925602565,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.21875926969810558,
+"price_response": 1.072427038655584,
 "horizon": 1.0
 },
 "animals_per_t": 2.2580208338942596,
@@ -2287,6 +2677,11 @@
 "animal_elas": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
+"grouped": {
+"value_share": 0.04090816546846114,
+"price_response": 1.072427038655584,
+"horizon": 0.1345069109388476
+},
 "animals_per_t": 0.2394458531498741,
 "raw_kg_per_kg": 0.1520551368236927,
 "animals_per_t_protein": null
@@ -2302,6 +2697,11 @@
 "animal_elas": 1.072427038655584,
 "horizon": 0.453210457532846
 },
+"grouped": {
+"value_share": 0.04090816546846114,
+"price_response": 1.072427038655584,
+"horizon": 0.453210457532846
+},
 "animals_per_t": 0.8067939699376079,
 "raw_kg_per_kg": 0.5123378244959916,
 "animals_per_t_protein": null
@@ -2315,6 +2715,11 @@
 "within_stream": 0.15754060743974355,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.04090816546846114,
+"price_response": 1.072427038655584,
 "horizon": 1.0
 },
 "animals_per_t": 1.7801750964211505,
@@ -2358,6 +2763,11 @@
 "animal_elas": 1.1355109821059126,
 "horizon": 0.1345069109388476
 },
+"grouped": {
+"value_share": 0.24594768256457475,
+"price_response": 1.1355109821059126,
+"horizon": 0.1345069109388476
+},
 "animals_per_t": 0.2666725548948818,
 "raw_kg_per_kg": 0.16934489066421438,
 "animals_per_t_protein": null
@@ -2373,6 +2783,11 @@
 "animal_elas": 1.1355109821059126,
 "horizon": 0.453210457532846
 },
+"grouped": {
+"value_share": 0.24594768256457475,
+"price_response": 1.1355109821059126,
+"horizon": 0.453210457532846
+},
 "animals_per_t": 0.8985322001061328,
 "raw_kg_per_kg": 0.570594290234437,
 "animals_per_t_protein": null
@@ -2386,6 +2801,11 @@
 "within_stream": 1.0,
 "animal_share": 0.24594768256457475,
 "animal_elas": 1.1355109821059126,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.24594768256457475,
+"price_response": 1.1355109821059126,
 "horizon": 1.0
 },
 "animals_per_t": 1.982593704914703,
@@ -2428,6 +2848,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
+},
+"grouped": {
+"value_share": 0.006979735785859715,
+"price_response": 0.3860737339160103,
+"horizon": 0.1345069109388476
 }
 },
 "lr": {
@@ -2440,6 +2865,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
+},
+"grouped": {
+"value_share": 0.006979735785859715,
+"price_response": 0.3860737339160103,
+"horizon": 0.453210457532846
 }
 },
 "limit": {
@@ -2451,6 +2881,11 @@
 "within_stream": 0.11574074074074076,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.006979735785859715,
+"price_response": 0.3860737339160103,
 "horizon": 1.0
 }
 }
@@ -2486,6 +2921,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
+},
+"grouped": {
+"value_share": 0.015395302933381998,
+"price_response": 0.3860737339160103,
+"horizon": 0.1345069109388476
 }
 },
 "lr": {
@@ -2498,6 +2938,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
+},
+"grouped": {
+"value_share": 0.015395302933381998,
+"price_response": 0.3860737339160103,
+"horizon": 0.453210457532846
 }
 },
 "limit": {
@@ -2509,6 +2954,11 @@
 "within_stream": 0.2552910052910053,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.015395302933381998,
+"price_response": 0.3860737339160103,
 "horizon": 1.0
 }
 }
@@ -2544,6 +2994,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
+},
+"grouped": {
+"value_share": 0.0324258582508797,
+"price_response": 0.3860737339160103,
+"horizon": 0.1345069109388476
 }
 },
 "lr": {
@@ -2556,6 +3011,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
+},
+"grouped": {
+"value_share": 0.0324258582508797,
+"price_response": 0.3860737339160103,
+"horizon": 0.453210457532846
 }
 },
 "limit": {
@@ -2567,6 +3027,11 @@
 "within_stream": 0.5376984126984127,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.0324258582508797,
+"price_response": 0.3860737339160103,
 "horizon": 1.0
 }
 }
@@ -2602,6 +3067,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
+},
+"grouped": {
+"value_share": 0.005504020219706517,
+"price_response": 0.3860737339160103,
+"horizon": 0.1345069109388476
 }
 },
 "lr": {
@@ -2614,6 +3084,11 @@
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
+},
+"grouped": {
+"value_share": 0.005504020219706517,
+"price_response": 0.3860737339160103,
+"horizon": 0.453210457532846
 }
 },
 "limit": {
@@ -2625,6 +3100,11 @@
 "within_stream": 0.09126984126984126,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.005504020219706517,
+"price_response": 0.3860737339160103,
 "horizon": 1.0
 }
 }
@@ -2748,6 +3228,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
 "animals_per_t": 4.1459474390884115,
 "raw_kg_per_kg": 0.058222451063546184,
 "animals_per_t_protein": 32.904344754669935
@@ -2765,6 +3250,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
 "animals_per_t": 47.94033748134531,
 "raw_kg_per_kg": 0.6732366953477903,
 "animals_per_t_protein": 380.47886889956595
@@ -2780,6 +3270,11 @@
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
 "animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
 "horizon": 1.0
 },
 "animals_per_t": 71.20165415771967,
@@ -2825,6 +3320,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
 "animals_per_t": 4.1459474390884115,
 "raw_kg_per_kg": 0.05822245106354619,
 "animals_per_t_protein": 32.904344754669935
@@ -2842,6 +3342,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
 "animals_per_t": 47.94033748134531,
 "raw_kg_per_kg": 0.6732366953477904,
 "animals_per_t_protein": 380.47886889956595
@@ -2857,6 +3362,11 @@
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
 "animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.9989744490881082,
+"price_response": 1.000926979270969,
 "horizon": 1.0
 },
 "animals_per_t": 71.20165415771969,
@@ -2902,6 +3412,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
+"grouped": {
+"value_share": 0.48283765039258564,
+"price_response": 0.7954386590232866,
+"horizon": 0.05822824607283239
+},
 "animals_per_t": 2.4436378945620443,
 "raw_kg_per_kg": 0.034316544004341795,
 "animals_per_t_protein": 22.418696280385728
@@ -2919,6 +3434,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
+"grouped": {
+"value_share": 0.48283765039258564,
+"price_response": 0.7954386590232866,
+"horizon": 0.6733037040846278
+},
 "animals_per_t": 28.256225402912133,
 "raw_kg_per_kg": 0.3968083833506843,
 "animals_per_t_protein": 259.2314257147902
@@ -2934,6 +3454,11 @@
 "route_elas": 0.7947019867549668,
 "animal_share": 0.9989744490881082,
 "animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.48283765039258564,
+"price_response": 0.7954386590232866,
 "horizon": 1.0
 },
 "animals_per_t": 41.96653788104008,
@@ -2979,6 +3504,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
+"grouped": {
+"value_share": 0.5161367986955226,
+"price_response": 1.1931579885349297,
+"horizon": 0.05822824607283239
+},
 "animals_per_t": 7.3309136836861315,
 "raw_kg_per_kg": 0.10294963201302539,
 "animals_per_t_protein": 46.10637536909517
@@ -2996,6 +3526,11 @@
 "animal_elas": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
+"grouped": {
+"value_share": 0.5161367986955226,
+"price_response": 1.1931579885349297,
+"horizon": 0.6733037040846278
+},
 "animals_per_t": 84.7686762087364,
 "raw_kg_per_kg": 1.1904251500520528,
 "animals_per_t_protein": 533.1363283568327
@@ -3011,6 +3546,11 @@
 "route_elas": 1.1920529801324502,
 "animal_share": 0.9989744490881082,
 "animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.5161367986955226,
+"price_response": 1.1931579885349297,
 "horizon": 1.0
 },
 "animals_per_t": 125.89961364312023,
@@ -3053,6 +3593,11 @@
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
 "horizon": 0.05822824607283239
+},
+"grouped": {
+"value_share": 0.0010255509118917547,
+"price_response": 0.09704277399142588,
+"horizon": 0.05822824607283239
 }
 },
 "lr": {
@@ -3065,6 +3610,11 @@
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
 "horizon": 0.6733037040846278
+},
+"grouped": {
+"value_share": 0.0010255509118917547,
+"price_response": 0.09704277399142588,
+"horizon": 0.6733037040846278
 }
 },
 "limit": {
@@ -3076,6 +3626,11 @@
 "within_stream": 1.0,
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.0010255509118917547,
+"price_response": 0.09704277399142588,
 "horizon": 1.0
 }
 }
@@ -3216,6 +3771,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
 "animals_per_t": 4.215411831454148,
 "raw_kg_per_kg": 0.05919795479208894,
 "animals_per_t_protein": 33.4556494559853
@@ -3233,6 +3793,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
 "animals_per_t": 48.217898360755015,
 "raw_kg_per_kg": 0.6771345437783386,
 "animals_per_t_protein": 382.68173302186517
@@ -3248,6 +3813,11 @@
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
 "animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
 "horizon": 1.0
 },
 "animals_per_t": 71.20601643642361,
@@ -3293,6 +3863,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
 "animals_per_t": 4.215411831454149,
 "raw_kg_per_kg": 0.05919795479208897,
 "animals_per_t_protein": 33.45564945598531
@@ -3310,6 +3885,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
 "animals_per_t": 48.217898360755015,
 "raw_kg_per_kg": 0.6771345437783387,
 "animals_per_t_protein": 382.68173302186517
@@ -3325,6 +3905,11 @@
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
 "animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.9995987260030683,
+"price_response": 1.0003631578559367,
 "horizon": 1.0
 },
 "animals_per_t": 71.20601643642362,
@@ -3370,6 +3955,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
+"grouped": {
+"value_share": 0.3237419365774774,
+"price_response": 0.7476197847846305,
+"horizon": 0.05920021990301738
+},
 "animals_per_t": 1.565663354175563,
 "raw_kg_per_kg": 0.02198695457666423,
 "animals_per_t_protein": 14.363883983262046
@@ -3387,6 +3977,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
+"grouped": {
+"value_share": 0.3237419365774774,
+"price_response": 0.7476197847846305,
+"horizon": 0.677160453201401
+},
 "animals_per_t": 17.908806896514786,
 "raw_kg_per_kg": 0.2514973111593747,
 "animals_per_t_protein": 164.3009807019705
@@ -3402,6 +3997,11 @@
 "route_elas": 0.7473483793495482,
 "animal_share": 0.9995987260030683,
 "animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.3237419365774774,
+"price_response": 0.7476197847846305,
 "horizon": 1.0
 },
 "animals_per_t": 26.44691787869123,
@@ -3447,6 +4047,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
+"grouped": {
+"value_share": 0.675856789425591,
+"price_response": 1.1214296771769459,
+"horizon": 0.05920021990301738
+},
 "animals_per_t": 9.173005756685052,
 "raw_kg_per_kg": 0.128818535840303,
 "animals_per_t_protein": 57.69186010493743
@@ -3464,6 +4069,11 @@
 "animal_elas": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
+"grouped": {
+"value_share": 0.675856789425591,
+"price_response": 1.1214296771769459,
+"horizon": 0.677160453201401
+},
 "animals_per_t": 104.92523077772067,
 "raw_kg_per_kg": 1.4734880757751108,
 "animals_per_t_protein": 659.907111809564
@@ -3479,6 +4089,11 @@
 "route_elas": 1.1210225690243223,
 "animal_share": 0.9995987260030683,
 "animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.675856789425591,
+"price_response": 1.1214296771769459,
 "horizon": 1.0
 },
 "animals_per_t": 154.94884599605203,
@@ -3521,6 +4136,11 @@
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
 "horizon": 0.05920021990301738
+},
+"grouped": {
+"value_share": 0.00040127399693165664,
+"price_response": 0.09535097487525016,
+"horizon": 0.05920021990301738
 }
 },
 "lr": {
@@ -3533,6 +4153,11 @@
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
 "horizon": 0.677160453201401
+},
+"grouped": {
+"value_share": 0.00040127399693165664,
+"price_response": 0.09535097487525016,
+"horizon": 0.677160453201401
 }
 },
 "limit": {
@@ -3544,6 +4169,11 @@
 "within_stream": 1.0,
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.00040127399693165664,
+"price_response": 0.09535097487525016,
 "horizon": 1.0
 }
 }
@@ -3682,6 +4312,11 @@
 "animal_elas": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.4521396749139154,
+"price_response": 1.2138072237835362,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 85.38640260222107,
 "raw_kg_per_kg": 0.23238372433269375,
 "animals_per_t_protein": 379.4951226765381
@@ -3697,6 +4332,11 @@
 "animal_elas": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.4521396749139154,
+"price_response": 1.2138072237835362,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 383.09496405692556,
 "raw_kg_per_kg": 1.042613716089874,
 "animals_per_t_protein": 1702.644284697447
@@ -3710,6 +4350,11 @@
 "within_stream": 0.8252997937147218,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.4521396749139154,
+"price_response": 1.2138072237835362,
 "horizon": 1.0
 },
 "animals_per_t": 914.5274609339432,
@@ -3753,6 +4398,11 @@
 "animal_elas": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.09570933505470307,
+"price_response": 1.2138072237835362,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 99.6366232249336,
 "raw_kg_per_kg": 0.2711664724043681,
 "animals_per_t_protein": 442.82943655526043
@@ -3768,6 +4418,11 @@
 "animal_elas": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.09570933505470307,
+"price_response": 1.2138072237835362,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 447.030059000477,
 "raw_kg_per_kg": 1.2166165435395975,
 "animals_per_t_protein": 1986.8002622243423
@@ -3781,6 +4436,11 @@
 "within_stream": 0.1747002062852782,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.09570933505470307,
+"price_response": 1.2138072237835362,
 "horizon": 1.0
 },
 "animals_per_t": 1067.1538474155166,
@@ -3824,6 +4484,11 @@
 "animal_elas": 0.9710457790268291,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.19935967474280877,
+"price_response": 0.9710457790268291,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 87.61587260287126,
 "raw_kg_per_kg": 0.2384513478213267,
 "animals_per_t_protein": null
@@ -3839,6 +4504,11 @@
 "animal_elas": 0.9710457790268291,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.19935967474280877,
+"price_response": 0.9710457790268291,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 393.09771278196513,
 "raw_kg_per_kg": 1.0698367390941053,
 "animals_per_t_protein": null
@@ -3852,6 +4522,11 @@
 "within_stream": 1.0,
 "animal_share": 0.19935967474280877,
 "animal_elas": 0.9710457790268291,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.19935967474280877,
+"price_response": 0.9710457790268291,
 "horizon": 1.0
 },
 "animals_per_t": 938.4061052705766,
@@ -3895,6 +4570,11 @@
 "animal_elas": 0.6473638526845528,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.16320180291218006,
+"price_response": 0.6473638526845528,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 15.751856774353211,
 "raw_kg_per_kg": 0.04286953227707657,
 "animals_per_t_protein": null
@@ -3910,6 +4590,11 @@
 "animal_elas": 0.6473638526845528,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.16320180291218006,
+"price_response": 0.6473638526845528,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 70.67234150749564,
 "raw_kg_per_kg": 0.19233860926700597,
 "animals_per_t_protein": null
@@ -3923,6 +4608,11 @@
 "within_stream": 1.0,
 "animal_share": 0.16320180291218006,
 "animal_elas": 0.6473638526845528,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.16320180291218006,
+"price_response": 0.6473638526845528,
 "horizon": 1.0
 },
 "animals_per_t": 168.7095971000617,
@@ -3966,6 +4656,11 @@
 "animal_elas": 0.3236819263422764,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.02087087215545536,
+"price_response": 0.3236819263422764,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 1.9153522342355553,
 "raw_kg_per_kg": 0.005212734955870205,
 "animals_per_t_protein": null
@@ -3981,6 +4676,11 @@
 "animal_elas": 0.3236819263422764,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.02087087215545536,
+"price_response": 0.3236819263422764,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 8.593426739724665,
 "raw_kg_per_kg": 0.023387476807758507,
 "animals_per_t_protein": null
@@ -3994,6 +4694,11 @@
 "within_stream": 1.0,
 "animal_share": 0.02087087215545536,
 "animal_elas": 0.3236819263422764,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.02087087215545536,
+"price_response": 0.3236819263422764,
 "horizon": 1.0
 },
 "animals_per_t": 20.514299258275983,
@@ -4037,6 +4742,11 @@
 "animal_elas": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.01655870848697285,
+"price_response": 0.48552288951341455,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 9.193690724330668,
 "raw_kg_per_kg": 0.02502112778817699,
 "animals_per_t_protein": null
@@ -4052,6 +4762,11 @@
 "animal_elas": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.01655870848697285,
+"price_response": 0.48552288951341455,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 41.2484483506784,
 "raw_kg_per_kg": 0.11225988867724085,
 "animals_per_t_protein": null
@@ -4065,6 +4780,11 @@
 "within_stream": 0.3076923076923077,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.01655870848697285,
+"price_response": 0.48552288951341455,
 "horizon": 1.0
 },
 "animals_per_t": 98.46863643972473,
@@ -4108,6 +4828,11 @@
 "animal_elas": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.03725709409568891,
+"price_response": 0.48552288951341455,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 13.790536086496001,
 "raw_kg_per_kg": 0.037531691682265486,
 "animals_per_t_protein": null
@@ -4123,6 +4848,11 @@
 "animal_elas": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.03725709409568891,
+"price_response": 0.48552288951341455,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 61.87267252601759,
 "raw_kg_per_kg": 0.16838983301586125,
 "animals_per_t_protein": null
@@ -4136,6 +4866,11 @@
 "within_stream": 0.6923076923076924,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.03725709409568891,
+"price_response": 0.48552288951341455,
 "horizon": 1.0
 },
 "animals_per_t": 147.7029546595871,
@@ -4179,6 +4914,11 @@
 "animal_elas": 0.19420915580536582,
 "horizon": 0.09336669072246542
 },
+"grouped": {
+"value_share": 0.014902837638275566,
+"price_response": 0.19420915580536582,
+"horizon": 0.09336669072246542
+},
 "animals_per_t": 0.7354952579464533,
 "raw_kg_per_kg": 0.002001690223054159,
 "animals_per_t_protein": null
@@ -4194,6 +4934,11 @@
 "animal_elas": 0.19420915580536582,
 "horizon": 0.4188993555925563
 },
+"grouped": {
+"value_share": 0.014902837638275566,
+"price_response": 0.19420915580536582,
+"horizon": 0.4188993555925563
+},
 "animals_per_t": 3.299875868054272,
 "raw_kg_per_kg": 0.008980791094179269,
 "animals_per_t_protein": null
@@ -4207,6 +4952,11 @@
 "within_stream": 1.0,
 "animal_share": 0.014902837638275566,
 "animal_elas": 0.19420915580536582,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.014902837638275566,
+"price_response": 0.19420915580536582,
 "horizon": 1.0
 },
 "animals_per_t": 7.877490915177977,
@@ -4369,6 +5119,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.2313481844678791,
+"price_response": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 2.910789551641286,
 "raw_kg_per_kg": 0.3696873407640584,
 "animals_per_t_protein": null
@@ -4384,6 +5139,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.2313481844678791,
+"price_response": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 5.935351946597691,
 "raw_kg_per_kg": 0.7538244997475809,
 "animals_per_t_protein": null
@@ -4397,6 +5157,11 @@
 "within_stream": 0.5381717742612262,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.2313481844678791,
+"price_response": 1.012214281742215,
 "horizon": 1.0
 },
 "animals_per_t": 9.540060751105273,
@@ -4440,6 +5205,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.11845750480016531,
+"price_response": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 3.6922984642548733,
 "raw_kg_per_kg": 0.468943555121644,
 "animals_per_t_protein": null
@@ -4455,6 +5225,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.11845750480016531,
+"price_response": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 7.5289162917593,
 "raw_kg_per_kg": 0.9562165156069996,
 "animals_per_t_protein": null
@@ -4468,6 +5243,11 @@
 "within_stream": 0.27556077727384953,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.11845750480016531,
+"price_response": 1.012214281742215,
 "horizon": 1.0
 },
 "animals_per_t": 12.101442249695541,
@@ -4511,6 +5291,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.0800722707670423,
+"price_response": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 5.271873681698439,
 "raw_kg_per_kg": 0.6695588697342219,
 "animals_per_t_protein": null
@@ -4526,6 +5311,11 @@
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.0800722707670423,
+"price_response": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 10.74980693854781,
 "raw_kg_per_kg": 1.3652885137635369,
 "animals_per_t_protein": null
@@ -4539,6 +5329,11 @@
 "within_stream": 0.18626744846492432,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.0800722707670423,
+"price_response": 1.012214281742215,
 "horizon": 1.0
 },
 "animals_per_t": 17.2784718040496,
@@ -4582,6 +5377,11 @@
 "animal_elas": 1.2146571380906581,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.22344585885017668,
+"price_response": 1.2146571380906581,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 3.4532097206502086,
 "raw_kg_per_kg": 0.43857788276309456,
 "animals_per_t_protein": null
@@ -4597,6 +5397,11 @@
 "animal_elas": 1.2146571380906581,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.22344585885017668,
+"price_response": 1.2146571380906581,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 7.041393640400538,
 "raw_kg_per_kg": 0.8942982802466184,
 "animals_per_t_protein": null
@@ -4610,6 +5415,11 @@
 "within_stream": 1.0,
 "animal_share": 0.22344585885017668,
 "animal_elas": 1.2146571380906581,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.22344585885017668,
+"price_response": 1.2146571380906581,
 "horizon": 1.0
 },
 "animals_per_t": 11.317833164109876,
@@ -4653,6 +5463,11 @@
 "animal_elas": 1.1387410669599918,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.16478730945641024,
+"price_response": 1.1387410669599918,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 3.6062000247296475,
 "raw_kg_per_kg": 0.4580085484551303,
 "animals_per_t_protein": null
@@ -4668,6 +5483,11 @@
 "animal_elas": 1.1387410669599918,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.16478730945641024,
+"price_response": 1.1387410669599918,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 7.353354118139801,
 "raw_kg_per_kg": 0.9339190901309621,
 "animals_per_t_protein": null
@@ -4681,6 +5501,11 @@
 "within_stream": 1.0,
 "animal_share": 0.16478730945641024,
 "animal_elas": 1.1387410669599918,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.16478730945641024,
+"price_response": 1.1387410669599918,
 "horizon": 1.0
 },
 "animals_per_t": 11.819256152393223,
@@ -4724,6 +5549,11 @@
 "animal_elas": 0.7591607113066613,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.10013948487599868,
+"price_response": 0.7591607113066613,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 1.6391818294225668,
 "raw_kg_per_kg": 0.208185703843241,
 "animals_per_t_protein": null
@@ -4739,6 +5569,11 @@
 "animal_elas": 0.7591607113066613,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.10013948487599868,
+"price_response": 0.7591607113066613,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 3.342433690063546,
 "raw_kg_per_kg": 0.42450867733225545,
 "animals_per_t_protein": null
@@ -4752,6 +5587,11 @@
 "within_stream": 1.0,
 "animal_share": 0.10013948487599868,
 "animal_elas": 0.7591607113066613,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.10013948487599868,
+"price_response": 0.7591607113066613,
 "horizon": 1.0
 },
 "animals_per_t": 5.372389160178738,
@@ -4795,6 +5635,11 @@
 "animal_elas": 0.3643971414271974,
 "horizon": 0.3051122658001998
 },
+"grouped": {
+"value_share": 0.012025187186203714,
+"price_response": 0.3643971414271974,
+"horizon": 0.3051122658001998
+},
 "animals_per_t": 0.5960661197900244,
 "raw_kg_per_kg": 0.0757038923066331,
 "animals_per_t_protein": null
@@ -4810,6 +5655,11 @@
 "animal_elas": 0.3643971414271974,
 "horizon": 0.6221503302177656
 },
+"grouped": {
+"value_share": 0.012025187186203714,
+"price_response": 0.3643971414271974,
+"horizon": 0.6221503302177656
+},
 "animals_per_t": 1.2154304327503804,
 "raw_kg_per_kg": 0.1543667917571838,
 "animals_per_t_protein": null
@@ -4823,6 +5673,11 @@
 "within_stream": 0.1470981943659458,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.012025187186203714,
+"price_response": 0.3643971414271974,
 "horizon": 1.0
 },
 "animals_per_t": 1.9535960582468135,
@@ -4865,6 +5720,11 @@
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.3051122658001998
+},
+"grouped": {
+"value_share": 0.06972419959612394,
+"price_response": 0.3643971414271974,
+"horizon": 0.3051122658001998
 }
 },
 "lr": {
@@ -4877,6 +5737,11 @@
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.6221503302177656
+},
+"grouped": {
+"value_share": 0.06972419959612394,
+"price_response": 0.3643971414271974,
+"horizon": 0.6221503302177656
 }
 },
 "limit": {
@@ -4888,6 +5753,11 @@
 "within_stream": 0.8529018056340542,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.06972419959612394,
+"price_response": 0.3643971414271974,
 "horizon": 1.0
 }
 }
@@ -5035,6 +5905,11 @@
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
+"grouped": {
+"value_share": 0.46957396721678035,
+"price_response": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
 "animals_per_t": 290.68136209974267,
 "raw_kg_per_kg": 0.1744088172598456,
 "animals_per_t_protein": null
@@ -5084,6 +5959,11 @@
 "within_stream": 0.061616667308506956,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"grouped": {
+"value_share": 0.04969036690124661,
+"price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "animals_per_t": 129.19171648877455,
@@ -5137,6 +6017,11 @@
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
+"grouped": {
+"value_share": 0.2644459213525718,
+"price_response": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
 "animals_per_t": 161.4896456109682,
 "raw_kg_per_kg": 0.09689378736658091,
 "animals_per_t_protein": null
@@ -5186,6 +6071,11 @@
 "within_stream": 0.02818962529364193,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"grouped": {
+"value_share": 0.022733342857320323,
+"price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "animals_per_t": 96.89378736658091,
@@ -5239,6 +6129,11 @@
 "animal_elas": 1.1992486915688878,
 "horizon": 0.0400240563287737
 },
+"grouped": {
+"value_share": 0.0775169723659447,
+"price_response": 1.1992486915688878,
+"horizon": 0.0400240563287737
+},
 "animals_per_t": 426.332664412956,
 "raw_kg_per_kg": 0.2557995986477736,
 "animals_per_t_protein": null
@@ -5290,6 +6185,11 @@
 "animal_elas": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
+"grouped": {
+"value_share": 0.07349205264694372,
+"price_response": 0.23984973831377757,
+"horizon": 0.0400240563287737
+},
 "animals_per_t": 24.158850983400836,
 "raw_kg_per_kg": 0.014495310590040502,
 "animals_per_t_protein": null
@@ -5339,6 +6239,11 @@
 "within_stream": 0.3666630981693609,
 "animal_share": 0.11603942930613613,
 "animal_elas": 0.23984973831377757,
+"horizon": 0.0400240563287737
+},
+"grouped": {
+"value_share": 0.04254737665919241,
+"price_response": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
 "animals_per_t": 35.527722034412996,
@@ -5439,6 +6344,11 @@
 "animal_elas": 1.0203246667546524,
 "horizon": 0.08925983955140364
 },
+"grouped": {
+"value_share": 0.9701202949165696,
+"price_response": 1.0203246667546524,
+"horizon": 0.08925983955140364
+},
 "animals_per_t": 19.633944734372356,
 "raw_kg_per_kg": 0.08835275130467563,
 "animals_per_t_protein": null
@@ -5454,6 +6364,11 @@
 "animal_elas": 1.0203246667546524,
 "horizon": 0.43948204109449995
 },
+"grouped": {
+"value_share": 0.9701202949165696,
+"price_response": 1.0203246667546524,
+"horizon": 0.43948204109449995
+},
 "animals_per_t": 96.67019512878885,
 "raw_kg_per_kg": 0.4350158780795499,
 "animals_per_t_protein": null
@@ -5467,6 +6382,11 @@
 "within_stream": 1.0,
 "animal_share": 0.9701202949165696,
 "animal_elas": 1.0203246667546524,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.9701202949165696,
+"price_response": 1.0203246667546524,
 "horizon": 1.0
 },
 "animals_per_t": 219.96392591614972,
@@ -5510,6 +6430,11 @@
 "animal_elas": 0.3401082222515508,
 "horizon": 0.08925983955140364
 },
+"grouped": {
+"value_share": 0.029879705083430345,
+"price_response": 0.3401082222515508,
+"horizon": 0.08925983955140364
+},
 "animals_per_t": 0.6108338361804736,
 "raw_kg_per_kg": 0.002748752262812131,
 "animals_per_t_protein": null
@@ -5525,6 +6450,11 @@
 "animal_elas": 0.3401082222515508,
 "horizon": 0.43948204109449995
 },
+"grouped": {
+"value_share": 0.029879705083430345,
+"price_response": 0.3401082222515508,
+"horizon": 0.43948204109449995
+},
 "animals_per_t": 3.0075171817845425,
 "raw_kg_per_kg": 0.013533827318030442,
 "animals_per_t_protein": null
@@ -5538,6 +6468,11 @@
 "within_stream": 1.0,
 "animal_share": 0.029879705083430345,
 "animal_elas": 0.3401082222515508,
+"horizon": 1.0
+},
+"grouped": {
+"value_share": 0.029879705083430345,
+"price_response": 0.3401082222515508,
 "horizon": 1.0
 },
 "animals_per_t": 6.843322139613548,

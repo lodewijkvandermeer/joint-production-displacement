@@ -103,7 +103,8 @@ def sub_record(br, name, mc=None, full=None):
             continue
         u = br.units_per_qty(name, e)
         D = br.discount(name, e)
-        d = dict(DF=br.DF_sub(name, e), D=D, M=(1 / D if D > 0 else None), units_per_qty=u, steps=br.steps(name, e))
+        st = br.steps(name, e)
+        d = dict(DF=br.DF_sub(name, e), D=D, M=(1 / D if D > 0 else None), units_per_qty=u, steps=st, grouped=grouped_steps(st))
         if s.kg:
             d["animals_per_t"] = u * br.animals_per_unit / (s.kg / 1000.0)
             d["raw_kg_per_kg"] = u * br.raw_kg_per_unit / s.kg
@@ -226,6 +227,7 @@ def write_tables(results=RESULTS, out_dir=TABLES):
     (out_dir / "per_kg.md").write_text(headline_table(P) + "\n\n" + EQUIV_NOTE + "\n")
     (out_dir / "per_kg_all.md").write_text(all_products_table(P))
     (out_dir / "theta.md").write_text(theta_table() + "\n")
+    (out_dir / "steps.md").write_text("Three to five years:\n\n" + steps_table("lr") + "\n\nConstant-cost limit:\n\n" + steps_table("limit") + "\n")
     return P
 
 
@@ -249,4 +251,37 @@ def theta_table():
                 apt = b.units_per_qty(sub, b.eps_s_lr) * b.animals_per_unit / (s.kg / 1000.0) / s.protein
                 lines.append(f"| {label} | {name} | {th:g} | {share:.1%} | {fm(b.multiplier(sub, b.eps_s_sr))} | "
                              f"{fm(b.multiplier(sub, b.eps_s_lr))} | {fm(b.multiplier(sub, INF))} | {fsig(apt, 3)} |")
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------- the discount, step by step
+def grouped_steps(steps):
+    """The six model-level factors grouped into the three that carry the argument:
+      value_share     the product's share of the value of everything made alongside it from the same raw material
+                      (within-stream value x share in the route x the raw commodity's or stream's share of the animal):
+                      the long-run rule when all buyers respond alike
+      price_response  how this product's buyers respond to price relative to the others (route and animal levels)
+      horizon         the part not absorbed by buyers of all the animal's products before supply adjusts"""
+    v = steps["within_stream"] * steps.get("route_share", 1.0) * steps["animal_share"]
+    e = steps.get("route_elas", 1.0) * steps["animal_elas"]
+    return dict(value_share=v, price_response=e, horizon=steps["horizon"])
+
+
+def steps_table(horizon="lr"):
+    lines = ["| Product | Value relative to physical share in its stream | Share of the route's value (joint products) | "
+             "Own buyers' response relative to the route | Raw commodity's (or part's) share of the animal | "
+             "Response relative to the animal's average | Horizon: not absorbed by other buyers | Discount (product) | "
+             "Multiplier | Value-share rule alone (1 / value share) |",
+             "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+    f = lambda v: "" if v is None else f"{v:.3f}"  # noqa: E731
+    for key, sub, label in PICKS:
+        br = _branch(key)
+        e = _eps(br, horizon)
+        if e is not None and e != INF and e <= 0:
+            continue
+        st = br.steps(sub, e)
+        g = grouped_steps(st)
+        D = math.prod(st.values())
+        lines.append(f"| {label} | {f(st['within_stream'])} | {f(st.get('route_share'))} | {f(st.get('route_elas'))} | "
+                     f"{f(st['animal_share'])} | {f(st['animal_elas'])} | {f(st['horizon'])} | {D:.4f} | {fm(1 / D)} | {fm(1 / g['value_share'])} |")
     return "\n".join(lines)

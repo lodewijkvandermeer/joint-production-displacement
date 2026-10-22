@@ -1,6 +1,6 @@
-"""The paper's eleven figures as PNG files, drawn from the model and from the data files in data/.
+"""The paper's twelve figures as PNG files, drawn from the model and from the data files in data/.
 
-python -m jpdm figures   (writes paper/figures/fig01.png ... fig11.png)
+python -m jpdm figures   (writes paper/figures/fig01.png ... fig12.png)
 """
 import json
 import math
@@ -470,11 +470,52 @@ def fig11(out):
     _save(fig, out, "fig11.png")
 
 
+# ---------------------------------------------------------------- figure 12
+def fig12(out):
+    from . import per_unit
+    picks = [("eggs_2019-21", "Shell eggs (table)", "Shell eggs", AQUA), ("dairy_2026", "Fluid milk (Class I)", "Fluid milk", VIOLET),
+             ("dairy_2026", "Cheese (cheddar-equivalent)", "Cheese", BLUE),
+             ("eggs_2019-21", "Liquid egg white (albumen): liquid, dried albumen, protein fractions", "Egg white", YELLOW),
+             ("broiler", "Boneless skinless breast (fillets, whole-muscle nuggets)", "Chicken breast", "#0f7a53"),
+             ("beef", "Grinding material: trim and ground chuck/round (minced beef)", "Beef grinding material", "#8a5a2b"),
+             ("dairy_2026", "WPI (whey protein isolate)", "WPI", ORANGE), ("dairy_2026", "Cull cows (manufacturing beef)", "Cull-cow beef", MUTED),
+             ("broiler", "Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)", "Mechanically separated chicken", MAGENTA)]
+    fig, ax = plt.subplots(figsize=(8, 6.0))
+    top = _title(fig, "From the naive rule to the model: value share, price response, horizon",
+                 "Animals removed per unit displaced, as a share of what the naive rule attributes (log scale); each step multiplies "
+                 "by one factor; the end value is the discount, its inverse the multiplier (animals' worth displaced per animal removed)")
+    fig.subplots_adjust(left=0.09, right=0.62, top=top, bottom=0.11)
+    xs = [0, 1, 2, 3]
+    ends = []
+    for key, sub, label, c in picks:
+        br = next(b for b in params.ALL if b.key == key)
+        g = per_unit.grouped_steps(br.steps(sub, br.eps_s_lr))
+        ys = [1.0, g["value_share"], g["value_share"] * g["price_response"], g["value_share"] * g["price_response"] * g["horizon"]]
+        ax.plot(xs, ys, color=c, marker="o", markersize=4.5, markeredgecolor=SURFACE, markeredgewidth=1.2, drawstyle="default")
+        ends.append((ys[-1], label, c))
+    ends.sort(reverse=True)
+    pos, last = {}, None
+    for v, label, c in ends:
+        y = v if last is None else min(v, last / 1.32)
+        pos[label] = last = y
+    for v, label, c in ends:
+        ax.annotate(f"{label}  {per_unit.fm(1 / v)}", (3, v), xytext=(3.22, pos[label]), textcoords="data", va="center", fontsize=8.5,
+                    color=INK, annotation_clip=False, arrowprops=dict(arrowstyle="-", color=c, lw=1.0, shrinkA=0, shrinkB=3))
+    ax.set_yscale("log")
+    ax.set_ylim(0.0015, 1.4)
+    ax.set_xticks(xs)
+    ax.set_xticklabels(["naive rule", "x value share", "x price response", "x horizon\n(3 to 5 years)"], color=INK)
+    ax.set_xlim(-0.15, 3.05)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
+    _grid(ax)
+    _save(fig, out, "fig12.png")
+
+
 def main(out_dir=FIGURES):
     out_dir = Path(out_dir)
-    for f in (fig01, fig02, fig03, fig04, fig05, fig06, fig07, fig08, fig09, fig10, fig11):
+    for f in (fig01, fig02, fig03, fig04, fig05, fig06, fig07, fig08, fig09, fig10, fig11, fig12):
         f(out_dir)
-    print(f"  wrote 11 figures to {out_dir}")
+    print(f"  wrote 12 figures to {out_dir}")
 
 
 if __name__ == "__main__":
