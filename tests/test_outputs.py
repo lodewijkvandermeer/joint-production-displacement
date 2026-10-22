@@ -38,7 +38,7 @@ def test_workbook_builds(tmp_path):
     workbook.build(path, RESULTS)
     wb = load_workbook(path)
     assert wb.sheetnames == ["README", "Summary", "Assumptions", "Dairy", "Beef", "Eggs", "Broiler", "Pork", "Pollock",
-                             "Salmon", "Sensitivity", "Ranges", "Exit", "Sources"]
+                             "Salmon", "Per kg", "Sensitivity", "Ranges", "Exit", "Sources"]
     formulas = sum(1 for ws in wb for row in ws.iter_rows() for c in row if isinstance(c.value, str) and c.value.startswith("="))
     assert formulas > 2000
 

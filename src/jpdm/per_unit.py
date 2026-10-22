@@ -122,9 +122,23 @@ def sub_record(br, name, mc=None, full=None):
     return rec
 
 
+def naive_stream(br, stream):
+    """Animal units the naive rule attributes to today's whole stream: 1 for a stream fixed to the animal (all of it
+    comes from every animal); for a routed stream, the sum over its products of quantity / naive yield."""
+    if br.is_fixed(stream):
+        return 1.0
+    return sum(s.qty / br.naive_yield(s.name) for s in br.subs if s.stream == stream)
+
+
+def stream_multiplier(br, stream, eps_s):
+    """Multiplier for a whole stream at the margin: naive animal units for the stream / its market-share factor."""
+    d = br.DF_stream(stream, eps_s)
+    return naive_stream(br, stream) / d if d > 0 else None
+
+
 def stream_whole_market(br, stream, full):
     """Average multiplier when a perfect substitute takes the stream's whole market (exact model, full_loss.json)."""
-    naive = sum(s.qty / br.naive_yield(s.name) for s in br.subs if s.stream == stream)
+    naive = naive_stream(br, stream)
     out = {}
     for h in ("SR", "LR", "limit"):
         if br.key == "pollock" and h == "limit":

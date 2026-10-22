@@ -10,6 +10,6 @@ shell eggs, egg white, chicken breast, ground beef and so on) is replaced.
 
 Run `python -m jpdm --help` for the command line.
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 from . import edm_model, params, exact_model  # noqa: F401

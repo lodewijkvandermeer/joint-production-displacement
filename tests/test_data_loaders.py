@@ -21,14 +21,14 @@ def _write(tmp_path, monkeypatch, name, text):
 
 
 def test_wrong_columns_are_rejected(tmp_path, monkeypatch):
-    _write(tmp_path, monkeypatch, "technical_reachability.csv", "product,level,df\nA,1,0.1\n")
+    _write(tmp_path, monkeypatch, "technical_reachability.csv", "product,level,branch\nA,1,beef\n")
     with pytest.raises(ValueError, match="columns"):
         data.reachability()
 
 
 def test_non_numeric_and_out_of_range_values_are_rejected(tmp_path, monkeypatch):
-    head = "product,reachability_1_to_4,df_3_5_years\n"
-    for row, msg in (("A,x,0.1", "not a number"), ("A,5,0.1", "outside"), ("A,2.5,0.1", "whole"), ("A,2,1.5", "outside")):
+    head = "product,reachability_1_to_4,branch,item\n"
+    for row, msg in (("A,x,beef,Hide", "not a number"), ("A,5,beef,Hide", "outside"), ("A,2.5,beef,Hide", "whole"), ("A,2,beef,", "required")):
         _write(tmp_path, monkeypatch, "technical_reachability.csv", head + row + "\n")
         with pytest.raises(ValueError, match=msg):
             data.reachability()

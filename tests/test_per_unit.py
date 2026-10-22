@@ -97,3 +97,13 @@ def test_value_share_rule_is_exact_for_fixed_products_with_average_buyers():
     g = per_unit.grouped_steps(hen.steps("Shell eggs (table)", INF))
     assert g["horizon"] == 1.0
     assert hen.multiplier("Shell eggs (table)", INF) == pytest.approx(1 / (g["value_share"] * g["price_response"]))
+
+
+def test_stream_multiplier_matches_product_multiplier_for_single_product_streams():
+    for br in params.ALL:
+        for k in br.streams:
+            subs = [s for s in br.subs if s.stream == k.name]
+            if len(subs) == 1 and br.eps_s_lr > 0:
+                assert per_unit.stream_multiplier(br, k.name, br.eps_s_lr) == pytest.approx(br.multiplier(subs[0].name, br.eps_s_lr), rel=1e-12)
+    bro = params.broiler()   # a fixed stream of several cuts is attributed to the whole bird once, not once per cut
+    assert per_unit.naive_stream(bro, "Breast meat") == 1.0

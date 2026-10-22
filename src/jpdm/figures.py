@@ -1,6 +1,6 @@
 """The paper's twelve figures as PNG files, drawn from the model and from the data files in data/.
 
-python -m jpdm figures   (writes paper/figures/fig01.png ... fig12.png)
+python -m jpdm figures   (writes paper/figures/fig01.png ... fig07.png)
 """
 import json
 import math
@@ -83,6 +83,16 @@ def _df(br, stream=None, sub=None, horizon="lr"):
     return sum(r[key] for r in br.results(eps) if r["sub"].startswith(sub))
 
 
+def _mult(br, stream=None, sub=None, horizon="lr"):
+    """Multiplier (animals' worth displaced per animal removed) for a stream or a sub-product (name prefix)."""
+    from . import per_unit
+    eps = {"lr": br.eps_s_lr, "sr": br.eps_s_sr, "limit": float("inf")}[horizon]
+    if stream is not None:
+        return per_unit.stream_multiplier(br, stream, eps)
+    name = next(s.name for s in br.subs if s.name.startswith(sub))
+    return br.multiplier(name, eps)
+
+
 def _shares(br):
     out = {}
     for r in _rows(br):
@@ -112,7 +122,7 @@ def fig01(out):
     ax.set_xlim(0, 2.5)
     ax.set_ylim(0, 1)
     ax.set_xlabel("Supply elasticity")
-    ax.set_ylabel("Displacement factor")
+    ax.set_ylabel("Displacement factor (single market)")
     _grid(ax)
     _save(fig, out, "fig01.png")
 
@@ -176,7 +186,7 @@ def fig02(out):
           "Milk is allocated across uses; cheese and whey come in fixed proportions.", nodes, edges)
 
 
-def fig09(out):
+def fig10(out):
     br = params.eggs("2019-21")
     s = _shares(br)
     p = lambda v: f"{v * 100:.1f}%"  # noqa: E731
@@ -196,7 +206,7 @@ def fig09(out):
         dict(id="yolk", label="Egg yolk", share=p(s["Egg yolk"]), x=81, y=8),
     ]
     edges = [("hen", "eggs"), ("hen", "spent"), ("eggs", "shell"), ("eggs", "brk"), ("brk", "whole"), ("brk", "sep"), ("sep", "white"), ("sep", "yolk")]
-    _flow(out, "fig09.png", f"Shell eggs carry {s['Shell eggs'] * 100:.0f}% of a laying hen's revenue; separated egg white, {s['Egg white'] * 100:.0f}%",
+    _flow(out, "fig10.png", f"Shell eggs carry {s['Shell eggs'] * 100:.0f}% of a laying hen's revenue; separated egg white, {s['Egg white'] * 100:.0f}%",
           "Share of a US laying hen's revenue by product at 2019-21 price relationships (model estimate; USDA NASS volumes and AMS prices). "
           "Eggs go to the shell market or the breaking plant; white and yolk come in fixed proportions.", nodes, edges)
 
@@ -313,28 +323,31 @@ RANKING = [
 
 def fig06(out):
     by_key = {b.key: b for b in params.ALL}
-    rows = sorted(((lab, _df(by_key[k], stream=st, sub=sb)) for lab, k, st, sb in RANKING), key=lambda r: -r[1])
+    rows = sorted(((lab, _mult(by_key[k], stream=st, sub=sb)) for lab, k, st, sb in RANKING), key=lambda r: r[1])
     fig, ax = plt.subplots(figsize=(8, 8.6))
-    top = _title(fig, "Primary products displace a tenth to a half of the volume replaced; by-products under a twentieth",
-           "Displacement factor after three to five years by product; dark blue 0.10 and above, light blue 0.05 to 0.10, grey below 0.05")
+    top = _title(fig, "Primary products remove an animal for every 1.5 to 7 animals' worth displaced; carcass by-products need hundreds",
+           "Animals' worth of the product displaced per animal removed after three to five years (log scale); dark blue up to 5, "
+           "light blue 5 to 20, grey above 20; the naive rule would give 1 for every product")
     fig.subplots_adjust(left=0.36, right=0.95, top=top, bottom=0.06)
     for i, (lab, v) in enumerate(rows):
         y = len(rows) - 1 - i
-        c = BLUE if v >= 0.10 else LIGHT_BLUE if v >= 0.05 else MUTED
-        ax.barh(y, v, height=0.62, color=c, edgecolor=SURFACE)
-        ax.text(v + 0.005, y, "<0.001" if v < 0.0005 else f"{v:.3f}" if v < 0.1 else f"{v:.2f}", va="center", fontsize=7.8, color=INK)
+        c = BLUE if v <= 5 else LIGHT_BLUE if v <= 20 else MUTED
+        ax.barh(y, v, height=0.62, color=c, edgecolor=SURFACE, left=0)
+        ax.text(v * 1.08, y, f"{v:,.0f}" if v >= 10 else f"{v:.1f}", va="center", fontsize=7.8, color=INK)
+    ax.set_xscale("log")
     ax.set_yticks(range(len(rows)))
     ax.set_yticklabels([r[0] for r in rows][::-1], color=INK, fontsize=8.2)
     ax.tick_params(axis="y", length=0)
-    ax.set_xlim(0, 0.52)
+    ax.set_xlim(1, 40000)
     ax.set_ylim(-0.6, len(rows) - 0.4)
-    ax.set_xlabel("Displacement factor, three to five years")
+    ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
+    ax.set_xlabel("Animals' worth displaced per animal removed, three to five years (log scale)")
     _grid(ax, "x")
     _save(fig, out, "fig06.png")
 
 
-# ---------------------------------------------------------------- figure 7
-def fig07(out):
+# ---------------------------------------------------------------- figure 8
+def fig08(out):
     cow, cow19, bro = params.dairy("2026"), params.dairy("2019"), params.broiler()
     series = [
         ("Dairy cow, all products", [cow.DF_bundle(cow.eps_s_sr), cow.DF_bundle(cow.eps_s_lr), 1.0], MUTED, (0, (4, 3))),
@@ -346,7 +359,7 @@ def fig07(out):
     ]
     fig, ax = plt.subplots(figsize=(8, 5.0))
     top = _title(fig, "The elasticity discount shrinks with the horizon; the joint-production discount does not",
-           "Displacement factor at three horizons (log scale); the slope is the supply response, the gap between lines is joint production")
+           "Market-share factor at three horizons (log scale); the slope is the supply response, the gap between lines is joint production")
     fig.subplots_adjust(left=0.09, right=0.66, top=top, bottom=0.1)
     xs = [0, 1, 2]
     ends = sorted(((ys[-1], name) for name, ys, c, ls in series), reverse=True)
@@ -365,11 +378,11 @@ def fig07(out):
     ax.set_xlim(-0.1, 2.05)
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
     _grid(ax)
-    _save(fig, out, "fig07.png")
+    _save(fig, out, "fig08.png")
 
 
-# ---------------------------------------------------------------- figure 8
-def fig08(out, results=RESULTS):
+# ---------------------------------------------------------------- figure 9
+def fig09(out, results=RESULTS):
     cow = params.dairy("2026")
     g = cow.price_response("Whey protein", cow.eps_s_lr)["EPk"]
     df = cow.DF_stream("Whey protein", cow.eps_s_lr)
@@ -381,11 +394,11 @@ def fig08(out, results=RESULTS):
     fig, ax = plt.subplots(figsize=(8, 4.6))
     m1 = share_wpi
     top = _title(fig, f"Taking {m1 * 100:.0f}% of the whey protein market cuts its price by {(1 - (1 - m1) ** g) * 100:.0f}% and milk output by {df * m1 * 100:.1f}%",
-           f"Whey protein stream (WPC 80 and WPI) price as a share of today's, by share of the stream replaced; three to five years, 2026 parameters "
+           f"Whey protein stream (WPC 80 and WPI) farm value as a share of today's, by share of the stream replaced; three to five years, 2026 parameters "
            f"(price = (1 {MINUS} share) to the power {g:.2f}, floored at {floor:.0%})")
     fig.subplots_adjust(left=0.09, right=0.95, top=top, bottom=0.12)
     ax.axhline(floor, color=MUTED, lw=1, ls=(0, (4, 3)))
-    ax.text(0.02, floor + 0.025, f"floor: feed-grade whey, {floor:.0%} of today's price", fontsize=8.5, color=QUIET)
+    ax.text(0.02, floor + 0.025, f"floor: the protein at its other-solids (dry whey) value, {floor:.0%} of today's farm value", fontsize=8.5, color=QUIET)
     ax.plot(xs, ys, color=ORANGE)
     for m, lab, off, ha in ((m1, "all WPI replaced", (8, 8), "left"), (m1 + (1 - m1) / 2, "WPI and half of WPC 80 replaced", (-10, -4), "right")):
         p = (1 - m) ** g
@@ -401,11 +414,11 @@ def fig08(out, results=RESULTS):
     ax.set_xlabel("Share of the whey protein stream replaced")
     ax.set_ylabel("Price, share of today's")
     _grid(ax)
-    _save(fig, out, "fig08.png")
+    _save(fig, out, "fig09.png")
 
 
-# ---------------------------------------------------------------- figure 10
-def fig10(out, results=RESULTS):
+# ---------------------------------------------------------------- figure 11
+def fig11(out, results=RESULTS):
     cv = json.load(open(results / "exit_curves.json"))["curves"]
     series = [("dairy_2026", "Cheese", "Cheese (milk output)", BLUE), ("dairy_2026", "Whey protein", "Whey protein (milk output)", ORANGE),
               ("eggs_2019-21", "Shell eggs", "Shell eggs (hens)", AQUA), ("eggs_2019-21", "Egg white", "Egg white (hens)", VIOLET)]
@@ -432,46 +445,49 @@ def fig10(out, results=RESULTS):
     ax.set_xlabel("Substitute's price, share of today's price")
     ax.set_ylabel("Change in animal output")
     _grid(ax)
-    _save(fig, out, "fig10.png")
-
-
-# ---------------------------------------------------------------- figure 11
-LABEL_SIDE = {"Chicken breast": "l", "Fluid milk": "l", "Ham": "l", "Whole liquid egg": "l", "Cheese": "l", "Pork loin": "l"}
-JITTER = {"Whey protein, 2026 prices": 0.1, "Separated egg white": -0.35, "Whey protein, 2019 prices": 0.05, "Mechanically separated chicken": -0.05,
-          "Pork sausage trim": -0.25, "Fishmeal and oil": 0.4, "Tallow, hides, lard": -0.1, "Pollock fillets (fish fingers)": 0.15,
-          "Chicken breast": 0.1, "Fluid milk": -0.1, "Ham": -0.1, "Cheese": -0.15, "Farmed salmon": 0.15, "Beef middle meats (steaks)": 0.1, "Pork loin": -0.1}
-DY = {"Whey protein, 2026 prices": 1.0, "Separated egg white": 1.0, "Whey protein, 2019 prices": 1.12, "Mechanically separated chicken": 0.9,
-      "Pork sausage trim": 1.0, "Fishmeal and oil": 1.12, "Tallow, hides, lard": 0.85, "Pollock fillets (fish fingers)": 1.0, "Fluid milk": 0.93,
-      "Farmed salmon": 0.92, "Shell eggs": 1.08, "Ham": 1.04}
-
-
-def fig11(out):
-    rows = data.reachability()
-    fig, ax = plt.subplots(figsize=(8, 5.6))
-    top = _title(fig, "The fractions biotechnology reaches first are the ones with the lowest displacement",
-           "Displacement factor after three to five years (log scale) against technical reachability; reachability is a judgement (section 8)")
-    fig.subplots_adjust(left=0.1, right=0.97, top=top, bottom=0.12)
-    for r in rows:
-        x = r["reachability"] + JITTER.get(r["product"], 0.0)
-        y = r["df_3_5_years"]
-        c = BLUE if y >= 0.10 else ORANGE if r["reachability"] == 4 else MUTED
-        ax.plot([x], [y], "o", color=c, markersize=7, markeredgecolor=SURFACE, markeredgewidth=1.5)
-        left = LABEL_SIDE.get(r["product"]) == "l"
-        ax.text(x + (-0.07 if left else 0.07), y * DY.get(r["product"], 1.0), r["product"], ha="right" if left else "left", va="center", fontsize=7.6, color=INK)
-    ax.set_yscale("log")
-    ax.set_ylim(0.0015, 0.8)
-    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
-    ax.set_xticks([1, 2, 3, 4])
-    ax.set_xticklabels(["low", "low to medium", "medium", "high"], color=INK)
-    ax.set_xlim(0.4, 5.4)
-    ax.set_xlabel("Technical reachability for biotechnology today")
-    ax.set_ylabel("Displacement factor, three to five years")
-    _grid(ax)
     _save(fig, out, "fig11.png")
 
 
 # ---------------------------------------------------------------- figure 12
+LABEL_SIDE = {"Chicken breast": "l", "Ham": "l", "Cheese": "l", "Pork loin": "l", "Tallow, hides, offal": "l", "Pork sausage trim": "l"}
+JITTER = {"Whey protein, 2026 prices": 0.1, "Separated egg white": -0.35, "Whey protein, 2019 prices": 0.05, "Mechanically separated chicken": -0.05,
+          "Pork sausage trim": -0.25, "Fishmeal and oil": 0.4, "Tallow, hides, offal": -0.1, "Pollock fillets (fish fingers)": 0.15,
+          "Chicken breast": 0.1, "Fluid milk": -0.1, "Ham": -0.1, "Cheese": -0.15, "Farmed salmon": 0.15, "Beef middle meats (steaks)": 0.1, "Pork loin": -0.1}
+DY = {"Fluid milk": 1.12, "Whole liquid egg": 0.88, "Shell eggs": 0.9, "Farmed salmon": 1.05, "Tallow, hides, offal": 1.0,
+      "Whey protein, 2019 prices": 0.95, "Mechanically separated chicken": 0.9, "Whey protein, 2026 prices": 0.95}
+
+
 def fig12(out):
+    rows = data.reachability()
+    by_key = {b.key: b for b in params.ALL}
+    fig, ax = plt.subplots(figsize=(8, 5.6))
+    top = _title(fig, "The fractions biotechnology reaches first need the most volume per animal removed",
+           "Animals' worth displaced per animal removed after three to five years (log scale) against technical reachability; "
+           "reachability is a judgement (section 8); multipliers from the model")
+    fig.subplots_adjust(left=0.1, right=0.97, top=top, bottom=0.12)
+    for r in rows:
+        br = by_key[r["branch"]]
+        is_stream = any(k.name == r["item"] for k in br.streams)
+        y = _mult(br, stream=r["item"]) if is_stream else _mult(br, sub=r["item"])
+        x = r["reachability"] + JITTER.get(r["product"], 0.0)
+        c = BLUE if y <= 5 else ORANGE if r["reachability"] == 4 else MUTED
+        ax.plot([x], [y], "o", color=c, markersize=7, markeredgecolor=SURFACE, markeredgewidth=1.5)
+        left = LABEL_SIDE.get(r["product"]) == "l"
+        ax.text(x + (-0.07 if left else 0.07), y * DY.get(r["product"], 1.0), r["product"], ha="right" if left else "left", va="center", fontsize=7.6, color=INK)
+    ax.set_yscale("log")
+    ax.set_ylim(1, 3000)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
+    ax.set_xticks([1, 2, 3, 4])
+    ax.set_xticklabels(["low", "low to medium", "medium", "high"], color=INK)
+    ax.set_xlim(0.4, 5.4)
+    ax.set_xlabel("Technical reachability for biotechnology today")
+    ax.set_ylabel("Animals' worth displaced per animal removed")
+    _grid(ax)
+    _save(fig, out, "fig12.png")
+
+
+# ---------------------------------------------------------------- figure 7
+def fig07(out):
     from . import per_unit
     picks = [("eggs_2019-21", "Shell eggs (table)", "Shell eggs", AQUA), ("dairy_2026", "Fluid milk (Class I)", "Fluid milk", VIOLET),
              ("dairy_2026", "Cheese (cheddar-equivalent)", "Cheese", BLUE),
@@ -508,7 +524,7 @@ def fig12(out):
     ax.set_xlim(-0.15, 3.05)
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
     _grid(ax)
-    _save(fig, out, "fig12.png")
+    _save(fig, out, "fig07.png")
 
 
 def main(out_dir=FIGURES):

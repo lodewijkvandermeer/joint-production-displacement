@@ -13,15 +13,15 @@
 | Separated egg yolk | 28 | 2.4 (1.8–3.9) | 1.6 | 3.1 | 84.8 hen-years | 1.2 kg liquid egg | 533 |
 | Separated egg white (liquid) | 45 | 3.9 (2.6–7.4) | 2.6 | 3.8 | 28.3 hen-years | 0.40 kg liquid egg | 259 |
 | Separated egg white (2025 prices) | 70 | 6.1 (3.6–12) | 4.1 | 6.1 | 17.9 hen-years | 0.25 kg liquid egg | 164 |
-| Chicken breast | 20 | 4.3 (2.8–8.8) | 1.8 | 6.6 (whole stream) | 383 birds | 1.0 kg live weight | 1,703 |
+| Chicken breast | 20 | 4.3 (2.8–8.8) | 1.8 | 3.3 (whole stream) | 383 birds | 1.0 kg live weight | 1,703 |
 | Chicken dark meat | 101 | 23 (12–51) | 9.5 | 20 | 70.7 birds | 0.19 kg live weight |  |
 | Mechanically separated chicken | 1,585 | 353 (175–862) | 148 | 235 | 8.59 birds | 0.023 kg live weight |  |
 | Beef middle meats | 18 | 5.3 (3.8–7.9) | 2.4 | 4.6 | 1.45 fed cattle | 0.92 kg live weight |  |
 | Beef grinding material | 27 | 7.9 (5.7–12) | 3.6 | 12 | 0.899 fed cattle | 0.57 kg live weight |  |
-| Pork loin | 14 | 6.9 (5.3–9.6) | 4.3 | 11 (whole stream) | 5.94 hogs | 0.75 kg live weight |  |
+| Pork loin | 14 | 6.9 (5.3–9.6) | 4.3 | 3.7 (whole stream) | 5.94 hogs | 0.75 kg live weight |  |
 | Pork sausage material | 43 | 21 (12–38) | 13 | 25 | 3.34 hogs | 0.42 kg live weight |  |
 | Farmed salmon | 11 | 2.3 (1.5–4.5) | 1.0 | 1.1 | 96.7 fish | 0.44 kg head-on gutted |  |
-| Pollock fillets (quota) | none | 49 (16–141) | n/a | 52 (whole stream) | 291 fish | 0.17 kg round weight |  |
+| Pollock fillets (quota) | none | 49 (16–141) | n/a | 13 (whole stream) | 291 fish | 0.17 kg round weight |  |
 | Dried egg white (albumen powder) | 45 | 3.9 | 2.6 | | 212 hen-years | 3.0 kg liquid egg | 262 |
 
 Dried egg white: 7.5 kg of liquid white per kg of powder [E] (liquid white about 12.4% solids, powder about 93%; USDA FoodData Central), protein 81% [S]; the liquid-white figures times 7.5, i.e. assuming the powder's price moves with the liquid white it is made from.
