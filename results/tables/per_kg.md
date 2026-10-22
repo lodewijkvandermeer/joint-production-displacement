@@ -1,13 +1,13 @@
 | Product | Animals' worth displaced per animal removed: within a year | 3–5 years (80% range) | constant-cost limit | whole market lost, 3–5 years | Animals per tonne displaced, 3–5 years | Raw commodity per kg, 3–5 years | Animals per tonne of protein, 3–5 years |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Fluid milk | 7.1 | 1.9 (1.5–2.9) | 1.1 | 1.9 | 0.0482 cow-years | 0.53 kg milk | 1.46 |
-| Cheese | 8.0 | 2.1 (1.6–3.4) | 1.2 | 2.1 | 0.401 cow-years | 4.4 kg milk | 1.60 |
-| Butter | 18 | 4.9 (3.2–9.3) | 2.8 | 6.9 | 0.424 cow-years | 4.7 kg milk |  |
-| Nonfat dry milk (casein route) | 11 | 3.0 (2.2–5.2) | 1.8 | 5.3 | 0.330 cow-years | 3.7 kg milk | 0.944 |
-| WPC 80 (2026 prices) | 43 | 11 (6.4–23) | 6.6 | 7.6 (whole stream) | 0.900 cow-years | 10.0 kg milk | 1.12 |
-| WPI (2026 prices) | 34 | 9.0 (5.0–18) | 5.2 | 7.6 (whole stream) | 1.29 cow-years | 14 kg milk | 1.44 |
-| WPI (2019-21 prices) | 128 | 36 (19–76) | 21 | 32 (whole stream) | 0.332 cow-years | 3.7 kg milk | 0.368 |
-| Cull-cow beef | 168 | 45 (29–74) | 26 | 65 | n/a | n/a |  |
+| Fluid milk | 6.8 | 1.8 (1.4–2.8) | 1.1 | 1.9 | 0.0491 cow-years | 0.54 kg milk | 1.49 |
+| Cheese | 7.4 | 2.0 (1.5–3.1) | 1.2 | 1.9 | 0.429 cow-years | 4.7 kg milk | 1.71 |
+| Butter | 18 | 4.8 (3.2–9.1) | 2.8 | 6.7 | 0.432 cow-years | 4.8 kg milk |  |
+| Nonfat dry milk (casein route) | 11 | 3.0 (2.1–5.1) | 1.7 | 5.2 | 0.336 cow-years | 3.7 kg milk | 0.961 |
+| WPC 80 (2026 prices) | 76 | 21 (11–41) | 12 | 14 (whole stream) | 0.502 cow-years | 5.5 kg milk | 0.627 |
+| WPI (2026 prices) | 60 | 16 (8.9–32) | 9.5 | 14 (whole stream) | 0.715 cow-years | 7.9 kg milk | 0.794 |
+| WPI (2019-21 prices) | 240 | 67 (35–143) | 40 | 62 (whole stream) | 0.176 cow-years | 1.9 kg milk | 0.196 |
+| Cull-cow beef | 169 | 46 (30–75) | 27 | 66 | n/a | n/a |  |
 | Shell eggs | 17 | 1.5 (1.3–1.9) | 1.0 | 1.5 | 47.9 hen-years | 0.67 kg liquid egg | 380 |
 | Whole liquid egg | 17 | 1.5 (1.3–1.9) | 1.0 | 1.4 | 47.9 hen-years | 0.67 kg liquid egg | 380 |
 | Separated egg yolk | 28 | 2.4 (1.8–3.9) | 1.6 | 3.1 | 84.8 hen-years | 1.2 kg liquid egg | 533 |

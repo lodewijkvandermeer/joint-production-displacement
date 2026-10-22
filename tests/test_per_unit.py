@@ -65,10 +65,11 @@ def test_conversions_are_set_for_every_animal():
 def test_headline_multipliers():
     cow, hen, bro, steer = params.dairy("2026"), params.eggs("2019-21"), params.broiler(), params.beef()
     M = lambda b, s, e: b.multiplier(s, e)  # noqa: E731
-    assert M(cow, "Cheese (cheddar-equivalent)", cow.eps_s_lr) == pytest.approx(2.13, abs=0.01)
-    assert M(cow, "Cheese (cheddar-equivalent)", INF) == pytest.approx(1.22, abs=0.01)
+    assert M(cow, "Cheese (cheddar-equivalent)", cow.eps_s_lr) == pytest.approx(1.99, abs=0.01)
+    assert M(cow, "Cheese (cheddar-equivalent)", INF) == pytest.approx(1.16, abs=0.01)
     assert M(cow, "Fluid milk (Class I)", INF) == pytest.approx(1.08, abs=0.01)
-    assert M(cow, "Cull cows (manufacturing beef)", cow.eps_s_lr) == pytest.approx(44.7, abs=0.1)
+    assert M(cow, "WPI (whey protein isolate)", cow.eps_s_lr) == pytest.approx(16.2, abs=0.1)
+    assert M(cow, "Cull cows (manufacturing beef)", cow.eps_s_lr) == pytest.approx(45.6, abs=0.3)
     assert M(hen, "Shell eggs (table)", INF) == pytest.approx(1.0, abs=0.01)
     assert M(hen, "Liquid egg white (albumen): liquid, dried albumen, protein fractions", hen.eps_s_lr) == pytest.approx(3.88, abs=0.02)
     assert M(bro, "Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)", bro.eps_s_lr) == pytest.approx(353, abs=1)

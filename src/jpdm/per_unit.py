@@ -225,4 +225,28 @@ def write_tables(results=RESULTS, out_dir=TABLES):
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "per_kg.md").write_text(headline_table(P) + "\n\n" + EQUIV_NOTE + "\n")
     (out_dir / "per_kg_all.md").write_text(all_products_table(P))
+    (out_dir / "theta.md").write_text(theta_table() + "\n")
     return P
+
+
+# ---------------------------------------------------------------- whey protein valuation sensitivity
+THETAS = (0.0, 0.5, 1.0)
+THETA_SUBS = [("WPC 80 (whey protein concentrate)", "WPC 80"), ("WPI (whey protein isolate)", "WPI"),
+              ("Cheese (cheddar-equivalent)", "Cheese")]
+
+
+def theta_table():
+    """Multipliers and animals per tonne of protein for whey protein and cheese at theta = 0, 0.5, 1 (closed form)."""
+    lines = ["| Prices | Product | Share of the premium valued as milk (theta) | Whey protein share of the cow's value | "
+             "Multiplier: within a year | 3–5 years | constant-cost limit | Cow-years per tonne of protein, 3–5 years |",
+             "| --- | --- | --- | --- | --- | --- | --- | --- |"]
+    for sc, label in (("2026", "2026"), ("2019", "2019–21")):
+        for sub, name in THETA_SUBS:
+            for th in THETAS:
+                b = params.dairy(sc, th)
+                share = b.stream_value("Whey protein") / b.total()
+                s = b.sub(sub)
+                apt = b.units_per_qty(sub, b.eps_s_lr) * b.animals_per_unit / (s.kg / 1000.0) / s.protein
+                lines.append(f"| {label} | {name} | {th:g} | {share:.1%} | {fm(b.multiplier(sub, b.eps_s_sr))} | "
+                             f"{fm(b.multiplier(sub, b.eps_s_lr))} | {fm(b.multiplier(sub, INF))} | {fsig(apt, 3)} |")
+    return "\n".join(lines)

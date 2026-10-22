@@ -102,8 +102,9 @@ def _basis(animal: str, stream: dict) -> str:
     return tag[1]
 
 
-def load(animal: str, scenario: Optional[str] = None) -> Branch:
-    """Build the Branch for `animal` (the file's stem) at `scenario` (default: the file's default_scenario)."""
+def load(animal: str, scenario: Optional[str] = None, overrides: Optional[dict] = None) -> Branch:
+    """Build the Branch for `animal` (the file's stem) at `scenario` (default: the file's default_scenario).
+    `overrides` replaces named [vars] after the scenario is applied, e.g. {"theta_whey": 0.0} for a sensitivity run."""
     data = _read(animal)
     scenarios = data.get("scenarios")
     meta = {k: v for k, v in data.items()
@@ -122,6 +123,11 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
     elif scenario is not None:
         raise ValueError(f"{animal} has no scenarios")
 
+    if overrides:
+        unknown = set(overrides) - set(names)
+        if unknown:
+            raise ValueError(f"{animal}: cannot override unknown names {sorted(unknown)}")
+        names.update(overrides)
     env = _Names(names)
 
     def opt(d, key):
@@ -138,7 +144,7 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
             env.define(name, raw)
         subs += [make_sub(d) for d in data["derived_subs"]]
 
-    streams = [Stream(d["name"], d["route"], d["elas"], d.get("floor"), d.get("floor_note", ""), d.get("elas_src", ""),
+    streams = [Stream(d["name"], d["route"], d["elas"], opt(d, "floor"), d.get("floor_note", ""), d.get("elas_src", ""),
                       _basis(animal, d)) for d in data["streams"]]
     raw_shares = {route: env.value(x) for route, x in data["raw_shares"].items()} if "raw_shares" in data else None
 
@@ -151,7 +157,9 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
                   raw_label=conv.get("raw_label", ""))
 
 
-def dairy(scenario="2026"): return load("dairy", scenario)
+def dairy(scenario="2026", theta=None):
+    """Dairy cow; `theta` overrides the share of the whey-protein premium valued as milk (data/params/dairy.toml)."""
+    return load("dairy", scenario, None if theta is None else {"theta_whey": theta})
 def eggs(scenario="2019-21"): return load("eggs", scenario)
 def beef(): return load("beef")
 def broiler(): return load("broiler")

@@ -35,6 +35,20 @@ dry_whey_share = 0.10
 lactose_share = 0.15
 feed_share = 0.25
 prot = "whey_solids*protein_frac*rec_protein"   # lb whey protein recovered per cwt milk in the cheese route
+# Whey protein valuation. Liquid whey is one commodity: the protein that goes into WPC 80 or WPI is the same protein
+# that could go into dry whey. The federal order pays farmers for it at the other-solids price (dry whey price less
+# the make allowance, x 1.03), whatever the plant makes. The premium WPC 80 and WPI earn above that, net of
+# processing cost (the make allowance), is partly a return to the plants' capacity and partly passed to milk
+# through competition for milk. theta_whey is the share passed to milk:
+#   0  farm value of the protein = its other-solids value (the federal order formula; premium is plant rent)
+#   1  farm value = product price less processing allowance (version 1.0: all of the premium is milk value)
+theta_whey = 0.5          # [A] central; 0 and 1 are reported as bounds (python -m jpdm tables: results/tables/theta.md)
+p_os = "(p_drywhey-mk_drywhey)*1.03"          # $/lb other solids, FMMO formula (Sep 2026 announced: 0.4147)
+wpc80_v1 = "p_wpc80-mk_wpc80"                 # farm value per lb at theta = 1
+wpi_v1 = "p_wpi-mk_wpi"
+wpc80_v = "0.80*p_os+theta_whey*(wpc80_v1-0.80*p_os)"
+wpi_v = "0.90*p_os+theta_whey*(wpi_v1-0.90*p_os)"
+wp_v_per_protein = "split_wpc80*wpc80_v/0.80+(1-split_wpc80)*wpi_v/0.90"   # stream farm value per lb protein
 
 [scenarios.2026]
 price_tag = "USDA AMS announced class prices Sep 2026 (Class I Oct 2026 advance); Dairy Market News Oct 2026 for whey products"
@@ -137,8 +151,8 @@ protein = 0.25
 name = "WPC 80 (whey protein concentrate)"
 stream = "Whey protein"
 qty = "u_cheese*prot*split_wpc80/0.80"
-price = "p_wpc80-mk_wpc80"
-src = "[S] price; [A] processing allowance"
+price = "wpc80_v"
+src = "[S] price and other-solids price; [A] processing allowance and theta_whey"
 kg = 0.45359237
 protein = 0.80
 full_yield = "whey_solids*protein_frac*tech_rec/0.80"
@@ -147,8 +161,8 @@ full_yield = "whey_solids*protein_frac*tech_rec/0.80"
 name = "WPI (whey protein isolate)"
 stream = "Whey protein"
 qty = "u_cheese*prot*(1-split_wpc80)/0.90"
-price = "p_wpi-mk_wpi"
-src = "[S] price; [A] processing allowance"
+price = "wpi_v"
+src = "[S] price and other-solids price; [A] processing allowance and theta_whey"
 kg = 0.45359237
 protein = 0.90
 full_yield = "whey_solids*protein_frac*tech_rec/0.90"
@@ -235,8 +249,8 @@ elas_src = "[S] Andreyeva cheese 0.44; Okrent & Alston 0.70; EU 0.60"
 name = "Whey protein"
 route = "Cheese route"
 elas = -1.50
-floor = 0.06
-floor_note = "protein valued as dry/feed whey (~$0.35-0.70 per lb solids)"
+floor = "p_os/wp_v_per_protein"
+floor_note = "protein valued at the other-solids price, as in dry whey"
 elas_src = "[A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12"
 
 [[streams]]

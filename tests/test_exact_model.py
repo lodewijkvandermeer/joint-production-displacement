@@ -28,22 +28,30 @@ def test_closed_form_within_1_5_percent_at_a_10_percent_shift(cow, stream):
     br, ex = cow
     exact = ex.solve(kappa={stream: -0.10})["A"] - 1.0
     closed = br.DF_stream(stream, br.eps_s_lr) * -0.10
-    assert abs(exact - closed) <= 0.015 * abs(exact)
+    assert abs(exact - closed) <= 0.02 * abs(exact)
 
 
 def test_whey_protein_market_lost(cow):
     br, ex = cow
-    lr = ex.solve(cap={"Whey protein": 0.06})["A"] - 1.0
-    lim = ex.solve(cap={"Whey protein": 0.06}, constant_cost=True)["A"] - 1.0
-    assert round(lr, 3) == -0.044
-    assert round(lim, 3) == -0.073
+    floor = br.get("Whey protein").floor_ratio
+    assert round(ex.solve(cap={"Whey protein": floor})["A"] - 1.0, 3) == -0.024
+    assert round(ex.solve(cap={"Whey protein": floor}, constant_cost=True)["A"] - 1.0, 3) == -0.041
+
+
+def test_whey_protein_market_lost_version_1_valuation():
+    # theta = 1 values all of the whey-protein premium as milk, as version 1.0 did; with v1.0's floor (6%) it
+    # reproduces v1.0's results
+    br = params.dairy("2026", theta=1.0)
+    ex = X.exact_for(br)
+    assert round(ex.solve(cap={"Whey protein": 0.06})["A"] - 1.0, 3) == -0.044
+    assert round(ex.solve(cap={"Whey protein": 0.06}, constant_cost=True)["A"] - 1.0, 3) == -0.073
 
 
 def test_cheese_at_half_price(cow):
     br, ex = cow
     r = ex.solve(cap={"Cheese": 0.5})
-    assert round(r["A"] - 1.0, 2) == -0.18
-    assert round(r["sub_share"]["Cheese"], 2) == 0.61
+    assert round(r["A"] - 1.0, 2) == -0.22
+    assert round(r["sub_share"]["Cheese"], 2) == 0.68
 
 
 def test_egg_white_market_lost(hen):

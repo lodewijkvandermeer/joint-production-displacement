@@ -1,7 +1,7 @@
 | Product (animal) | Animal change, substitute at 90% of today's price | at 75% | at 50% | at 25% | Substitute's share of the market at 50% | Animal change at 50%, constant-cost limit | Price below which the raw commodity leaves the product entirely (3–5 years) |
-| Cheese (dairy cow) | −4.1% | −9.8% | −18% | −24% | 61% | −38% | no threshold (joint products carry the route) |
-| Fluid milk (dairy cow) | −7.5% | −10% | −10% | −10% | 100% | −17% | 87% of today's price |
-| Whey protein, WPC 80 and WPI (dairy cow) | −0.5% | −1.3% | −2.5% | −3.6% | 67% | −4.2% | no threshold (joint products carry the route) |
+| Cheese (dairy cow) | −5.0% | −12% | −22% | −28% | 68% | −44% | no threshold (joint products carry the route) |
+| Fluid milk (dairy cow) | −7.5% | −10% | −10% | −10% | 100% | −17% | 86% of today's price |
+| Whey protein, WPC 80 and WPI (dairy cow) | −0.3% | −0.7% | −1.4% | −2.0% | 66% | −2.3% | no threshold (joint products carry the route) |
 | Shell eggs (laying hen) | −10.0% | −25% | −44% | −44% | 100% | −68% | 56% of today's price |
 | Whole liquid egg (laying hen) | −10.0% | −15% | −15% | n/a (cap below the floor) | 100% | −20% | 85% of today's price |
 | Separated egg white (laying hen) | −0.6% | −1.5% | −2.5% | n/a (cap below the floor) | 75% | −3.7% | no threshold (joint products carry the route) |

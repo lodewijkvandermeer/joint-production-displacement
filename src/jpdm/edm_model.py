@@ -176,8 +176,10 @@ class Branch:
             DF = self.DF_stream(st.name, eps_s)
             pr = self.price_response(st.name, eps_s)
             g = pr["EPk"]
-            if st.floor_ratio is None or st.floor_ratio <= 0 or st.floor_ratio >= 1:
+            if st.floor_ratio is None or st.floor_ratio <= 0:
                 kfloor = None
+            elif st.floor_ratio >= 1:      # the floor is today's price: the stream cannot fall
+                kfloor = 0.0
             else:
                 kfloor = math.exp(math.log(st.floor_ratio)/g) - 1.0 if g != 0 else None
             for sub in [x for x in self.subs if x.stream == st.name]:

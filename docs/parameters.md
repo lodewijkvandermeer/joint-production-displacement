@@ -19,25 +19,25 @@ Raw-commodity routes (share of raw volume): Fluid 0.190; Other manufactured 0.08
 | Butter (fat) | Butter & powder | -0.6 | none | [S] EU butter 0.47; fats & oils 0.48 |
 | Milk powder (nonfat solids) | Butter & powder | -1 | 0.6 (feed-grade SMP / export at world price) | [A] traded commodity, elastic for one supplier |
 | Cheese | Cheese route | -0.55 | none | [S] Andreyeva cheese 0.44; Okrent & Alston 0.70; EU 0.60 |
-| Whey protein | Cheese route | -1.5 | 0.06 (protein valued as dry/feed whey (~$0.35-0.70 per lb solids)) | [A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12 |
+| Whey protein | Cheese route | -1.5 | 0.0721304 (protein valued at the other-solids price, as in dry whey) | [A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12 |
 | Whey carbohydrate | Cheese route | -2 | 0.5 (feed-grade whey / permeate) | [A] feed outlet, near-perfect substitutes |
 | Cull cows | Cattle sales | -0.8 | 0.15 (rendering / pet food) | [S] beef demand 0.75 (Andreyeva) |
 | Calves | Cattle sales | -0.6 | 0.05 (bob veal / euthanasia) | [A] derived from fed-beef demand |
 
 | Product | Stream | Quantity per unit | Price | Value share | kg per quantity unit | Protein | Naive yield per unit | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Fluid milk (Class I) | Fluid milk | 0.19 | 18.88 | 17.4% | 45.36 | 3% | 1 | [S] Class I price |
-| Other dairy: yogurt, ice cream, etc. (Class II) | Other dairy | 0.08 | 17.6 | 6.8% | 45.36 |  | 1 | [S] Class II price |
-| Butter / cream (3.5 lb fat per cwt) | Butter (fat) | 0.13 | 5.167 | 3.3% | 1.984 |  | 1 | [S] FMMO butterfat price x 3.5 |
-| Nonfat dry milk / SMP (also the casein route) | Milk powder (nonfat solids) | 0.13 | 13.77 | 8.7% | 4.071 | 35% | 1 | [S] FMMO nonfat solids price x 9.3 x 0.965 |
-| Cheese (cheddar-equivalent) | Cheese | 6.36 | 1.306 | 40.4% | 0.4536 | 25% | 10.6 | [S] cheese price less make allowance |
-| WPC 80 (whey protein concentrate) | Whey protein | 0.1784 | 8 | 6.9% | 0.4536 | 80% | 0.8775 | [S] price; [A] processing allowance |
-| WPI (whey protein isolate) | Whey protein | 0.1014 | 11.5 | 5.7% | 0.4536 | 90% | 0.78 | [S] price; [A] processing allowance |
-| Dry whey (sweet whey powder) | Whey carbohydrate | 0.36 | 0.4026 | 0.7% | 0.4536 | 12% | 6 | [S] price and make allowance |
-| Lactose | Whey carbohydrate | 0.54 | 0.43 | 1.1% | 0.4536 |  | 4.44 | [S] price; [A] allowance |
-| Permeate / condensed whey / feed | Whey carbohydrate | 0.9 | 0.26 | 1.1% | 0.4536 |  | 5.22 | [S] feed-grade whey price |
-| Cull cows (manufacturing beef) | Cull cows | 1 | 0.9627 | 4.7% |  |  | 1 | [S] ERS cattle sales share; [E] 60/40 split |
-| Calves (beef-on-dairy, bull calves) | Calves | 1 | 0.6418 | 3.1% |  |  | 1 | [E] |
+| Fluid milk (Class I) | Fluid milk | 0.19 | 18.88 | 18.7% | 45.36 | 3% | 1 | [S] Class I price |
+| Other dairy: yogurt, ice cream, etc. (Class II) | Other dairy | 0.08 | 17.6 | 7.3% | 45.36 |  | 1 | [S] Class II price |
+| Butter / cream (3.5 lb fat per cwt) | Butter (fat) | 0.13 | 5.167 | 3.5% | 1.984 |  | 1 | [S] FMMO butterfat price x 3.5 |
+| Nonfat dry milk / SMP (also the casein route) | Milk powder (nonfat solids) | 0.13 | 13.77 | 9.3% | 4.071 | 35% | 1 | [S] FMMO nonfat solids price x 9.3 x 0.965 |
+| Cheese (cheddar-equivalent) | Cheese | 6.36 | 1.306 | 43.2% | 0.4536 | 25% | 10.6 | [S] cheese price less make allowance |
+| WPC 80 (whey protein concentrate) | Whey protein | 0.1784 | 4.166 | 3.9% | 0.4536 | 80% | 0.8775 | [S] price and other-solids price; [A] processing allowance and theta_whey |
+| WPI (whey protein isolate) | Whey protein | 0.1014 | 5.937 | 3.1% | 0.4536 | 90% | 0.78 | [S] price and other-solids price; [A] processing allowance and theta_whey |
+| Dry whey (sweet whey powder) | Whey carbohydrate | 0.36 | 0.4026 | 0.8% | 0.4536 | 12% | 6 | [S] price and make allowance |
+| Lactose | Whey carbohydrate | 0.54 | 0.43 | 1.2% | 0.4536 |  | 4.44 | [S] price; [A] allowance |
+| Permeate / condensed whey / feed | Whey carbohydrate | 0.9 | 0.26 | 1.2% | 0.4536 |  | 5.22 | [S] feed-grade whey price |
+| Cull cows (manufacturing beef) | Cull cows | 1 | 0.8994 | 4.7% |  |  | 1 | [S] ERS cattle sales share; [E] 60/40 split |
+| Calves (beef-on-dairy, bull calves) | Calves | 1 | 0.5996 | 3.1% |  |  | 1 | [E] |
 
 Per-unit conversions: 0.0041 cow-years and 45.36 kg milk per model unit. [S] NASS Milk Production, Disposition and Income 2025: 24,390 lb per cow (9.498 m cows, 231.7 bn lb)
 
@@ -58,25 +58,25 @@ Raw-commodity routes (share of raw volume): Fluid 0.190; Other manufactured 0.08
 | Butter (fat) | Butter & powder | -0.6 | none | [S] EU butter 0.47; fats & oils 0.48 |
 | Milk powder (nonfat solids) | Butter & powder | -1 | 0.6 (feed-grade SMP / export at world price) | [A] traded commodity, elastic for one supplier |
 | Cheese | Cheese route | -0.55 | none | [S] Andreyeva cheese 0.44; Okrent & Alston 0.70; EU 0.60 |
-| Whey protein | Cheese route | -1.5 | 0.06 (protein valued as dry/feed whey (~$0.35-0.70 per lb solids)) | [A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12 |
+| Whey protein | Cheese route | -1.5 | 0.109923 (protein valued at the other-solids price, as in dry whey) | [A] ingredient with substitutes (SPI, MPC, pea); Houck soybean meal flexibility 1.12 |
 | Whey carbohydrate | Cheese route | -2 | 0.5 (feed-grade whey / permeate) | [A] feed outlet, near-perfect substitutes |
 | Cull cows | Cattle sales | -0.8 | 0.15 (rendering / pet food) | [S] beef demand 0.75 (Andreyeva) |
 | Calves | Cattle sales | -0.6 | 0.05 (bob veal / euthanasia) | [A] derived from fed-beef demand |
 
 | Product | Stream | Quantity per unit | Price | Value share | kg per quantity unit | Protein | Naive yield per unit | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Fluid milk (Class I) | Fluid milk | 0.19 | 17.6 | 17.7% | 45.36 | 3% | 1 | [S] Class I price |
-| Other dairy: yogurt, ice cream, etc. (Class II) | Other dairy | 0.08 | 16.9 | 7.1% | 45.36 |  | 1 | [S] Class II price |
-| Butter / cream (3.5 lb fat per cwt) | Butter (fat) | 0.13 | 8.05 | 5.5% | 1.984 |  | 1 | [S] FMMO butterfat price x 3.5 |
-| Nonfat dry milk / SMP (also the casein route) | Milk powder (nonfat solids) | 0.13 | 8.975 | 6.2% | 4.071 | 35% | 1 | [S] FMMO nonfat solids price x 9.3 x 0.965 |
-| Cheese (cheddar-equivalent) | Cheese | 6.36 | 1.55 | 52.1% | 0.4536 | 25% | 10.6 | [S] cheese price less make allowance |
-| WPC 80 (whey protein concentrate) | Whey protein | 0.1755 | 1.8 | 1.7% | 0.4536 | 80% | 0.8629 | [S] price; [A] processing allowance |
-| WPI (whey protein isolate) | Whey protein | 0.09971 | 3 | 1.6% | 0.4536 | 90% | 0.767 | [S] price; [A] processing allowance |
+| Fluid milk (Class I) | Fluid milk | 0.19 | 17.6 | 18.0% | 45.36 | 3% | 1 | [S] Class I price |
+| Other dairy: yogurt, ice cream, etc. (Class II) | Other dairy | 0.08 | 16.9 | 7.3% | 45.36 |  | 1 | [S] Class II price |
+| Butter / cream (3.5 lb fat per cwt) | Butter (fat) | 0.13 | 8.05 | 5.6% | 1.984 |  | 1 | [S] FMMO butterfat price x 3.5 |
+| Nonfat dry milk / SMP (also the casein route) | Milk powder (nonfat solids) | 0.13 | 8.975 | 6.3% | 4.071 | 35% | 1 | [S] FMMO nonfat solids price x 9.3 x 0.965 |
+| Cheese (cheddar-equivalent) | Cheese | 6.36 | 1.55 | 52.9% | 0.4536 | 25% | 10.6 | [S] cheese price less make allowance |
+| WPC 80 (whey protein concentrate) | Whey protein | 0.1755 | 0.9622 | 0.9% | 0.4536 | 80% | 0.8629 | [S] price and other-solids price; [A] processing allowance and theta_whey |
+| WPI (whey protein isolate) | Whey protein | 0.09971 | 1.57 | 0.8% | 0.4536 | 90% | 0.767 | [S] price and other-solids price; [A] processing allowance and theta_whey |
 | Dry whey (sweet whey powder) | Whey carbohydrate | 0.354 | 0.1509 | 0.3% | 0.4536 | 12% | 5.9 | [S] price and make allowance |
 | Lactose | Whey carbohydrate | 0.531 | 0.15 | 0.4% | 0.4536 |  | 4.366 | [S] price; [A] allowance |
 | Permeate / condensed whey / feed | Whey carbohydrate | 0.885 | 0.1 | 0.5% | 0.4536 |  | 5.133 | [S] feed-grade whey price |
-| Cull cows (manufacturing beef) | Cull cows | 1 | 0.7949 | 4.2% |  |  | 1 | [S] ERS cattle sales share; [E] 60/40 split |
-| Calves (beef-on-dairy, bull calves) | Calves | 1 | 0.5299 | 2.8% |  |  | 1 | [E] |
+| Cull cows (manufacturing beef) | Cull cows | 1 | 0.7818 | 4.2% |  |  | 1 | [S] ERS cattle sales share; [E] 60/40 split |
+| Calves (beef-on-dairy, bull calves) | Calves | 1 | 0.5212 | 2.8% |  |  | 1 | [E] |
 
 Per-unit conversions: 0.0041 cow-years and 45.36 kg milk per model unit. [S] NASS Milk Production, Disposition and Income 2025: 24,390 lb per cow (9.498 m cows, 231.7 bn lb)
 

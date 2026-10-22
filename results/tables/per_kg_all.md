@@ -4,18 +4,18 @@ Animals: cow-years ([S] NASS Milk Production, Disposition and Income 2025: 24,39
 
 | Product | Multiplier, within a year | 3–5 years | constant-cost limit | Animals per tonne, 3–5 years | Raw per kg, 3–5 years |
 | --- | --- | --- | --- | --- | --- |
-| Fluid milk (Class I) | 7.1 | 1.9 | 1.1 | 0.0482 | 0.53 |
-| Other dairy: yogurt, ice cream, etc. (Class II) | 7.1 | 1.9 | 1.1 | 0.0482 | 0.53 |
-| Butter / cream (3.5 lb fat per cwt) | 18 | 4.9 | 2.8 | 0.424 | 4.7 |
-| Nonfat dry milk / SMP (also the casein route) | 11 | 3.0 | 1.8 | 0.330 | 3.7 |
-| Cheese (cheddar-equivalent) | 8.0 | 2.1 | 1.2 | 0.401 | 4.4 |
-| WPC 80 (whey protein concentrate) | 43 | 11 | 6.6 | 0.900 | 10.0 |
-| WPI (whey protein isolate) | 34 | 9.0 | 5.2 | 1.29 | 14 |
-| Dry whey (sweet whey powder) | 167 | 44 | 26 | 0.0340 | 0.38 |
-| Lactose | 211 | 56 | 32 | 0.0363 | 0.40 |
-| Permeate / condensed whey / feed | 297 | 79 | 45 | 0.0219 | 0.24 |
-| Cull cows (manufacturing beef) | 168 | 45 | 26 | n/a | n/a |
-| Calves (beef-on-dairy, bull calves) | 189 | 50 | 29 | n/a | n/a |
+| Fluid milk (Class I) | 6.8 | 1.8 | 1.1 | 0.0491 | 0.54 |
+| Other dairy: yogurt, ice cream, etc. (Class II) | 6.8 | 1.8 | 1.1 | 0.0491 | 0.54 |
+| Butter / cream (3.5 lb fat per cwt) | 18 | 4.8 | 2.8 | 0.432 | 4.8 |
+| Nonfat dry milk / SMP (also the casein route) | 11 | 3.0 | 1.7 | 0.336 | 3.7 |
+| Cheese (cheddar-equivalent) | 7.4 | 2.0 | 1.2 | 0.429 | 4.7 |
+| WPC 80 (whey protein concentrate) | 76 | 21 | 12 | 0.502 | 5.5 |
+| WPI (whey protein isolate) | 60 | 16 | 9.5 | 0.715 | 7.9 |
+| Dry whey (sweet whey powder) | 153 | 41 | 24 | 0.0364 | 0.40 |
+| Lactose | 194 | 52 | 31 | 0.0388 | 0.43 |
+| Permeate / condensed whey / feed | 273 | 74 | 43 | 0.0235 | 0.26 |
+| Cull cows (manufacturing beef) | 169 | 46 | 27 | n/a | n/a |
+| Calves (beef-on-dairy, bull calves) | 190 | 51 | 30 | n/a | n/a |
 
 ### Dairy cow (2019 prices)
 
@@ -23,18 +23,18 @@ Animals: cow-years ([S] NASS Milk Production, Disposition and Income 2025: 24,39
 
 | Product | Multiplier, within a year | 3–5 years | constant-cost limit | Animals per tonne, 3–5 years | Raw per kg, 3–5 years |
 | --- | --- | --- | --- | --- | --- |
-| Fluid milk (Class I) | 6.4 | 1.8 | 1.1 | 0.0510 | 0.56 |
-| Other dairy: yogurt, ice cream, etc. (Class II) | 6.4 | 1.8 | 1.1 | 0.0510 | 0.56 |
-| Butter / cream (3.5 lb fat per cwt) | 11 | 3.0 | 1.8 | 0.698 | 7.7 |
-| Nonfat dry milk / SMP (also the casein route) | 16 | 4.4 | 2.7 | 0.228 | 2.5 |
-| Cheese (cheddar-equivalent) | 6.6 | 1.8 | 1.1 | 0.467 | 5.2 |
-| WPC 80 (whey protein concentrate) | 190 | 53 | 32 | 0.199 | 2.2 |
-| WPI (whey protein isolate) | 128 | 36 | 21 | 0.332 | 3.7 |
-| Dry whey (sweet whey powder) | 441 | 122 | 73 | 0.0125 | 0.14 |
-| Lactose | 600 | 167 | 100 | 0.0124 | 0.14 |
-| Permeate / condensed whey / feed | 766 | 212 | 127 | 0.00829 | 0.092 |
-| Cull cows (manufacturing beef) | 190 | 53 | 32 | n/a | n/a |
-| Calves (beef-on-dairy, bull calves) | 214 | 59 | 36 | n/a | n/a |
+| Fluid milk (Class I) | 6.3 | 1.8 | 1.1 | 0.0512 | 0.57 |
+| Other dairy: yogurt, ice cream, etc. (Class II) | 6.3 | 1.8 | 1.1 | 0.0512 | 0.57 |
+| Butter / cream (3.5 lb fat per cwt) | 11 | 2.9 | 1.8 | 0.701 | 7.8 |
+| Nonfat dry milk / SMP (also the casein route) | 16 | 4.4 | 2.7 | 0.229 | 2.5 |
+| Cheese (cheddar-equivalent) | 6.5 | 1.8 | 1.1 | 0.474 | 5.2 |
+| WPC 80 (whey protein concentrate) | 348 | 97 | 58 | 0.108 | 1.2 |
+| WPI (whey protein isolate) | 240 | 67 | 40 | 0.176 | 1.9 |
+| Dry whey (sweet whey powder) | 433 | 121 | 73 | 0.0127 | 0.14 |
+| Lactose | 589 | 164 | 99 | 0.0126 | 0.14 |
+| Permeate / condensed whey / feed | 751 | 209 | 126 | 0.00841 | 0.093 |
+| Cull cows (manufacturing beef) | 191 | 53 | 32 | n/a | n/a |
+| Calves (beef-on-dairy, bull calves) | 215 | 60 | 36 | n/a | n/a |
 
 ### Fed steer (Oct 2026 prices)
 

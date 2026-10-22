@@ -72,8 +72,10 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         out = inputs_writer(ws, r)
         r, qty_f, price_f = out[0], out[1], out[2]
         if len(out) > 3 and out[3]: raw_map = out[3]
+        floor_map = out[5] if len(out) > 5 else {}
     else:
         qty_f = price_f = lambda i: None
+        floor_map = {}
     # ---------------- sub-product table ----------------
     r = section(ws, r, "A. Products of one unit of the animal (sub-products). Blue = editable inputs; black = formulas.")
     heads = ["Sub-product", "Stream (fixed proportion within route)", "Route (fungible use of the raw commodity, or fixed to the animal)", "Quantity per unit", "Quantity unit",
@@ -137,7 +139,10 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         put(ws, row, 4, f"=C{row}/{TOTAL}", BLACK, PCT)
         put(ws, row, 5, f"=C{row}/SUMIF($B${st0}:$B${st1},B{row},$C${st0}:$C${st1})", BLACK, PCT)
         put(ws, row, 6, st.elas, BLUE, NUM2)
-        put(ws, row, 7, st.floor_ratio if st.floor_ratio is not None else "", BLUE, PCT)
+        if st.name in floor_map:
+            put(ws, row, 7, floor_map[st.name], BLACK, PCT)
+        else:
+            put(ws, row, 7, st.floor_ratio if st.floor_ratio is not None else "", BLUE, PCT)
         put(ws, row, 8, st.floor_note, BLACK, wrap=True)
         put(ws, row, 9, f"=E{row}/ABS(F{row})", BLACK, DF3)
         put(ws, row, 10, f"=INDEX($G${rt0}:$G${rt1},MATCH(B{row},$A${rt0}:$A${rt1},0))", BLACK, DF3)
@@ -239,6 +244,7 @@ def dairy_inputs(ws, r):
         ("mk_wpc80","Processing allowance: WPC 80",1.50,1.20,"$/lb","[A] ultrafiltration + drying"),
         ("mk_wpi","Processing allowance: WPI",2.50,2.00,"$/lb","[A]"),
         ("mk_feed","Processing allowance: feed whey",0.10,0.10,"$/lb","[A]"),
+        ("theta_whey","Share of the WPC 80 / WPI premium over the protein's other-solids value counted as milk value (theta)",0.5,0.5,"share","[A] 0 = federal-order other-solids value only (premium is plant rent); 1 = product price less allowance (version 1.0)"),
         ("cattle_share","Cattle sales (cull cows + calves) as share of dairy gross value",0.078,0.07,"share","[S] ERS 2024: 1.94 of 24.94 $/cwt"),
         ("cull_split","Cull cows share of cattle sales (rest calves)",0.60,0.60,"share","[E]"),
     ]
@@ -249,6 +255,12 @@ def dairy_inputs(ws, r):
         ref[key] = f"$B${r}"; r += 1
     r += 1
     R = ref
+    put(ws, r, 1, "Other-solids price, FMMO formula: (dry whey price - make allowance) x 1.03", BOLD)
+    put(ws, r, 2, f"=({R['drywhey']}-{R['mk_drywhey']})*1.03", BLACK, NUM3); OS = f"$B${r}"; r += 1
+    put(ws, r, 1, "Farm value of WPC 80 per lb: 0.80 x other-solids price + theta x (WPC 80 price - allowance - 0.80 x other-solids price)", BOLD)
+    put(ws, r, 2, f"=0.8*{OS}+{R['theta_whey']}*({R['wpc80']}-{R['mk_wpc80']}-0.8*{OS})", BLACK, NUM3); V80 = f"$B${r}"; r += 1
+    put(ws, r, 1, "Farm value of WPI per lb: 0.90 x other-solids price + theta x (WPI price - allowance - 0.90 x other-solids price)", BOLD)
+    put(ws, r, 2, f"=0.9*{OS}+{R['theta_whey']}*({R['wpi']}-{R['mk_wpi']}-0.9*{OS})", BLACK, NUM3); VWPI = f"$B${r}"; r += 2
     prot = f"{R['whey_solids']}*{R['protein_frac']}*{R['rec_protein']}"
     qty = {0: f"={R['u_fluid']}", 1: f"={R['u_other']}", 2: f"={R['u_bp']}", 3: f"={R['u_bp']}", 4: f"={R['u_cheese']}*{R['cheese_yield']}",
            5: f"={R['u_cheese']}*{prot}*{R['split_wpc80']}/0.8", 6: f"={R['u_cheese']}*{prot}*(1-{R['split_wpc80']})/0.9",
@@ -257,11 +269,12 @@ def dairy_inputs(ws, r):
     # milk total (rows 0-9) needed for cattle; compute in a helper cell
     put(ws, r, 1, "Helper: milk value per cwt (sum of milk products, computed below)", BOLD); MILKTOT = f"$B${r}"; helper_row = r; r += 2
     price = {0: f"={R['classI']}", 1: f"={R['classII']}", 2: f"=3.5*{R['bfat']}", 3: f"=9.3*0.965*{R['nfs']}", 4: f"={R['cheese']}-{R['mk_cheese']}",
-             5: f"={R['wpc80']}-{R['mk_wpc80']}", 6: f"={R['wpi']}-{R['mk_wpi']}", 7: f"={R['drywhey']}-{R['mk_drywhey']}", 8: f"={R['lactose']}-{R['mk_lactose']}",
+             5: f"={V80}", 6: f"={VWPI}", 7: f"={R['drywhey']}-{R['mk_drywhey']}", 8: f"={R['lactose']}-{R['mk_lactose']}",
              9: f"={R['feedwhey']}-{R['mk_feed']}", 10: f"={MILKTOT}*{R['cattle_share']}/(1-{R['cattle_share']})*{R['cull_split']}",
              11: f"={MILKTOT}*{R['cattle_share']}/(1-{R['cattle_share']})*(1-{R['cull_split']})"}
     raw = {"Fluid": f"={R['u_fluid']}", "Other manufactured": f"={R['u_other']}", "Butter & powder": f"={R['u_bp']}", "Cheese route": f"={R['u_cheese']}"}
-    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row
+    floors = {"Whey protein": f"={OS}/({R['split_wpc80']}*{V80}/0.8+(1-{R['split_wpc80']})*{VWPI}/0.9)"}
+    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row, floors
 
 def eggs_inputs(ws, r):
     r = section(ws, r, "Inputs (two price scenarios; 1 = 2019-21 normal market, 2 = Sep 2025 HPAI-tight market). Blue = editable.")
@@ -431,7 +444,7 @@ def build(path=WORKBOOK, results=RESULTS):
     # ---------------- branch sheets ----------------
     refs = {}
     d = dairy("2026")
-    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: dairy_inputs(ws, r)[:4], protein=PROTEIN,
+    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: (lambda o: o[:4] + (None, o[5]))(dairy_inputs(ws, r)), protein=PROTEIN,
                                        unit_factor_note="lb of raw milk displaced per lb of product replaced (long run).", chart_title="Where the dairy cow's revenue comes from (value share by stream)")
     # fill dairy helper cell: milk value = sum of first 10 sub rows
     s0 = refs["Dairy"]["sub0"]
