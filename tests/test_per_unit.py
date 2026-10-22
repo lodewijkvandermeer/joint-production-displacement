@@ -91,12 +91,21 @@ def test_grouped_steps_multiply_to_the_discount(br):
         assert math.prod(g.values()) == pytest.approx(br.discount(s.name, br.eps_s_lr), rel=1e-12)
 
 
-def test_value_share_rule_is_exact_for_fixed_products_with_average_buyers():
-    # a carcass part whose buyers respond like the animal's average: the long-run discount is its value share
-    hen = params.eggs("2019-21")
+def test_value_share_rule_is_exact_when_all_buyers_respond_alike():
+    # with every demand elasticity equal, the constant-cost multiplier of a product alone in a fixed stream is one over its
+    # value share; the price-response factor is then 1 by construction of the closed form, not by assumption here
+    import copy
+    steer = copy.deepcopy(params.beef())
+    for st in steer.streams:
+        st.elas = -1.0
+    name = "Grinding material: trim and ground chuck/round (minced beef)"
+    share = steer.sub(name).value / steer.total()
+    assert steer.multiplier(name, INF) == pytest.approx(1 / share, rel=1e-12)
+    hen = copy.deepcopy(params.eggs("2019-21"))
+    for st in hen.streams:
+        st.elas = -1.0
     g = per_unit.grouped_steps(hen.steps("Shell eggs (table)", INF))
-    assert g["horizon"] == 1.0
-    assert hen.multiplier("Shell eggs (table)", INF) == pytest.approx(1 / (g["value_share"] * g["price_response"]))
+    assert g["price_response"] == pytest.approx(1.0) and g["yield_basis"] == pytest.approx(1.0)
 
 
 def test_stream_multiplier_matches_product_multiplier_for_single_product_streams():

@@ -69,7 +69,8 @@ PICKS = [
 EQUIVALENTS = [
     ("eggs_2019-21", "Liquid egg white (albumen): liquid, dried albumen, protein fractions", "Dried egg white (albumen powder)", 7.5, 0.81),
 ]
-EQUIV_NOTE = ("Dried egg white: 7.5 kg of liquid white per kg of powder [E] (liquid white about 12.4% solids, powder about "
+EQUIV_NOTE = ("Shell eggs and whole liquid egg are per tonne of egg contents (1.29 lb of liquid egg per dozen); per tonne "
+              "of eggs in shell, multiply by 0.89. Dried egg white: 7.5 kg of liquid white per kg of powder [E] (liquid white about 12.4% solids, powder about "
               "93%; USDA FoodData Central), protein 81% [S]; the liquid-white figures times 7.5, i.e. assuming the powder's "
               "price moves with the liquid white it is made from.")
 
@@ -156,7 +157,8 @@ def build(results=RESULTS):
     for br in params.ALL:
         out[br.key] = dict(name=br.name, animal_label=br.animal_label, animals_per_unit=br.animals_per_unit,
                            animals_src=br.animals_src, raw_label=br.raw_label, raw_kg_per_unit=br.raw_kg_per_unit,
-                           bundle={h: (br.DF_bundle(_eps(br, h)) if _eps(br, h) and _eps(br, h) > 0 else 0.0) for h, _ in HORIZONS},
+                           bundle={h: (None if br.key == "pollock" and h == "limit" else
+                                       br.DF_bundle(_eps(br, h)) if _eps(br, h) and _eps(br, h) > 0 else 0.0) for h, _ in HORIZONS},
                            subs={s.name: sub_record(br, s.name, mc[br.key].get(s.name)) for s in br.subs},
                            streams={k.name: stream_whole_market(br, k.name, full[br.key]) for k in br.streams})
     return out
@@ -198,7 +200,13 @@ def headline_table(P):
         lr_txt = fm(lr["M"]) + (f" ({fm(rng[0])}–{fm(rng[1])})" if rng and rng[1] else "")
         wm = b["streams"][r["stream"]]["LR"]
         n_in_stream = sum(1 for x in b["subs"].values() if x["stream"] == r["stream"])
-        wm_txt = fm(wm["M"]) + (" (whole stream)" if n_in_stream > 1 else "") if wm else "n/a"
+        if not wm:
+            wm_txt = "n/a"
+        elif n_in_stream > 1:
+            br = _branch(key)
+            wm_txt = f"{fm(wm['M'])} for the whole stream ({fm(stream_multiplier(br, r['stream'], br.eps_s_lr))} at the margin)"
+        else:
+            wm_txt = fm(wm["M"])
         apt = f"{fsig(lr.get('animals_per_t'), 3)} {b['animal_label']}" if lr.get("animals_per_t") is not None else "n/a"
         raw = f"{fsig(lr.get('raw_kg_per_kg'), 2)} {b['raw_label']}" if lr.get("raw_kg_per_kg") is not None else "n/a"
         prot = fsig(lr.get("animals_per_t_protein"), 3) if lr.get("animals_per_t_protein") else ""
@@ -262,6 +270,10 @@ def theta_table():
                 b = params.dairy(sc, th)
                 share = b.stream_value("Whey protein") / b.total()
                 s = b.sub(sub)
+                if s.stream == "Whey protein" and b.get("Whey protein").floor_ratio >= 1:
+                    # the floor is today's farm value: whey protein cannot fall, so displacing it removes no cows
+                    lines.append(f"| {label} | {name} | {th:g} | {share:.1%} | none | none | none | 0 |")
+                    continue
                 apt = b.units_per_qty(sub, b.eps_s_lr) * b.animals_per_unit / (s.kg / 1000.0) / s.protein
                 lines.append(f"| {label} | {name} | {th:g} | {share:.1%} | {fm(b.multiplier(sub, b.eps_s_sr))} | "
                              f"{fm(b.multiplier(sub, b.eps_s_lr))} | {fm(b.multiplier(sub, INF))} | {fsig(apt, 3)} |")
@@ -270,32 +282,37 @@ def theta_table():
 
 # ---------------------------------------------------------------- the discount, step by step
 def grouped_steps(steps):
-    """The six model-level factors grouped into the three that carry the argument:
+    """The model-level factors grouped into the ones that carry the argument:
       value_share     the product's share of the value of everything made alongside it from the same raw material
-                      (within-stream value x share in the route x the raw commodity's or stream's share of the animal):
-                      the long-run rule when all buyers respond alike
+                      (share of its stream x the stream's share of its route x the raw commodity's share of the animal;
+                      for a fixed part, its share of the animal): the long-run rule when all buyers respond alike
+      yield_basis     correction for products the naive rule credits with more raw material than today's output uses
+                      (1 for every product that is alone in its stream or fixed to the animal by itself)
       price_response  how this product's buyers respond to price relative to the others (route and animal levels)
       horizon         the part not absorbed by buyers of all the animal's products before supply adjusts"""
-    v = steps["within_stream"] * steps.get("route_share", 1.0) * steps["animal_share"]
+    v = steps["value_within"] * steps.get("route_share", 1.0) * steps["animal_share"]
     e = steps.get("route_elas", 1.0) * steps["animal_elas"]
-    return dict(value_share=v, price_response=e, horizon=steps["horizon"])
+    return dict(value_share=v, yield_basis=steps["yield_basis"], price_response=e, horizon=steps["horizon"])
 
 
 def steps_table(horizon="lr"):
-    lines = ["| Product | Value relative to physical share in its stream | Share of the route's value (joint products) | "
-             "Own buyers' response relative to the route | Raw commodity's (or part's) share of the animal | "
-             "Response relative to the animal's average | Horizon: not absorbed by other buyers | Discount (product) | "
+    lines = ["| Product | Share of its stream's value | Share of the route's value (joint products) | Raw commodity's (or part's) share "
+             "of the animal | Value share (product of the three) | Yield basis of the naive rule | Own buyers' response relative "
+             "to the route | Response relative to the animal's average | Horizon: not absorbed by other buyers | Discount | "
              "Multiplier | Value-share rule alone (1 / value share) |",
-             "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+             "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     f = lambda v: "" if v is None else f"{v:.3f}"  # noqa: E731
     for key, sub, label in PICKS:
         br = _branch(key)
+        if br.key == "pollock" and horizon == "limit":
+            continue
         e = _eps(br, horizon)
         if e is not None and e != INF and e <= 0:
             continue
         st = br.steps(sub, e)
         g = grouped_steps(st)
         D = math.prod(st.values())
-        lines.append(f"| {label} | {f(st['within_stream'])} | {f(st.get('route_share'))} | {f(st.get('route_elas'))} | "
-                     f"{f(st['animal_share'])} | {f(st['animal_elas'])} | {f(st['horizon'])} | {D:.4f} | {fm(1 / D)} | {fm(1 / g['value_share'])} |")
+        lines.append(f"| {label} | {f(st['value_within'])} | {f(st.get('route_share'))} | {f(st['animal_share'])} | "
+                     f"{f(g['value_share'])} | {f(st['yield_basis'])} | {f(st.get('route_elas'))} | {f(st['animal_elas'])} | "
+                     f"{f(st['horizon'])} | {D:.4f} | {fm(1 / D)} | {fm(1 / g['value_share'])} |")
     return "\n".join(lines)

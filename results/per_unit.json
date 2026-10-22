@@ -28,7 +28,8 @@
 "M": 6.821461214317462,
 "units_per_qty": 0.1465961571255606,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.922,
@@ -37,6 +38,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.0078205157304423,
 "horizon": 0.15776420378339284
 },
@@ -50,7 +52,8 @@
 "M": 1.8422195727429398,
 "units_per_qty": 0.5428234586125192,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.922,
@@ -59,6 +62,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.0078205157304423,
 "horizon": 0.5841770509004678
 },
@@ -72,7 +76,8 @@
 "M": 1.0761823971160902,
 "units_per_qty": 0.9292105155034679,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.922,
@@ -81,6 +86,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.0078205157304423,
 "horizon": 1.0
 },
@@ -120,7 +126,8 @@
 "M": 6.821461214317461,
 "units_per_qty": 0.14659615712556062,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.922,
@@ -129,6 +136,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.007820515730442,
 "horizon": 0.15776420378339284
 },
@@ -142,7 +150,8 @@
 "M": 1.8422195727429398,
 "units_per_qty": 0.5428234586125192,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.922,
@@ -151,6 +160,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.007820515730442,
 "horizon": 0.5841770509004678
 },
@@ -164,7 +174,8 @@
 "M": 1.0761823971160902,
 "units_per_qty": 0.929210515503468,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.922,
@@ -173,6 +184,7 @@
 },
 "grouped": {
 "value_share": 0.922,
+"yield_basis": 1.0,
 "price_response": 1.007820515730442,
 "horizon": 1.0
 },
@@ -212,7 +224,8 @@
 "M": 17.72923106985157,
 "units_per_qty": 0.05640402542333,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.272846687350266,
 "route_elas": 1.4101614188289189,
 "animal_share": 0.922,
@@ -221,6 +234,7 @@
 },
 "grouped": {
 "value_share": 0.25156464573694526,
+"yield_basis": 1.0,
 "price_response": 1.4211896083873332,
 "horizon": 0.15776420378339284
 },
@@ -234,7 +248,8 @@
 "M": 4.787997096283542,
 "units_per_qty": 0.2088555986753215,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.272846687350266,
 "route_elas": 1.4101614188289189,
 "animal_share": 0.922,
@@ -243,6 +258,7 @@
 },
 "grouped": {
 "value_share": 0.25156464573694526,
+"yield_basis": 1.0,
 "price_response": 1.4211896083873332,
 "horizon": 0.5841770509004678
 },
@@ -256,7 +272,8 @@
 "M": 2.7970380234269223,
 "units_per_qty": 0.35752106035898756,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.272846687350266,
 "route_elas": 1.4101614188289189,
 "animal_share": 0.922,
@@ -265,6 +282,7 @@
 },
 "grouped": {
 "value_share": 0.25156464573694526,
+"yield_basis": 1.0,
 "price_response": 1.4211896083873332,
 "horizon": 1.0
 },
@@ -304,7 +322,8 @@
 "M": 11.087441677301749,
 "units_per_qty": 0.09019213170223062,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.7271533126497339,
 "route_elas": 0.8460968512973513,
 "animal_share": 0.922,
@@ -313,6 +332,7 @@
 },
 "grouped": {
 "value_share": 0.6704353542630547,
+"yield_basis": 1.0,
 "price_response": 0.8527137650323999,
 "horizon": 0.15776420378339284
 },
@@ -326,7 +346,8 @@
 "M": 2.9943001107593066,
 "units_per_qty": 0.3339678599371978,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.7271533126497339,
 "route_elas": 0.8460968512973513,
 "animal_share": 0.922,
@@ -335,6 +356,7 @@
 },
 "grouped": {
 "value_share": 0.6704353542630547,
+"yield_basis": 1.0,
 "price_response": 0.8527137650323999,
 "horizon": 0.5841770509004678
 },
@@ -348,7 +370,8 @@
 "M": 1.7492014082143157,
 "units_per_qty": 0.5716894551444804,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.7271533126497339,
 "route_elas": 0.8460968512973513,
 "animal_share": 0.922,
@@ -357,6 +380,7 @@
 },
 "grouped": {
 "value_share": 0.6704353542630547,
+"yield_basis": 1.0,
 "price_response": 0.8527137650323999,
 "horizon": 1.0
 },
@@ -396,7 +420,8 @@
 "M": 7.364661443928129,
 "units_per_qty": 0.012809770463961884,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.8093414109544987,
 "route_elas": 1.1444395686863753,
 "animal_share": 0.922,
@@ -405,6 +430,7 @@
 },
 "grouped": {
 "value_share": 0.7462127809000478,
+"yield_basis": 1.0,
 "price_response": 1.1533896763358278,
 "horizon": 0.15776420378339284
 },
@@ -418,7 +444,8 @@
 "M": 1.9889174815145807,
 "units_per_qty": 0.04743264791944453,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.8093414109544987,
 "route_elas": 1.1444395686863753,
 "animal_share": 0.922,
@@ -427,6 +454,7 @@
 },
 "grouped": {
 "value_share": 0.7462127809000478,
+"yield_basis": 1.0,
 "price_response": 1.1533896763358278,
 "horizon": 0.5841770509004678
 },
@@ -440,7 +468,8 @@
 "M": 1.1618799488355733,
 "units_per_qty": 0.08119567149433626,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.8093414109544987,
 "route_elas": 1.1444395686863753,
 "animal_share": 0.922,
@@ -449,6 +478,7 @@
 },
 "grouped": {
 "value_share": 0.7462127809000478,
+"yield_basis": 1.0,
 "price_response": 1.1533896763358278,
 "horizon": 1.0
 },
@@ -488,7 +518,8 @@
 "M": 76.05204956713578,
 "units_per_qty": 0.014984489518525653,
 "steps": {
-"within_stream": 1.6304054550418778,
+"value_within": 0.5525262930975252,
+"yield_basis": 2.9508196721311477,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -496,7 +527,8 @@
 "horizon": 0.15776420378339284
 },
 "grouped": {
-"value_share": 0.19707571785878752,
+"value_share": 0.06678677105214464,
+"yield_basis": 2.9508196721311477,
 "price_response": 0.42290954798980357,
 "horizon": 0.15776420378339284
 },
@@ -510,7 +542,8 @@
 "M": 20.538792182198495,
 "units_per_qty": 0.05548530456376405,
 "steps": {
-"within_stream": 1.6304054550418778,
+"value_within": 0.5525262930975252,
+"yield_basis": 2.9508196721311477,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -518,7 +551,8 @@
 "horizon": 0.5841770509004678
 },
 "grouped": {
-"value_share": 0.19707571785878752,
+"value_share": 0.06678677105214464,
+"yield_basis": 2.9508196721311477,
 "price_response": 0.42290954798980357,
 "horizon": 0.5841770509004678
 },
@@ -532,7 +566,8 @@
 "M": 11.9982910460543,
 "units_per_qty": 0.09498028804492979,
 "steps": {
-"within_stream": 1.6304054550418778,
+"value_within": 0.5525262930975252,
+"yield_basis": 2.9508196721311477,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -540,7 +575,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.19707571785878752,
+"value_share": 0.06678677105214464,
+"yield_basis": 2.9508196721311477,
 "price_response": 0.42290954798980357,
 "horizon": 1.0
 },
@@ -580,7 +616,8 @@
 "M": 60.038678228200034,
 "units_per_qty": 0.0213537559434329,
 "steps": {
-"within_stream": 2.0652632626268073,
+"value_within": 0.4474737069024748,
+"yield_basis": 4.615384615384616,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -588,7 +625,8 @@
 "horizon": 0.15776420378339284
 },
 "grouped": {
-"value_share": 0.24963927763545501,
+"value_share": 0.05408851015434857,
+"yield_basis": 4.615384615384616,
 "price_response": 0.42290954798980357,
 "horizon": 0.15776420378339284
 },
@@ -602,7 +640,8 @@
 "M": 16.21418412838873,
 "units_per_qty": 0.07906973745330748,
 "steps": {
-"within_stream": 2.0652632626268073,
+"value_within": 0.4474737069024748,
+"yield_basis": 4.615384615384616,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -610,7 +649,8 @@
 "horizon": 0.5841770509004678
 },
 "grouped": {
-"value_share": 0.24963927763545501,
+"value_share": 0.05408851015434857,
+"yield_basis": 4.615384615384616,
 "price_response": 0.42290954798980357,
 "horizon": 0.5841770509004678
 },
@@ -624,7 +664,8 @@
 "M": 9.471954266879301,
 "units_per_qty": 0.13535235136578377,
 "steps": {
-"within_stream": 2.0652632626268073,
+"value_within": 0.4474737069024748,
+"yield_basis": 4.615384615384616,
 "route_share": 0.13110117267515534,
 "route_elas": 0.419627841851671,
 "animal_share": 0.922,
@@ -632,7 +673,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.24963927763545501,
+"value_share": 0.05408851015434857,
+"yield_basis": 4.615384615384616,
 "price_response": 0.42290954798980357,
 "horizon": 1.0
 },
@@ -672,7 +714,8 @@
 "M": 153.45378386382802,
 "units_per_qty": 0.0010861033365887121,
 "steps": {
-"within_stream": 2.3715834118755894,
+"value_within": 0.23715834118755896,
+"yield_basis": 10.0,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -680,7 +723,8 @@
 "horizon": 0.15776420378339284
 },
 "grouped": {
-"value_share": 0.13022824102206956,
+"value_share": 0.01302282410220696,
+"yield_basis": 10.0,
 "price_response": 0.3171821609923527,
 "horizon": 0.15776420378339284
 },
@@ -694,7 +738,8 @@
 "M": 41.442083340159314,
 "units_per_qty": 0.004021676837495254,
 "steps": {
-"within_stream": 2.3715834118755894,
+"value_within": 0.23715834118755896,
+"yield_basis": 10.0,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -702,7 +747,8 @@
 "horizon": 0.5841770509004678
 },
 "grouped": {
-"value_share": 0.13022824102206956,
+"value_share": 0.01302282410220696,
+"yield_basis": 10.0,
 "price_response": 0.3171821609923527,
 "horizon": 0.5841770509004678
 },
@@ -716,7 +762,8 @@
 "M": 24.20951402882568,
 "units_per_qty": 0.006884345818268831,
 "steps": {
-"within_stream": 2.3715834118755894,
+"value_within": 0.23715834118755896,
+"yield_basis": 10.0,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -724,7 +771,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.13022824102206956,
+"value_share": 0.01302282410220696,
+"yield_basis": 10.0,
 "price_response": 0.3171821609923527,
 "horizon": 1.0
 },
@@ -764,7 +812,8 @@
 "M": 194.15617028151217,
 "units_per_qty": 0.0011600209506536167,
 "steps": {
-"within_stream": 1.874410933081998,
+"value_within": 0.3799481621112158,
+"yield_basis": 4.933333333333334,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -772,7 +821,8 @@
 "horizon": 0.15776420378339284
 },
 "grouped": {
-"value_share": 0.10292753674421891,
+"value_share": 0.020863689880584912,
+"yield_basis": 4.933333333333334,
 "price_response": 0.3171821609923527,
 "horizon": 0.15776420378339284
 },
@@ -786,7 +836,8 @@
 "M": 52.43426383641781,
 "units_per_qty": 0.004295382613320811,
 "steps": {
-"within_stream": 1.874410933081998,
+"value_within": 0.3799481621112158,
+"yield_basis": 4.933333333333334,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -794,7 +845,8 @@
 "horizon": 0.5841770509004678
 },
 "grouped": {
-"value_share": 0.10292753674421891,
+"value_share": 0.020863689880584912,
+"yield_basis": 4.933333333333334,
 "price_response": 0.3171821609923527,
 "horizon": 0.5841770509004678
 },
@@ -808,7 +860,8 @@
 "M": 30.630893614095605,
 "units_per_qty": 0.007352878047331338,
 "steps": {
-"within_stream": 1.874410933081998,
+"value_within": 0.3799481621112158,
+"yield_basis": 4.933333333333334,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -816,7 +869,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.10292753674421891,
+"value_share": 0.020863689880584912,
+"yield_basis": 4.933333333333334,
 "price_response": 0.3171821609923527,
 "horizon": 1.0
 },
@@ -856,7 +910,8 @@
 "M": 273.1233129247443,
 "units_per_qty": 0.00070140801667428,
 "steps": {
-"within_stream": 1.332469368520264,
+"value_within": 0.3828934967012253,
+"yield_basis": 3.48,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -864,7 +919,8 @@
 "horizon": 0.15776420378339284
 },
 "grouped": {
-"value_share": 0.07316847520912106,
+"value_share": 0.021025423910666974,
+"yield_basis": 3.48,
 "price_response": 0.3171821609923527,
 "horizon": 0.15776420378339284
 },
@@ -878,7 +934,8 @@
 "M": 73.76031278845333,
 "units_per_qty": 0.0025972080917753743,
 "steps": {
-"within_stream": 1.332469368520264,
+"value_within": 0.3828934967012253,
+"yield_basis": 3.48,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -886,7 +943,8 @@
 "horizon": 0.5841770509004678
 },
 "grouped": {
-"value_share": 0.07316847520912106,
+"value_share": 0.021025423910666974,
+"yield_basis": 3.48,
 "price_response": 0.3171821609923527,
 "horizon": 0.5841770509004678
 },
@@ -900,7 +958,8 @@
 "M": 43.089081998254734,
 "units_per_qty": 0.004445926261177089,
 "steps": {
-"within_stream": 1.332469368520264,
+"value_within": 0.3828934967012253,
+"yield_basis": 3.48,
 "route_share": 0.05955741637034581,
 "route_elas": 0.31472088138875326,
 "animal_share": 0.922,
@@ -908,7 +967,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.07316847520912106,
+"value_share": 0.021025423910666974,
+"yield_basis": 3.48,
 "price_response": 0.3171821609923527,
 "horizon": 1.0
 },
@@ -948,13 +1008,15 @@
 "M": 169.13332713954966,
 "units_per_qty": 0.00591249528944058,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
 "horizon": 0.15776420378339284
 },
 "grouped": {
 "value_share": 0.046799999999999994,
+"yield_basis": 1.0,
 "price_response": 0.8007860237164258,
 "horizon": 0.15776420378339284
 }
@@ -965,13 +1027,15 @@
 "M": 45.67653701609282,
 "units_per_qty": 0.021893078270090367,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
 "horizon": 0.5841770509004678
 },
 "grouped": {
 "value_share": 0.046799999999999994,
+"yield_basis": 1.0,
 "price_response": 0.8007860237164258,
 "horizon": 0.5841770509004678
 }
@@ -982,13 +1046,15 @@
 "M": 26.683184689407152,
 "units_per_qty": 0.03747678590992873,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.046799999999999994,
 "animal_elas": 0.8007860237164258,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.046799999999999994,
+"yield_basis": 1.0,
 "price_response": 0.8007860237164258,
 "horizon": 1.0
 }
@@ -1021,13 +1087,15 @@
 "M": 190.27499303199335,
 "units_per_qty": 0.005255551368391628,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
 "horizon": 0.15776420378339284
 },
 "grouped": {
 "value_share": 0.031200000000000002,
+"yield_basis": 1.0,
 "price_response": 1.067714698288568,
 "horizon": 0.15776420378339284
 }
@@ -1038,13 +1106,15 @@
 "M": 51.38610414310441,
 "units_per_qty": 0.01946051401785811,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
 "horizon": 0.5841770509004678
 },
 "grouped": {
 "value_share": 0.031200000000000002,
+"yield_basis": 1.0,
 "price_response": 1.067714698288568,
 "horizon": 0.5841770509004678
 }
@@ -1055,13 +1125,15 @@
 "M": 30.01858277558304,
 "units_per_qty": 0.03331269858660332,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.031200000000000002,
 "animal_elas": 1.067714698288568,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.031200000000000002,
+"yield_basis": 1.0,
 "price_response": 1.067714698288568,
 "horizon": 1.0
 }
@@ -1264,7 +1336,8 @@
 "M": 6.339667503026616,
 "units_per_qty": 0.15773697903282635,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.93,
@@ -1273,6 +1346,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088646,
 "horizon": 0.16764203877144615
 },
@@ -1286,7 +1360,8 @@
 "M": 1.766377814365285,
 "units_per_qty": 0.5661302988904054,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.93,
@@ -1295,6 +1370,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088646,
 "horizon": 0.6016803294839618
 },
@@ -1308,7 +1384,8 @@
 "M": 1.0627947853404651,
 "units_per_qty": 0.940915418285244,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.93,
@@ -1317,6 +1394,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088646,
 "horizon": 1.0
 },
@@ -1356,7 +1434,8 @@
 "M": 6.339667503026616,
 "units_per_qty": 0.15773697903282635,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.93,
@@ -1365,6 +1444,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088644,
 "horizon": 0.16764203877144615
 },
@@ -1378,7 +1458,8 @@
 "M": 1.766377814365285,
 "units_per_qty": 0.5661302988904054,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.93,
@@ -1387,6 +1468,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088644,
 "horizon": 0.6016803294839618
 },
@@ -1400,7 +1482,8 @@
 "M": 1.0627947853404651,
 "units_per_qty": 0.940915418285244,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 0.9999999999999999,
 "animal_share": 0.93,
@@ -1409,6 +1492,7 @@
 },
 "grouped": {
 "value_share": 0.93,
+"yield_basis": 1.0,
 "price_response": 1.0117370089088644,
 "horizon": 1.0
 },
@@ -1448,7 +1532,8 @@
 "M": 10.58031441029959,
 "units_per_qty": 0.09451514966573515,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.4728479544186319,
 "route_elas": 1.2672035847469614,
 "animal_share": 0.93,
@@ -1457,6 +1542,7 @@
 },
 "grouped": {
 "value_share": 0.4397485976093277,
+"yield_basis": 1.0,
 "price_response": 1.2820767645104816,
 "horizon": 0.16764203877144615
 },
@@ -1470,7 +1556,8 @@
 "M": 2.947920002814074,
 "units_per_qty": 0.339222230944328,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.4728479544186319,
 "route_elas": 1.2672035847469614,
 "animal_share": 0.93,
@@ -1479,6 +1566,7 @@
 },
 "grouped": {
 "value_share": 0.4397485976093277,
+"yield_basis": 1.0,
 "price_response": 1.2820767645104816,
 "horizon": 0.6016803294839618
 },
@@ -1492,7 +1580,8 @@
 "M": 1.773705478585534,
 "units_per_qty": 0.5637914592209885,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.4728479544186319,
 "route_elas": 1.2672035847469614,
 "animal_share": 0.93,
@@ -1501,6 +1590,7 @@
 },
 "grouped": {
 "value_share": 0.4397485976093277,
+"yield_basis": 1.0,
 "price_response": 1.2820767645104816,
 "horizon": 1.0
 },
@@ -1540,7 +1630,8 @@
 "M": 15.817321485488826,
 "units_per_qty": 0.0632218293670912,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5271520455813681,
 "route_elas": 0.7603221508481768,
 "animal_share": 0.93,
@@ -1549,6 +1640,7 @@
 },
 "grouped": {
 "value_share": 0.49025140239067233,
+"yield_basis": 1.0,
 "price_response": 0.7692460587062889,
 "horizon": 0.16764203877144615
 },
@@ -1562,7 +1654,8 @@
 "M": 4.407071150231823,
 "units_per_qty": 0.22690806794607743,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5271520455813681,
 "route_elas": 0.7603221508481768,
 "animal_share": 0.93,
@@ -1571,6 +1664,7 @@
 },
 "grouped": {
 "value_share": 0.49025140239067233,
+"yield_basis": 1.0,
 "price_response": 0.7692460587062889,
 "horizon": 0.6016803294839618
 },
@@ -1584,7 +1678,8 @@
 "M": 2.6516480217307454,
 "units_per_qty": 0.3771239590642556,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5271520455813681,
 "route_elas": 0.7603221508481768,
 "animal_share": 0.93,
@@ -1593,6 +1688,7 @@
 },
 "grouped": {
 "value_share": 0.49025140239067233,
+"yield_basis": 1.0,
 "price_response": 0.7692460587062889,
 "horizon": 1.0
 },
@@ -1632,7 +1728,8 @@
 "M": 6.455593998655055,
 "units_per_qty": 0.014613623883590564,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.9474266186406768,
 "route_elas": 1.0365367141924586,
 "animal_share": 0.93,
@@ -1641,6 +1738,7 @@
 },
 "grouped": {
 "value_share": 0.8811067553358295,
+"yield_basis": 1.0,
 "price_response": 1.0487025548413007,
 "horizon": 0.16764203877144615
 },
@@ -1654,7 +1752,8 @@
 "M": 1.7986776139805538,
 "units_per_qty": 0.05244943391091172,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.9474266186406768,
 "route_elas": 1.0365367141924586,
 "animal_share": 0.93,
@@ -1663,6 +1762,7 @@
 },
 "grouped": {
 "value_share": 0.8811067553358295,
+"yield_basis": 1.0,
 "price_response": 1.0487025548413007,
 "horizon": 0.6016803294839618
 },
@@ -1676,7 +1776,8 @@
 "M": 1.0822289394152458,
 "units_per_qty": 0.08717159484986918,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.9474266186406768,
 "route_elas": 1.0365367141924586,
 "animal_share": 0.93,
@@ -1685,6 +1786,7 @@
 },
 "grouped": {
 "value_share": 0.8811067553358295,
+"yield_basis": 1.0,
 "price_response": 1.0487025548413007,
 "horizon": 1.0
 },
@@ -1724,7 +1826,8 @@
 "M": 348.3519274673086,
 "units_per_qty": 0.0033268551765440156,
 "steps": {
-"within_stream": 1.5310750949370338,
+"value_within": 0.5188643377286614,
+"yield_basis": 2.950819672131148,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1732,7 +1835,8 @@
 "horizon": 0.16764203877144615
 },
 "grouped": {
-"value_share": 0.04453229648279817,
+"value_share": 0.015091500474726044,
+"yield_basis": 2.950819672131148,
 "price_response": 0.384524270108477,
 "horizon": 0.16764203877144615
 },
@@ -1746,7 +1850,8 @@
 "M": 97.05889401547935,
 "units_per_qty": 0.01194034225208534,
 "steps": {
-"within_stream": 1.5310750949370338,
+"value_within": 0.5188643377286614,
+"yield_basis": 2.950819672131148,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1754,7 +1859,8 @@
 "horizon": 0.6016803294839618
 },
 "grouped": {
-"value_share": 0.04453229648279817,
+"value_share": 0.015091500474726044,
+"yield_basis": 2.950819672131148,
 "price_response": 0.384524270108477,
 "horizon": 0.6016803294839618
 },
@@ -1768,7 +1874,8 @@
 "M": 58.39842733058254,
 "units_per_qty": 0.019844993540550207,
 "steps": {
-"within_stream": 1.5310750949370338,
+"value_within": 0.5188643377286614,
+"yield_basis": 2.950819672131148,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1776,7 +1883,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.04453229648279817,
+"value_share": 0.015091500474726044,
+"yield_basis": 2.950819672131148,
 "price_response": 0.384524270108477,
 "horizon": 1.0
 },
@@ -1816,7 +1924,8 @@
 "M": 240.18134000947583,
 "units_per_qty": 0.005428319138974226,
 "steps": {
-"within_stream": 2.220626133560025,
+"value_within": 0.48113566227133875,
+"yield_basis": 4.615384615384616,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1824,7 +1933,8 @@
 "horizon": 0.16764203877144615
 },
 "grouped": {
-"value_share": 0.0645883286091932,
+"value_share": 0.013994137865325192,
+"yield_basis": 4.615384615384616,
 "price_response": 0.384524270108477,
 "horizon": 0.16764203877144615
 },
@@ -1838,7 +1948,8 @@
 "M": 66.9200695801037,
 "units_per_qty": 0.01948266002977299,
 "steps": {
-"within_stream": 2.220626133560025,
+"value_within": 0.48113566227133875,
+"yield_basis": 4.615384615384616,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1846,7 +1957,8 @@
 "horizon": 0.6016803294839618
 },
 "grouped": {
-"value_share": 0.0645883286091932,
+"value_share": 0.013994137865325192,
+"yield_basis": 4.615384615384616,
 "price_response": 0.384524270108477,
 "horizon": 0.6016803294839618
 },
@@ -1860,7 +1972,8 @@
 "M": 40.264489514046446,
 "units_per_qty": 0.03238041710036046,
 "steps": {
-"within_stream": 2.220626133560025,
+"value_within": 0.48113566227133875,
+"yield_basis": 4.615384615384616,
 "route_share": 0.03127487993553896,
 "route_elas": 0.3800634618705682,
 "animal_share": 0.93,
@@ -1868,7 +1981,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.0645883286091932,
+"value_share": 0.013994137865325192,
+"yield_basis": 4.615384615384616,
 "price_response": 0.384524270108477,
 "horizon": 1.0
 },
@@ -1908,7 +2022,8 @@
 "M": 433.12750353140274,
 "units_per_qty": 0.00039132016332793393,
 "steps": {
-"within_stream": 2.410928263300846,
+"value_within": 0.24109282633008466,
+"yield_basis": 9.999999999999998,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -1916,7 +2031,8 @@
 "horizon": 0.16764203877144615
 },
 "grouped": {
-"value_share": 0.04775471791515595,
+"value_share": 0.004775471791515596,
+"yield_basis": 9.999999999999998,
 "price_response": 0.28839320258135775,
 "horizon": 0.16764203877144615
 },
@@ -1930,7 +2046,8 @@
 "M": 120.67932784551265,
 "units_per_qty": 0.001404478533727856,
 "steps": {
-"within_stream": 2.410928263300846,
+"value_within": 0.24109282633008466,
+"yield_basis": 9.999999999999998,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -1938,7 +2055,8 @@
 "horizon": 0.6016803294839618
 },
 "grouped": {
-"value_share": 0.04775471791515595,
+"value_share": 0.004775471791515596,
+"yield_basis": 9.999999999999998,
 "price_response": 0.28839320258135775,
 "horizon": 0.6016803294839618
 },
@@ -1952,7 +2070,8 @@
 "M": 72.61037773999108,
 "units_per_qty": 0.002334260345410367,
 "steps": {
-"within_stream": 2.410928263300846,
+"value_within": 0.24109282633008466,
+"yield_basis": 9.999999999999998,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -1960,7 +2079,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.04775471791515595,
+"value_share": 0.004775471791515596,
+"yield_basis": 9.999999999999998,
 "price_response": 0.28839320258135775,
 "horizon": 1.0
 },
@@ -2000,7 +2120,8 @@
 "M": 588.8192818278259,
 "units_per_qty": 0.000388986245852817,
 "steps": {
-"within_stream": 1.7734462374181175,
+"value_within": 0.3594823454225914,
+"yield_basis": 4.933333333333334,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2008,7 +2129,8 @@
 "horizon": 0.16764203877144615
 },
 "grouped": {
-"value_share": 0.03512772490776879,
+"value_share": 0.007120484778601782,
+"yield_basis": 4.933333333333334,
 "price_response": 0.28839320258135775,
 "horizon": 0.16764203877144615
 },
@@ -2022,7 +2144,8 @@
 "M": 164.05865380079152,
 "units_per_qty": 0.0013961019221946877,
 "steps": {
-"within_stream": 1.7734462374181175,
+"value_within": 0.3594823454225914,
+"yield_basis": 4.933333333333334,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2030,7 +2153,8 @@
 "horizon": 0.6016803294839618
 },
 "grouped": {
-"value_share": 0.03512772490776879,
+"value_share": 0.007120484778601782,
+"yield_basis": 4.933333333333334,
 "price_response": 0.28839320258135775,
 "horizon": 0.6016803294839618
 },
@@ -2044,7 +2168,8 @@
 "M": 98.71086487355545,
 "units_per_qty": 0.0023203383155172633,
 "steps": {
-"within_stream": 1.7734462374181175,
+"value_within": 0.3594823454225914,
+"yield_basis": 4.933333333333334,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2052,7 +2177,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.03512772490776879,
+"value_share": 0.007120484778601782,
+"yield_basis": 4.933333333333334,
 "price_response": 0.28839320258135775,
 "horizon": 1.0
 },
@@ -2092,7 +2218,8 @@
 "M": 751.2521871596398,
 "units_per_qty": 0.0002593241639018781,
 "steps": {
-"within_stream": 1.389998402300687,
+"value_within": 0.3994248282473239,
+"yield_basis": 3.48,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2100,7 +2227,8 @@
 "horizon": 0.16764203877144615
 },
 "grouped": {
-"value_share": 0.027532541143926895,
+"value_share": 0.007911649754001984,
+"yield_basis": 3.48,
 "price_response": 0.28839320258135775,
 "horizon": 0.16764203877144615
 },
@@ -2114,7 +2242,8 @@
 "M": 209.31621346997534,
 "units_per_qty": 0.0009307346147964588,
 "steps": {
-"within_stream": 1.389998402300687,
+"value_within": 0.3994248282473239,
+"yield_basis": 3.48,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2122,7 +2251,8 @@
 "horizon": 0.6016803294839618
 },
 "grouped": {
-"value_share": 0.027532541143926895,
+"value_share": 0.007911649754001984,
+"yield_basis": 3.48,
 "price_response": 0.28839320258135775,
 "horizon": 0.6016803294839618
 },
@@ -2136,7 +2266,8 @@
 "M": 125.94144828695003,
 "units_per_qty": 0.0015468922103448427,
 "steps": {
-"within_stream": 1.389998402300687,
+"value_within": 0.3994248282473239,
+"yield_basis": 3.48,
 "route_share": 0.02129850142378426,
 "route_elas": 0.28504759640292615,
 "animal_share": 0.93,
@@ -2144,7 +2275,8 @@
 "horizon": 1.0
 },
 "grouped": {
-"value_share": 0.027532541143926895,
+"value_share": 0.007911649754001984,
+"yield_basis": 3.48,
 "price_response": 0.28839320258135775,
 "horizon": 1.0
 },
@@ -2184,13 +2316,15 @@
 "M": 190.6993939192631,
 "units_per_qty": 0.00524385515573989,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
 "horizon": 0.16764203877144615
 },
 "grouped": {
 "value_share": 0.04200000000000001,
+"yield_basis": 1.0,
 "price_response": 0.7447636350599486,
 "horizon": 0.16764203877144615
 }
@@ -2201,13 +2335,15 @@
 "M": 53.133256353125546,
 "units_per_qty": 0.01882060443188281,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
 "horizon": 0.6016803294839618
 },
 "grouped": {
 "value_share": 0.04200000000000001,
+"yield_basis": 1.0,
 "price_response": 0.7447636350599486,
 "horizon": 0.6016803294839618
 }
@@ -2218,13 +2354,15 @@
 "M": 31.969235189104385,
 "units_per_qty": 0.031280072672517846,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.04200000000000001,
 "animal_elas": 0.7447636350599486,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.04200000000000001,
+"yield_basis": 1.0,
 "price_response": 0.7447636350599486,
 "horizon": 1.0
 }
@@ -2257,13 +2395,15 @@
 "M": 214.53681815917096,
 "units_per_qty": 0.004661204582879903,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
 "horizon": 0.16764203877144615
 },
 "grouped": {
 "value_share": 0.028000000000000008,
+"yield_basis": 1.0,
 "price_response": 0.9930181800799315,
 "horizon": 0.16764203877144615
 }
@@ -2274,13 +2414,15 @@
 "M": 59.774913397266225,
 "units_per_qty": 0.01672942616167361,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
 "horizon": 0.6016803294839618
 },
 "grouped": {
 "value_share": 0.028000000000000008,
+"yield_basis": 1.0,
 "price_response": 0.9930181800799315,
 "horizon": 0.6016803294839618
 }
@@ -2291,13 +2433,15 @@
 "M": 35.96538958774243,
 "units_per_qty": 0.02780450904223809,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.028000000000000008,
 "animal_elas": 0.9930181800799315,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.028000000000000008,
+"yield_basis": 1.0,
 "price_response": 0.9930181800799315,
 "horizon": 1.0
 }
@@ -2500,13 +2644,15 @@
 "M": 17.74497513242378,
 "units_per_qty": 0.00019563197501562546,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.4340799650790305,
 "animal_elas": 0.9651843347900257,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.4340799650790305,
+"yield_basis": 1.0,
 "price_response": 0.9651843347900257,
 "horizon": 0.1345069109388476
 },
@@ -2520,13 +2666,15 @@
 "M": 5.266475541500512,
 "units_per_qty": 0.0006591665534954969,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.4340799650790305,
 "animal_elas": 0.9651843347900257,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.4340799650790305,
+"yield_basis": 1.0,
 "price_response": 0.9651843347900257,
 "horizon": 0.453210457532846
 },
@@ -2540,13 +2688,15 @@
 "M": 2.38682178974899,
 "units_per_qty": 0.0014544380928097284,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.4340799650790305,
 "animal_elas": 0.9651843347900257,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.4340799650790305,
+"yield_basis": 1.0,
 "price_response": 0.9651843347900257,
 "horizon": 1.0
 },
@@ -2586,13 +2736,15 @@
 "M": 31.689922794113873,
 "units_per_qty": 0.00013776480572805756,
 "steps": {
-"within_stream": 0.8424593925602565,
+"value_within": 0.8424593925602565,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.21875926969810558,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
@@ -2606,13 +2758,15 @@
 "M": 9.4051528425244,
 "units_per_qty": 0.0004641876777939151,
 "steps": {
-"within_stream": 0.8424593925602565,
+"value_within": 0.8424593925602565,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.21875926969810558,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 0.453210457532846
 },
@@ -2626,13 +2780,15 @@
 "M": 4.2625136229268294,
 "units_per_qty": 0.0010242210215554736,
 "steps": {
-"within_stream": 0.8424593925602565,
+"value_within": 0.8424593925602565,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.21875926969810558,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 1.0
 },
@@ -2672,13 +2828,15 @@
 "M": 169.46407368412554,
 "units_per_qty": 0.00010861081201692337,
 "steps": {
-"within_stream": 0.15754060743974355,
+"value_within": 0.15754060743974355,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.04090816546846114,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 0.1345069109388476
 },
@@ -2692,13 +2850,15 @@
 "M": 50.29471118219508,
 "units_per_qty": 0.00036595558892570833,
 "steps": {
-"within_stream": 0.15754060743974355,
+"value_within": 0.15754060743974355,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.04090816546846114,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 0.453210457532846
 },
@@ -2712,13 +2872,15 @@
 "M": 22.79408906636498,
 "units_per_qty": 0.0008074738410006482,
 "steps": {
-"within_stream": 0.15754060743974355,
+"value_within": 0.15754060743974355,
+"yield_basis": 1.0,
 "animal_share": 0.2596674351665667,
 "animal_elas": 1.072427038655584,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.04090816546846114,
+"yield_basis": 1.0,
 "price_response": 1.072427038655584,
 "horizon": 1.0
 },
@@ -2758,13 +2920,15 @@
 "M": 26.62081378311068,
 "units_per_qty": 0.00012096063618872455,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.24594768256457475,
 "animal_elas": 1.1355109821059126,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.24594768256457475,
+"yield_basis": 1.0,
 "price_response": 1.1355109821059126,
 "horizon": 0.1345069109388476
 },
@@ -2778,13 +2942,15 @@
 "M": 7.90070787010692,
 "units_per_qty": 0.00040756735016745505,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.24594768256457475,
 "animal_elas": 1.1355109821059126,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.24594768256457475,
+"yield_basis": 1.0,
 "price_response": 1.1355109821059126,
 "horizon": 0.453210457532846
 },
@@ -2798,13 +2964,15 @@
 "M": 3.5806834286445146,
 "units_per_qty": 0.0008992893773593409,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.24594768256457475,
 "animal_elas": 1.1355109821059126,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.24594768256457475,
+"yield_basis": 1.0,
 "price_response": 1.1355109821059126,
 "horizon": 1.0
 },
@@ -2844,13 +3012,15 @@
 "M": 2758.9648169117654,
 "units_per_qty": 0.00036245478516806366,
 "steps": {
-"within_stream": 0.11574074074074076,
+"value_within": 0.11574074074074076,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.006979735785859715,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.1345069109388476
 }
@@ -2861,13 +3031,15 @@
 "M": 818.8245190367647,
 "units_per_qty": 0.0012212628918053937,
 "steps": {
-"within_stream": 0.11574074074074076,
+"value_within": 0.11574074074074076,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.006979735785859715,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.453210457532846
 }
@@ -2878,13 +3050,15 @@
 "M": 371.09983491176473,
 "units_per_qty": 0.002694692656594059,
 "steps": {
-"within_stream": 0.11574074074074076,
+"value_within": 0.11574074074074076,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.006979735785859715,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 1.0
 }
@@ -2917,13 +3091,15 @@
 "M": 1250.8260180299455,
 "units_per_qty": 0.0007994716975707004,
 "steps": {
-"within_stream": 0.2552910052910053,
+"value_within": 0.2552910052910053,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.015395302933381998,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.1345069109388476
 }
@@ -2934,13 +3110,15 @@
 "M": 371.2287327239219,
 "units_per_qty": 0.002693757007067897,
 "steps": {
-"within_stream": 0.2552910052910053,
+"value_within": 0.2552910052910053,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.015395302933381998,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.453210457532846
 }
@@ -2951,13 +3129,15 @@
 "M": 168.24474380714727,
 "units_per_qty": 0.005943722088258894,
 "steps": {
-"within_stream": 0.2552910052910053,
+"value_within": 0.2552910052910053,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.015395302933381998,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 1.0
 }
@@ -2990,13 +3170,15 @@
 "M": 593.8731155714132,
 "units_per_qty": 0.0016838613733807756,
 "steps": {
-"within_stream": 0.5376984126984127,
+"value_within": 0.5376984126984127,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.0324258582508797,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.1345069109388476
 }
@@ -3007,13 +3189,15 @@
 "M": 176.25374026006625,
 "units_per_qty": 0.005673638463073056,
 "steps": {
-"within_stream": 0.5376984126984127,
+"value_within": 0.5376984126984127,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.0324258582508797,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.453210457532846
 }
@@ -3024,13 +3208,15 @@
 "M": 79.88003826514003,
 "units_per_qty": 0.012518772170348396,
 "steps": {
-"within_stream": 0.5376984126984127,
+"value_within": 0.5376984126984127,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.0324258582508797,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 1.0
 }
@@ -3063,13 +3249,15 @@
 "M": 3498.6872678228915,
 "units_per_qty": 0.00028582148773253016,
 "steps": {
-"within_stream": 0.09126984126984126,
+"value_within": 0.09126984126984126,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.1345069109388476
 },
 "grouped": {
 "value_share": 0.005504020219706517,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.1345069109388476
 }
@@ -3080,13 +3268,15 @@
 "M": 1038.364426314738,
 "units_per_qty": 0.0009630530232522532,
 "steps": {
-"within_stream": 0.09126984126984126,
+"value_within": 0.09126984126984126,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 0.453210457532846
 },
 "grouped": {
 "value_share": 0.005504020219706517,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 0.453210457532846
 }
@@ -3097,13 +3287,15 @@
 "M": 470.5976167359336,
 "units_per_qty": 0.0021249576377713147,
 "steps": {
-"within_stream": 0.09126984126984126,
+"value_within": 0.09126984126984126,
+"yield_basis": 1.0,
 "animal_share": 0.06030491718982793,
 "animal_elas": 0.3860737339160103,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.005504020219706517,
+"yield_basis": 1.0,
 "price_response": 0.3860737339160103,
 "horizon": 1.0
 }
@@ -3221,7 +3413,8 @@
 "M": 17.175505011092064,
 "units_per_qty": 0.058222451063546184,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3230,6 +3423,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
@@ -3243,7 +3437,8 @@
 "M": 1.4853616965774654,
 "units_per_qty": 0.6732366953477903,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3252,6 +3447,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
@@ -3265,7 +3461,8 @@
 "M": 1.0000995322110346,
 "units_per_qty": 0.9999004776946404,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3274,6 +3471,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 1.0
 },
@@ -3313,7 +3511,8 @@
 "M": 17.175505011092064,
 "units_per_qty": 0.045133682994997044,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3322,6 +3521,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 0.05822824607283239
 },
@@ -3335,7 +3535,8 @@
 "M": 1.4853616965774654,
 "units_per_qty": 0.521888911122318,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3344,6 +3545,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 0.6733037040846278
 },
@@ -3357,7 +3559,8 @@
 "M": 1.0000995322110344,
 "units_per_qty": 0.7751166493756904,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9989744490881082,
@@ -3366,6 +3569,7 @@
 },
 "grouped": {
 "value_share": 0.9989744490881082,
+"yield_basis": 1.0,
 "price_response": 1.000926979270969,
 "horizon": 1.0
 },
@@ -3405,7 +3609,8 @@
 "M": 44.71553890818796,
 "units_per_qty": 0.02660197209638899,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.48333333333333334,
 "route_elas": 0.7947019867549668,
 "animal_share": 0.9989744490881082,
@@ -3414,6 +3619,7 @@
 },
 "grouped": {
 "value_share": 0.48283765039258564,
+"yield_basis": 1.0,
 "price_response": 0.7954386590232866,
 "horizon": 0.05822824607283239
 },
@@ -3427,7 +3633,8 @@
 "M": 3.8670623479861606,
 "units_per_qty": 0.3076033979462669,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.48333333333333334,
 "route_elas": 0.7947019867549668,
 "animal_share": 0.9989744490881082,
@@ -3436,6 +3643,7 @@
 },
 "grouped": {
 "value_share": 0.48283765039258564,
+"yield_basis": 1.0,
 "price_response": 0.7954386590232866,
 "horizon": 0.6733037040846278
 },
@@ -3449,7 +3657,8 @@
 "M": 2.60370740282528,
 "units_per_qty": 0.45685683307573804,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.48333333333333334,
 "route_elas": 0.7947019867549668,
 "animal_share": 0.9989744490881082,
@@ -3458,6 +3667,7 @@
 },
 "grouped": {
 "value_share": 0.48283765039258564,
+"yield_basis": 1.0,
 "price_response": 0.7954386590232866,
 "horizon": 1.0
 },
@@ -3497,7 +3707,8 @@
 "M": 27.8871102868269,
 "units_per_qty": 0.07980591628916696,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5166666666666667,
 "route_elas": 1.1920529801324502,
 "animal_share": 0.9989744490881082,
@@ -3506,6 +3717,7 @@
 },
 "grouped": {
 "value_share": 0.5161367986955226,
+"yield_basis": 1.0,
 "price_response": 1.1931579885349297,
 "horizon": 0.05822824607283239
 },
@@ -3519,7 +3731,8 @@
 "M": 2.4117163030451323,
 "units_per_qty": 0.9228101938388007,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5166666666666667,
 "route_elas": 1.1920529801324502,
 "animal_share": 0.9989744490881082,
@@ -3528,6 +3741,7 @@
 },
 "grouped": {
 "value_share": 0.5161367986955226,
+"yield_basis": 1.0,
 "price_response": 1.1931579885349297,
 "horizon": 0.6733037040846278
 },
@@ -3541,7 +3755,8 @@
 "M": 1.623817520041572,
 "units_per_qty": 1.370570499227214,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.5166666666666667,
 "route_elas": 1.1920529801324502,
 "animal_share": 0.9989744490881082,
@@ -3550,6 +3765,7 @@
 },
 "grouped": {
 "value_share": 0.5161367986955226,
+"yield_basis": 1.0,
 "price_response": 1.1931579885349297,
 "horizon": 1.0
 },
@@ -3589,13 +3805,15 @@
 "M": 172562.27740320773,
 "units_per_qty": 0.00014487523215508559,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
 "horizon": 0.05822824607283239
 },
 "grouped": {
 "value_share": 0.0010255509118917547,
+"yield_basis": 1.0,
 "price_response": 0.09704277399142588,
 "horizon": 0.05822824607283239
 }
@@ -3606,13 +3824,15 @@
 "M": 14923.427111072906,
 "units_per_qty": 0.0016752184209383421,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
 "horizon": 0.6733037040846278
 },
 "grouped": {
 "value_share": 0.0010255509118917547,
+"yield_basis": 1.0,
 "price_response": 0.09704277399142588,
 "horizon": 0.6733037040846278
 }
@@ -3623,13 +3843,15 @@
 "M": 10047.998751522346,
 "units_per_qty": 0.0024880576339853066,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.0010255509118917547,
 "animal_elas": 0.09704277399142588,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.0010255509118917547,
+"yield_basis": 1.0,
 "price_response": 0.09704277399142588,
 "horizon": 1.0
 }
@@ -3764,7 +3986,8 @@
 "M": 16.892475483521896,
 "units_per_qty": 0.05919795479208894,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3773,6 +3996,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
@@ -3786,7 +4010,8 @@
 "M": 1.4768113799365583,
 "units_per_qty": 0.6771345437783386,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3795,6 +4020,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
@@ -3808,7 +4034,8 @@
 "M": 1.000038263330826,
 "units_per_qty": 0.9999617381332004,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3817,6 +4044,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 1.0
 },
@@ -3856,7 +4084,8 @@
 "M": 16.892475483521892,
 "units_per_qty": 0.045889887435727875,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3865,6 +4094,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 0.05920021990301738
 },
@@ -3878,7 +4108,8 @@
 "M": 1.4768113799365579,
 "units_per_qty": 0.5249104990529757,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3887,6 +4118,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 0.677160453201401
 },
@@ -3900,7 +4132,8 @@
 "M": 1.0000382633308258,
 "units_per_qty": 0.7751641380877524,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 1.0,
 "route_elas": 1.0,
 "animal_share": 0.9995987260030683,
@@ -3909,6 +4142,7 @@
 },
 "grouped": {
 "value_share": 0.9995987260030683,
+"yield_basis": 1.0,
 "price_response": 1.0003631578559367,
 "horizon": 1.0
 },
@@ -3948,7 +4182,8 @@
 "M": 69.79060029756495,
 "units_per_qty": 0.017044150834623434,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.32387189794846105,
 "route_elas": 0.7473483793495482,
 "animal_share": 0.9995987260030683,
@@ -3957,6 +4192,7 @@
 },
 "grouped": {
 "value_share": 0.3237419365774774,
+"yield_basis": 1.0,
 "price_response": 0.7476197847846305,
 "horizon": 0.05920021990301738
 },
@@ -3970,7 +4206,8 @@
 "M": 6.1013883271630025,
 "units_per_qty": 0.1949591559374997,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.32387189794846105,
 "route_elas": 0.7473483793495482,
 "animal_share": 0.9995987260030683,
@@ -3979,6 +4216,7 @@
 },
 "grouped": {
 "value_share": 0.3237419365774774,
+"yield_basis": 1.0,
 "price_response": 0.7476197847846305,
 "horizon": 0.677160453201401
 },
@@ -3992,7 +4230,8 @@
 "M": 4.131618884779436,
 "units_per_qty": 0.2879068838349823,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.32387189794846105,
 "route_elas": 0.7473483793495482,
 "animal_share": 0.9995987260030683,
@@ -4001,6 +4240,7 @@
 },
 "grouped": {
 "value_share": 0.3237419365774774,
+"yield_basis": 1.0,
 "price_response": 0.7476197847846305,
 "horizon": 1.0
 },
@@ -4040,7 +4280,8 @@
 "M": 22.28691486988051,
 "units_per_qty": 0.09985933010876201,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.6761281020515391,
 "route_elas": 1.1210225690243223,
 "animal_share": 0.9995987260030683,
@@ -4049,6 +4290,7 @@
 },
 "grouped": {
 "value_share": 0.675856789425591,
+"yield_basis": 1.0,
 "price_response": 1.1214296771769459,
 "horizon": 0.05920021990301738
 },
@@ -4062,7 +4304,8 @@
 "M": 1.9484159995154662,
 "units_per_qty": 1.1422388184303185,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.6761281020515391,
 "route_elas": 1.1210225690243223,
 "animal_share": 0.9995987260030683,
@@ -4071,6 +4314,7 @@
 },
 "grouped": {
 "value_share": 0.675856789425591,
+"yield_basis": 1.0,
 "price_response": 1.1214296771769459,
 "horizon": 0.677160453201401
 },
@@ -4084,7 +4328,8 @@
 "M": 1.3193902612567538,
 "units_per_qty": 1.686806742818742,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "route_share": 0.6761281020515391,
 "route_elas": 1.1210225690243223,
 "animal_share": 0.9995987260030683,
@@ -4093,6 +4338,7 @@
 },
 "grouped": {
 "value_share": 0.675856789425591,
+"yield_basis": 1.0,
 "price_response": 1.1214296771769459,
 "horizon": 1.0
 },
@@ -4132,13 +4378,15 @@
 "M": 441479.48228407477,
 "units_per_qty": 5.662777321079097e-05,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
 "horizon": 0.05920021990301738
 },
 "grouped": {
 "value_share": 0.00040127399693165664,
+"yield_basis": 1.0,
 "price_response": 0.09535097487525016,
 "horizon": 0.05920021990301738
 }
@@ -4149,13 +4397,15 @@
 "M": 38595.99642939311,
 "units_per_qty": 0.0006477355765573922,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
 "horizon": 0.677160453201401
 },
 "grouped": {
 "value_share": 0.00040127399693165664,
+"yield_basis": 1.0,
 "price_response": 0.09535097487525016,
 "horizon": 0.677160453201401
 }
@@ -4166,13 +4416,15 @@
 "M": 26135.682433887498,
 "units_per_qty": 0.00095654666998804,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.00040127399693165664,
 "animal_elas": 0.09535097487525016,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.00040127399693165664,
+"yield_basis": 1.0,
 "price_response": 0.09535097487525016,
 "horizon": 1.0
 }
@@ -4307,13 +4559,15 @@
 "M": 19.515770329067774,
 "units_per_qty": 0.038730620722115625,
 "steps": {
-"within_stream": 0.8252997937147218,
+"value_within": 0.8252997937147218,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.4521396749139154,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
@@ -4327,13 +4581,15 @@
 "M": 4.349786812030887,
 "units_per_qty": 0.1737689526816457,
 "steps": {
-"within_stream": 0.8252997937147218,
+"value_within": 0.8252997937147218,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.4521396749139154,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
@@ -4347,13 +4603,15 @@
 "M": 1.8221228925247384,
 "units_per_qty": 0.4148226784351097,
 "steps": {
-"within_stream": 0.8252997937147218,
+"value_within": 0.8252997937147218,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.4521396749139154,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 1.0
 },
@@ -4393,13 +4651,15 @@
 "M": 92.19428854286815,
 "units_per_qty": 0.045194412067394676,
 "steps": {
-"within_stream": 0.1747002062852782,
+"value_within": 0.1747002062852782,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.09570933505470307,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 0.09336669072246542
 },
@@ -4413,13 +4673,15 @@
 "M": 20.54879175591806,
 "units_per_qty": 0.20276942392326622,
 "steps": {
-"within_stream": 0.1747002062852782,
+"value_within": 0.1747002062852782,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.09570933505470307,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 0.4188993555925563
 },
@@ -4433,13 +4695,15 @@
 "M": 8.607875624759709,
 "units_per_qty": 0.48405284280382255,
 "steps": {
-"within_stream": 0.1747002062852782,
+"value_within": 0.1747002062852782,
+"yield_basis": 1.0,
 "animal_share": 0.5478490099686184,
 "animal_elas": 1.2138072237835362,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.09570933505470307,
+"yield_basis": 1.0,
 "price_response": 1.2138072237835362,
 "horizon": 1.0
 },
@@ -4479,13 +4743,15 @@
 "M": 55.32622171248319,
 "units_per_qty": 0.03974189130355445,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.19935967474280877,
 "animal_elas": 0.9710457790268291,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.19935967474280877,
+"yield_basis": 1.0,
 "price_response": 0.9710457790268291,
 "horizon": 0.09336669072246542
 },
@@ -4499,13 +4765,15 @@
 "M": 12.331425585902144,
 "units_per_qty": 0.17830612318235087,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.19935967474280877,
 "animal_elas": 0.9710457790268291,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.19935967474280877,
+"yield_basis": 1.0,
 "price_response": 0.9710457790268291,
 "horizon": 0.4188993555925563
 },
@@ -4519,13 +4787,15 @@
 "M": 5.165626231471969,
 "units_per_qty": 0.4256538493121504,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.19935967474280877,
 "animal_elas": 0.9710457790268291,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.19935967474280877,
+"yield_basis": 1.0,
 "price_response": 0.9710457790268291,
 "horizon": 1.0
 },
@@ -4565,13 +4835,15 @@
 "M": 101.3758797562217,
 "units_per_qty": 0.007144922046179429,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16320180291218006,
 "animal_elas": 0.6473638526845528,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.16320180291218006,
+"yield_basis": 1.0,
 "price_response": 0.6473638526845528,
 "horizon": 0.09336669072246542
 },
@@ -4585,13 +4857,15 @@
 "M": 22.595237461103384,
 "units_per_qty": 0.03205643487783433,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16320180291218006,
 "animal_elas": 0.6473638526845528,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.16320180291218006,
+"yield_basis": 1.0,
 "price_response": 0.6473638526845528,
 "horizon": 0.4188993555925563
 },
@@ -4605,13 +4879,15 @@
 "M": 9.465130411916993,
 "units_per_qty": 0.07652538599036213,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16320180291218006,
 "animal_elas": 0.6473638526845528,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.16320180291218006,
+"yield_basis": 1.0,
 "price_response": 0.6473638526845528,
 "horizon": 1.0
 },
@@ -4651,13 +4927,15 @@
 "M": 1585.4369884297523,
 "units_per_qty": 0.0008687891593117008,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.02087087215545536,
 "animal_elas": 0.3236819263422764,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.02087087215545536,
+"yield_basis": 1.0,
 "price_response": 0.3236819263422764,
 "horizon": 0.09336669072246542
 },
@@ -4671,13 +4949,15 @@
 "M": 353.3712883116884,
 "units_per_qty": 0.0038979128012930843,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.02087087215545536,
 "animal_elas": 0.3236819263422764,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.02087087215545536,
+"yield_basis": 1.0,
 "price_response": 0.3236819263422764,
 "horizon": 0.4188993555925563
 },
@@ -4691,13 +4971,15 @@
 "M": 148.02700495867768,
 "units_per_qty": 0.009305129619450646,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.02087087215545536,
 "animal_elas": 0.3236819263422764,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.02087087215545536,
+"yield_basis": 1.0,
 "price_response": 0.3236819263422764,
 "horizon": 1.0
 },
@@ -4737,13 +5019,15 @@
 "M": 1332.2074694444445,
 "units_per_qty": 0.004170187964696165,
 "steps": {
-"within_stream": 0.3076923076923077,
+"value_within": 0.3076923076923077,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.01655870848697285,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
@@ -4757,13 +5041,15 @@
 "M": 296.93004087301586,
 "units_per_qty": 0.018709981446206808,
 "steps": {
-"within_stream": 0.3076923076923077,
+"value_within": 0.3076923076923077,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.01655870848697285,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
@@ -4777,13 +5063,15 @@
 "M": 124.38380277777775,
 "units_per_qty": 0.04466462217336311,
 "steps": {
-"within_stream": 0.3076923076923077,
+"value_within": 0.3076923076923077,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.01655870848697285,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 1.0
 },
@@ -4823,13 +5111,15 @@
 "M": 592.0922086419753,
 "units_per_qty": 0.0062552819470442465,
 "steps": {
-"within_stream": 0.6923076923076924,
+"value_within": 0.6923076923076924,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.03725709409568891,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 0.09336669072246542
 },
@@ -4843,13 +5133,15 @@
 "M": 131.9689070546737,
 "units_per_qty": 0.02806497216931021,
 "steps": {
-"within_stream": 0.6923076923076924,
+"value_within": 0.6923076923076924,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.03725709409568891,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 0.4188993555925563
 },
@@ -4863,13 +5155,15 @@
 "M": 55.28169012345678,
 "units_per_qty": 0.06699693326004466,
 "steps": {
-"within_stream": 0.6923076923076924,
+"value_within": 0.6923076923076924,
+"yield_basis": 1.0,
 "animal_share": 0.053815802582661755,
 "animal_elas": 0.48552288951341455,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.03725709409568891,
+"yield_basis": 1.0,
 "price_response": 0.48552288951341455,
 "horizon": 1.0
 },
@@ -4909,13 +5203,15 @@
 "M": 3700.5763040123456,
 "units_per_qty": 0.00033361503717569313,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.014902837638275566,
 "animal_elas": 0.19420915580536582,
 "horizon": 0.09336669072246542
 },
 "grouped": {
 "value_share": 0.014902837638275566,
+"yield_basis": 1.0,
 "price_response": 0.19420915580536582,
 "horizon": 0.09336669072246542
 },
@@ -4929,13 +5225,15 @@
 "M": 824.8056690917107,
 "units_per_qty": 0.0014967985156965446,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.014902837638275566,
 "animal_elas": 0.19420915580536582,
 "horizon": 0.4188993555925563
 },
 "grouped": {
 "value_share": 0.014902837638275566,
+"yield_basis": 1.0,
 "price_response": 0.19420915580536582,
 "horizon": 0.4188993555925563
 },
@@ -4949,13 +5247,15 @@
 "M": 345.51056327160484,
 "units_per_qty": 0.003573169773869048,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.014902837638275566,
 "animal_elas": 0.19420915580536582,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.014902837638275566,
+"yield_basis": 1.0,
 "price_response": 0.19420915580536582,
 "horizon": 1.0
 },
@@ -5114,13 +5414,15 @@
 "M": 13.995930480889331,
 "units_per_qty": 0.0013203119313002084,
 "steps": {
-"within_stream": 0.5381717742612262,
+"value_within": 0.5381717742612262,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.2313481844678791,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
@@ -5134,13 +5436,15 @@
 "M": 6.863823506308386,
 "units_per_qty": 0.00269223035624136,
 "steps": {
-"within_stream": 0.5381717742612262,
+"value_within": 0.5381717742612262,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.2313481844678791,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
@@ -5154,13 +5458,15 @@
 "M": 4.2703300610062245,
 "units_per_qty": 0.004327298766037821,
 "steps": {
-"within_stream": 0.5381717742612262,
+"value_within": 0.5381717742612262,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.2313481844678791,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 1.0
 },
@@ -5200,13 +5506,15 @@
 "M": 27.33413228781667,
 "units_per_qty": 0.0016747984111487285,
 "steps": {
-"within_stream": 0.27556077727384953,
+"value_within": 0.27556077727384953,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.11845750480016531,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
@@ -5220,13 +5528,15 @@
 "M": 13.405086569831083,
 "units_per_qty": 0.0034150589843107127,
 "steps": {
-"within_stream": 0.27556077727384953,
+"value_within": 0.27556077727384953,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.11845750480016531,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
@@ -5240,13 +5550,15 @@
 "M": 8.339979036018141,
 "units_per_qty": 0.005489121870457533,
 "steps": {
-"within_stream": 0.27556077727384953,
+"value_within": 0.27556077727384953,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.11845750480016531,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 1.0
 },
@@ -5286,13 +5598,15 @@
 "M": 40.43763309913683,
 "units_per_qty": 0.002391281677622221,
 "steps": {
-"within_stream": 0.18626744846492432,
+"value_within": 0.18626744846492432,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.0800722707670423,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.3051122658001998
 },
@@ -5306,13 +5620,15 @@
 "M": 19.831248589318008,
 "units_per_qty": 0.004876030406298346,
 "steps": {
-"within_stream": 0.18626744846492432,
+"value_within": 0.18626744846492432,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.0800722707670423,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 0.6221503302177656
 },
@@ -5326,13 +5642,15 @@
 "M": 12.338017858474794,
 "units_per_qty": 0.007837382975577034,
 "steps": {
-"within_stream": 0.18626744846492432,
+"value_within": 0.18626744846492432,
+"yield_basis": 1.0,
 "animal_share": 0.4298779600350867,
 "animal_elas": 1.012214281742215,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.0800722707670423,
+"yield_basis": 1.0,
 "price_response": 1.012214281742215,
 "horizon": 1.0
 },
@@ -5372,13 +5690,15 @@
 "M": 12.07575563402838,
 "units_per_qty": 0.0015663495812967662,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.22344585885017668,
 "animal_elas": 1.2146571380906581,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.22344585885017668,
+"yield_basis": 1.0,
 "price_response": 1.2146571380906581,
 "horizon": 0.3051122658001998
 },
@@ -5392,13 +5712,15 @@
 "M": 5.922139688422713,
 "units_per_qty": 0.0031939224294522083,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.22344585885017668,
 "animal_elas": 1.2146571380906581,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.22344585885017668,
+"yield_basis": 1.0,
 "price_response": 1.2146571380906581,
 "horizon": 0.6221503302177656
 },
@@ -5412,13 +5734,15 @@
 "M": 3.684461162747926,
 "units_per_qty": 0.005133682768173198,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.22344585885017668,
 "animal_elas": 1.2146571380906581,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.22344585885017668,
+"yield_basis": 1.0,
 "price_response": 1.2146571380906581,
 "horizon": 1.0
 },
@@ -5458,13 +5782,15 @@
 "M": 17.465924839714003,
 "units_per_qty": 0.0016357448159111795,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16478730945641024,
 "animal_elas": 1.1387410669599918,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.16478730945641024,
+"yield_basis": 1.0,
 "price_response": 1.1387410669599918,
 "horizon": 0.3051122658001998
 },
@@ -5478,13 +5804,15 @@
 "M": 8.565563085493894,
 "units_per_qty": 0.003335425321896293,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16478730945641024,
 "animal_elas": 1.1387410669599918,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.16478730945641024,
+"yield_basis": 1.0,
 "price_response": 1.1387410669599918,
 "horizon": 0.6221503302177656
 },
@@ -5498,13 +5826,15 @@
 "M": 5.329067902141129,
 "units_per_qty": 0.005361124409801124,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.16478730945641024,
 "animal_elas": 1.1387410669599918,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.16478730945641024,
+"yield_basis": 1.0,
 "price_response": 1.1387410669599918,
 "horizon": 1.0
 },
@@ -5544,13 +5874,15 @@
 "M": 43.11230627561659,
 "units_per_qty": 0.0007435203708687179,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.10013948487599868,
 "animal_elas": 0.7591607113066613,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.10013948487599868,
+"yield_basis": 1.0,
 "price_response": 0.7591607113066613,
 "horizon": 0.3051122658001998
 },
@@ -5564,13 +5896,15 @@
 "M": 21.142950204689825,
 "units_per_qty": 0.0015161024190437694,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.10013948487599868,
 "animal_elas": 0.7591607113066613,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.10013948487599868,
+"yield_basis": 1.0,
 "price_response": 0.7591607113066613,
 "horizon": 0.6221503302177656
 },
@@ -5584,13 +5918,15 @@
 "M": 13.154093451625547,
 "units_per_qty": 0.0024368747317277837,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.10013948487599868,
 "animal_elas": 0.7591607113066613,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.10013948487599868,
+"yield_basis": 1.0,
 "price_response": 0.7591607113066613,
 "horizon": 1.0
 },
@@ -5630,13 +5966,15 @@
 "M": 747.9516526794743,
 "units_per_qty": 0.0002703710439522611,
 "steps": {
-"within_stream": 0.1470981943659458,
+"value_within": 0.1470981943659458,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.012025187186203714,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 0.3051122658001998
 },
@@ -5650,13 +5988,15 @@
 "M": 366.80720458375464,
 "units_per_qty": 0.0005513099705613707,
 "steps": {
-"within_stream": 0.1470981943659458,
+"value_within": 0.1470981943659458,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.012025187186203714,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 0.6221503302177656
 },
@@ -5670,13 +6010,15 @@
 "M": 228.20922345803848,
 "units_per_qty": 0.0008861362660828303,
 "steps": {
-"within_stream": 0.1470981943659458,
+"value_within": 0.1470981943659458,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.012025187186203714,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 1.0
 },
@@ -5716,13 +6058,15 @@
 "M": 128.99766052246093,
 "units_per_qty": 0.007752078572199231,
 "steps": {
-"within_stream": 0.8529018056340542,
+"value_within": 0.8529018056340542,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.3051122658001998
 },
 "grouped": {
 "value_share": 0.06972419959612394,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 0.3051122658001998
 }
@@ -5733,13 +6077,15 @@
 "M": 63.26247302827381,
 "units_per_qty": 0.015807159475935622,
 "steps": {
-"within_stream": 0.8529018056340542,
+"value_within": 0.8529018056340542,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 0.6221503302177656
 },
 "grouped": {
 "value_share": 0.06972419959612394,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 0.6221503302177656
 }
@@ -5750,13 +6096,15 @@
 "M": 39.35876848493304,
 "units_per_qty": 0.025407299021126914,
 "steps": {
-"within_stream": 0.8529018056340542,
+"value_within": 0.8529018056340542,
+"yield_basis": 1.0,
 "animal_share": 0.08174938678232765,
 "animal_elas": 0.3643971414271974,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.06972419959612394,
+"yield_basis": 1.0,
 "price_response": 0.3643971414271974,
 "horizon": 1.0
 }
@@ -5872,7 +6220,7 @@
 "bundle": {
 "sr": 0.0,
 "lr": 0.0400240563287737,
-"limit": 1.0
+"limit": null
 },
 "subs": {
 "Fillet blocks and fillets (fish fingers, portions)": {
@@ -5900,13 +6248,15 @@
 "M": 48.80432592592594,
 "units_per_qty": 0.1744088172598456,
 "steps": {
-"within_stream": 0.5822775060653906,
+"value_within": 0.5822775060653906,
+"yield_basis": 1.0,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.46957396721678035,
+"yield_basis": 1.0,
 "price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
@@ -5956,13 +6306,15 @@
 "M": 461.20088000000004,
 "units_per_qty": 0.07751502989326473,
 "steps": {
-"within_stream": 0.061616667308506956,
+"value_within": 0.061616667308506956,
+"yield_basis": 1.0,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.04969036690124661,
+"yield_basis": 1.0,
 "price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
@@ -6012,13 +6364,15 @@
 "M": 86.6613514973576,
 "units_per_qty": 0.09689378736658091,
 "steps": {
-"within_stream": 0.3279162013324604,
+"value_within": 0.32791620133246047,
+"yield_basis": 1.0,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.2644459213525718,
+"yield_basis": 1.0,
 "price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
@@ -6068,13 +6422,15 @@
 "M": 1008.0893551912569,
 "units_per_qty": 0.058136272419948544,
 "steps": {
-"within_stream": 0.02818962529364193,
+"value_within": 0.02818962529364193,
+"yield_basis": 1.0,
 "animal_share": 0.8064435983279191,
 "animal_elas": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.022733342857320323,
+"yield_basis": 1.0,
 "price_response": 1.0902260832444435,
 "horizon": 0.0400240563287737
 },
@@ -6124,13 +6480,15 @@
 "M": 268.76508158508165,
 "units_per_qty": 0.2557995986477736,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.0775169723659447,
 "animal_elas": 1.1992486915688878,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.0775169723659447,
+"yield_basis": 1.0,
 "price_response": 1.1992486915688878,
 "horizon": 0.0400240563287737
 },
@@ -6180,13 +6538,15 @@
 "M": 1417.4223369598628,
 "units_per_qty": 0.014495310590040502,
 "steps": {
-"within_stream": 0.6333369018306391,
+"value_within": 0.6333369018306391,
+"yield_basis": 1.0,
 "animal_share": 0.11603942930613613,
 "animal_elas": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.07349205264694372,
+"yield_basis": 1.0,
 "price_response": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
@@ -6236,13 +6596,15 @@
 "M": 2448.312568015926,
 "units_per_qty": 0.021316633220647797,
 "steps": {
-"within_stream": 0.3666630981693609,
+"value_within": 0.3666630981693609,
+"yield_basis": 1.0,
 "animal_share": 0.11603942930613613,
 "animal_elas": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
 "grouped": {
 "value_share": 0.04254737665919241,
+"yield_basis": 1.0,
 "price_response": 0.23984973831377757,
 "horizon": 0.0400240563287737
 },
@@ -6339,13 +6701,15 @@
 "M": 11.318266666666666,
 "units_per_qty": 0.08835275130467563,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.9701202949165696,
 "animal_elas": 1.0203246667546524,
 "horizon": 0.08925983955140364
 },
 "grouped": {
 "value_share": 0.9701202949165696,
+"yield_basis": 1.0,
 "price_response": 1.0203246667546524,
 "horizon": 0.08925983955140364
 },
@@ -6359,13 +6723,15 @@
 "M": 2.298766666666667,
 "units_per_qty": 0.4350158780795499,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.9701202949165696,
 "animal_elas": 1.0203246667546524,
 "horizon": 0.43948204109449995
 },
 "grouped": {
 "value_share": 0.9701202949165696,
+"yield_basis": 1.0,
 "price_response": 1.0203246667546524,
 "horizon": 0.43948204109449995
 },
@@ -6379,13 +6745,15 @@
 "M": 1.0102666666666666,
 "units_per_qty": 0.9898376666226738,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.9701202949165696,
 "animal_elas": 1.0203246667546524,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.9701202949165696,
+"yield_basis": 1.0,
 "price_response": 1.0203246667546524,
 "horizon": 1.0
 },
@@ -6425,13 +6793,15 @@
 "M": 1102.4285714285713,
 "units_per_qty": 0.002748752262812131,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.029879705083430345,
 "animal_elas": 0.3401082222515508,
 "horizon": 0.08925983955140364
 },
 "grouped": {
 "value_share": 0.029879705083430345,
+"yield_basis": 1.0,
 "price_response": 0.3401082222515508,
 "horizon": 0.08925983955140364
 },
@@ -6445,13 +6815,15 @@
 "M": 223.90584415584414,
 "units_per_qty": 0.013533827318030442,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.029879705083430345,
 "animal_elas": 0.3401082222515508,
 "horizon": 0.43948204109449995
 },
 "grouped": {
 "value_share": 0.029879705083430345,
+"yield_basis": 1.0,
 "price_response": 0.3401082222515508,
 "horizon": 0.43948204109449995
 },
@@ -6465,13 +6837,15 @@
 "M": 98.4025974025974,
 "units_per_qty": 0.030794949628260966,
 "steps": {
-"within_stream": 1.0,
+"value_within": 1.0,
+"yield_basis": 1.0,
 "animal_share": 0.029879705083430345,
 "animal_elas": 0.3401082222515508,
 "horizon": 1.0
 },
 "grouped": {
 "value_share": 0.029879705083430345,
+"yield_basis": 1.0,
 "price_response": 0.3401082222515508,
 "horizon": 1.0
 },

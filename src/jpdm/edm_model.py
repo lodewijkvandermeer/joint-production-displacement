@@ -224,27 +224,29 @@ class Branch:
         d = self.discount(name, eps_s)
         return 1.0/d if d > 0 else None
     def steps(self, name, eps_s):
-        """The discount D as a product of factors, one per level of the model (each <= 1 except the relative-elasticity
-        terms, which exceed 1 when this product's buyers respond less to price than the buyers they are averaged with):
-          within_stream   sub-product's value relative to its physical share of the stream (1 for a single-product stream)
+        """The discount D as a product of factors, one per level of the model:
+          value_within    the product's share of its stream's value (1 for a single-product stream)
+          yield_basis     naive yield / today's yield of the product per unit of the raw commodity behind it: above 1 when
+                          the naive rule credits the product with more raw material than today's output of it uses (WPI is
+                          credited with all the whey protein, of which about a fifth becomes WPI today); 1 otherwise
           route_share     value share of the stream within its route (cheese and whey; white and yolk); routed only
           route_elas      route elasticity / stream elasticity; routed only
           animal_share    value share at the animal: the raw commodity (routed) or the stream (fixed)
           animal_elas     |eps_bar| / |eps_raw| (routed) or |eps_bar| / |eps_k| (fixed)
           horizon         eps_s H / (1 + eps_s H): the part not absorbed by buyers of all the animal's products
-        Their product equals discount(name, eps_s)."""
+        The elasticity terms exceed 1 when this product's buyers respond less to price than the buyers they are averaged
+        with. The factors multiply to discount(name, eps_s)."""
         s = self.sub(name); st = self.get(s.stream); T = self.total()
         w = s.value/self.stream_value(s.stream)
         ebar = abs(self.eps_bar())
         hz = self.DF_bundle(eps_s)
         if self.is_fixed(s.stream):
-            within = w*self.naive_yield(name)/s.qty
-            return dict(within_stream=within, animal_share=self.stream_value(s.stream)/T,
+            return dict(value_within=w, yield_basis=self.naive_yield(name)/s.qty, animal_share=self.stream_value(s.stream)/T,
                         animal_elas=ebar/abs(st.elas), horizon=hz)
         r = st.route
-        within = w*self.naive_yield(name)*self.a(r)/s.qty
-        return dict(within_stream=within, route_share=self.S(s.stream), route_elas=abs(self.eps_route(r))/abs(st.elas),
-                    animal_share=self.W_raw(), animal_elas=ebar/abs(self.eps_raw()), horizon=hz)
+        return dict(value_within=w, yield_basis=self.naive_yield(name)*self.a(r)/s.qty, route_share=self.S(s.stream),
+                    route_elas=abs(self.eps_route(r))/abs(st.elas), animal_share=self.W_raw(),
+                    animal_elas=ebar/abs(self.eps_raw()), horizon=hz)
 
 
 def single_df(eps_s, eps_d):

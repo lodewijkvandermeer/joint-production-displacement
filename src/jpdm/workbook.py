@@ -51,7 +51,7 @@ def section(ws, row, text):
 def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None, unit_factor_note="", chart_title=None):
     ws = wb.create_sheet(sheetname)
     ws.sheet_properties.tabColor = "1F3864"
-    for col, w in zip("ABCDEFGHIJKLMNOPQRSTUVW", [52,26,20,12,16,12,14,12,10,10,10,10,10,10,10,10,12,12,12,12,12,12,40]):
+    for col, w in zip("ABCDEFGHIJKLMNOPQRSTUVWX", [52,26,20,12,16,12,14,12,10,10,10,10,10,10,10,10,12,12,12,12,12,12,40,14]):
         ws.column_dimensions[col].width = w
     put(ws, 1, 1, br.name, H1)
     put(ws, 2, 1, "Unit of analysis: " + br.unit, BLACK)
@@ -72,10 +72,12 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         out = inputs_writer(ws, r)
         r, qty_f, price_f = out[0], out[1], out[2]
         if len(out) > 3 and out[3]: raw_map = out[3]
-        floor_map = out[5] if len(out) > 5 else {}
+        floor_map = out[5] if len(out) > 5 and out[5] else {}
+        naive_map = out[6] if len(out) > 6 and out[6] else {}
     else:
         qty_f = price_f = lambda i: None
         floor_map = {}
+        naive_map = {}
     # ---------------- sub-product table ----------------
     r = section(ws, r, "A. Products of one unit of the animal (sub-products). Blue = editable inputs; black = formulas.")
     heads = ["Sub-product", "Stream (fixed proportion within route)", "Route (fungible use of the raw commodity, or fixed to the animal)", "Quantity per unit", "Quantity unit",
@@ -83,7 +85,8 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
              "DF short run (within a year)", "DF long run (3-5 years)", "DF constant-cost limit (supply perfectly elastic)", "DF LR, all-fixed variant", "DF LR, all-fungible variant",
              "Stream price change for the shift in col. B9", "Farm (animal) price change for that shift", "Shift at which stream hits its floor (as % of this product)",
              "Animal change if this product is fully replaced (LR, floor-capped, linear)", "Animal units removed per unit of product displaced (LR) = DF / quantity",
-             "Naive yield: units of product per animal unit if all the raw commodity (or, for a fixed part, the animal) went to it", "Source / note"]
+             "Naive yield: units of product per animal unit if all the raw commodity (or, for a fixed part, the animal) went to it", "Source / note",
+             "Value share for the rule of thumb (share of everything made from the same raw material)"]
     for j, h in enumerate(heads, 1): hdr(ws, r, j, h)
     ws.row_dimensions[r].height = 72
     sub0 = r+1; n = len(br.subs); sub1 = sub0+n-1
@@ -119,12 +122,24 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         put(ws, row, 19, f"=IF({lk('S')}=\"\",\"no external floor\",{lk('S')}/K{row})", BLACK, PCT)
         put(ws, row, 20, f"={lk('M')}*IF({lk('S')}=\"\",-K{row},MAX(-K{row},{lk('S')}))", BLACK, PCT2)
         put(ws, row, 21, f"=IF(D{row}=0,\"\",M{row}/D{row})", BLACK, "0.000000")
-        put(ws, row, 22, br.naive_yield(s.name), BLUE, NUM3)
+        if i in naive_map:
+            put(ws, row, 22, naive_map[i], BLACK, NUM3)
+        elif s.full_yield is not None:
+            put(ws, row, 22, s.full_yield, BLUE, NUM3)
+        elif br.is_fixed(s.stream):
+            put(ws, row, 22, f"=D{row}", BLACK, NUM3)
+        else:
+            put(ws, row, 22, f"=D{row}/INDEX($E${rt0}:$E${rt1},MATCH(C{row},$A${rt0}:$A${rt1},0))", BLACK, NUM3)
+        # value share for the rule of thumb: the product's share of what is made alongside it from the same raw material
+        if br.is_fixed(s.stream):
+            put(ws, row, 24, f"=I{row}", BLACK, PCT2)
+        else:
+            put(ws, row, 24, f"=K{row}*{lk('E')}*{WRAW}", BLACK, PCT2)
         put(ws, row, 23, s.src, BLACK, wrap=True)
     put(ws, sub1+1, 1, "Total value of one unit of the animal", BOLD)
     put(ws, sub1+1, 8, f"=SUM(H{sub0}:H{sub1})", BOLD, NUM3)
     put(ws, sub1+1, 9, f"=SUM(I{sub0}:I{sub1})", BOLD, PCT)
-    put(ws, sub1+2, 1, "Columns U and V feed the Per kg sheet (animals per tonne, multiplier). Naive yields are from the Python model at the stated scenario.", BLACK)
+    put(ws, sub1+2, 1, "Columns U, V and X feed the Per kg sheet (animals per tonne, multiplier, value-share rule). Naive yields in blue are technical yields typed in; the rest are formulas.", BLACK)
     # ---------------- stream table ----------------
     section(ws, st0-1, "B. Streams (the fixed-proportion joint products within a route). Edit demand elasticities and floor ratios here.")
     sh = ["Stream", "Route", "Stream value", "Share of animal value", "S_k: share within route", "Own-price demand elasticity (eps_k)", "Floor price ratio (P_floor / P_now; blank = no external floor)",
@@ -226,6 +241,8 @@ def dairy_inputs(ws, r):
         ("protein_frac","Protein share of whey solids",0.13,0.13,"share","[S] 0.8% protein in 6.5% solids whey"),
         ("rec_protein","Share of whey protein recovered into WPC/WPI",0.50,0.50,"share","[E] NASS 2025 WPC+WPI protein vs liquid whey protein"),
         ("split_wpc80","Of recovered whey protein, share going to WPC(50-90%) (rest WPI), protein basis",0.61,0.61,"share","[S] NASS 2025: 381 m lb WPC x 0.8 vs 214 m lb WPI x 0.9"),
+        ("tech_rec","Naive rule: share of whey protein a WPC/WPI plant recovers",0.90,0.90,"share","[A] technical recovery"),
+        ("lactose_frac","Naive rule: lactose share of whey solids",0.74,0.74,"share","[S] sweet whey composition"),
         ("dry_whey_share","Whey solids sold as dry whey (share)",0.10,0.10,"share","[E] 845 m lb / ~8.4 bn lb solids"),
         ("lactose_share","Whey solids sold as lactose (share)",0.15,0.15,"share","[E] 1,137 m lb"),
         ("feed_share","Whey solids to permeate / condensed / feed (share)",0.25,0.25,"share","[E] remainder not recovered as food products"),
@@ -275,7 +292,10 @@ def dairy_inputs(ws, r):
              11: f"={MILKTOT}*{R['cattle_share']}/(1-{R['cattle_share']})*(1-{R['cull_split']})"}
     raw = {"Fluid": f"={R['u_fluid']}", "Other manufactured": f"={R['u_other']}", "Butter & powder": f"={R['u_bp']}", "Cheese route": f"={R['u_cheese']}"}
     floors = {"Whey protein": f"={OS}/({R['split_wpc80']}*{V80}/0.8+(1-{R['split_wpc80']})*{VWPI}/0.9)"}
-    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row, floors
+    naive = {4: f"={R['cheese_yield']}",
+             5: f"={R['whey_solids']}*{R['protein_frac']}*{R['tech_rec']}/0.8", 6: f"={R['whey_solids']}*{R['protein_frac']}*{R['tech_rec']}/0.9",
+             7: f"={R['whey_solids']}", 8: f"={R['whey_solids']}*{R['lactose_frac']}", 9: f"={R['whey_solids']}*(1-{R['protein_frac']})"}
+    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row, floors, naive
 
 def eggs_inputs(ws, r):
     r = section(ws, r, "Inputs (two price scenarios; 1 = 2019-21 normal market, 2 = Sep 2025 HPAI-tight market). Blue = editable.")
@@ -434,7 +454,7 @@ def write_perkg(wb, refs):
     heads = ["Branch", "Product", "kg per unit of quantity (blank = not a weight)", "Protein content", "Naive yield per animal unit",
              "Units removed per unit, within a year", "3-5 years", "constant-cost limit", "Multiplier, within a year", "Multiplier, 3-5 years",
              "Multiplier, constant-cost limit", "Animals per tonne displaced, 3-5 years", "Raw commodity kg per kg, 3-5 years",
-             "Animals per tonne of protein, 3-5 years", "Animals per tonne of NEW product, 3-5 years (x substitution ratio)", "Value-share rule: 1 / share of the animal's value"]
+             "Animals per tonne of protein, 3-5 years", "Animals per tonne of NEW product, 3-5 years (x substitution ratio)", "Value-share rule: 1 / value share (branch col. X)"]
     for j, h in enumerate(heads, 1): hdr(ws, r, j, h)
     ws.row_dimensions[r].height = 75
     r += 1
@@ -457,12 +477,14 @@ def write_perkg(wb, refs):
             put(ws, r, 13, f"=IF(C{r}=\"\",\"\",G{r}*{RAW}/C{r})", BLACK, "#,##0.000")
             put(ws, r, 14, f"=IF(OR(C{r}=\"\",D{r}=\"\"),\"\",L{r}/D{r})", BLACK, "#,##0.000")
             put(ws, r, 15, f"=IF(C{r}=\"\",\"\",L{r}*{SUBST})", BLACK, "#,##0.000")
-            put(ws, r, 16, f"=IF('{sheet}'!I{sr}=0,\"\",1/'{sheet}'!I{sr})", GREEN, "#,##0.0")
+            put(ws, r, 16, f"=IF('{sheet}'!X{sr}=0,\"\",1/'{sheet}'!X{sr})", GREEN, "#,##0.0")
+            if sheet == "Pollock":   # quota-managed: no constant-cost limit
+                put(ws, r, 8, "n/a (quota)", BLACK); put(ws, r, 11, "n/a (quota)", BLACK)
             rows[(sheet, sb.name)] = r
             r += 1
         r += 1
-    put(ws, r, 1, "The value-share rule (col. P) uses the product's share of the whole animal; the model's multiplier also reflects joint "
-                  "products within a route, buyers' price response and the horizon (paper, section 4.5).", BLACK)
+    put(ws, r, 1, "The value-share rule (col. P) is the long-run multiplier when all buyers respond alike; the model's multiplier also "
+                  "reflects buyers' price response, the horizon and, for products sharing a stream, the naive rule's yield basis (paper, section 4.5).", BLACK)
     ws.freeze_panes = "C9"
     return rows
 
@@ -522,7 +544,7 @@ def build(path=WORKBOOK, results=RESULTS):
     # ---------------- branch sheets ----------------
     refs = {}
     d = dairy("2026")
-    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: (lambda o: o[:4] + (None, o[5]))(dairy_inputs(ws, r)), protein=PROTEIN,
+    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: (lambda o: o[:4] + (None, o[5], o[6]))(dairy_inputs(ws, r)), protein=PROTEIN,
                                        unit_factor_note="lb of raw milk displaced per lb of product replaced (long run).", chart_title="Where the dairy cow's revenue comes from (value share by stream)")
     # fill dairy helper cell: milk value = sum of first 10 sub rows
     s0 = refs["Dairy"]["sub0"]
@@ -552,7 +574,7 @@ def build(path=WORKBOOK, results=RESULTS):
     wsum = wb.create_sheet("Summary", 1); wsum.sheet_properties.tabColor = "00B050"
     for col, w in zip("ABCDEFGHIJKLMNO", [12, 56, 12, 10, 12, 12, 12, 12, 12, 14, 14, 30, 16, 12, 60]): wsum.column_dimensions[col].width = w
     put(wsum, 1, 1, "Summary: market-share factors, multipliers and floors by product (linked to branch sheets)", H1)
-    put(wsum, 2, 1, "DF = market-share factor: % change in animal output per % of the product's market displaced, at three horizons (within a year; 3-5 years; constant-cost limit, where supply is perfectly elastic). It is not tonnes removed per tonne displaced except for carcass parts; per tonne and the multiplier are on the Per kg sheet. DF(3-5 years)/DF(limit) is the bundle factor, so 1 - that ratio is the elasticity discount alone. Floor = next-best use as a share of the current price.", BLACK)
+    put(wsum, 2, 1, "DF = market-share factor: % change in animal output per % of the product's market displaced, at three horizons (within a year; 3-5 years; constant-cost limit, where supply is perfectly elastic). It is the share of each tonne displaced that leaves production only for products fixed to the animal (carcass parts, cull cows, spent hens); per tonne and the multiplier are on the Per kg sheet. DF(3-5 years)/DF(limit) is the bundle factor, so 1 - that ratio is the elasticity discount alone. Floor = next-best use as a share of the current price.", BLACK)
     heads = ["Branch", "Product", "Share of animal value", "Demand elasticity (stream)", "DF short run (within a year)", "DF long run (3-5 years)", "DF constant-cost limit", "1 - DF (3-5 years)", "Stream price change for a 10% replacement",
              "Animal change if fully replaced (LR, linear, floor-capped)", "Floor ratio (P_floor/P_now)", "Biotech route most likely to target it", "Technical reachability", "Multiplier, 3-5 years (Per kg sheet)", "Reading"]
     for j, h in enumerate(heads, 1): hdr(wsum, 4, j, h)

@@ -24,7 +24,7 @@ def test_baseline_is_an_equilibrium(cow, hen):
 
 
 @pytest.mark.parametrize("stream", ["Cheese", "Fluid milk", "Whey protein"])
-def test_closed_form_within_1_5_percent_at_a_10_percent_shift(cow, stream):
+def test_closed_form_within_2_percent_at_a_10_percent_shift(cow, stream):
     br, ex = cow
     exact = ex.solve(kappa={stream: -0.10})["A"] - 1.0
     closed = br.DF_stream(stream, br.eps_s_lr) * -0.10
@@ -39,8 +39,8 @@ def test_whey_protein_market_lost(cow):
 
 
 def test_whey_protein_market_lost_version_1_valuation():
-    # theta = 1 values all of the whey-protein premium as milk, as version 1.0 did; with v1.0's floor (6%) it
-    # reproduces v1.0's results
+    # theta = 1 values all of the whey-protein premium as milk, as version 1.0 did; with v1.0's fixed floor of 6% (the
+    # shipped model uses the other-solids value, 3.7% at theta = 1) it reproduces v1.0's full-loss results
     br = params.dairy("2026", theta=1.0)
     ex = X.exact_for(br)
     assert round(ex.solve(cap={"Whey protein": 0.06})["A"] - 1.0, 3) == -0.044

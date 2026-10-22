@@ -497,16 +497,18 @@ def fig07(out):
              ("dairy_2026", "WPI (whey protein isolate)", "WPI", ORANGE), ("dairy_2026", "Cull cows (manufacturing beef)", "Cull-cow beef", MUTED),
              ("broiler", "Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)", "Mechanically separated chicken", MAGENTA)]
     fig, ax = plt.subplots(figsize=(8, 6.0))
-    top = _title(fig, "From the naive rule to the model: value share, price response, horizon",
+    top = _title(fig, "From the naive rule to the model: value share, price response and horizon",
                  "Animals removed per unit displaced, as a share of what the naive rule attributes (log scale); each step multiplies "
                  "by one factor; the end value is the discount, its inverse the multiplier (animals' worth displaced per animal removed)")
     fig.subplots_adjust(left=0.09, right=0.62, top=top, bottom=0.11)
-    xs = [0, 1, 2, 3]
+    xs = [0, 1, 2, 3, 4]
     ends = []
     for key, sub, label, c in picks:
         br = next(b for b in params.ALL if b.key == key)
         g = per_unit.grouped_steps(br.steps(sub, br.eps_s_lr))
-        ys = [1.0, g["value_share"], g["value_share"] * g["price_response"], g["value_share"] * g["price_response"] * g["horizon"]]
+        ys = [1.0, g["value_share"]]
+        for f in ("yield_basis", "price_response", "horizon"):
+            ys.append(ys[-1] * g[f])
         ax.plot(xs, ys, color=c, marker="o", markersize=4.5, markeredgecolor=SURFACE, markeredgewidth=1.2, drawstyle="default")
         ends.append((ys[-1], label, c))
     ends.sort(reverse=True)
@@ -515,13 +517,13 @@ def fig07(out):
         y = v if last is None else min(v, last / 1.32)
         pos[label] = last = y
     for v, label, c in ends:
-        ax.annotate(f"{label}  {per_unit.fm(1 / v)}", (3, v), xytext=(3.22, pos[label]), textcoords="data", va="center", fontsize=8.5,
+        ax.annotate(f"{label}  {per_unit.fm(1 / v)}", (4, v), xytext=(4.25, pos[label]), textcoords="data", va="center", fontsize=8.5,
                     color=INK, annotation_clip=False, arrowprops=dict(arrowstyle="-", color=c, lw=1.0, shrinkA=0, shrinkB=3))
     ax.set_yscale("log")
     ax.set_ylim(0.0015, 1.4)
     ax.set_xticks(xs)
-    ax.set_xticklabels(["naive rule", "x value share", "x price response", "x horizon\n(3 to 5 years)"], color=INK)
-    ax.set_xlim(-0.15, 3.05)
+    ax.set_xticklabels(["naive rule", "x value\nshare", "x yield basis\n(products sharing\na stream)", "x price\nresponse", "x horizon\n(3 to 5 years)"], color=INK, fontsize=8.5)
+    ax.set_xlim(-0.15, 4.05)
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
     _grid(ax)
     _save(fig, out, "fig07.png")
