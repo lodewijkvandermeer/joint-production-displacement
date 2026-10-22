@@ -28,10 +28,14 @@ def parameters_md():
         for st in br.streams:
             fl = "none" if st.floor_ratio is None else f"{st.floor_ratio:g} ({_esc(st.floor_note)})" if st.floor_note else f"{st.floor_ratio:g}"
             out.append(f"| {_esc(st.name)} | {_esc(st.route)} | {st.elas:g} | {fl} | {_esc(st.elas_src)} |")
-        out += ["", "| Product | Stream | Quantity per unit | Price | Value share | Source |", "| --- | --- | --- | --- | --- | --- |"]
+        out += ["", "| Product | Stream | Quantity per unit | Price | Value share | kg per quantity unit | Protein | Naive yield per unit | Source |",
+                "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+        g = lambda v, f="{:.4g}": "" if v is None else f.format(v)  # noqa: E731
         for s in br.subs:
-            out.append(f"| {_esc(s.name)} | {_esc(s.stream)} | {s.qty:.4g} | {s.price:.4g} | {s.value / T:.1%} | {_esc(s.src)} |")
-        out.append("")
+            out.append(f"| {_esc(s.name)} | {_esc(s.stream)} | {s.qty:.4g} | {s.price:.4g} | {s.value / T:.1%} | {g(s.kg)} | "
+                       f"{g(s.protein, '{:.0%}')} | {br.naive_yield(s.name):.4g} | {_esc(s.src)} |")
+        out += ["", f"Per-unit conversions: {br.animals_per_unit:.4g} {br.animal_label} and {br.raw_kg_per_unit:.4g} "
+                f"{br.raw_label} per model unit. {_esc(br.animals_src)}", ""]
     return "\n".join(out)
 
 

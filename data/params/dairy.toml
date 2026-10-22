@@ -17,6 +17,10 @@ supply_src = "[S] Chavas & Klemme 1986: 0.115 (current year), 0.89 (5-year), 2.4
 default_scenario = "2026"
 
 [vars]
+# naive rule (technical yields when all the whey goes to one product)
+tech_rec = 0.90           # [A] share of whey protein a WPC/WPI plant recovers
+lactose_frac = 0.74       # [S] lactose share of sweet whey solids
+milk_per_cow = 24390.0     # lb per cow-year [S] NASS 2025 (cows exclude heifers not yet fresh)
 # [E] utilisation shares from NASS volumes and standard yields
 u_fluid = 0.19
 u_cheese = 0.60
@@ -92,6 +96,8 @@ stream = "Fluid milk"
 qty = "u_fluid"
 price = "p_classI"
 src = "[S] Class I price"
+kg = "45.359237"
+protein = 0.033
 
 [[subs]]
 name = "Other dairy: yogurt, ice cream, etc. (Class II)"
@@ -99,6 +105,7 @@ stream = "Other dairy"
 qty = "u_other"
 price = "p_classII"
 src = "[S] Class II price"
+kg = "45.359237"
 
 [[subs]]
 name = "Butter / cream (3.5 lb fat per cwt)"
@@ -106,6 +113,7 @@ stream = "Butter (fat)"
 qty = "u_bp"
 price = "3.5*p_bfat"
 src = "[S] FMMO butterfat price x 3.5"
+kg = "3.5/0.80*0.45359237"
 
 [[subs]]
 name = "Nonfat dry milk / SMP (also the casein route)"
@@ -113,6 +121,8 @@ stream = "Milk powder (nonfat solids)"
 qty = "u_bp"
 price = "9.3*0.965*p_nfs"
 src = "[S] FMMO nonfat solids price x 9.3 x 0.965"
+kg = "9.3*0.965*0.45359237"
+protein = 0.35
 
 [[subs]]
 name = "Cheese (cheddar-equivalent)"
@@ -120,6 +130,8 @@ stream = "Cheese"
 qty = "u_cheese*cheese_yield"
 price = "p_cheese-mk_cheese"
 src = "[S] cheese price less make allowance"
+kg = 0.45359237
+protein = 0.25
 
 [[subs]]
 name = "WPC 80 (whey protein concentrate)"
@@ -127,6 +139,9 @@ stream = "Whey protein"
 qty = "u_cheese*prot*split_wpc80/0.80"
 price = "p_wpc80-mk_wpc80"
 src = "[S] price; [A] processing allowance"
+kg = 0.45359237
+protein = 0.80
+full_yield = "whey_solids*protein_frac*tech_rec/0.80"
 
 [[subs]]
 name = "WPI (whey protein isolate)"
@@ -134,6 +149,9 @@ stream = "Whey protein"
 qty = "u_cheese*prot*(1-split_wpc80)/0.90"
 price = "p_wpi-mk_wpi"
 src = "[S] price; [A] processing allowance"
+kg = 0.45359237
+protein = 0.90
+full_yield = "whey_solids*protein_frac*tech_rec/0.90"
 
 [[subs]]
 name = "Dry whey (sweet whey powder)"
@@ -141,6 +159,9 @@ stream = "Whey carbohydrate"
 qty = "u_cheese*whey_solids*dry_whey_share"
 price = "p_drywhey-mk_drywhey"
 src = "[S] price and make allowance"
+kg = 0.45359237
+protein = 0.12
+full_yield = "whey_solids"
 
 [[subs]]
 name = "Lactose"
@@ -148,6 +169,8 @@ stream = "Whey carbohydrate"
 qty = "u_cheese*whey_solids*lactose_share"
 price = "p_lactose-mk_lactose"
 src = "[S] price; [A] allowance"
+kg = 0.45359237
+full_yield = "whey_solids*lactose_frac"
 
 [[subs]]
 name = "Permeate / condensed whey / feed"
@@ -155,6 +178,8 @@ stream = "Whey carbohydrate"
 qty = "u_cheese*whey_solids*feed_share"
 price = "p_feedwhey-mk_feed"
 src = "[S] feed-grade whey price"
+kg = 0.45359237
+full_yield = "whey_solids*(1-protein_frac)"
 
 # Cattle sales are sized from the value of everything above (total_value() of the [[subs]] so far).
 [derived]
@@ -237,3 +262,11 @@ elas = -0.60
 floor = 0.05
 floor_note = "bob veal / euthanasia"
 elas_src = "[A] derived from fed-beef demand"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = "100/milk_per_cow"
+animal_label = "cow-years"
+animals_src = "[S] NASS Milk Production, Disposition and Income 2025: 24,390 lb per cow (9.498 m cows, 231.7 bn lb)"
+raw_kg_per_unit = 45.359237
+raw_label = "kg milk"

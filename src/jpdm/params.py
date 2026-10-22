@@ -16,6 +16,9 @@ File layout (see data/params/dairy.toml for a full example):
   [derived]         values that need total_value()
   [[derived_subs]]  products that use [derived] values; appended after [[subs]]
   [[streams]]       name, route, elas, floor (omit for none), floor_note, elas_src
+  [conversions]     animals_per_unit, animal_label, animals_src, raw_kg_per_unit, raw_label (per-unit outputs)
+  optional in [[subs]]: kg (kg of product per unit of qty), protein (kg per kg), full_yield (qty per animal unit
+                    under the naive rule, for products that share a routed stream)
 """
 import ast
 import operator
@@ -104,7 +107,8 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
     data = _read(animal)
     scenarios = data.get("scenarios")
     meta = {k: v for k, v in data.items()
-            if k not in ("vars", "derived", "raw_shares", "subs", "derived_subs", "streams", "scenarios", "default_scenario")}
+            if k not in ("vars", "derived", "raw_shares", "subs", "derived_subs", "streams", "scenarios", "default_scenario",
+                         "conversions")}
     names = dict(data.get("vars", {}))
     if scenarios:
         scenario = scenario or data["default_scenario"]
@@ -120,8 +124,12 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
 
     env = _Names(names)
 
+    def opt(d, key):
+        return env.value(d[key]) if key in d else None
+
     def make_sub(d):
-        return Sub(d["name"], env.value(d["qty"]), env.value(d["price"]), d["stream"], src=d.get("src", ""))
+        return Sub(d["name"], env.value(d["qty"]), env.value(d["price"]), d["stream"], src=d.get("src", ""),
+                   kg=opt(d, "kg"), protein=opt(d, "protein"), full_yield=opt(d, "full_yield"))
 
     subs = [make_sub(d) for d in data["subs"]]
     if "derived_subs" in data:
@@ -134,9 +142,13 @@ def load(animal: str, scenario: Optional[str] = None) -> Branch:
                       _basis(animal, d)) for d in data["streams"]]
     raw_shares = {route: env.value(x) for route, x in data["raw_shares"].items()} if "raw_shares" in data else None
 
+    conv = data.get("conversions", {})
     return Branch(meta["key"], meta["name"], meta["unit"], meta["eps_s_sr"], meta["eps_s_lr"], subs, streams,
                   notes=meta.get("notes", ""), supply_src=meta.get("supply_src", ""), price_tag=meta.get("price_tag", ""),
-                  raw_shares=raw_shares, monte_carlo=dict(data.get("monte_carlo", {})))
+                  raw_shares=raw_shares, monte_carlo=dict(data.get("monte_carlo", {})),
+                  animals_per_unit=opt(conv, "animals_per_unit"), animal_label=conv.get("animal_label", ""),
+                  animals_src=conv.get("animals_src", ""), raw_kg_per_unit=opt(conv, "raw_kg_per_unit"),
+                  raw_label=conv.get("raw_label", ""))
 
 
 def dairy(scenario="2026"): return load("dairy", scenario)

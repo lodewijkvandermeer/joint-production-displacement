@@ -13,6 +13,7 @@ supply_src = "[S] Chavas 1980 SR 0.03; Chavas & Johnson 1981 LR ~1; Harrington &
 default_scenario = "2019-21"
 
 [vars]
+eggs_per_hen = 288.0      # [S] NASS 2025, eggs per layer per year (all layers)
 shell_share = 0.68        # [S] 32% broken (NASS/AMS)
 breaking_share = 0.32
 sep_share = 0.36          # [E] NASS white/yolk volumes imply ~36% of broken eggs separated
@@ -47,6 +48,8 @@ stream = "Shell eggs"
 qty = "shell_share"
 price = "p_shell"
 src = "[S]"
+kg = "liquid_per_doz*0.45359237"
+protein = 0.126
 
 [[subs]]
 name = "Liquid/frozen whole egg"
@@ -54,6 +57,8 @@ stream = "Whole egg products"
 qty = "breaking_share*(1-sep_share)*liquid_per_doz"
 price = "p_whole"
 src = "[S]"
+kg = 0.45359237
+protein = 0.126
 
 [[subs]]
 name = "Liquid egg white (albumen): liquid, dried albumen, protein fractions"
@@ -61,6 +66,8 @@ stream = "Egg white"
 qty = "breaking_share*sep_share*liquid_per_doz*wf"
 price = "p_white"
 src = "[S]"
+kg = 0.45359237
+protein = 0.109
 
 [[subs]]
 name = "Liquid egg yolk"
@@ -68,6 +75,8 @@ stream = "Egg yolk"
 qty = "breaking_share*sep_share*liquid_per_doz*yf"
 price = "p_yolk"
 src = "[S]"
+kg = 0.45359237
+protein = 0.159
 
 [[subs]]
 name = "Spent hen (soup meat, rendering)"
@@ -113,3 +122,11 @@ elas = -5.00
 floor = 0.00
 floor_note = "rendering / composting"
 elas_src = "[A] effectively perfectly elastic at ~0"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = "12/eggs_per_hen"
+animal_label = "hen-years"
+animals_src = "[S] NASS Chickens and Eggs 2025 Summary: 288 eggs per layer (all layers, 2025)"
+raw_kg_per_unit = "liquid_per_doz*0.45359237"
+raw_label = "kg liquid egg"

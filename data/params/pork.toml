@@ -21,6 +21,7 @@ stream = "Fresh pork cuts"
 qty = "carc*0.2517"
 price = 0.879
 src = "[S]"
+kg = 0.45359237
 
 [[subs]]
 name = "Butt (shoulder)"
@@ -28,6 +29,7 @@ stream = "Fresh pork cuts"
 qty = "carc*0.1016"
 price = 1.115
 src = "[S]"
+kg = 0.45359237
 
 [[subs]]
 name = "Spareribs"
@@ -35,6 +37,7 @@ stream = "Fresh pork cuts"
 qty = "carc*0.0481"
 price = 1.592
 src = "[S]"
+kg = 0.45359237
 
 [[subs]]
 name = "Ham (mostly cured)"
@@ -42,6 +45,7 @@ stream = "Ham"
 qty = "carc*0.2459"
 price = 0.869
 src = "[S]"
+kg = 0.45359237
 
 [[subs]]
 name = "Belly (bacon)"
@@ -49,6 +53,7 @@ stream = "Belly"
 qty = "carc*0.1628"
 price = 0.968
 src = "[S]"
+kg = 0.45359237
 
 [[subs]]
 name = "Picnic, jowl, neck bones, trim -> sausage, ground pork"
@@ -56,6 +61,7 @@ stream = "Sausage & trim"
 qty = "carc*(0.1137+0.0145+0.0169)"
 price = 0.66
 src = "[S] picnic; [E] jowl/neck"
+kg = 0.45359237
 
 [[subs]]
 name = "Feet, tails (export, variety meats)"
@@ -63,6 +69,7 @@ stream = "Variety meats & drop"
 qty = "carc*(0.0092+0.0123+0.0015)"
 price = 0.50
 src = "[A]"
+kg = 0.45359237
 
 [[subs]]
 name = "Drop credit (lard, offal, meals, plasma)"
@@ -104,3 +111,11 @@ elas = -2.50
 floor = 0.40
 floor_note = "rendering"
 elas_src = "[A]"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = 1.0
+animal_label = "hogs"
+animals_src = "one market hog per model unit; the breeding herd is not counted"
+raw_kg_per_unit = "live*0.45359237"
+raw_label = "kg live weight"

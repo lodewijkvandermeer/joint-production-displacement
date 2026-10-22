@@ -1,0 +1,5601 @@
+{
+"dairy_2026": {
+"name": "Dairy cow (2026 prices)",
+"animal_label": "cow-years",
+"animals_per_unit": 0.004100041000410004,
+"animals_src": "[S] NASS Milk Production, Disposition and Income 2025: 24,390 lb per cow (9.498 m cows, 231.7 bn lb)",
+"raw_label": "kg milk",
+"raw_kg_per_unit": 45.359237,
+"bundle": {
+"sr": 0.1529990869245163,
+"lr": 0.5753304419727564,
+"limit": 1.0
+},
+"subs": {
+"Fluid milk (Class I)": {
+"sub": "Fluid milk (Class I)",
+"stream": "Fluid milk",
+"qty": 0.19,
+"kg_per_qty": 45.359237,
+"protein": 0.033,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.02693589241525572,
+"D": 0.14176785481713539,
+"M": 7.053785227193342,
+"units_per_qty": 0.14176785481713539,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.012814457555589569,
+"raw_kg_per_kg": 0.14176785481713539,
+"animals_per_t_protein": 0.3883168956239263
+},
+"lr": {
+"DF": 0.10128844034111993,
+"D": 0.533097054426947,
+"M": 1.875831036198372,
+"units_per_qty": 0.533097054426947,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.04818687272778168,
+"raw_kg_per_kg": 0.533097054426947,
+"animals_per_t_protein": 1.4602082644782326
+},
+"limit": {
+"DF": 0.17605263506274926,
+"D": 0.926592816119733,
+"M": 1.0792226991222231,
+"units_per_qty": 0.926592816119733,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.08375512438130898,
+"raw_kg_per_kg": 0.9265928161197331,
+"animals_per_t_protein": 2.5380340721608783
+}
+},
+"lr_range": {
+"D": [
+0.3433373823949809,
+0.6895489462119473
+],
+"M": [
+1.450223374995383,
+2.912587009967891
+],
+"animals_per_t": [
+0.031034414110468162,
+0.06232862671959177
+]
+}
+},
+"Other dairy: yogurt, ice cream, etc. (Class II)": {
+"sub": "Other dairy: yogurt, ice cream, etc. (Class II)",
+"stream": "Other dairy",
+"qty": 0.08,
+"kg_per_qty": 45.359237,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.011341428385370831,
+"D": 0.14176785481713539,
+"M": 7.053785227193342,
+"units_per_qty": 0.14176785481713539,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.012814457555589569,
+"raw_kg_per_kg": 0.14176785481713539,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.042647764354155765,
+"D": 0.5330970544269471,
+"M": 1.8758310361983719,
+"units_per_qty": 0.5330970544269471,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.048186872727781695,
+"raw_kg_per_kg": 0.5330970544269471,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.07412742528957865,
+"D": 0.9265928161197331,
+"M": 1.079222699122223,
+"units_per_qty": 0.9265928161197331,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.083755124381309,
+"raw_kg_per_kg": 0.9265928161197331,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.343337382394981,
+0.6895489462119473
+],
+"M": [
+1.450223374995383,
+2.9125870099678903
+],
+"animals_per_t": [
+0.031034414110468173,
+0.06232862671959178
+]
+}
+},
+"Butter / cream (3.5 lb fat per cwt)": {
+"sub": "Butter / cream (3.5 lb fat per cwt)",
+"stream": "Butter (fat)",
+"qty": 0.13,
+"kg_per_qty": 1.9844666187500002,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.007091018753382556,
+"D": 0.05454629810294274,
+"M": 18.33304980867346,
+"units_per_qty": 0.05454629810294274,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.272846687350266,
+"route_elas": 1.4101614188289189,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.11269630666981036,
+"raw_kg_per_kg": 1.2467725280672624,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.02666472745313469,
+"D": 0.20511328810103607,
+"M": 4.875354538256016,
+"units_per_qty": 0.20511328810103607,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.272846687350266,
+"route_elas": 1.4101614188289189,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.42377779651082237,
+"raw_kg_per_kg": 4.688303728023682,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.04634680438897641,
+"D": 0.35651387991520317,
+"M": 2.804939881268718,
+"units_per_qty": 0.35651387991520317,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.272846687350266,
+"route_elas": 1.4101614188289189,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.7365815635580247,
+"raw_kg_per_kg": 8.148888683776072,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.10741442546637145,
+0.31053503192474674
+],
+"M": [
+3.220248594182231,
+9.309736524290892
+],
+"animals_per_t": [
+0.22192540014858708,
+0.641586182869165
+]
+}
+},
+"Nonfat dry milk / SMP (also the casein route)": {
+"sub": "Nonfat dry milk / SMP (also the casein route)",
+"stream": "Milk powder (nonfat solids)",
+"qty": 0.13,
+"kg_per_qty": 4.0707647245650005,
+"protein": 0.35,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.011338802372845045,
+"D": 0.08722155671419266,
+"M": 11.46505563156591,
+"units_per_qty": 0.08722155671419266,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7271533126497339,
+"route_elas": 0.8460968512973513,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.08784883992183817,
+"raw_kg_per_kg": 0.9718820738112725,
+"animals_per_t_protein": 0.2509966854909662
+},
+"lr": {
+"DF": 0.04263788962236843,
+"D": 0.32798376632591103,
+"M": 3.04893138828804,
+"units_per_qty": 0.32798376632591103,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7271533126497339,
+"route_elas": 0.8460968512973513,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.33034257207012335,
+"raw_kg_per_kg": 3.6546188236214943,
+"animals_per_t_protein": 0.9438359202003525
+},
+"limit": {
+"DF": 0.0741102617065889,
+"D": 0.57007893620453,
+"M": 1.7541430431683678,
+"units_per_qty": 0.57007893620453,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7271533126497339,
+"route_elas": 0.8460968512973513,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.5741788509181059,
+"raw_kg_per_kg": 6.352208325862499,
+"animals_per_t_protein": 1.64051100262316
+}
+},
+"lr_range": {
+"D": [
+0.19160520817608284,
+0.4601512263703779
+],
+"M": [
+2.173198597965042,
+5.219064813107858
+],
+"animals_per_t": [
+0.19298320157718807,
+0.4634605589270699
+]
+}
+},
+"Cheese (cheddar-equivalent)": {
+"sub": "Cheese (cheddar-equivalent)",
+"stream": "Cheese",
+"qty": 6.359999999999999,
+"kg_per_qty": 0.45359237,
+"protein": 0.25,
+"naive_yield": 10.6,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.07496043716187216,
+"D": 0.12493406193645361,
+"M": 8.004222263329911,
+"units_per_qty": 0.011786232258156,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7215665912856171,
+"route_elas": 1.2213121437488874,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.10653626183966583,
+"raw_kg_per_kg": 1.1786232258156,
+"animals_per_t_protein": 0.4261450473586633
+},
+"lr": {
+"DF": 0.2818776393357701,
+"D": 0.4697960655596169,
+"M": 2.128583173230301,
+"units_per_qty": 0.044320383543360084,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7215665912856171,
+"route_elas": 1.2213121437488874,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.4006138588302822,
+"raw_kg_per_kg": 4.432038354336008,
+"animals_per_t_protein": 1.6024554353211289
+},
+"limit": {
+"DF": 0.48994042166313495,
+"D": 0.8165673694385583,
+"M": 1.2246386978303618,
+"units_per_qty": 0.07703465749420361,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.7215665912856171,
+"route_elas": 1.2213121437488874,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.6963195923661074,
+"raw_kg_per_kg": 7.703465749420362,
+"animals_per_t_protein": 2.7852783694644296
+}
+},
+"lr_range": {
+"D": [
+0.2981175031050518,
+0.6093170420210606
+],
+"M": [
+1.6411817346895012,
+3.3543820459532565
+],
+"animals_per_t": [
+0.25421669541123015,
+0.5195889649785371
+]
+}
+},
+"WPC 80 (whey protein concentrate)": {
+"sub": "WPC 80 (whey protein concentrate)",
+"stream": "Whey protein",
+"qty": 0.17842499999999997,
+"kg_per_qty": 0.45359237,
+"protein": 0.8,
+"naive_yield": 0.8775000000000001,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.004724060529387108,
+"D": 0.023233084570756277,
+"M": 43.042067744147516,
+"units_per_qty": 0.026476449653283503,
+"steps": {
+"within_stream": 1.6240601503759402,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.2393217706103689,
+"raw_kg_per_kg": 2.6476449653283503,
+"animals_per_t_protein": 0.2991522132629611
+},
+"lr": {
+"DF": 0.017764131060594112,
+"D": 0.08736457898652844,
+"M": 11.446286488191047,
+"units_per_qty": 0.09956077377382158,
+"steps": {
+"within_stream": 1.6240601503759402,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.8999341291944869,
+"raw_kg_per_kg": 9.956077377382158,
+"animals_per_t_protein": 1.1249176614931085
+},
+"limit": {
+"DF": 0.030876396874955032,
+"D": 0.15185113217191004,
+"M": 6.585397064197744,
+"units_per_qty": 0.17304972327283194,
+"steps": {
+"within_stream": 1.6240601503759402,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 1.5642039140301591,
+"raw_kg_per_kg": 17.304972327283192,
+"animals_per_t_protein": 1.955254892537699
+}
+},
+"lr_range": {
+"D": [
+0.044024415572276994,
+0.15557725934805
+],
+"M": [
+6.427674611254385,
+22.71466837210484
+],
+"animals_per_t": [
+0.4534912724462684,
+1.6025863918538605
+]
+}
+},
+"WPI (whey protein isolate)": {
+"sub": "WPI (whey protein isolate)",
+"stream": "Whey protein",
+"qty": 0.10139999999999999,
+"kg_per_qty": 0.45359237,
+"protein": 0.9,
+"naive_yield": 0.78,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.0038592734925867365,
+"D": 0.02968671917374413,
+"M": 33.68509649541979,
+"units_per_qty": 0.038059896376595036,
+"steps": {
+"within_stream": 2.0751879699248126,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.3440250452524053,
+"raw_kg_per_kg": 3.8059896376595033,
+"animals_per_t_protein": 0.38225005028045034
+},
+"lr": {
+"DF": 0.014512227287206667,
+"D": 0.11163251759389746,
+"M": 8.957963338584298,
+"units_per_qty": 0.14311861229986853,
+"steps": {
+"within_stream": 2.0751879699248126,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 1.293655310717075,
+"raw_kg_per_kg": 14.311861229986851,
+"animals_per_t_protein": 1.4373947896856387
+},
+"limit": {
+"DF": 0.025224160288556164,
+"D": 0.19403200221966282,
+"M": 5.153789006763452,
+"units_per_qty": 0.24875897720469592,
+"steps": {
+"within_stream": 2.0751879699248126,
+"route_share": 0.22533512246032067,
+"route_elas": 0.44781445270792547,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 2.248543126418354,
+"raw_kg_per_kg": 24.87589772046959,
+"animals_per_t_protein": 2.498381251575949
+}
+},
+"lr_range": {
+"D": [
+0.056253419897909496,
+0.19879316472250835
+],
+"M": [
+5.030354043590388,
+17.776696986864657
+],
+"animals_per_t": [
+0.6518937041415109,
+2.303717938289925
+]
+}
+},
+"Dry whey (sweet whey powder)": {
+"sub": "Dry whey (sweet whey powder)",
+"stream": "Whey carbohydrate",
+"qty": 0.36,
+"kg_per_qty": 0.45359237,
+"protein": 0.12,
+"naive_yield": 6.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.000359755378776403,
+"D": 0.005995922979606718,
+"M": 166.77999423961774,
+"units_per_qty": 0.0009993204966011195,
+"steps": {
+"within_stream": 2.3715834118755894,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.009032901079475115,
+"raw_kg_per_kg": 0.09993204966011196,
+"animals_per_t_protein": 0.07527417566229262
+},
+"lr": {
+"DF": 0.0013528069038452445,
+"D": 0.022546781730754077,
+"M": 44.35222782309496,
+"units_per_qty": 0.0037577969551256794,
+"steps": {
+"within_stream": 2.3715834118755894,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.03396688878878443,
+"raw_kg_per_kg": 0.37577969551256796,
+"animals_per_t_protein": 0.28305740657320355
+},
+"limit": {
+"DF": 0.0023513563774004227,
+"D": 0.03918927295667371,
+"M": 25.517186835937604,
+"units_per_qty": 0.006531545492778952,
+"steps": {
+"within_stream": 2.3715834118755894,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.05903892148017583,
+"raw_kg_per_kg": 0.6531545492778952,
+"animals_per_t_protein": 0.4919910123347986
+}
+},
+"lr_range": {
+"D": [
+0.010851674674674357,
+0.041409353902220676
+],
+"M": [
+24.14913312488009,
+92.15167520030806
+],
+"animals_per_t": [
+0.016348125920958412,
+0.06238348938702855
+]
+}
+},
+"Lactose": {
+"sub": "Lactose",
+"stream": "Whey carbohydrate",
+"qty": 0.5399999999999999,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 4.4399999999999995,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.0005763592133899151,
+"D": 0.00473895353231708,
+"M": 211.0170511655253,
+"units_per_qty": 0.001067331876647991,
+"steps": {
+"within_stream": 1.874410933081998,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.009647658877730498,
+"raw_kg_per_kg": 0.1067331876647991,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.0021673135940888785,
+"D": 0.01782013399584189,
+"M": 56.11630082205542,
+"units_per_qty": 0.004013543692757183,
+"steps": {
+"within_stream": 1.874410933081998,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.03627859458315275,
+"raw_kg_per_kg": 0.40135436927571827,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0037670761634954596,
+"D": 0.030973737344296003,
+"M": 32.2854161538293,
+"units_per_qty": 0.006976066969436037,
+"steps": {
+"within_stream": 1.874410933081998,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.06305697028434079,
+"raw_kg_per_kg": 0.6976066969436037,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.008576758274916487,
+0.0327284063876965
+],
+"M": [
+30.554497159260624,
+116.59416855953505
+],
+"animals_per_t": [
+0.017460740551445884,
+0.06662916154103891
+]
+}
+},
+"Permeate / condensed whey / feed": {
+"sub": "Permeate / condensed whey / feed",
+"stream": "Whey carbohydrate",
+"qty": 0.8999999999999999,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 5.22,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.0005808271142689069,
+"D": 0.0033687972627596597,
+"M": 296.8418465113622,
+"units_per_qty": 0.0006453634602987855,
+"steps": {
+"within_stream": 1.332469368520264,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.1529990869245163
+},
+"animals_per_t": 0.0058334681586277425,
+"raw_kg_per_kg": 0.06453634602987854,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.0021841144746632115,
+"D": 0.012667863953046627,
+"M": 78.93990681511065,
+"units_per_qty": 0.002426793860736902,
+"steps": {
+"within_stream": 1.332469368520264,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 0.5753304419727564
+},
+"animals_per_t": 0.021935894399115627,
+"raw_kg_per_kg": 0.24267938607369016,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0037962783042977508,
+"D": 0.022018414164926954,
+"M": 45.416531477225824,
+"units_per_qty": 0.004218087004775279,
+"steps": {
+"within_stream": 1.332469368520264,
+"route_share": 0.05309828625406229,
+"route_elas": 0.3358608395309441,
+"animal_share": 0.9219999999999999,
+"animal_elas": 1.0049813623858277,
+"horizon": 1.0
+},
+"animals_per_t": 0.038127470404485136,
+"raw_kg_per_kg": 0.4218087004775279,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.006096991583237304,
+0.0232657621775517
+],
+"M": [
+42.98161359892452,
+164.01531580744492
+],
+"animals_per_t": [
+0.010557657077618446,
+0.04028740000155843
+]
+}
+},
+"Cull cows (manufacturing beef)": {
+"sub": "Cull cows (manufacturing beef)",
+"stream": "Cull cows",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.005945946409789895,
+"D": 0.005945946409789895,
+"M": 168.1818050619356,
+"units_per_qty": 0.005945946409789895,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0468,
+"animal_elas": 0.8303980076953273,
+"horizon": 0.1529990869245163
+}
+},
+"lr": {
+"DF": 0.022358852230134375,
+"D": 0.022358852230134375,
+"M": 44.7250149384788,
+"units_per_qty": 0.022358852230134375,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0468,
+"animal_elas": 0.8303980076953273,
+"horizon": 0.5753304419727564
+}
+},
+"limit": {
+"DF": 0.03886262676014132,
+"D": 0.03886262676014132,
+"M": 25.73166261179314,
+"units_per_qty": 0.03886262676014132,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0468,
+"animal_elas": 0.8303980076953273,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.013436623438382905,
+0.034056886385871704
+],
+"M": [
+29.362637226133625,
+74.42345947892024
+]
+}
+},
+"Calves (beef-on-dairy, bull calves)": {
+"sub": "Calves (beef-on-dairy, bull calves)",
+"stream": "Calves",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.005285285697591019,
+"D": 0.005285285697591019,
+"M": 189.20453069467752,
+"units_per_qty": 0.005285285697591019,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.031200000000000002,
+"animal_elas": 1.1071973435937699,
+"horizon": 0.1529990869245163
+}
+},
+"lr": {
+"DF": 0.019874535315675006,
+"D": 0.019874535315675006,
+"M": 50.31564180578864,
+"units_per_qty": 0.019874535315675006,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.031200000000000002,
+"animal_elas": 1.1071973435937699,
+"horizon": 0.5753304419727564
+}
+},
+"limit": {
+"DF": 0.03454455712012562,
+"D": 0.03454455712012562,
+"M": 28.94812043826728,
+"units_per_qty": 0.03454455712012562,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.031200000000000002,
+"animal_elas": 1.1071973435937699,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.009672615832385784,
+0.036558374551250994
+],
+"M": [
+27.353513723595814,
+103.38464975025752
+]
+}
+}
+},
+"streams": {
+"Fluid milk": {
+"SR": {
+"A": -0.026634161563367842,
+"naive": 0.19,
+"M": 7.133695556661437
+},
+"LR": {
+"A": -0.10047175989594037,
+"naive": 0.19,
+"M": 1.891078649331762
+},
+"limit": {
+"A": -0.17415532891800534,
+"naive": 0.19,
+"M": 1.0909801105739034
+}
+},
+"Other dairy": {
+"SR": {
+"A": -0.011940456848160474,
+"naive": 0.08,
+"M": 6.699911152254167
+},
+"LR": {
+"A": -0.04382771675726138,
+"naive": 0.08,
+"M": 1.8253289452215324
+},
+"limit": {
+"A": -0.07419261081245354,
+"naive": 0.08,
+"M": 1.078274495585909
+}
+},
+"Butter (fat)": {
+"SR": {
+"A": -0.005029592426157858,
+"naive": 0.13,
+"M": 25.847024765644466
+},
+"LR": {
+"A": -0.018906505925624373,
+"naive": 0.13,
+"M": 6.875939981263717
+},
+"limit": {
+"A": -0.032815468333913245,
+"naive": 0.13,
+"M": 3.961546386514652
+}
+},
+"Milk powder (nonfat solids)": {
+"SR": {
+"A": -0.00649061366749959,
+"naive": 0.13,
+"M": 20.02892278906511
+},
+"LR": {
+"A": -0.024443470258755706,
+"naive": 0.13,
+"M": 5.318393772399552
+},
+"limit": {
+"A": -0.04243409543582932,
+"naive": 0.13,
+"M": 3.063574200529186
+}
+},
+"Cheese": {
+"SR": {
+"A": -0.06886537307319407,
+"naive": 0.6,
+"M": 8.712651558023008
+},
+"LR": {
+"A": -0.2791440918811021,
+"naive": 0.6,
+"M": 2.149427544594289
+},
+"limit": {
+"A": -0.46519580979437336,
+"naive": 0.6,
+"M": 1.2897794592458023
+}
+},
+"Whey protein": {
+"SR": {
+"A": -0.012161810376753346,
+"naive": 0.33333333333333326,
+"M": 27.408200178032885
+},
+"LR": {
+"A": -0.04370971576648741,
+"naive": 0.33333333333333326,
+"M": 7.626069570301406
+},
+"limit": {
+"A": -0.07261526147056707,
+"naive": 0.33333333333333326,
+"M": 4.5904032648624735
+}
+},
+"Whey carbohydrate": {
+"SR": {
+"A": -0.0015224532967281768,
+"naive": 0.3540354147250699,
+"M": 232.542709510964
+},
+"LR": {
+"A": -0.005698950487014853,
+"naive": 0.3540354147250699,
+"M": 62.12291465450438
+},
+"limit": {
+"A": -0.009857390265995192,
+"naive": 0.3540354147250699,
+"M": 35.915734811309804
+}
+},
+"Cull cows": {
+"SR": {
+"A": -0.004116517002993758,
+"naive": 1.0,
+"M": 242.9238113853884
+},
+"LR": {
+"A": -0.015373742350346387,
+"naive": 1.0,
+"M": 65.04597105970551
+},
+"limit": {
+"A": -0.02651495869045417,
+"naive": 1.0,
+"M": 37.71455998383345
+}
+},
+"Calves": {
+"SR": {
+"A": -0.0030557214641302455,
+"naive": 1.0,
+"M": 327.2549581951611
+},
+"LR": {
+"A": -0.011460231853219316,
+"naive": 1.0,
+"M": 87.25826953658779
+},
+"limit": {
+"A": -0.019853570007219323,
+"naive": 1.0,
+"M": 50.36877496774492
+}
+}
+}
+},
+"dairy_2019": {
+"name": "Dairy cow (2019 prices)",
+"animal_label": "cow-years",
+"animals_per_unit": 0.004100041000410004,
+"animals_src": "[S] NASS Milk Production, Disposition and Income 2025: 24,390 lb per cow (9.498 m cows, 231.7 bn lb)",
+"raw_label": "kg milk",
+"raw_kg_per_unit": 45.359237,
+"bundle": {
+"sr": 0.16635055716604857,
+"lr": 0.5994532235182612,
+"limit": 1.0
+},
+"subs": {
+"Fluid milk (Class I)": {
+"sub": "Fluid milk (Class I)",
+"stream": "Fluid milk",
+"qty": 0.19,
+"kg_per_qty": 45.359237,
+"protein": 0.033,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.029721724471301666,
+"D": 0.15643012879632456,
+"M": 6.392630420333041,
+"units_per_qty": 0.15643012879632456,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.014139786825875142,
+"raw_kg_per_kg": 0.15643012879632456,
+"animals_per_t_protein": 0.42847838866288307
+},
+"lr": {
+"DF": 0.10710384050628056,
+"D": 0.5637044237172661,
+"M": 1.7739793372662338,
+"units_per_qty": 0.5637044237172661,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.05095348604195623,
+"raw_kg_per_kg": 0.5637044237172661,
+"animals_per_t_protein": 1.5440450315744312
+},
+"limit": {
+"DF": 0.17866922105727542,
+"D": 0.9403643213540812,
+"M": 1.0634176321790327,
+"units_per_qty": 0.9403643213540812,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.08499993668047065,
+"raw_kg_per_kg": 0.9403643213540812,
+"animals_per_t_protein": 2.575755656983959
+}
+},
+"lr_range": {
+"D": [
+0.37579749819772085,
+0.7202860436778331
+],
+"M": [
+1.3883373262293506,
+2.6610076032860213
+],
+"animals_per_t": [
+0.033968497981175474,
+0.06510696621952056
+]
+}
+},
+"Other dairy: yogurt, ice cream, etc. (Class II)": {
+"sub": "Other dairy: yogurt, ice cream, etc. (Class II)",
+"stream": "Other dairy",
+"qty": 0.08,
+"kg_per_qty": 45.359237,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.012514410303705967,
+"D": 0.1564301287963246,
+"M": 6.39263042033304,
+"units_per_qty": 0.1564301287963246,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.014139786825875146,
+"raw_kg_per_kg": 0.1564301287963246,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.04509635389738129,
+"D": 0.5637044237172661,
+"M": 1.7739793372662338,
+"units_per_qty": 0.5637044237172661,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.05095348604195623,
+"raw_kg_per_kg": 0.5637044237172661,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0752291457083265,
+"D": 0.9403643213540813,
+"M": 1.0634176321790325,
+"units_per_qty": 0.9403643213540813,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 0.9999999999999999,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.08499993668047066,
+"raw_kg_per_kg": 0.9403643213540813,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.3757974981977208,
+0.720286043677833
+],
+"M": [
+1.3883373262293508,
+2.6610076032860217
+],
+"animals_per_t": [
+0.033968497981175474,
+0.06510696621952053
+]
+}
+},
+"Butter / cream (3.5 lb fat per cwt)": {
+"sub": "Butter / cream (3.5 lb fat per cwt)",
+"stream": "Butter (fat)",
+"qty": 0.13,
+"kg_per_qty": 1.9844666187500002,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.012185171964044873,
+"D": 0.0937320920311144,
+"M": 10.66870458485072,
+"units_per_qty": 0.0937320920311144,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.4728479544186319,
+"route_elas": 1.2672035847469614,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.19365678250805943,
+"raw_kg_per_kg": 2.1424478178540434,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.04390992574602477,
+"D": 0.33776865958480595,
+"M": 2.9606062363193377,
+"units_per_qty": 0.33776865958480595,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.4728479544186319,
+"route_elas": 1.2672035847469614,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.6978526823613438,
+"raw_kg_per_kg": 7.720426504795563,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.07324996183740955,
+"D": 0.5634612449031503,
+"M": 1.7747449519298946,
+"units_per_qty": 0.5634612449031503,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.4728479544186319,
+"route_elas": 1.2672035847469614,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 1.1641486858066497,
+"raw_kg_per_kg": 12.879114169214864,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.20087760680094605,
+0.4603541136856687
+],
+"M": [
+2.172240825641461,
+4.978155683579612
+],
+"animals_per_t": [
+0.4150265951396559,
+0.9511224441797628
+]
+}
+},
+"Nonfat dry milk / SMP (also the casein route)": {
+"sub": "Nonfat dry milk / SMP (also the casein route)",
+"stream": "Milk powder (nonfat solids)",
+"qty": 0.13,
+"kg_per_qty": 4.0707647245650005,
+"protein": 0.35,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.008150744779477321,
+"D": 0.06269803676521016,
+"M": 15.949462719937657,
+"units_per_qty": 0.06269803676521016,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5271520455813681,
+"route_elas": 0.7603221508481768,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.06314895081784547,
+"raw_kg_per_kg": 0.6986242884306664,
+"animals_per_t_protein": 0.18042557376527277
+},
+"lr": {
+"DF": 0.029371649337219828,
+"D": 0.22593576413246022,
+"M": 4.426036771291003,
+"units_per_qty": 0.22593576413246022,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5271520455813681,
+"route_elas": 0.7603221508481768,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.2275606572917426,
+"raw_kg_per_kg": 2.5175303819985535,
+"animals_per_t_protein": 0.650173306547836
+},
+"limit": {
+"DF": 0.048997399938621025,
+"D": 0.37690307645093096,
+"M": 2.6532020099607494,
+"units_per_qty": 0.37690307645093096,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5271520455813681,
+"route_elas": 0.7603221508481768,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.3796137018934729,
+"raw_kg_per_kg": 4.199711142135282,
+"animals_per_t_protein": 1.084610576838494
+}
+},
+"lr_range": {
+"D": [
+0.12013335634990713,
+0.33882834856418537
+],
+"M": [
+2.9513469113124304,
+8.324082755894576
+],
+"animals_per_t": [
+0.12099733585170992,
+0.3412651467748047
+]
+}
+},
+"Cheese (cheddar-equivalent)": {
+"sub": "Cheese (cheddar-equivalent)",
+"stream": "Cheese",
+"qty": 6.359999999999999,
+"kg_per_qty": 0.45359237,
+"protein": 0.25,
+"naive_yield": 10.6,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.09120765539544383,
+"D": 0.15201275899240638,
+"M": 6.5783951730654,
+"units_per_qty": 0.014340826320038339,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.9217673318896343,
+"route_elas": 1.0542371743870433,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.12962734777023718,
+"raw_kg_per_kg": 1.4340826320038338,
+"animals_per_t_protein": 0.5185093910809487
+},
+"lr": {
+"DF": 0.3286717157296087,
+"D": 0.5477861928826812,
+"M": 1.8255297650668771,
+"units_per_qty": 0.051677942724781246,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.9217673318896343,
+"route_elas": 1.0542371743870433,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.46711915367633494,
+"raw_kg_per_kg": 5.167794272478124,
+"animals_per_t_protein": 1.8684766147053398
+},
+"limit": {
+"DF": 0.548285842555981,
+"D": 0.9138097375933018,
+"M": 1.0943197022978737,
+"units_per_qty": 0.08620846581068885,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.9217673318896343,
+"route_elas": 1.0542371743870433,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.7792420414970127,
+"raw_kg_per_kg": 8.620846581068884,
+"animals_per_t_protein": 3.116968165988051
+}
+},
+"lr_range": {
+"D": [
+0.36295458047744383,
+0.7002094867881454
+],
+"M": [
+1.4281440324194847,
+2.755165670273573
+],
+"animals_per_t": [
+0.30950585950946674,
+0.597096580955026
+]
+}
+},
+"WPC 80 (whey protein concentrate)": {
+"sub": "WPC 80 (whey protein concentrate)",
+"stream": "Whey protein",
+"qty": 0.17545125,
+"kg_per_qty": 0.45359237,
+"protein": 0.8,
+"naive_yield": 0.8628750000000002,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.0010715857885804953,
+"D": 0.005270094042199159,
+"M": 189.74993462976417,
+"units_per_qty": 0.006107598484368138,
+"steps": {
+"within_stream": 1.5154349859681948,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.055206846182071716,
+"raw_kg_per_kg": 0.6107598484368139,
+"animals_per_t_protein": 0.06900855772758964
+},
+"lr": {
+"DF": 0.0038615173052876303,
+"D": 0.018991068714529335,
+"M": 52.65633098546679,
+"units_per_qty": 0.022009061236597804,
+"steps": {
+"within_stream": 1.5154349859681948,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.19894085398875974,
+"raw_kg_per_kg": 2.2009061236597804,
+"animals_per_t_protein": 0.24867606748594967
+},
+"limit": {
+"DF": 0.006441732488523345,
+"D": 0.0316806515829017,
+"M": 31.565007347882574,
+"units_per_qty": 0.036715227098828566,
+"steps": {
+"within_stream": 1.5154349859681948,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.3318705216416263,
+"raw_kg_per_kg": 3.6715227098828565,
+"animals_per_t_protein": 0.41483815205203284
+}
+},
+"lr_range": {
+"D": [
+0.008930832385154783,
+0.03587166421907275
+],
+"M": [
+27.877156573859374,
+111.97164574068633
+],
+"animals_per_t": [
+0.09355489405258559,
+0.37577345546017804
+]
+}
+},
+"WPI (whey protein isolate)": {
+"sub": "WPI (whey protein isolate)",
+"stream": "Whey protein",
+"qty": 0.09971000000000001,
+"kg_per_qty": 0.45359237,
+"protein": 0.9,
+"naive_yield": 0.7670000000000001,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.0010149810747939116,
+"D": 0.007807546729183936,
+"M": 128.08120587509086,
+"units_per_qty": 0.010179330807280227,
+"steps": {
+"within_stream": 2.2450888681010293,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.09201141030345283,
+"raw_kg_per_kg": 1.0179330807280227,
+"animals_per_t_protein": 0.10223490033716981
+},
+"lr": {
+"DF": 0.0036575391598352783,
+"D": 0.028134916614117527,
+"M": 35.54302341519009,
+"units_per_qty": 0.036681768727663,
+"steps": {
+"within_stream": 2.2450888681010293,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.3315680899812662,
+"raw_kg_per_kg": 3.6681768727663,
+"animals_per_t_protein": 0.36840898886807355
+},
+"limit": {
+"DF": 0.0061014588233736615,
+"D": 0.046934298641335866,
+"M": 21.306379959820735,
+"units_per_qty": 0.061192045164714284,
+"steps": {
+"within_stream": 2.2450888681010293,
+"route_share": 0.05751099695992169,
+"route_elas": 0.3865536306085826,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.5531175360693771,
+"raw_kg_per_kg": 6.119204516471428,
+"animals_per_t_protein": 0.6145750400770856
+}
+},
+"lr_range": {
+"D": [
+0.013230862792821901,
+0.05314320625047814
+],
+"M": [
+18.81708068735508,
+75.58086087496326
+],
+"animals_per_t": [
+0.155924823420976,
+0.62628909243363
+]
+}
+},
+"Dry whey (sweet whey powder)": {
+"sub": "Dry whey (sweet whey powder)",
+"stream": "Whey carbohydrate",
+"qty": 0.35400000000000004,
+"kg_per_qty": 0.45359237,
+"protein": 0.12,
+"naive_yield": 5.9,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.00013594140016544493,
+"D": 0.0022656900027574157,
+"M": 441.3666471507438,
+"units_per_qty": 0.00038401525470464667,
+"steps": {
+"within_stream": 2.410928263300846,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.0034711304536977597,
+"raw_kg_per_kg": 0.038401525470464666,
+"animals_per_t_protein": 0.028926087114148
+},
+"lr": {
+"DF": 0.0004898721827388847,
+"D": 0.00816453637898141,
+"M": 122.48092893239797,
+"units_per_qty": 0.0013838197252510865,
+"steps": {
+"within_stream": 2.410928263300846,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.012508406194543267,
+"raw_kg_per_kg": 0.13838197252510864,
+"animals_per_t_protein": 0.10423671828786056
+},
+"limit": {
+"DF": 0.0008171983459589516,
+"D": 0.013619972432649192,
+"M": 73.42158766803702,
+"units_per_qty": 0.002308469903838846,
+"steps": {
+"within_stream": 2.410928263300846,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.02086635904821725,
+"raw_kg_per_kg": 0.23084699038388456,
+"animals_per_t_protein": 0.17388632540181043
+}
+},
+"lr_range": {
+"D": [
+0.0038410960748181296,
+0.015756758795459836
+],
+"M": [
+63.46482883828499,
+260.3423555468731
+],
+"animals_per_t": [
+0.00588471747884906,
+0.024140003813375457
+]
+}
+},
+"Lactose": {
+"sub": "Lactose",
+"stream": "Whey carbohydrate",
+"qty": 0.531,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 4.3660000000000005,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.00020269592469996755,
+"D": 0.0016666109364219556,
+"M": 600.0200635589842,
+"units_per_qty": 0.0003817249052730086,
+"steps": {
+"within_stream": 1.7734462374181175,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.003450427886379482,
+"raw_kg_per_kg": 0.03817249052730085,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.0007304257197895894,
+"D": 0.006005722584936625,
+"M": 166.5078574405302,
+"units_per_qty": 0.0013755663272873623,
+"steps": {
+"within_stream": 1.7734462374181175,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.01243380337429748,
+"raw_kg_per_kg": 0.13755663272873622,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0012184865993423728,
+"D": 0.010018667594592844,
+"M": 99.81367188384492,
+"units_per_qty": 0.002294701693676785,
+"steps": {
+"within_stream": 1.7734462374181175,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.02074190760260164,
+"raw_kg_per_kg": 0.2294701693676785,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.0028254583452936542,
+0.011590458756103659
+],
+"M": [
+86.27786190718201,
+353.9248779461544
+],
+"animals_per_t": [
+0.005849619760287335,
+0.023996027647490516
+]
+}
+},
+"Permeate / condensed whey / feed": {
+"sub": "Permeate / condensed whey / feed",
+"stream": "Whey carbohydrate",
+"qty": 0.885,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 5.133,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.00022521769411107512,
+"D": 0.0013062626258442357,
+"M": 765.5428397131866,
+"units_per_qty": 0.0002544832701820058,
+"steps": {
+"within_stream": 1.389998402300687,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.16635055716604857
+},
+"animals_per_t": 0.002300285257586322,
+"raw_kg_per_kg": 0.025448327018200576,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.000811584133099544,
+"D": 0.004707187971977355,
+"M": 212.44105949309022,
+"units_per_qty": 0.0009170442181915752,
+"steps": {
+"within_stream": 1.389998402300687,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 0.5994532235182612
+},
+"animals_per_t": 0.008289202249531656,
+"raw_kg_per_kg": 0.09170442181915751,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0013538739992693036,
+"D": 0.007852469195761961,
+"M": 127.34847792076762,
+"units_per_qty": 0.0015298011291178572,
+"steps": {
+"within_stream": 1.389998402300687,
+"route_share": 0.020721671150443974,
+"route_elas": 0.28991522295643696,
+"animal_share": 0.93,
+"animal_elas": 1.011144431563528,
+"horizon": 1.0
+},
+"animals_per_t": 0.01382793840173443,
+"raw_kg_per_kg": 0.15298011291178573,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.0022145484327977293,
+0.009084413619648814
+],
+"M": [
+110.07865139881841,
+451.55932703474866
+],
+"animals_per_t": [
+0.003899746506858225,
+0.015997351764993683
+]
+}
+},
+"Cull cows (manufacturing beef)": {
+"sub": "Cull cows (manufacturing beef)",
+"stream": "Cull cows",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.005251991489853895,
+"D": 0.005251991489853895,
+"M": 190.4039642737157,
+"units_per_qty": 0.005251991489853895,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.04200000000000001,
+"animal_elas": 0.7517102350325902,
+"horizon": 0.16635055716604857
+}
+},
+"lr": {
+"DF": 0.018925835188762157,
+"D": 0.018925835188762157,
+"M": 52.83782670757818,
+"units_per_qty": 0.018925835188762157,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.04200000000000001,
+"animal_elas": 0.7517102350325902,
+"horizon": 0.5994532235182612
+}
+},
+"limit": {
+"DF": 0.0315718298713688,
+"D": 0.0315718298713688,
+"M": 31.673805543557012,
+"units_per_qty": 0.0315718298713688,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.04200000000000001,
+"animal_elas": 0.7517102350325902,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.011217573246961548,
+0.02889379786236816
+],
+"M": [
+34.60950356070772,
+89.14584090376815
+]
+}
+},
+"Calves (beef-on-dairy, bull calves)": {
+"sub": "Calves (beef-on-dairy, bull calves)",
+"stream": "Calves",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "cow-years",
+"raw_label": "kg milk",
+"horizons": {
+"sr": {
+"DF": 0.004668436879870129,
+"D": 0.004668436879870129,
+"M": 214.2044598079302,
+"units_per_qty": 0.004668436879870129,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.028000000000000004,
+"animal_elas": 1.002280313376787,
+"horizon": 0.16635055716604857
+}
+},
+"lr": {
+"DF": 0.016822964612233027,
+"D": 0.016822964612233027,
+"M": 59.442555046025454,
+"units_per_qty": 0.016822964612233027,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.028000000000000004,
+"animal_elas": 1.002280313376787,
+"horizon": 0.5994532235182612
+}
+},
+"limit": {
+"DF": 0.02806384877455004,
+"D": 0.02806384877455004,
+"M": 35.633031236501644,
+"units_per_qty": 0.02806384877455004,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.028000000000000004,
+"animal_elas": 1.002280313376787,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.0082866332966107,
+0.031044939624311617
+],
+"M": [
+32.211368812484004,
+120.67627035083213
+]
+}
+}
+},
+"streams": {
+"Fluid milk": {
+"SR": {
+"A": -0.029919543098481993,
+"naive": 0.19,
+"M": 6.350364354649517
+},
+"LR": {
+"A": -0.10720802356114012,
+"naive": 0.19,
+"M": 1.7722554123166359
+},
+"limit": {
+"A": -0.1772669672828986,
+"naive": 0.19,
+"M": 1.0718296979537134
+}
+},
+"Other dairy": {
+"SR": {
+"A": -0.013357147005859105,
+"naive": 0.08,
+"M": 5.989302952562253
+},
+"LR": {
+"A": -0.04657803927156423,
+"naive": 0.08,
+"M": 1.7175476093696325
+},
+"limit": {
+"A": -0.07534316251127637,
+"naive": 0.08,
+"M": 1.061808362345112
+}
+},
+"Butter (fat)": {
+"SR": {
+"A": -0.009722957930771603,
+"naive": 0.13,
+"M": 13.3704167934915
+},
+"LR": {
+"A": -0.034828107204760705,
+"naive": 0.13,
+"M": 3.732617429816287
+},
+"limit": {
+"A": -0.057713297909758876,
+"naive": 0.13,
+"M": 2.2525138002556946
+}
+},
+"Milk powder (nonfat solids)": {
+"SR": {
+"A": -0.004020246831279772,
+"naive": 0.13,
+"M": 32.33632298109837
+},
+"LR": {
+"A": -0.014515175676128589,
+"naive": 0.13,
+"M": 8.956143756068746
+},
+"limit": {
+"A": -0.02423565024269203,
+"naive": 0.13,
+"M": 5.363998848729051
+}
+},
+"Cheese": {
+"SR": {
+"A": -0.09306431935576165,
+"naive": 0.6,
+"M": 6.447154012982676
+},
+"LR": {
+"A": -0.35825770759224396,
+"naive": 0.6,
+"M": 1.6747720629165037
+},
+"limit": {
+"A": -0.5418818018112799,
+"naive": 0.6,
+"M": 1.1072525373512374
+}
+},
+"Whey protein": {
+"SR": {
+"A": -0.002944233903211524,
+"naive": 0.33333333333333326,
+"M": 113.21564260561586
+},
+"LR": {
+"A": -0.010493974110781457,
+"naive": 0.33333333333333326,
+"M": 31.76426107158662
+},
+"limit": {
+"A": -0.01732649479507309,
+"naive": 0.33333333333333326,
+"M": 19.238359360955048
+}
+},
+"Whey carbohydrate": {
+"SR": {
+"A": -0.0005644586511577288,
+"naive": 0.3540354147250699,
+"M": 627.2123104126904
+},
+"LR": {
+"A": -0.0020305985535382653,
+"naive": 0.3540354147250699,
+"M": 174.35027426182904
+},
+"limit": {
+"A": -0.0033819021202720068,
+"naive": 0.3540354147250699,
+"M": 104.68529310854058
+}
+},
+"Cull cows": {
+"SR": {
+"A": -0.0036273557280301905,
+"naive": 1.0,
+"M": 275.6829147669624
+},
+"LR": {
+"A": -0.012980648285896068,
+"naive": 1.0,
+"M": 77.03775481587736
+},
+"limit": {
+"A": -0.021507201946409094,
+"naive": 1.0,
+"M": 46.49605292644602
+}
+},
+"Calves": {
+"SR": {
+"A": -0.0026940152598158296,
+"naive": 1.0,
+"M": 371.1931461250753
+},
+"LR": {
+"A": -0.009677523153440726,
+"naive": 1.0,
+"M": 103.33222500681511
+},
+"limit": {
+"A": -0.016092378769286264,
+"naive": 1.0,
+"M": 62.14121692863636
+}
+}
+}
+},
+"beef": {
+"name": "Fed steer (Oct 2026 prices)",
+"animal_label": "fed cattle",
+"animals_per_unit": 1.0,
+"animals_src": "one fed steer per model unit; the cow-calf herd behind it is not counted",
+"raw_label": "kg live weight",
+"raw_kg_per_unit": 635.029318,
+"bundle": {
+"sr": 0.1345069109388476,
+"lr": 0.453210457532846,
+"limit": 1.0
+},
+"subs": {
+"Middle meats: steaks and roasts from rib and loin": {
+"sub": "Middle meats: steaks and roasts from rib and loin",
+"stream": "Middle meats (whole cut)",
+"qty": 288.0612,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 288.0612,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.056353981481371086,
+"D": 0.056353981481371086,
+"M": 17.74497513242378,
+"units_per_qty": 0.00019563197501562546,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.4340799650790305,
+"animal_elas": 0.9651843347900257,
+"horizon": 0.1345069109388476
+},
+"animals_per_t": 0.43129467767640234,
+"raw_kg_per_kg": 0.27388476502187564,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.18988030839977704,
+"D": 0.18988030839977704,
+"M": 5.266475541500512,
+"units_per_qty": 0.0006591665534954969,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.4340799650790305,
+"animal_elas": 0.9651843347900257,
+"horizon": 0.453210457532846
+},
+"animals_per_t": 1.4532134954022635,
+"raw_kg_per_kg": 0.9228331748936957,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.4189671823404817,
+"D": 0.4189671823404817,
+"M": 2.38682178974899,
+"units_per_qty": 0.0014544380928097284,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.4340799650790305,
+"animal_elas": 0.9651843347900257,
+"horizon": 1.0
+},
+"animals_per_t": 3.206487121486916,
+"raw_kg_per_kg": 2.0362133299336196,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.12723710254273118,
+0.26334044047270877
+],
+"M": [
+3.79736586680326,
+7.85934275471387
+],
+"animals_per_t": [
+0.9737854129754285,
+2.015426903428003
+]
+}
+},
+"End-meat whole-muscle cuts (chuck/round roasts, steaks; 50% of chuck+round)": {
+"sub": "End-meat whole-muscle cuts (chuck/round roasts, steaks; 50% of chuck+round)",
+"stream": "End meats (whole cut)",
+"qty": 229.05540000000005,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 229.05540000000005,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.031555772681962524,
+"D": 0.031555772681962524,
+"M": 31.689922794113873,
+"units_per_qty": 0.00013776480572805756,
+"steps": {
+"within_stream": 0.8424593925602565,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 0.1345069109388476
+},
+"animals_per_t": 0.3037194072026775,
+"raw_kg_per_kg": 0.19287072801928057,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.10632469421215636,
+"D": 0.10632469421215636,
+"M": 9.4051528425244,
+"units_per_qty": 0.0004641876777939151,
+"steps": {
+"within_stream": 0.8424593925602565,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 0.453210457532846
+},
+"animals_per_t": 1.0233586552479157,
+"raw_kg_per_kg": 0.6498627489114811,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.23460335578079766,
+"D": 0.2346033557807977,
+"M": 4.2625136229268294,
+"units_per_qty": 0.0010242210215554736,
+"steps": {
+"within_stream": 0.8424593925602565,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 1.0
+},
+"animals_per_t": 2.2580208338942596,
+"raw_kg_per_kg": 1.4339094301776631,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.057630895159697264,
+0.17879866072956516
+],
+"M": [
+5.592883055832898,
+17.351804049355202
+],
+"animals_per_t": [
+0.5546884080727355,
+1.72090931801068
+]
+}
+},
+"Thin-meat whole-muscle (brisket, flank, skirt; 40% of thin meats)": {
+"sub": "Thin-meat whole-muscle (brisket, flank, skirt; 40% of thin meats)",
+"stream": "End meats (whole cut)",
+"qty": 54.3312,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 54.3312,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.005900955749853867,
+"D": 0.005900955749853867,
+"M": 169.46407368412554,
+"units_per_qty": 0.00010861081201692337,
+"steps": {
+"within_stream": 0.15754060743974355,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 0.1345069109388476
+},
+"animals_per_t": 0.2394458531498741,
+"raw_kg_per_kg": 0.1520551368236927,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.019882806293040445,
+"D": 0.019882806293040445,
+"M": 50.29471118219508,
+"units_per_qty": 0.00036595558892570833,
+"steps": {
+"within_stream": 0.15754060743974355,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 0.453210457532846
+},
+"animals_per_t": 0.8067939699376079,
+"raw_kg_per_kg": 0.5123378244959916,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.04387102275017442,
+"D": 0.04387102275017442,
+"M": 22.79408906636498,
+"units_per_qty": 0.0008074738410006482,
+"steps": {
+"within_stream": 0.15754060743974355,
+"animal_share": 0.2596674351665667,
+"animal_elas": 1.072427038655584,
+"horizon": 1.0
+},
+"animals_per_t": 1.7801750964211505,
+"raw_kg_per_kg": 1.1304633774009074,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.010777025350934642,
+0.033435498339148266
+],
+"M": [
+29.908332451236134,
+92.7899830831589
+],
+"animals_per_t": [
+0.4373044196503712,
+1.3567279208129661
+]
+}
+},
+"Grinding material: trim and ground chuck/round (minced beef)": {
+"sub": "Grinding material: trim and ground chuck/round (minced beef)",
+"stream": "Minced beef (grinding material)",
+"qty": 310.5522,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 310.5522,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.03756459168180803,
+"D": 0.03756459168180803,
+"M": 26.62081378311068,
+"units_per_qty": 0.00012096063618872455,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.24594768256457475,
+"animal_elas": 1.1355109821059126,
+"horizon": 0.1345069109388476
+},
+"animals_per_t": 0.2666725548948818,
+"raw_kg_per_kg": 0.16934489066421438,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.12657093724267354,
+"D": 0.12657093724267354,
+"M": 7.90070787010692,
+"units_per_qty": 0.00040756735016745505,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.24594768256457475,
+"animal_elas": 1.1355109821059126,
+"horizon": 0.453210457532846
+},
+"animals_per_t": 0.8985322001061328,
+"raw_kg_per_kg": 0.570594290234437,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.2792762945755735,
+"D": 0.2792762945755735,
+"M": 3.5806834286445146,
+"units_per_qty": 0.0008992893773593409,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.24594768256457475,
+"animal_elas": 1.1355109821059126,
+"horizon": 1.0
+},
+"animals_per_t": 1.982593704914703,
+"raw_kg_per_kg": 1.259005128303077,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.08473501489151856,
+0.1747641513405604
+],
+"M": [
+5.721997287941017,
+11.801496716324925
+],
+"animals_per_t": [
+0.6015372961213434,
+1.240657775194001
+]
+}
+},
+"Hide": {
+"sub": "Hide",
+"stream": "Drop credit",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.00036245478516806366,
+"D": 0.00036245478516806366,
+"M": 2758.9648169117654,
+"units_per_qty": 0.00036245478516806366,
+"steps": {
+"within_stream": 0.11574074074074076,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.1345069109388476
+}
+},
+"lr": {
+"DF": 0.0012212628918053937,
+"D": 0.0012212628918053937,
+"M": 818.8245190367647,
+"units_per_qty": 0.0012212628918053937,
+"steps": {
+"within_stream": 0.11574074074074076,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.453210457532846
+}
+},
+"limit": {
+"DF": 0.002694692656594059,
+"D": 0.002694692656594059,
+"M": 371.09983491176473,
+"units_per_qty": 0.002694692656594059,
+"steps": {
+"within_stream": 0.11574074074074076,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.0006514748382309691,
+0.0021214224910550395
+],
+"M": [
+471.3818224405991,
+1534.978699584814
+]
+}
+},
+"Tallow and technical fat": {
+"sub": "Tallow and technical fat",
+"stream": "Drop credit",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0007994716975707004,
+"D": 0.0007994716975707004,
+"M": 1250.8260180299455,
+"units_per_qty": 0.0007994716975707004,
+"steps": {
+"within_stream": 0.2552910052910053,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.1345069109388476
+}
+},
+"lr": {
+"DF": 0.002693757007067897,
+"D": 0.002693757007067897,
+"M": 371.2287327239219,
+"units_per_qty": 0.002693757007067897,
+"steps": {
+"within_stream": 0.2552910052910053,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.453210457532846
+}
+},
+"limit": {
+"DF": 0.005943722088258894,
+"D": 0.005943722088258894,
+"M": 168.24474380714727,
+"units_per_qty": 0.005943722088258894,
+"steps": {
+"within_stream": 0.2552910052910053,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.0014369673574694518,
+0.004679251894555686
+],
+"M": [
+213.70937545882086,
+695.9100321951877
+]
+}
+},
+"Edible offal (tongue, cheek, oxtail, liver, tripe, hearts, lips)": {
+"sub": "Edible offal (tongue, cheek, oxtail, liver, tripe, hearts, lips)",
+"stream": "Drop credit",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0016838613733807756,
+"D": 0.0016838613733807756,
+"M": 593.8731155714132,
+"units_per_qty": 0.0016838613733807756,
+"steps": {
+"within_stream": 0.5376984126984127,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.1345069109388476
+}
+},
+"lr": {
+"DF": 0.005673638463073056,
+"D": 0.005673638463073056,
+"M": 176.25374026006625,
+"units_per_qty": 0.005673638463073056,
+"steps": {
+"within_stream": 0.5376984126984127,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.453210457532846
+}
+},
+"limit": {
+"DF": 0.012518772170348396,
+"D": 0.012518772170348396,
+"M": 79.88003826514003,
+"units_per_qty": 0.012518772170348396,
+"steps": {
+"within_stream": 0.5376984126984127,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.0030265659627530164,
+0.009855522772729981
+],
+"M": [
+101.46595193985837,
+330.4074691603228
+]
+}
+},
+"Meat & bone meal, blood meal": {
+"sub": "Meat & bone meal, blood meal",
+"stream": "Drop credit",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "fed cattle",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.00028582148773253016,
+"D": 0.00028582148773253016,
+"M": 3498.6872678228915,
+"units_per_qty": 0.00028582148773253016,
+"steps": {
+"within_stream": 0.09126984126984126,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.1345069109388476
+}
+},
+"lr": {
+"DF": 0.0009630530232522532,
+"D": 0.0009630530232522532,
+"M": 1038.364426314738,
+"units_per_qty": 0.0009630530232522532,
+"steps": {
+"within_stream": 0.09126984126984126,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 0.453210457532846
+}
+},
+"limit": {
+"DF": 0.0021249576377713147,
+"D": 0.0021249576377713147,
+"M": 470.5976167359336,
+"units_per_qty": 0.0021249576377713147,
+"steps": {
+"within_stream": 0.09126984126984126,
+"animal_share": 0.06030491718982793,
+"animal_elas": 0.3860737339160103,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.0005137344438621356,
+0.0016728931643748308
+],
+"M": [
+597.7668038196005,
+1946.5309596184236
+]
+}
+}
+},
+"streams": {
+"Middle meats (whole cut)": {
+"SR": {
+"A": -0.07098090631278664,
+"naive": 1.0,
+"M": 14.088295739608752
+},
+"LR": {
+"A": -0.21759925915170797,
+"naive": 1.0,
+"M": 4.595603881641942
+},
+"limit": {
+"A": -0.4107033981363355,
+"naive": 1.0,
+"M": 2.434847153779925
+}
+},
+"End meats (whole cut)": {
+"SR": {
+"A": -0.03840525290086294,
+"naive": 2.0,
+"M": 52.07620960504237
+},
+"LR": {
+"A": -0.12444407068762664,
+"naive": 2.0,
+"M": 16.071476840550332
+},
+"limit": {
+"A": -0.25629000953598147,
+"naive": 2.0,
+"M": 7.803659626144003
+}
+},
+"Minced beef (grinding material)": {
+"SR": {
+"A": -0.024649940415673255,
+"naive": 1.0,
+"M": 40.56804938011804
+},
+"LR": {
+"A": -0.08387707545920442,
+"naive": 1.0,
+"M": 11.922208714660938
+},
+"limit": {
+"A": -0.1869598811189126,
+"naive": 1.0,
+"M": 5.348741098973888
+}
+},
+"Drop credit": {
+"SR": {
+"A": -0.004764469755395906,
+"naive": 4.0,
+"M": 839.5477787365277
+},
+"LR": {
+"A": -0.015894259977721426,
+"naive": 4.0,
+"M": 251.66317938719368
+},
+"limit": {
+"A": -0.034473032728854935,
+"naive": 4.0,
+"M": 116.0327271308475
+}
+}
+}
+},
+"eggs_2019-21": {
+"name": "Layer hen (2019-21 prices)",
+"animal_label": "hen-years",
+"animals_per_unit": 0.041666666666666664,
+"animals_src": "[S] NASS Chickens and Eggs 2025 Summary: 288 eggs per layer (all layers, 2025)",
+"raw_label": "kg liquid egg",
+"raw_kg_per_unit": 0.5851341573000001,
+"bundle": {
+"sr": 0.05822824607283239,
+"lr": 0.6733037040846278,
+"limit": 1.0
+},
+"subs": {
+"Shell eggs (table)": {
+"sub": "Shell eggs (table)",
+"stream": "Shell eggs",
+"qty": 0.68,
+"kg_per_qty": 0.5851341573000001,
+"protein": 0.126,
+"naive_yield": 1.0,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.03959126672321141,
+"D": 0.058222451063546184,
+"M": 17.175505011092064,
+"units_per_qty": 0.058222451063546184,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
+"animals_per_t": 4.1459474390884115,
+"raw_kg_per_kg": 0.058222451063546184,
+"animals_per_t_protein": 32.904344754669935
+},
+"lr": {
+"DF": 0.4578009528364974,
+"D": 0.6732366953477903,
+"M": 1.4853616965774654,
+"units_per_qty": 0.6732366953477903,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
+"animals_per_t": 47.94033748134531,
+"raw_kg_per_kg": 0.6732366953477903,
+"animals_per_t_protein": 380.47886889956595
+},
+"limit": {
+"DF": 0.6799323248323556,
+"D": 0.9999004776946404,
+"M": 1.0000995322110346,
+"units_per_qty": 0.9999004776946404,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"animals_per_t": 71.20165415771967,
+"raw_kg_per_kg": 0.9999004776946404,
+"animals_per_t_protein": 565.0924933152355
+}
+},
+"lr_range": {
+"D": [
+0.5318411139939154,
+0.7806527895529646
+],
+"M": [
+1.2809792181395305,
+1.8802608028747483
+],
+"animals_per_t": [
+37.87173614794055,
+55.589302314528986
+]
+}
+},
+"Liquid/frozen whole egg": {
+"sub": "Liquid/frozen whole egg",
+"stream": "Whole egg products",
+"qty": 0.26419200000000004,
+"kg_per_qty": 0.45359237,
+"protein": 0.126,
+"naive_yield": 1.29,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.01192395797781426,
+"D": 0.05822245106354619,
+"M": 17.175505011092064,
+"units_per_qty": 0.045133682994997044,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
+"animals_per_t": 4.1459474390884115,
+"raw_kg_per_kg": 0.05822245106354619,
+"animals_per_t_protein": 32.904344754669935
+},
+"lr": {
+"DF": 0.13787887520722747,
+"D": 0.6732366953477903,
+"M": 1.4853616965774654,
+"units_per_qty": 0.521888911122318,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
+"animals_per_t": 47.94033748134531,
+"raw_kg_per_kg": 0.6732366953477904,
+"animals_per_t_protein": 380.47886889956595
+},
+"limit": {
+"DF": 0.2047796178318624,
+"D": 0.9999004776946406,
+"M": 1.0000995322110344,
+"units_per_qty": 0.7751166493756904,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"animals_per_t": 71.20165415771969,
+"raw_kg_per_kg": 0.9999004776946406,
+"animals_per_t_protein": 565.0924933152356
+}
+},
+"lr_range": {
+"D": [
+0.5318411139939154,
+0.7806527895529645
+],
+"M": [
+1.2809792181395308,
+1.8802608028747483
+],
+"animals_per_t": [
+37.871736147940545,
+55.58930231452898
+]
+}
+},
+"Liquid egg white (albumen): liquid, dried albumen, protein fractions": {
+"sub": "Liquid egg white (albumen): liquid, dried albumen, protein fractions",
+"stream": "Egg white",
+"qty": 0.0968456629213483,
+"kg_per_qty": 0.45359237,
+"protein": 0.109,
+"naive_yield": 0.8406741573033707,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.0025762856226900013,
+"D": 0.022363590474739594,
+"M": 44.71553890818796,
+"units_per_qty": 0.02660197209638899,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.48333333333333334,
+"route_elas": 0.7947019867549668,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
+"animals_per_t": 2.4436378945620443,
+"raw_kg_per_kg": 0.034316544004341795,
+"animals_per_t_protein": 22.418696280385728
+},
+"lr": {
+"DF": 0.029790054990965528,
+"D": 0.25859422735213133,
+"M": 3.8670623479861606,
+"units_per_qty": 0.3076033979462669,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.48333333333333334,
+"route_elas": 0.7947019867549668,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
+"animals_per_t": 28.256225402912133,
+"raw_kg_per_kg": 0.3968083833506843,
+"animals_per_t_protein": 259.2314257147902
+},
+"limit": {
+"DF": 0.04424460285936761,
+"D": 0.38406773315423276,
+"M": 2.60370740282528,
+"units_per_qty": 0.45685683307573804,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.48333333333333334,
+"route_elas": 0.7947019867549668,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"animals_per_t": 41.96653788104008,
+"raw_kg_per_kg": 0.5893453146677021,
+"animals_per_t_protein": 385.01410900036774
+}
+},
+"lr_range": {
+"D": [
+0.1344959544252263,
+0.3898513844553504
+],
+"M": [
+2.565080027603518,
+7.435167877528651
+],
+"animals_per_t": [
+14.696182675586202,
+42.598509276881366
+]
+}
+},
+"Liquid egg yolk": {
+"sub": "Liquid egg yolk",
+"stream": "Egg yolk",
+"qty": 0.05176233707865169,
+"kg_per_qty": 0.45359237,
+"protein": 0.159,
+"naive_yield": 0.44932584269662923,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.004130940739830519,
+"D": 0.03585886058880659,
+"M": 27.8871102868269,
+"units_per_qty": 0.07980591628916696,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5166666666666667,
+"route_elas": 1.1920529801324502,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.05822824607283239
+},
+"animals_per_t": 7.3309136836861315,
+"raw_kg_per_kg": 0.10294963201302539,
+"animals_per_t_protein": 46.10637536909517
+},
+"lr": {
+"DF": 0.047766812313099906,
+"D": 0.4146424679956589,
+"M": 2.4117163030451323,
+"units_per_qty": 0.9228101938388007,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5166666666666667,
+"route_elas": 1.1920529801324502,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 0.6733037040846278
+},
+"animals_per_t": 84.7686762087364,
+"raw_kg_per_kg": 1.1904251500520528,
+"animals_per_t_protein": 533.1363283568327
+},
+"limit": {
+"DF": 0.07094393217105498,
+"D": 0.6158327445404078,
+"M": 1.623817520041572,
+"units_per_qty": 1.370570499227214,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.5166666666666667,
+"route_elas": 1.1920529801324502,
+"animal_share": 0.9989744490881082,
+"animal_elas": 1.000926979270969,
+"horizon": 1.0
+},
+"animals_per_t": 125.89961364312023,
+"raw_kg_per_kg": 1.7680359440031062,
+"animals_per_t_protein": 791.8214694535864
+}
+},
+"lr_range": {
+"D": [
+0.25914202449803475,
+0.5460001381706426
+],
+"M": [
+1.831501368022489,
+3.8588878123377617
+],
+"animals_per_t": [
+52.97847678974438,
+111.62317537381892
+]
+}
+},
+"Spent hen (soup meat, rendering)": {
+"sub": "Spent hen (soup meat, rendering)",
+"stream": "Spent hen",
+"qty": 0.04,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 0.04,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 5.795009286203424e-06,
+"D": 5.795009286203424e-06,
+"M": 172562.27740320773,
+"units_per_qty": 0.00014487523215508559,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0010255509118917547,
+"animal_elas": 0.09704277399142588,
+"horizon": 0.05822824607283239
+}
+},
+"lr": {
+"DF": 6.700873683753369e-05,
+"D": 6.700873683753369e-05,
+"M": 14923.427111072906,
+"units_per_qty": 0.0016752184209383421,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0010255509118917547,
+"animal_elas": 0.09704277399142588,
+"horizon": 0.6733037040846278
+}
+},
+"limit": {
+"DF": 9.952230535941228e-05,
+"D": 9.952230535941226e-05,
+"M": 10047.998751522346,
+"units_per_qty": 0.0024880576339853066,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0010255509118917547,
+"animal_elas": 0.09704277399142588,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+3.623723501609188e-05,
+0.00012817883799459446
+],
+"M": [
+7801.599824474707,
+27595.924456044446
+]
+}
+}
+},
+"streams": {
+"Shell eggs": {
+"SR": {
+"A": -0.020549333491087785,
+"naive": 0.68,
+"M": 33.09109759179854
+},
+"LR": {
+"A": -0.43990699976757197,
+"naive": 0.68,
+"M": 1.5457812682209715
+},
+"limit": {
+"A": -0.6799208657936915,
+"naive": 0.68,
+"M": 1.0001163873772518
+}
+},
+"Whole egg products": {
+"SR": {
+"A": -0.0146600574636786,
+"naive": 0.20480000000000004,
+"M": 13.969931598658976
+},
+"LR": {
+"A": -0.14965156817051262,
+"naive": 0.20480000000000004,
+"M": 1.36851222144663
+},
+"limit": {
+"A": -0.20478454830981696,
+"naive": 0.20480000000000004,
+"M": 1.000075453398758
+}
+},
+"Egg white": {
+"SR": {
+"A": -0.002728222905864275,
+"naive": 0.1152,
+"M": 42.22528875935295
+},
+"LR": {
+"A": -0.030132693119936604,
+"naive": 0.1152,
+"M": 3.823090075004964
+},
+"limit": {
+"A": -0.04355710016038261,
+"naive": 0.1152,
+"M": 2.6448041668481004
+}
+},
+"Egg yolk": {
+"SR": {
+"A": -0.0031041695008180437,
+"naive": 0.1152,
+"M": 37.111375512722894
+},
+"LR": {
+"A": -0.03667344994118937,
+"naive": 0.1152,
+"M": 3.141237058000764
+},
+"limit": {
+"A": -0.05458941201677203,
+"naive": 0.1152,
+"M": 2.1102993372525423
+}
+},
+"Spent hen": {
+"SR": {
+"A": -2.8987888487153057e-05,
+"naive": 1.0,
+"M": 34497.165960990336
+},
+"LR": {
+"A": -0.0003349316209400044,
+"naive": 1.0,
+"M": 2985.684054534606
+},
+"limit": {
+"A": -0.0004972212249179098,
+"naive": 1.0,
+"M": 2011.177218279646
+}
+}
+}
+},
+"eggs_2025": {
+"name": "Layer hen (2025 prices)",
+"animal_label": "hen-years",
+"animals_per_unit": 0.041666666666666664,
+"animals_src": "[S] NASS Chickens and Eggs 2025 Summary: 288 eggs per layer (all layers, 2025)",
+"raw_label": "kg liquid egg",
+"raw_kg_per_unit": 0.5851341573000001,
+"bundle": {
+"sr": 0.05920021990301738,
+"lr": 0.677160453201401,
+"limit": 1.0
+},
+"subs": {
+"Shell eggs (table)": {
+"sub": "Shell eggs (table)",
+"stream": "Shell eggs",
+"qty": 0.68,
+"kg_per_qty": 0.5851341573000001,
+"protein": 0.126,
+"naive_yield": 1.0,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.04025460925862048,
+"D": 0.05919795479208894,
+"M": 16.892475483521896,
+"units_per_qty": 0.05919795479208894,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
+"animals_per_t": 4.215411831454148,
+"raw_kg_per_kg": 0.05919795479208894,
+"animals_per_t_protein": 33.4556494559853
+},
+"lr": {
+"DF": 0.4604514897692703,
+"D": 0.6771345437783386,
+"M": 1.4768113799365583,
+"units_per_qty": 0.6771345437783386,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
+"animals_per_t": 48.217898360755015,
+"raw_kg_per_kg": 0.6771345437783386,
+"animals_per_t_protein": 382.68173302186517
+},
+"limit": {
+"DF": 0.6799739819305763,
+"D": 0.9999617381332004,
+"M": 1.000038263330826,
+"units_per_qty": 0.9999617381332004,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"animals_per_t": 71.20601643642361,
+"raw_kg_per_kg": 0.9999617381332003,
+"animals_per_t_protein": 565.1271145747905
+}
+},
+"lr_range": {
+"D": [
+0.5384845163914994,
+0.7865564427674214
+],
+"M": [
+1.271364578086219,
+1.8570636101130913
+],
+"animals_per_t": [
+38.34480446873376,
+56.00969402732425
+]
+}
+},
+"Liquid/frozen whole egg": {
+"sub": "Liquid/frozen whole egg",
+"stream": "Whole egg products",
+"qty": 0.26419200000000004,
+"kg_per_qty": 0.45359237,
+"protein": 0.126,
+"naive_yield": 1.29,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.01212374114141982,
+"D": 0.05919795479208896,
+"M": 16.892475483521892,
+"units_per_qty": 0.045889887435727875,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
+"animals_per_t": 4.215411831454149,
+"raw_kg_per_kg": 0.05919795479208897,
+"animals_per_t_protein": 33.45564945598531
+},
+"lr": {
+"DF": 0.1386771545658038,
+"D": 0.6771345437783387,
+"M": 1.4768113799365579,
+"units_per_qty": 0.5249104990529757,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
+"animals_per_t": 48.217898360755015,
+"raw_kg_per_kg": 0.6771345437783387,
+"animals_per_t_protein": 382.68173302186517
+},
+"limit": {
+"DF": 0.2047921639696795,
+"D": 0.9999617381332007,
+"M": 1.0000382633308258,
+"units_per_qty": 0.7751641380877524,
+"steps": {
+"within_stream": 1.0,
+"route_share": 1.0,
+"route_elas": 1.0,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"animals_per_t": 71.20601643642362,
+"raw_kg_per_kg": 0.9999617381332007,
+"animals_per_t_protein": 565.1271145747907
+}
+},
+"lr_range": {
+"D": [
+0.5384845163914993,
+0.786556442767421
+],
+"M": [
+1.2713645780862197,
+1.8570636101130917
+],
+"animals_per_t": [
+38.34480446873375,
+56.009694027324215
+]
+}
+},
+"Liquid egg white (albumen): liquid, dried albumen, protein fractions": {
+"sub": "Liquid egg white (albumen): liquid, dried albumen, protein fractions",
+"stream": "Egg white",
+"qty": 0.0968456629213483,
+"kg_per_qty": 0.45359237,
+"protein": 0.109,
+"naive_yield": 0.8406741573033707,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.0016506520865105583,
+"D": 0.014328577139848598,
+"M": 69.79060029756495,
+"units_per_qty": 0.017044150834623434,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.32387189794846105,
+"route_elas": 0.7473483793495482,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
+"animals_per_t": 1.565663354175563,
+"raw_kg_per_kg": 0.02198695457666423,
+"animals_per_t_protein": 14.363883983262046
+},
+"lr": {
+"DF": 0.018880948699353677,
+"D": 0.163897124126334,
+"M": 6.1013883271630025,
+"units_per_qty": 0.1949591559374997,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.32387189794846105,
+"route_elas": 0.7473483793495482,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
+"animals_per_t": 17.908806896514786,
+"raw_kg_per_kg": 0.2514973111593747,
+"animals_per_t_protein": 164.3009807019705
+},
+"limit": {
+"DF": 0.02788253302461848,
+"D": 0.24203587694981318,
+"M": 4.131618884779436,
+"units_per_qty": 0.2879068838349823,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.32387189794846105,
+"route_elas": 0.7473483793495482,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"animals_per_t": 26.44691787869123,
+"raw_kg_per_kg": 0.3713998801471272,
+"animals_per_t_protein": 242.6322741164333
+}
+},
+"lr_range": {
+"D": [
+0.08001160355579831,
+0.2808205542441585
+],
+"M": [
+3.5609929005786136,
+12.498187207342024
+],
+"animals_per_t": [
+8.74275473227206,
+30.684864699970873
+]
+}
+},
+"Liquid egg yolk": {
+"sub": "Liquid egg yolk",
+"stream": "Egg yolk",
+"qty": 0.05176233707865169,
+"kg_per_qty": 0.45359237,
+"protein": 0.159,
+"naive_yield": 0.44932584269662923,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 0.005168952305538091,
+"D": 0.04486937765224037,
+"M": 22.28691486988051,
+"units_per_qty": 0.09985933010876201,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.6761281020515391,
+"route_elas": 1.1210225690243223,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.05920021990301738
+},
+"animals_per_t": 9.173005756685052,
+"raw_kg_per_kg": 0.128818535840303,
+"animals_per_t_protein": 57.69186010493743
+},
+"lr": {
+"DF": 0.05912495074391096,
+"D": 0.513237419652005,
+"M": 1.9484159995154662,
+"units_per_qty": 1.1422388184303185,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.6761281020515391,
+"route_elas": 1.1210225690243223,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 0.677160453201401
+},
+"animals_per_t": 104.92523077772067,
+"raw_kg_per_kg": 1.4734880757751108,
+"animals_per_t_protein": 659.907111809564
+},
+"limit": {
+"DF": 0.08731305920832626,
+"D": 0.7579258611833877,
+"M": 1.3193902612567538,
+"units_per_qty": 1.686806742818742,
+"steps": {
+"within_stream": 1.0,
+"route_share": 0.6761281020515391,
+"route_elas": 1.1210225690243223,
+"animal_share": 0.9995987260030683,
+"animal_elas": 1.0003631578559367,
+"horizon": 1.0
+},
+"animals_per_t": 154.94884599605203,
+"raw_kg_per_kg": 2.1759806982361773,
+"animals_per_t_protein": 974.5210440003273
+}
+},
+"lr_range": {
+"D": [
+0.3505637572157866,
+0.6385412126513113
+],
+"M": [
+1.5660696290030551,
+2.8525481582639998
+],
+"animals_per_t": [
+71.66855283683631,
+130.54208741044727
+]
+}
+},
+"Spent hen (soup meat, rendering)": {
+"sub": "Spent hen (soup meat, rendering)",
+"stream": "Spent hen",
+"qty": 0.04,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 0.04,
+"animal_label": "hen-years",
+"raw_label": "kg liquid egg",
+"horizons": {
+"sr": {
+"DF": 2.265110928431639e-06,
+"D": 2.265110928431639e-06,
+"M": 441479.48228407477,
+"units_per_qty": 5.662777321079097e-05,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.00040127399693165664,
+"animal_elas": 0.09535097487525016,
+"horizon": 0.05920021990301738
+}
+},
+"lr": {
+"DF": 2.5909423062295688e-05,
+"D": 2.5909423062295688e-05,
+"M": 38595.99642939311,
+"units_per_qty": 0.0006477355765573922,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.00040127399693165664,
+"animal_elas": 0.09535097487525016,
+"horizon": 0.677160453201401
+}
+},
+"limit": {
+"DF": 3.82618667995216e-05,
+"D": 3.82618667995216e-05,
+"M": 26135.682433887498,
+"units_per_qty": 0.00095654666998804,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.00040127399693165664,
+"animal_elas": 0.09535097487525016,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+1.4006123943229711e-05,
+4.80952058444833e-05
+],
+"M": [
+20792.093150271936,
+71397.34048143853
+]
+}
+}
+},
+"streams": {
+"Shell eggs": {
+"SR": {
+"A": -0.020567816051384913,
+"naive": 0.68,
+"M": 33.06136141538532
+},
+"LR": {
+"A": -0.44628222020953756,
+"naive": 0.68,
+"M": 1.5236995094286476
+},
+"limit": {
+"A": -0.6799698964623764,
+"naive": 0.68,
+"M": 1.0000442718681817
+}
+},
+"Whole egg products": {
+"SR": {
+"A": -0.015140278040271182,
+"naive": 0.20480000000000004,
+"M": 13.52683216617677
+},
+"LR": {
+"A": -0.15083878002637152,
+"naive": 0.20480000000000004,
+"M": 1.3577410263076535
+},
+"limit": {
+"A": -0.20479411116220825,
+"naive": 0.20480000000000004,
+"M": 1.0000287549176017
+}
+},
+"Egg white": {
+"SR": {
+"A": -0.0016889010533520654,
+"naive": 0.1152,
+"M": 68.21003502328067
+},
+"LR": {
+"A": -0.018812371070064504,
+"naive": 0.1152,
+"M": 6.1236300076662795
+},
+"limit": {
+"A": -0.02735102354653285,
+"naive": 0.1152,
+"M": 4.211908187055885
+}
+},
+"Egg yolk": {
+"SR": {
+"A": -0.004504358646030271,
+"naive": 0.1152,
+"M": 25.575228140753563
+},
+"LR": {
+"A": -0.05186488631037944,
+"naive": 0.1152,
+"M": 2.221155934105376
+},
+"limit": {
+"A": -0.07577069659470081,
+"naive": 0.1152,
+"M": 1.5203766782851085
+}
+},
+"Spent hen": {
+"SR": {
+"A": -1.1327506847180757e-05,
+"naive": 1.0,
+"M": 88280.67936669441
+},
+"LR": {
+"A": -0.00012953018100159142,
+"naive": 1.0,
+"M": 7720.2084662238985
+},
+"limit": {
+"A": -0.00019125154794175092,
+"naive": 1.0,
+"M": 5228.715849685922
+}
+}
+}
+},
+"broiler": {
+"name": "Broiler (Jan 2025 prices)",
+"animal_label": "birds",
+"animals_per_unit": 1.0,
+"animals_src": "one bird per model unit",
+"raw_label": "kg live weight",
+"raw_kg_per_unit": 2.7215542200000002,
+"bundle": {
+"sr": 0.09336669072246542,
+"lr": 0.4188993555925563,
+"limit": 1.0
+},
+"subs": {
+"Boneless skinless breast (fillets, whole-muscle nuggets)": {
+"sub": "Boneless skinless breast (fillets, whole-muscle nuggets)",
+"stream": "Breast meat",
+"qty": 1.323,
+"kg_per_qty": 0.45359237,
+"protein": 0.225,
+"naive_yield": 1.323,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.051240611215358965,
+"D": 0.05124061121535897,
+"M": 19.515770329067774,
+"units_per_qty": 0.038730620722115625,
+"steps": {
+"within_stream": 0.8252997937147218,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 85.38640260222107,
+"raw_kg_per_kg": 0.23238372433269375,
+"animals_per_t_protein": 379.4951226765381
+},
+"lr": {
+"DF": 0.22989632439781724,
+"D": 0.22989632439781724,
+"M": 4.349786812030887,
+"units_per_qty": 0.1737689526816457,
+"steps": {
+"within_stream": 0.8252997937147218,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 383.09496405692556,
+"raw_kg_per_kg": 1.042613716089874,
+"animals_per_t_protein": 1702.644284697447
+},
+"limit": {
+"DF": 0.5488104035696502,
+"D": 0.5488104035696502,
+"M": 1.8221228925247384,
+"units_per_qty": 0.4148226784351097,
+"steps": {
+"within_stream": 0.8252997937147218,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 1.0
+},
+"animals_per_t": 914.5274609339432,
+"raw_kg_per_kg": 2.4889360706106585,
+"animals_per_t_protein": 4064.5664930397475
+}
+},
+"lr_range": {
+"D": [
+0.11346461774869579,
+0.3619068791631535
+],
+"M": [
+2.7631417294756195,
+8.813320133108142
+],
+"animals_per_t": [
+189.07533111730828,
+603.0749000799543
+]
+}
+},
+"Tenders": {
+"sub": "Tenders",
+"stream": "Breast meat",
+"qty": 0.24,
+"kg_per_qty": 0.45359237,
+"protein": 0.225,
+"naive_yield": 0.24,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.010846658896174722,
+"D": 0.010846658896174722,
+"M": 92.19428854286815,
+"units_per_qty": 0.045194412067394676,
+"steps": {
+"within_stream": 0.1747002062852782,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 99.6366232249336,
+"raw_kg_per_kg": 0.2711664724043681,
+"animals_per_t_protein": 442.82943655526043
+},
+"lr": {
+"DF": 0.04866466174158389,
+"D": 0.04866466174158389,
+"M": 20.54879175591806,
+"units_per_qty": 0.20276942392326622,
+"steps": {
+"within_stream": 0.1747002062852782,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 447.030059000477,
+"raw_kg_per_kg": 1.2166165435395975,
+"animals_per_t_protein": 1986.8002622243423
+},
+"limit": {
+"DF": 0.11617268227291741,
+"D": 0.11617268227291741,
+"M": 8.607875624759709,
+"units_per_qty": 0.48405284280382255,
+"steps": {
+"within_stream": 0.1747002062852782,
+"animal_share": 0.5478490099686184,
+"animal_elas": 1.2138072237835362,
+"horizon": 1.0
+},
+"animals_per_t": 1067.1538474155166,
+"raw_kg_per_kg": 2.9043170568229355,
+"animals_per_t_protein": 4742.905988513407
+}
+},
+"lr_range": {
+"D": [
+0.024018292840661107,
+0.07660877529277436
+],
+"M": [
+13.053334897710062,
+41.63493245061437
+],
+"animals_per_t": [
+220.63029889462484,
+703.7226626774163
+]
+}
+},
+"Wings": {
+"sub": "Wings",
+"stream": "Wings",
+"qty": 0.45480000000000004,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 0.45480000000000004,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.018074612164856563,
+"D": 0.018074612164856563,
+"M": 55.32622171248319,
+"units_per_qty": 0.03974189130355445,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.19935967474280877,
+"animal_elas": 0.9710457790268291,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 87.61587260287126,
+"raw_kg_per_kg": 0.2384513478213267,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.08109362482333318,
+"D": 0.08109362482333318,
+"M": 12.331425585902144,
+"units_per_qty": 0.17830612318235087,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.19935967474280877,
+"animal_elas": 0.9710457790268291,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 393.09771278196513,
+"raw_kg_per_kg": 1.0698367390941053,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.19358737066716603,
+"D": 0.19358737066716603,
+"M": 5.165626231471969,
+"units_per_qty": 0.4256538493121504,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.19935967474280877,
+"animal_elas": 0.9710457790268291,
+"horizon": 1.0
+},
+"animals_per_t": 938.4061052705766,
+"raw_kg_per_kg": 2.5539230958729022,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.03532581808294531,
+0.15135643247318528
+],
+"M": [
+6.606921051585718,
+28.307907764570142
+],
+"animals_per_t": [
+171.2403203187682,
+733.6935246101822
+]
+}
+},
+"Leg quarters / dark meat (whole legs)": {
+"sub": "Leg quarters / dark meat (whole legs)",
+"stream": "Dark meat",
+"qty": 1.3806,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 1.3806,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.00986427937695532,
+"D": 0.00986427937695532,
+"M": 101.3758797562217,
+"units_per_qty": 0.007144922046179429,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16320180291218006,
+"animal_elas": 0.6473638526845528,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 15.751856774353211,
+"raw_kg_per_kg": 0.04286953227707657,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.044257113992338074,
+"D": 0.044257113992338074,
+"M": 22.595237461103384,
+"units_per_qty": 0.03205643487783433,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16320180291218006,
+"animal_elas": 0.6473638526845528,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 70.67234150749564,
+"raw_kg_per_kg": 0.19233860926700597,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.10565094789829395,
+"D": 0.10565094789829396,
+"M": 9.465130411916993,
+"units_per_qty": 0.07652538599036213,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16320180291218006,
+"animal_elas": 0.6473638526845528,
+"horizon": 1.0
+},
+"animals_per_t": 168.7095971000617,
+"raw_kg_per_kg": 0.4591523159421728,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.01941801418327526,
+0.08642222230035093
+],
+"M": [
+11.57109795816879,
+51.49857192200942
+],
+"animals_per_t": [
+31.007817861675367,
+138.004046294218
+]
+}
+},
+"Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)": {
+"sub": "Backs, necks, frames -> mechanically separated chicken (MSC nuggets, hot dogs)",
+"stream": "Backs & necks (MSC)",
+"qty": 0.726,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 0.726,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0006307409296602948,
+"D": 0.0006307409296602948,
+"M": 1585.4369884297523,
+"units_per_qty": 0.0008687891593117008,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.02087087215545536,
+"animal_elas": 0.3236819263422764,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 1.9153522342355553,
+"raw_kg_per_kg": 0.005212734955870205,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.002829884693738779,
+"D": 0.002829884693738779,
+"M": 353.3712883116884,
+"units_per_qty": 0.0038979128012930843,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.02087087215545536,
+"animal_elas": 0.3236819263422764,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 8.593426739724665,
+"raw_kg_per_kg": 0.023387476807758507,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0067555241037211685,
+"D": 0.0067555241037211685,
+"M": 148.02700495867768,
+"units_per_qty": 0.009305129619450646,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.02087087215545536,
+"animal_elas": 0.3236819263422764,
+"horizon": 1.0
+},
+"animals_per_t": 20.514299258275983,
+"raw_kg_per_kg": 0.05583077771670388,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.001160249961970114,
+0.005717359264642895
+],
+"M": [
+174.90592312156542,
+861.8832430746146
+],
+"animals_per_t": [
+3.5232965745984774,
+17.361734947752627
+]
+}
+},
+"Giblets": {
+"sub": "Giblets",
+"stream": "Giblets & paws",
+"qty": 0.18,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 0.18,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0007506338336453096,
+"D": 0.0007506338336453096,
+"M": 1332.2074694444445,
+"units_per_qty": 0.004170187964696165,
+"steps": {
+"within_stream": 0.3076923076923077,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 9.193690724330668,
+"raw_kg_per_kg": 0.02502112778817699,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.003367796660317225,
+"D": 0.0033677966603172255,
+"M": 296.93004087301586,
+"units_per_qty": 0.018709981446206808,
+"steps": {
+"within_stream": 0.3076923076923077,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 41.2484483506784,
+"raw_kg_per_kg": 0.11225988867724085,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.00803963199120536,
+"D": 0.00803963199120536,
+"M": 124.38380277777775,
+"units_per_qty": 0.04466462217336311,
+"steps": {
+"within_stream": 0.3076923076923077,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 1.0
+},
+"animals_per_t": 98.46863643972473,
+"raw_kg_per_kg": 0.26798773304017864,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.0014006211847163073,
+0.006843566873637037
+],
+"M": [
+146.12263143832575,
+713.9689238689816
+],
+"animals_per_t": [
+17.154673047034464,
+83.81934635419508
+]
+}
+},
+"Paws (export)": {
+"sub": "Paws (export)",
+"stream": "Giblets & paws",
+"qty": 0.27,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 0.27,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0016889261257019468,
+"D": 0.0016889261257019468,
+"M": 592.0922086419753,
+"units_per_qty": 0.0062552819470442465,
+"steps": {
+"within_stream": 0.6923076923076924,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 13.790536086496001,
+"raw_kg_per_kg": 0.037531691682265486,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.007577542485713757,
+"D": 0.007577542485713757,
+"M": 131.9689070546737,
+"units_per_qty": 0.02806497216931021,
+"steps": {
+"within_stream": 0.6923076923076924,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 61.87267252601759,
+"raw_kg_per_kg": 0.16838983301586125,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.01808917198021206,
+"D": 0.01808917198021206,
+"M": 55.28169012345678,
+"units_per_qty": 0.06699693326004466,
+"steps": {
+"within_stream": 0.6923076923076924,
+"animal_share": 0.053815802582661755,
+"animal_elas": 0.48552288951341455,
+"horizon": 1.0
+},
+"animals_per_t": 147.7029546595871,
+"raw_kg_per_kg": 0.401981599560268,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.003151397665611691,
+0.015398025465683331
+],
+"M": [
+64.94339175036701,
+317.3195217195474
+],
+"animals_per_t": [
+25.73200957055169,
+125.72901953129256
+]
+}
+},
+"Feathers, blood, viscera, heads -> rendering": {
+"sub": "Feathers, blood, viscera, heads -> rendering",
+"stream": "Rendering",
+"qty": 0.81,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 0.81,
+"animal_label": "birds",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.0002702281801123115,
+"D": 0.0002702281801123115,
+"M": 3700.5763040123456,
+"units_per_qty": 0.00033361503717569313,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.014902837638275566,
+"animal_elas": 0.19420915580536582,
+"horizon": 0.09336669072246542
+},
+"animals_per_t": 0.7354952579464533,
+"raw_kg_per_kg": 0.002001690223054159,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.0012124067977142012,
+"D": 0.0012124067977142012,
+"M": 824.8056690917107,
+"units_per_qty": 0.0014967985156965446,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.014902837638275566,
+"animal_elas": 0.19420915580536582,
+"horizon": 0.4188993555925563
+},
+"animals_per_t": 3.299875868054272,
+"raw_kg_per_kg": 0.008980791094179269,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0028942675168339292,
+"D": 0.0028942675168339292,
+"M": 345.51056327160484,
+"units_per_qty": 0.003573169773869048,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.014902837638275566,
+"animal_elas": 0.19420915580536582,
+"horizon": 1.0
+},
+"animals_per_t": 7.877490915177977,
+"raw_kg_per_kg": 0.021439018643214288,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.000529900729976996,
+0.0024276677952944485
+],
+"M": [
+411.917974089495,
+1887.1459189033612
+],
+"animals_per_t": [
+1.4422606625203274,
+6.6075201726418324
+]
+}
+}
+},
+"streams": {
+"Breast meat": {
+"SR": {
+"A": -0.07108008205732586,
+"naive": 2.0,
+"M": 28.137277590464887
+},
+"LR": {
+"A": -0.3027102318199939,
+"naive": 2.0,
+"M": 6.606978521919591
+},
+"limit": {
+"A": -0.6339940204621907,
+"naive": 2.0,
+"M": 3.154603884973507
+}
+},
+"Wings": {
+"SR": {
+"A": -0.01994139040291376,
+"naive": 1.0,
+"M": 50.14695464032858
+},
+"LR": {
+"A": -0.0860694244712219,
+"naive": 1.0,
+"M": 11.618527788975273
+},
+"limit": {
+"A": -0.1911562004080185,
+"naive": 1.0,
+"M": 5.231323900901582
+}
+},
+"Dark meat": {
+"SR": {
+"A": -0.011746196081065197,
+"naive": 1.0,
+"M": 85.13394405291723
+},
+"LR": {
+"A": -0.05126227931877647,
+"naive": 1.0,
+"M": 19.50752118885431
+},
+"limit": {
+"A": -0.11623344047560003,
+"naive": 1.0,
+"M": 8.603376067233613
+}
+},
+"Backs & necks (MSC)": {
+"SR": {
+"A": -0.0009502971224237822,
+"naive": 1.0,
+"M": 1052.302460360448
+},
+"LR": {
+"A": -0.0042511168785015485,
+"naive": 1.0,
+"M": 235.23229978858737
+},
+"limit": {
+"A": -0.01009325210766443,
+"naive": 1.0,
+"M": 99.07609453653082
+}
+},
+"Giblets & paws": {
+"SR": {
+"A": -0.004227942690792297,
+"naive": 2.0,
+"M": 473.0433088309457
+},
+"LR": {
+"A": -0.01870066217564137,
+"naive": 2.0,
+"M": 106.94808457665788
+},
+"limit": {
+"A": -0.043501425597308296,
+"naive": 2.0,
+"M": 45.97550476883113
+}
+},
+"Rendering": {
+"SR": {
+"A": -0.001358830698138913,
+"naive": 1.0,
+"M": 735.926853411263
+},
+"LR": {
+"A": -0.006057644513517424,
+"naive": 1.0,
+"M": 165.08066753810573
+},
+"limit": {
+"A": -0.014294105433491522,
+"naive": 1.0,
+"M": 69.95890751281082
+}
+}
+}
+},
+"pork": {
+"name": "Hog (Sep 2026 prices)",
+"animal_label": "hogs",
+"animals_per_unit": 1.0,
+"animals_src": "one market hog per model unit; the breeding herd is not counted",
+"raw_label": "kg live weight",
+"raw_kg_per_unit": 127.00586360000001,
+"bundle": {
+"sr": 0.3051122658001998,
+"lr": 0.6221503302177656,
+"limit": 1.0
+},
+"subs": {
+"Loin (chops, roasts)": {
+"sub": "Loin (chops, roasts)",
+"stream": "Fresh pork cuts",
+"qty": 54.1155,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 54.1155,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.07144934031827642,
+"D": 0.07144934031827642,
+"M": 13.995930480889331,
+"units_per_qty": 0.0013203119313002084,
+"steps": {
+"within_stream": 0.5381717742612262,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 2.910789551641286,
+"raw_kg_per_kg": 0.3696873407640584,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.1456913918431793,
+"D": 0.1456913918431793,
+"M": 6.863823506308386,
+"units_per_qty": 0.00269223035624136,
+"steps": {
+"within_stream": 0.5381717742612262,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 5.935351946597691,
+"raw_kg_per_kg": 0.7538244997475809,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.23417393637351971,
+"D": 0.2341739363735197,
+"M": 4.2703300610062245,
+"units_per_qty": 0.004327298766037821,
+"steps": {
+"within_stream": 0.5381717742612262,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"animals_per_t": 9.540060751105273,
+"raw_kg_per_kg": 1.21164365449059,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.10364019159861053,
+0.19034230534911167
+],
+"M": [
+5.253692804475992,
+9.648766415570837
+],
+"animals_per_t": [
+4.222219344384478,
+7.754394808649996
+]
+}
+},
+"Butt (shoulder)": {
+"sub": "Butt (shoulder)",
+"stream": "Fresh pork cuts",
+"qty": 21.843999999999998,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 21.843999999999998,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.03658429649313282,
+"D": 0.03658429649313282,
+"M": 27.33413228781667,
+"units_per_qty": 0.0016747984111487285,
+"steps": {
+"within_stream": 0.27556077727384953,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 3.6922984642548733,
+"raw_kg_per_kg": 0.468943555121644,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.0745985484532832,
+"D": 0.0745985484532832,
+"M": 13.405086569831083,
+"units_per_qty": 0.0034150589843107127,
+"steps": {
+"within_stream": 0.27556077727384953,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 7.5289162917593,
+"raw_kg_per_kg": 0.9562165156069996,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.11990437813827433,
+"D": 0.11990437813827434,
+"M": 8.339979036018141,
+"units_per_qty": 0.005489121870457533,
+"steps": {
+"within_stream": 0.27556077727384953,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"animals_per_t": 12.101442249695541,
+"raw_kg_per_kg": 1.5369541237281095,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.05306701896978586,
+0.09746121242069859
+],
+"M": [
+10.260492098984214,
+18.84409600187563
+],
+"animals_per_t": [
+5.3558299988494795,
+9.836348363645898
+]
+}
+},
+"Spareribs": {
+"sub": "Spareribs",
+"stream": "Fresh pork cuts",
+"qty": 10.3415,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 10.3415,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.024729439469130195,
+"D": 0.024729439469130195,
+"M": 40.43763309913683,
+"units_per_qty": 0.002391281677622221,
+"steps": {
+"within_stream": 0.18626744846492432,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 5.271873681698439,
+"raw_kg_per_kg": 0.6695588697342219,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.05042546844673434,
+"D": 0.05042546844673434,
+"M": 19.831248589318008,
+"units_per_qty": 0.004876030406298346,
+"steps": {
+"within_stream": 0.18626744846492432,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 10.74980693854781,
+"raw_kg_per_kg": 1.3652885137635369,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0810502960419299,
+"D": 0.0810502960419299,
+"M": 12.338017858474794,
+"units_per_qty": 0.007837382975577034,
+"steps": {
+"within_stream": 0.18626744846492432,
+"animal_share": 0.4298779600350867,
+"animal_elas": 1.012214281742215,
+"horizon": 1.0
+},
+"animals_per_t": 17.2784718040496,
+"raw_kg_per_kg": 2.19446723316157,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.03587106379555054,
+0.0658796637950415
+],
+"M": [
+15.17919100363208,
+27.877623192319167
+],
+"animals_per_t": [
+7.647068482662218,
+14.044364659124911
+]
+}
+},
+"Ham (mostly cured)": {
+"sub": "Ham (mostly cured)",
+"stream": "Ham",
+"qty": 52.868500000000004,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 52.868500000000004,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.08281055283878809,
+"D": 0.08281055283878809,
+"M": 12.07575563402838,
+"units_per_qty": 0.0015663495812967662,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.22344585885017668,
+"animal_elas": 1.2146571380906581,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 3.4532097206502086,
+"raw_kg_per_kg": 0.43857788276309456,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.1688578879614941,
+"D": 0.1688578879614941,
+"M": 5.922139688422713,
+"units_per_qty": 0.0031939224294522083,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.22344585885017668,
+"animal_elas": 1.2146571380906581,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 7.041393640400538,
+"raw_kg_per_kg": 0.8942982802466184,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.27141010742916477,
+"D": 0.27141010742916477,
+"M": 3.684461162747926,
+"units_per_qty": 0.005133682768173198,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.22344585885017668,
+"animal_elas": 1.2146571380906581,
+"horizon": 1.0
+},
+"animals_per_t": 11.317833164109876,
+"raw_kg_per_kg": 1.4374311750884956,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.09716844536863331,
+0.26892289383135093
+],
+"M": [
+3.7185380008112214,
+10.29140680604948
+],
+"animals_per_t": [
+4.05193551527972,
+11.214116066724662
+]
+}
+},
+"Belly (bacon)": {
+"sub": "Belly (bacon)",
+"stream": "Belly",
+"qty": 35.002,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 35.002,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.05725434004652311,
+"D": 0.057254340046523106,
+"M": 17.465924839714003,
+"units_per_qty": 0.0016357448159111795,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16478730945641024,
+"animal_elas": 1.1387410669599918,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 3.6062000247296475,
+"raw_kg_per_kg": 0.4580085484551303,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.11674655711701405,
+"D": 0.11674655711701405,
+"M": 8.565563085493894,
+"units_per_qty": 0.003335425321896293,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16478730945641024,
+"animal_elas": 1.1387410669599918,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 7.353354118139801,
+"raw_kg_per_kg": 0.9339190901309621,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.18765007659185895,
+"D": 0.18765007659185895,
+"M": 5.329067902141129,
+"units_per_qty": 0.005361124409801124,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.16478730945641024,
+"animal_elas": 1.1387410669599918,
+"horizon": 1.0
+},
+"animals_per_t": 11.819256152393223,
+"raw_kg_per_kg": 1.5011148347443148,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.07903641855431266,
+0.15755344769076637
+],
+"M": [
+6.347052474298893,
+12.65239516530996
+],
+"animals_per_t": [
+4.9781577136948165,
+9.923601363617257
+]
+}
+},
+"Picnic, jowl, neck bones, trim -> sausage, ground pork": {
+"sub": "Picnic, jowl, neck bones, trim -> sausage, ground pork",
+"stream": "Sausage & trim",
+"qty": 31.1965,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 31.1965,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.02319523324980596,
+"D": 0.02319523324980596,
+"M": 43.11230627561659,
+"units_per_qty": 0.0007435203708687179,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.10013948487599868,
+"animal_elas": 0.7591607113066613,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 1.6391818294225668,
+"raw_kg_per_kg": 0.208185703843241,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.04729708911569895,
+"D": 0.04729708911569895,
+"M": 21.142950204689825,
+"units_per_qty": 0.0015161024190437694,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.10013948487599868,
+"animal_elas": 0.7591607113066613,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 3.342433690063546,
+"raw_kg_per_kg": 0.42450867733225545,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.0760219625683458,
+"D": 0.0760219625683458,
+"M": 13.154093451625547,
+"units_per_qty": 0.0024368747317277837,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.10013948487599868,
+"animal_elas": 0.7591607113066613,
+"horizon": 1.0
+},
+"animals_per_t": 5.372389160178738,
+"raw_kg_per_kg": 0.6823249248837795,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.026203480745374604,
+0.08074796931553199
+],
+"M": [
+12.384212364429684,
+38.16286888437592
+],
+"animals_per_t": [
+1.8517713981514488,
+5.706370901266893
+]
+}
+},
+"Feet, tails (export, variety meats)": {
+"sub": "Feet, tails (export, variety meats)",
+"stream": "Variety meats & drop",
+"qty": 4.945,
+"kg_per_qty": 0.45359237,
+"protein": null,
+"naive_yield": 4.945,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.001336984812343931,
+"D": 0.001336984812343931,
+"M": 747.9516526794743,
+"units_per_qty": 0.0002703710439522611,
+"steps": {
+"within_stream": 0.1470981943659458,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 0.3051122658001998
+},
+"animals_per_t": 0.5960661197900244,
+"raw_kg_per_kg": 0.0757038923066331,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.002726227804425978,
+"D": 0.002726227804425978,
+"M": 366.80720458375464,
+"units_per_qty": 0.0005513099705613707,
+"steps": {
+"within_stream": 0.1470981943659458,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 0.6221503302177656
+},
+"animals_per_t": 1.2154304327503804,
+"raw_kg_per_kg": 0.1543667917571838,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.004381943835779596,
+"D": 0.004381943835779596,
+"M": 228.20922345803848,
+"units_per_qty": 0.0008861362660828303,
+"steps": {
+"within_stream": 0.1470981943659458,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 1.0
+},
+"animals_per_t": 1.9535960582468135,
+"raw_kg_per_kg": 0.2481181545031925,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.0013988469395700993,
+0.004840750040975629
+],
+"M": [
+206.57955720400201,
+714.8744953520969
+],
+"animals_per_t": [
+0.6236460278018541,
+2.158145004459102
+]
+}
+},
+"Drop credit (lard, offal, meals, plasma)": {
+"sub": "Drop credit (lard, offal, meals, plasma)",
+"stream": "Variety meats & drop",
+"qty": 1.0,
+"kg_per_qty": null,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "hogs",
+"raw_label": "kg live weight",
+"horizons": {
+"sr": {
+"DF": 0.007752078572199231,
+"D": 0.007752078572199231,
+"M": 128.99766052246093,
+"units_per_qty": 0.007752078572199231,
+"steps": {
+"within_stream": 0.8529018056340542,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 0.3051122658001998
+}
+},
+"lr": {
+"DF": 0.015807159475935622,
+"D": 0.015807159475935622,
+"M": 63.26247302827381,
+"units_per_qty": 0.015807159475935622,
+"steps": {
+"within_stream": 0.8529018056340542,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 0.6221503302177656
+}
+},
+"limit": {
+"DF": 0.025407299021126914,
+"D": 0.025407299021126914,
+"M": 39.35876848493304,
+"units_per_qty": 0.025407299021126914,
+"steps": {
+"within_stream": 0.8529018056340542,
+"animal_share": 0.08174938678232765,
+"animal_elas": 0.3643971414271974,
+"horizon": 1.0
+}
+}
+},
+"lr_range": {
+"D": [
+0.00811076631978845,
+0.028067539974692256
+],
+"M": [
+35.62834508837159,
+123.29291223200752
+]
+}
+}
+},
+"streams": {
+"Fresh pork cuts": {
+"SR": {
+"A": -0.1446597843559121,
+"naive": 3.0,
+"M": 20.738313784700406
+},
+"LR": {
+"A": -0.2718649931190862,
+"naive": 3.0,
+"M": 11.034888918875618
+},
+"limit": {
+"A": -0.39622800056372864,
+"naive": 3.0,
+"M": 7.571398275063312
+}
+},
+"Ham": {
+"SR": {
+"A": -0.06909511400162893,
+"naive": 1.0,
+"M": 14.472803387753652
+},
+"LR": {
+"A": -0.13814773542332848,
+"naive": 1.0,
+"M": 7.238627523901734
+},
+"limit": {
+"A": -0.21639589736318054,
+"naive": 1.0,
+"M": 4.621159699352732
+}
+},
+"Belly": {
+"SR": {
+"A": -0.049196360646425186,
+"naive": 1.0,
+"M": 20.326706830755462
+},
+"LR": {
+"A": -0.09842533176997081,
+"naive": 1.0,
+"M": 10.159986072864791
+},
+"limit": {
+"A": -0.15443759700422155,
+"naive": 1.0,
+"M": 6.475107223875447
+}
+},
+"Sausage & trim": {
+"SR": {
+"A": -0.020030950683932458,
+"naive": 1.0,
+"M": 49.922742848253115
+},
+"LR": {
+"A": -0.040465420057038015,
+"naive": 1.0,
+"M": 24.712458157865417
+},
+"limit": {
+"A": -0.06427512220798781,
+"naive": 1.0,
+"M": 15.558118999200046
+}
+},
+"Variety meats & drop": {
+"SR": {
+"A": -0.013795668295569774,
+"naive": 2.0,
+"M": 144.97304205569102
+},
+"LR": {
+"A": -0.027743772821448465,
+"naive": 2.0,
+"M": 72.08824887917976
+},
+"limit": {
+"A": -0.04385839583385964,
+"naive": 2.0,
+"M": 45.601303056687634
+}
+}
+}
+},
+"pollock": {
+"name": "Alaska pollock (wild, TAC-managed)",
+"animal_label": "fish",
+"animals_per_unit": 1666.6666666666667,
+"animals_src": "[A] about 0.6 kg average round weight per fish",
+"raw_label": "kg round weight",
+"raw_kg_per_unit": 1000.0,
+"bundle": {
+"sr": 0.0,
+"lr": 0.0400240563287737,
+"limit": 1.0
+},
+"subs": {
+"Fillet blocks and fillets (fish fingers, portions)": {
+"sub": "Fillet blocks and fillets (fish fingers, portions)",
+"stream": "Flesh (fillets, surimi, mince)",
+"qty": 0.11748251748251748,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.11748251748251748,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.020489986922835008,
+"D": 0.020489986922835008,
+"M": 48.80432592592594,
+"units_per_qty": 0.1744088172598456,
+"steps": {
+"within_stream": 0.5822775060653906,
+"animal_share": 0.8064435983279191,
+"animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 290.68136209974267,
+"raw_kg_per_kg": 0.1744088172598456,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.007112478665328374,
+0.06328562195832094
+],
+"M": [
+15.801377454401674,
+140.5979612810313
+],
+"animals_per_t": [
+100.90123503392435,
+897.801978178561
+]
+}
+},
+"H&G (headed and gutted)": {
+"sub": "H&G (headed and gutted)",
+"stream": "Flesh (fillets, surimi, mince)",
+"qty": 0.027972027972027972,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.027972027972027972,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.0021682525844269854,
+"D": 0.0021682525844269854,
+"M": 461.20088000000004,
+"units_per_qty": 0.07751502989326473,
+"steps": {
+"within_stream": 0.061616667308506956,
+"animal_share": 0.8064435983279191,
+"animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 129.19171648877455,
+"raw_kg_per_kg": 0.07751502989326473,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.0007526432450082936,
+0.006696891212520735
+],
+"M": [
+149.3230169440958,
+1328.6507341057459
+],
+"animals_per_t": [
+44.84499334841083,
+399.02310141269385
+]
+}
+},
+"Surimi (crab sticks, kamaboko)": {
+"sub": "Surimi (crab sticks, kamaboko)",
+"stream": "Flesh (fillets, surimi, mince)",
+"qty": 0.1190909090909091,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.1190909090909091,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.011539169222747364,
+"D": 0.011539169222747364,
+"M": 86.6613514973576,
+"units_per_qty": 0.09689378736658091,
+"steps": {
+"within_stream": 0.3279162013324604,
+"animal_share": 0.8064435983279191,
+"animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 161.4896456109682,
+"raw_kg_per_kg": 0.09689378736658091,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.004005473269528512,
+0.03564001792163379
+],
+"M": [
+28.05834728250772,
+249.65838808798514
+],
+"animals_per_t": [
+56.056241685513534,
+498.7788767658674
+]
+}
+},
+"Mince": {
+"sub": "Mince",
+"stream": "Flesh (fillets, surimi, mince)",
+"qty": 0.017062937062937062,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.017062937062937062,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.0009919755573753457,
+"D": 0.0009919755573753457,
+"M": 1008.0893551912569,
+"units_per_qty": 0.058136272419948544,
+"steps": {
+"within_stream": 0.02818962529364193,
+"animal_share": 0.8064435983279191,
+"animal_elas": 1.0902260832444435,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 96.89378736658091,
+"raw_kg_per_kg": 0.058136272419948544,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.0003443342845912943,
+0.003063827729728236
+],
+"M": [
+326.38910807452635,
+2904.1546100672044
+],
+"animals_per_t": [
+33.63374501130812,
+299.26732605952037
+]
+}
+},
+"Roe": {
+"sub": "Roe",
+"stream": "Roe",
+"qty": 0.014545454545454545,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.014545454545454545,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.0037207214348767064,
+"D": 0.0037207214348767064,
+"M": 268.76508158508165,
+"units_per_qty": 0.2557995986477736,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.0775169723659447,
+"animal_elas": 1.1992486915688878,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 426.332664412956,
+"raw_kg_per_kg": 0.2557995986477736,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.0011882158396305331,
+0.013020167235686959
+],
+"M": [
+76.8039290047751,
+841.5979375522738
+],
+"animals_per_t": [
+136.14973162433193,
+1491.8941624224642
+]
+}
+},
+"Fishmeal": {
+"sub": "Fishmeal",
+"stream": "Meal & oil",
+"qty": 0.048671328671328666,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.048671328671328666,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.0007055060259208523,
+"D": 0.0007055060259208523,
+"M": 1417.4223369598628,
+"units_per_qty": 0.014495310590040502,
+"steps": {
+"within_stream": 0.6333369018306391,
+"animal_share": 0.11603942930613613,
+"animal_elas": 0.23984973831377757,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 24.158850983400836,
+"raw_kg_per_kg": 0.014495310590040502,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.0002133833564832149,
+0.0025810924707990314
+],
+"M": [
+387.43284532166683,
+4686.401116193248
+],
+"animals_per_t": [
+7.306949228232695,
+88.38511094929635
+]
+}
+},
+"Fish oil": {
+"sub": "Fish oil",
+"stream": "Meal & oil",
+"qty": 0.01916083916083916,
+"kg_per_qty": 1000.0,
+"protein": null,
+"naive_yield": 0.01916083916083916,
+"animal_label": "fish",
+"raw_label": "kg round weight",
+"horizons": {
+"sr": {
+"DF": 0.0,
+"D": 0.0,
+"M": null,
+"animals_per_t": 0.0,
+"raw_kg_per_kg": 0.0,
+"animals_per_t_protein": 0.0,
+"steps": null
+},
+"lr": {
+"DF": 0.0004084445805914333,
+"D": 0.0004084445805914333,
+"M": 2448.312568015926,
+"units_per_qty": 0.021316633220647797,
+"steps": {
+"within_stream": 0.3666630981693609,
+"animal_share": 0.11603942930613613,
+"animal_elas": 0.23984973831377757,
+"horizon": 0.0400240563287737
+},
+"animals_per_t": 35.527722034412996,
+"raw_kg_per_kg": 0.021316633220647797,
+"animals_per_t_protein": null
+},
+"limit": null
+},
+"lr_range": {
+"D": [
+0.0001235358343399275,
+0.001494293730981522
+],
+"M": [
+669.2124709264177,
+8094.817227269855
+],
+"animals_per_t": [
+10.745513570930434,
+129.9781043372005
+]
+}
+}
+},
+"streams": {
+"Flesh (fillets, surimi, mince)": {
+"SR": {
+"A": -1.6421821680268067e-09,
+"naive": 4.0,
+"M": 2435783360.628176
+},
+"LR": {
+"A": -0.07688623345008416,
+"naive": 4.0,
+"M": 52.024918122655436
+},
+"limit": null
+},
+"Roe": {
+"SR": {
+"A": -5.5789595165833816e-11,
+"naive": 1.0,
+"M": 17924489271.297157
+},
+"LR": {
+"A": -0.0026786195748280672,
+"naive": 1.0,
+"M": 373.32662293569143
+},
+"limit": null
+},
+"Meal & oil": {
+"SR": {
+"A": -1.2334266941138594e-10,
+"naive": 2.0,
+"M": 16214988775.128431
+},
+"LR": {
+"A": -0.0058793976953237514,
+"naive": 2.0,
+"M": 340.170899068577
+},
+"limit": null
+}
+}
+},
+"salmon": {
+"name": "Farmed Atlantic salmon (Norway)",
+"animal_label": "fish",
+"animals_per_unit": 0.2222222222222222,
+"animals_src": "[A] about 4.5 kg head-on gutted per harvested fish",
+"raw_label": "kg head-on gutted",
+"raw_kg_per_unit": 1.0,
+"bundle": {
+"sr": 0.08925983955140364,
+"lr": 0.43948204109449995,
+"limit": 1.0
+},
+"subs": {
+"Salmon HOG, fillets and portions": {
+"sub": "Salmon HOG, fillets and portions",
+"stream": "Salmon flesh",
+"qty": 1.0,
+"kg_per_qty": 1.0,
+"protein": null,
+"naive_yield": 1.0,
+"animal_label": "fish",
+"raw_label": "kg head-on gutted",
+"horizons": {
+"sr": {
+"DF": 0.08835275130467563,
+"D": 0.08835275130467563,
+"M": 11.318266666666666,
+"units_per_qty": 0.08835275130467563,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.9701202949165696,
+"animal_elas": 1.0203246667546524,
+"horizon": 0.08925983955140364
+},
+"animals_per_t": 19.633944734372356,
+"raw_kg_per_kg": 0.08835275130467563,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.4350158780795499,
+"D": 0.4350158780795499,
+"M": 2.298766666666667,
+"units_per_qty": 0.4350158780795499,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.9701202949165696,
+"animal_elas": 1.0203246667546524,
+"horizon": 0.43948204109449995
+},
+"animals_per_t": 96.67019512878885,
+"raw_kg_per_kg": 0.4350158780795499,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.9898376666226738,
+"D": 0.9898376666226738,
+"M": 1.0102666666666666,
+"units_per_qty": 0.9898376666226738,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.9701202949165696,
+"animal_elas": 1.0203246667546524,
+"horizon": 1.0
+},
+"animals_per_t": 219.96392591614972,
+"raw_kg_per_kg": 0.9898376666226738,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.22252633302778846,
+0.6858801886687599
+],
+"M": [
+1.4579805868732296,
+4.493850172218147
+],
+"animals_per_t": [
+49.45029622839743,
+152.41781970416883
+]
+}
+},
+"By-products (heads, frames, viscera, trimmings) -> oil, meal, pet food": {
+"sub": "By-products (heads, frames, viscera, trimmings) -> oil, meal, pet food",
+"stream": "Salmon by-products",
+"qty": 0.33,
+"kg_per_qty": 1.0,
+"protein": null,
+"naive_yield": 0.33,
+"animal_label": "fish",
+"raw_label": "kg head-on gutted",
+"horizons": {
+"sr": {
+"DF": 0.0009070882467280033,
+"D": 0.0009070882467280033,
+"M": 1102.4285714285713,
+"units_per_qty": 0.002748752262812131,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.029879705083430345,
+"animal_elas": 0.3401082222515508,
+"horizon": 0.08925983955140364
+},
+"animals_per_t": 0.6108338361804736,
+"raw_kg_per_kg": 0.002748752262812131,
+"animals_per_t_protein": null
+},
+"lr": {
+"DF": 0.004466163014950046,
+"D": 0.004466163014950046,
+"M": 223.90584415584414,
+"units_per_qty": 0.013533827318030442,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.029879705083430345,
+"animal_elas": 0.3401082222515508,
+"horizon": 0.43948204109449995
+},
+"animals_per_t": 3.0075171817845425,
+"raw_kg_per_kg": 0.013533827318030442,
+"animals_per_t_protein": null
+},
+"limit": {
+"DF": 0.010162333377326119,
+"D": 0.010162333377326119,
+"M": 98.4025974025974,
+"units_per_qty": 0.030794949628260966,
+"steps": {
+"within_stream": 1.0,
+"animal_share": 0.029879705083430345,
+"animal_elas": 0.3401082222515508,
+"horizon": 1.0
+},
+"animals_per_t": 6.843322139613548,
+"raw_kg_per_kg": 0.030794949628260966,
+"animals_per_t_protein": null
+}
+},
+"lr_range": {
+"D": [
+0.0018146226606629153,
+0.0090822452312757
+],
+"M": [
+110.10493270500902,
+551.0787568555335
+],
+"animals_per_t": [
+1.2219681216585287,
+6.1159900547311095
+]
+}
+}
+},
+"streams": {
+"Salmon flesh": {
+"SR": {
+"A": -0.28803771200968553,
+"naive": 1.0,
+"M": 3.4717676134240856
+},
+"LR": {
+"A": -0.8910859204568766,
+"naive": 1.0,
+"M": 1.122226237720467
+},
+"limit": {
+"A": -0.999973323417999,
+"naive": 1.0,
+"M": 1.00002667729366
+}
+},
+"Salmon by-products": {
+"SR": {
+"A": -0.0019213535021511685,
+"naive": 1.0,
+"M": 520.4664310239573
+},
+"LR": {
+"A": -0.009388356184812707,
+"naive": 1.0,
+"M": 106.51491915247883
+},
+"limit": {
+"A": -0.021104976702298606,
+"naive": 1.0,
+"M": 47.38218923933174
+}
+}
+}
+}
+}

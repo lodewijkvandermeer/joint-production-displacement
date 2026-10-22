@@ -17,6 +17,7 @@ stream = "Salmon flesh"
 qty = 1.0
 price = 75.0
 src = "[S] NOK/kg 2026 YTD"
+kg = 1.0
 
 [[subs]]
 name = "By-products (heads, frames, viscera, trimmings) -> oil, meal, pet food"
@@ -24,6 +25,7 @@ stream = "Salmon by-products"
 qty = 0.33
 price = 7.0
 src = "[S] SINTEF 2023"
+kg = 1.0
 
 [[streams]]
 name = "Salmon flesh"
@@ -38,3 +40,11 @@ elas = -3.00
 floor = 0.30
 floor_note = "ensilage / biogas"
 elas_src = "[A]"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = "1/4.5"
+animal_label = "fish"
+animals_src = "[A] about 4.5 kg head-on gutted per harvested fish"
+raw_kg_per_unit = 1.0
+raw_label = "kg head-on gutted"
