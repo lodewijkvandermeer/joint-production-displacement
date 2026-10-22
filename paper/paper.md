@@ -16,7 +16,7 @@ Second, three regimes have to be kept apart. In the marginal regime, a tonne rep
 
 Third, the fractions biotechnology reaches first are the fractions that matter least for how many animals exist, and their current prices are rents that entry removes. Whey protein at 2026 prices is 13% of a dairy cow's revenue and carries a factor of 0.032; at 2019 prices it was 3% and carried 0.008. Separated egg white is 3% of a laying hen and carries 0.030. Mechanically separated chicken carries 0.003. The products that decide animal numbers, cheese, shell eggs, breast meat and whole cuts, carry 0.10 to 0.46 and are the hardest to replicate. The route out is to use the fraction to make the primary product: casein into cheese inherits 0.28, plant protein and fat into mince inherits 0.13, albumen into whole liquid egg inherits 0.14.
 
-Headline factors, three to five years, with the 80% range over the elasticity literature: shell eggs 0.46 (0.36 to 0.53), farmed salmon fillets 0.44 (0.20 to 0.70), cheese 0.28 (0.18 to 0.37), chicken breast 0.23 (0.12 to 0.37), beef middle meats 0.19 (0.13 to 0.27), ham 0.17, pork loin 0.15, whole liquid egg 0.14, beef grinding material 0.13 on the fed steer and about 0.06 once cull cows and imported trim are counted, pork belly 0.12, fluid milk 0.10, whey protein isolate 0.015 (0.007 to 0.026), separated egg white 0.030 (0.016 to 0.045), mechanically separated chicken 0.003, fishmeal 0.001. Giving up every product of a farmed animal in proportion removes 42% (broilers) to 67% (eggs) of the animals per unit given up after three to five years, 6% to 31% within a year, and 100% in the constant-cost limit (4% for quota-managed pollock); these bundle rates are the "cumulative elasticities" of the animal-advocacy literature and apply only to a consumer who stops buying all of the animal's products.
+Headline factors, three to five years, with the 80% range over the elasticity literature: shell eggs 0.46 (0.36 to 0.53), farmed salmon fillets 0.44 (0.22 to 0.69), cheese 0.28 (0.18 to 0.37), chicken breast 0.23 (0.11 to 0.36), beef middle meats 0.19 (0.13 to 0.26), ham 0.17, pork loin 0.15, whole liquid egg 0.14, beef grinding material 0.13 on the fed steer and about 0.06 once cull cows and imported trim are counted, pork belly 0.12, fluid milk 0.10, whey protein isolate 0.015 (0.007 to 0.026), separated egg white 0.030 (0.015 to 0.045), mechanically separated chicken 0.003, fishmeal 0.001. Giving up every product of a farmed animal in proportion removes 42% (broilers) to 67% (eggs) of the animals per unit given up after three to five years, 6% to 31% within a year, and 100% in the constant-cost limit (4% for quota-managed pollock); these bundle rates are the "cumulative elasticities" of the animal-advocacy literature and apply only to a consumer who stops buying all of the animal's products.
 
 What a reader should test. The by-product demand elasticities are assumptions and are the main sensitivity; the 80% ranges above come from sampling them. The horizon is the biggest driver of every number, which is why three horizons are reported. Prices are a snapshot, and the dairy and egg scenarios show how far value shares move with them. Cross-price effects between species and trade are not modelled. Section 11 sets out each of these challenges with the model's answer.
 
@@ -269,23 +269,23 @@ The table collects the factors for the products most often discussed as targets 
 
 | Product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF constant-cost limit | Animal change if the product's market is lost (3–5 years) |
 | --- | --- | --- | --- | --- | --- |
-| Shell eggs | 82.8% | 0.040 | 0.458 (0.358–0.530) | 0.680 | −44% |
-| Farmed salmon fillets | 97.0% | 0.088 | 0.435 (0.200–0.698) | 0.990 | −89% |
-| Cheese | 40.4% | 0.075 | 0.282 (0.178–0.366) | 0.490 | −28% |
-| Chicken breast | 45.2% | 0.051 | 0.230 (0.116–0.369) | 0.549 | −25% (share of the stream) |
-| Beef middle meats | 43.4% | 0.056 | 0.190 (0.129–0.265) | 0.419 | −22% |
-| Ham | 22.3% | 0.083 | 0.169 (0.095–0.269) | 0.271 | −14% |
-| Pork loin | 23.1% | 0.071 | 0.146 (0.103–0.188) | 0.234 | −15% (share of the stream) |
-| Whole liquid egg | 11.2% | 0.012 | 0.138 (0.108–0.160) | 0.205 | −15% |
-| Beef grinding material | 24.6% | 0.038 | 0.127 (0.082–0.176) | 0.279 | −8.4% |
-| Pork belly | 16.5% | 0.057 | 0.117 (0.078–0.158) | 0.188 | −9.8% |
-| Fluid milk | 17.4% | 0.027 | 0.101 (0.066–0.131) | 0.176 | −10% |
-| Chicken wings | 19.9% | 0.018 | 0.081 (0.035–0.152) | 0.194 | −8.6% |
-| Separated egg yolk | 3.1% | 0.004 | 0.048 (0.029–0.063) | 0.071 | −3.7% |
-| Pork sausage material | 10.0% | 0.023 | 0.047 (0.025–0.083) | 0.076 | −4.0% |
+| Shell eggs | 82.8% | 0.040 | 0.458 (0.362–0.531) | 0.680 | −44% |
+| Farmed salmon fillets | 97.0% | 0.088 | 0.435 (0.223–0.686) | 0.990 | −89% |
+| Cheese | 40.4% | 0.075 | 0.282 (0.179–0.366) | 0.490 | −28% |
+| Chicken breast | 45.2% | 0.051 | 0.230 (0.113–0.362) | 0.549 | −25% (share of the stream) |
+| Beef middle meats | 43.4% | 0.056 | 0.190 (0.127–0.263) | 0.419 | −22% |
+| Ham | 22.3% | 0.083 | 0.169 (0.097–0.269) | 0.271 | −14% |
+| Pork loin | 23.1% | 0.071 | 0.146 (0.104–0.190) | 0.234 | −15% (share of the stream) |
+| Whole liquid egg | 11.2% | 0.012 | 0.138 (0.109–0.160) | 0.205 | −15% |
+| Beef grinding material | 24.6% | 0.038 | 0.127 (0.085–0.175) | 0.279 | −8.4% |
+| Pork belly | 16.5% | 0.057 | 0.117 (0.079–0.158) | 0.188 | −9.8% |
+| Fluid milk | 17.4% | 0.027 | 0.101 (0.065–0.131) | 0.176 | −10% |
+| Chicken wings | 19.9% | 0.018 | 0.081 (0.035–0.151) | 0.194 | −8.6% |
+| Separated egg yolk | 3.1% | 0.004 | 0.048 (0.030–0.063) | 0.071 | −3.7% |
+| Pork sausage material | 10.0% | 0.023 | 0.047 (0.026–0.081) | 0.076 | −4.0% |
 | Chicken dark meat | 16.3% | 0.010 | 0.044 (0.019–0.086) | 0.106 | −5.1% |
-| Nonfat dry milk (casein route) | 8.7% | 0.011 | 0.043 (0.024–0.059) | 0.074 | −2.4% |
-| Separated egg white | 2.9% | 0.003 | 0.030 (0.016–0.045) | 0.044 | −3.0% |
+| Nonfat dry milk (casein route) | 8.7% | 0.011 | 0.043 (0.025–0.060) | 0.074 | −2.4% |
+| Separated egg white | 2.9% | 0.003 | 0.030 (0.015–0.045) | 0.044 | −3.0% |
 | WPC 80 (2026 prices) | 6.9% | 0.005 | 0.018 (0.009–0.032) | 0.031 | −2.4% (share of the stream) |
 | WPI (2026 prices) | 5.7% | 0.004 | 0.015 (0.007–0.026) | 0.025 | −2.0% (share of the stream) |
 | WPI (2019 prices) | 1.6% | 0.001 | 0.004 (0.002–0.007) | 0.006 | −0.5% (share of the stream) |
@@ -310,17 +310,17 @@ Cheese decides the dairy cow; the whey protein that comes with it has almost no 
 
 | Dairy product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF 3–5 years, 2019 prices | DF constant-cost limit | Stream price change for a 10% replacement | Change in milk if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Cheese | 40.4% | 0.075 | 0.282 (0.178–0.366) | 0.329 | 0.490 | −6.7% | −28%; −47% |
-| Fluid milk | 17.4% | 0.027 | 0.101 (0.066–0.131) | 0.107 | 0.176 | −1.3% | −10%; −17% |
-| Nonfat dry milk / SMP (casein route) | 8.7% | 0.011 | 0.043 (0.024–0.059) | 0.029 | 0.074 | −4.3% | −2.4%; −4.2% |
-| Other manufactured (yogurt, ice cream) | 6.8% | 0.011 | 0.043 (0.028–0.055) | 0.045 | 0.074 | −0.6% | −4.4%; −7.4% |
+| Cheese | 40.4% | 0.075 | 0.282 (0.179–0.366) | 0.329 | 0.490 | −6.7% | −28%; −47% |
+| Fluid milk | 17.4% | 0.027 | 0.101 (0.065–0.131) | 0.107 | 0.176 | −1.3% | −10%; −17% |
+| Nonfat dry milk / SMP (casein route) | 8.7% | 0.011 | 0.043 (0.025–0.060) | 0.029 | 0.074 | −4.3% | −2.4%; −4.2% |
+| Other manufactured (yogurt, ice cream) | 6.8% | 0.011 | 0.043 (0.027–0.055) | 0.045 | 0.074 | −0.6% | −4.4%; −7.4% |
 | WPC 80 | 6.9% | 0.005 | 0.018 (0.009–0.032) | 0.004 | 0.031 | −3.4% | −2.4%; −4.0% (share of the stream) |
 | WPI | 5.7% | 0.004 | 0.015 (0.007–0.026) | 0.004 | 0.025 | −2.8% | −2.0%; −3.3% (share of the stream) |
 | Butter / cream | 3.3% | 0.007 | 0.027 (0.014–0.040) | 0.044 | 0.046 | −10.8% | −1.9%; −3.3% |
-| Cull cows | 4.7% | 0.006 | 0.022 (0.013–0.033) | 0.019 | 0.039 | −12.2% | −1.5%; −2.7% |
-| Calves | 3.1% | 0.005 | 0.020 (0.010–0.036) | 0.017 | 0.035 | −16.3% | −1.1%; −2.0% |
+| Cull cows | 4.7% | 0.006 | 0.022 (0.013–0.034) | 0.019 | 0.039 | −12.2% | −1.5%; −2.7% |
+| Calves | 3.1% | 0.005 | 0.020 (0.010–0.037) | 0.017 | 0.035 | −16.3% | −1.1%; −2.0% |
 | Dry whey, lactose, permeate | 3.0% | 0.002 | 0.006 (0.003–0.010) | 0.002 | 0.010 | −1.2% to −1.9% | −0.6%; −1.0% |
-| All products together (bundle) | 100% | 0.153 | 0.575 (0.380–0.746) | 0.599 | 1.000 |  |  |
+| All products together (bundle) | 100% | 0.153 | 0.575 (0.377–0.745) | 0.599 | 1.000 |  |  |
 
 The fluid milk factor is low for a different reason from the whey factor. Fluid milk is a primary product with inelastic demand, but it is fungible: when fluid demand falls, the milk goes to cheese and powder, every product's price falls a little, and the cow responds to the average. The all-fixed variant of the model, in which fluid milk would have to clear its own market, gives 0.16 in place of 0.10; the all-fungible variant gives 0.09. The whey factor is low because the stream is small, elastic and attached to cheese: the all-fungible variant, which lets whey protein spread its loss across all milk products as if it were a use of milk, gives 0.031 for WPI, and even that counterfactual is only a tenth of the cheese factor.
 
@@ -342,15 +342,15 @@ On the fed steer the whole-cut and minced streams carry comparable factors becau
 
 | Fed steer product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF constant-cost limit | Stream price change for a 10% replacement | Change in fed cattle if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- |
-| Middle meats (rib, loin steaks and roasts) | 43.4% | 0.056 | 0.190 (0.129–0.265) | 0.419 | −8.1% | −22%; −41% |
-| End-meat whole-muscle (chuck, round) | 21.9% | 0.032 | 0.106 (0.060–0.176) | 0.235 | −8.2% | −10%; −22% (share of the stream) |
-| Grinding material (trim, ground chuck and round) | 24.6% | 0.038 | 0.127 (0.082–0.176) | 0.279 | −10.3% | −8.4%; −19% |
+| Middle meats (rib, loin steaks and roasts) | 43.4% | 0.056 | 0.190 (0.127–0.263) | 0.419 | −8.1% | −22%; −41% |
+| End-meat whole-muscle (chuck, round) | 21.9% | 0.032 | 0.106 (0.058–0.179) | 0.235 | −8.2% | −10%; −22% (share of the stream) |
+| Grinding material (trim, ground chuck and round) | 24.6% | 0.038 | 0.127 (0.085–0.175) | 0.279 | −10.3% | −8.4%; −19% |
 | Thin-meat whole-muscle (brisket, flank, skirt) | 4.1% | 0.006 | 0.020 (0.011–0.033) | 0.044 | −1.5% | −2.0%; −4.0% (share of the stream) |
 | Edible offal | 3.2% | 0.002 | 0.006 (0.003–0.010) | 0.013 | −2.1% | −0.9%; −1.9% (share of the stream) |
 | Tallow and technical fat | 1.5% | 0.001 | 0.003 (0.001–0.005) | 0.006 | −1.0% | −0.4%; −0.9% (share of the stream) |
 | Hide | 0.7% | 0.000 | 0.001 (0.001–0.002) | 0.003 | −0.5% | −0.2%; −0.4% (share of the stream) |
-| Meat and bone meal, blood meal | 0.6% | 0.000 | 0.001 (0.000–0.002) | 0.002 | −0.4% | −0.1%; −0.3% (share of the stream) |
-| All products together (bundle) | 100% | 0.135 | 0.453 (0.343–0.588) | 1.000 |  |  |
+| Meat and bone meal, blood meal | 0.6% | 0.000 | 0.001 (0.001–0.002) | 0.002 | −0.4% | −0.1%; −0.3% (share of the stream) |
+| All products together (bundle) | 100% | 0.135 | 0.453 (0.350–0.586) | 1.000 |  |  |
 
 The fed-steer factors overstate the effect of a mince replacement on US cattle because mince is the residual sink of the whole system. Ground beef was about 48% of US beef consumption by volume in 2025 and is assembled from fed-cattle trim, from cull cows (dairy and beef, close to 100% ground) and from imported lean trim, which supplied 39% of the trim ground in 2025 ([Peel 2026](http://www.oklahomafarmreport.com/2026/04/27/cow-calf-corner-dr-derrell-peel-the-hamburger-story/)). Foreign manufacturing beef is a primary product in exporting countries and its supply to the US market is elastic, so a demand loss in ground beef falls first on imports and on the trim price, and only then on domestic cattle. A weighted composite, taking 41% of ground beef from fed cattle at a factor of 0.13, 20% from cull cows at 0.02 and 39% from imports at close to 0 for US cattle, gives a three-to-five-year factor of about 0.06 US cattle-equivalents per unit of ground beef replaced.
 
@@ -364,12 +364,12 @@ Shell eggs decide the laying hen; separated white has almost no effect on it. At
 
 | Layer product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF 3–5 years, Sep 2025 prices | DF constant-cost limit | Stream price change for a 10% replacement | Change in hens if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Shell eggs | 82.8% | 0.040 | 0.458 (0.358–0.530) | 0.460 | 0.680 | −4.6% | −44%; −68% |
-| Whole liquid and frozen egg | 11.2% | 0.012 | 0.138 (0.108–0.160) | 0.139 | 0.205 | −1.4% | −15%; −20% |
-| Separated egg white (liquid, dried albumen, protein fractions) | 2.9% | 0.003 | 0.030 (0.016–0.045) | 0.019 | 0.044 | −4.3% | −3.0%; −4.4% |
-| Separated egg yolk | 3.1% | 0.004 | 0.048 (0.029–0.063) | 0.059 | 0.071 | −4.4% | −3.7%; −5.5% |
+| Shell eggs | 82.8% | 0.040 | 0.458 (0.362–0.531) | 0.460 | 0.680 | −4.6% | −44%; −68% |
+| Whole liquid and frozen egg | 11.2% | 0.012 | 0.138 (0.109–0.160) | 0.139 | 0.205 | −1.4% | −15%; −20% |
+| Separated egg white (liquid, dried albumen, protein fractions) | 2.9% | 0.003 | 0.030 (0.015–0.045) | 0.019 | 0.044 | −4.3% | −3.0%; −4.4% |
+| Separated egg yolk | 3.1% | 0.004 | 0.048 (0.030–0.063) | 0.059 | 0.071 | −4.4% | −3.7%; −5.5% |
 | Spent hen | 0.1% | 0.000 | 0.000 (0.000–0.000) | 0.000 | 0.000 | −2.0% | n/a (no market price) |
-| All products together (bundle) | 100% | 0.058 | 0.673 (0.526–0.780) | 0.677 | 1.000 |  |  |
+| All products together (bundle) | 100% | 0.058 | 0.673 (0.532–0.781) | 0.677 | 1.000 |  |  |
 
 Two structural points explain the egg-white result. The first is that most egg white is never separated: it is eaten in shell eggs (68% of table eggs) and in whole liquid egg (two thirds of the broken eggs), so an albumen protein that replaces separated white competes in a market worth 3% to 4% of the hen. An albumen protein that replaces whole liquid egg in bakery and foodservice competes in the 11% to 15% market and inherits a factor of 0.14, and one that replaces the shell-egg occasion inherits 0.46. The second is that white and yolk are joint: a 10% loss of white demand raises the price of yolk by about 3.5% in the model, because fewer eggs are separated, and the breaker's margin on the pair is what moves. The protein fractions inside the white (ovalbumin 54%, ovotransferrin 12%, ovomucoid 11%, lysozyme 3.5% of albumen protein, [Abeyrathne, Lee & Ahn 2013](https://lib.dr.iastate.edu/ans_pubs/885/)) are a further level of the same structure: lysozyme is extracted commercially and the rest of the white is sold on, so the displacement factor of a single fraction is its share of the white's value multiplied by 0.030.
 
@@ -383,14 +383,14 @@ Processed chicken shows the dynamic, and the raw material decides which factor a
 
 | Broiler product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF constant-cost limit | Stream price change for a 10% replacement | Change in broilers if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- |
-| Boneless skinless breast (fillets, whole-muscle nuggets) | 45.2% | 0.051 | 0.230 (0.116–0.369) | 0.549 | −7.4% | −25%; −52% (share of the stream) |
-| Tenders | 9.6% | 0.011 | 0.049 (0.024–0.078) | 0.116 | −1.6% | −5.3%; −11% (share of the stream) |
-| Wings | 19.9% | 0.018 | 0.081 (0.035–0.152) | 0.194 | −9.2% | −8.6%; −19% |
+| Boneless skinless breast (fillets, whole-muscle nuggets) | 45.2% | 0.051 | 0.230 (0.113–0.362) | 0.549 | −7.4% | −25%; −52% (share of the stream) |
+| Tenders | 9.6% | 0.011 | 0.049 (0.024–0.077) | 0.116 | −1.6% | −5.3%; −11% (share of the stream) |
+| Wings | 19.9% | 0.018 | 0.081 (0.035–0.151) | 0.194 | −9.2% | −8.6%; −19% |
 | Whole legs / leg quarters (dark meat) | 16.3% | 0.010 | 0.044 (0.019–0.086) | 0.106 | −6.4% | −5.1%; −12% |
 | Paws and giblets | 5.4% | 0.002 | 0.011 (0.005–0.022) | 0.026 | −1.5% to −3.4% | −1.9%; −4.4% |
 | Backs, necks, frames (mechanically separated chicken) | 2.1% | 0.001 | 0.003 (0.001–0.006) | 0.007 | −3.3% | −0.4%; −1.0% |
 | Feathers, blood, viscera (rendering) | 1.5% | 0.000 | 0.001 (0.001–0.002) | 0.003 | −2.0% | −0.6%; −1.4% |
-| All products together (bundle) | 100% | 0.093 | 0.419 (0.229–0.661) | 1.000 |  |  |
+| All products together (bundle) | 100% | 0.093 | 0.419 (0.224–0.657) | 1.000 |  |  |
 
 A 10% replacement of breast meat lowers the breast price by 7.4%, lowers broiler output by 2.3% after three to five years, and raises the prices of wings by 2.3% and of leg quarters by 1.5%, because fewer birds means fewer of every part. Dark meat carries a lower factor than its 16% value share would suggest because it is export-exposed and elastic; the US leg quarter price is set in Mexico, Cuba and Angola as much as at home. Losing the whole breast-and-tenders stream removes 30% of broilers after three to five years and 63% in the constant-cost limit (25% and 52% for boneless breast alone), with wings rising 43% in price; losing the mechanically separated chicken market removes 0.4%.
 
@@ -400,15 +400,15 @@ Pork is the branch where the whole-cut versus processed distinction matters leas
 
 | Hog product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF constant-cost limit | Stream price change for a 10% replacement | Change in hogs if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- |
-| Loin (chops, roasts) | 23.1% | 0.071 | 0.146 (0.103–0.188) | 0.234 | −4.4% | −15%; −21% (share of the stream) |
-| Ham (mostly cured) | 22.3% | 0.083 | 0.169 (0.095–0.269) | 0.271 | −11.1% | −14%; −22% |
-| Belly (bacon) | 16.5% | 0.057 | 0.117 (0.078–0.158) | 0.188 | −11.0% | −9.8%; −15% |
-| Butt (shoulder, pulled pork) | 11.8% | 0.037 | 0.075 (0.053–0.096) | 0.120 | −2.2% | −7.5%; −11% (share of the stream) |
-| Spareribs | 8.0% | 0.025 | 0.050 (0.036–0.065) | 0.081 | −1.5% | −5.1%; −7.4% (share of the stream) |
-| Picnic, jowl, neck bones, trim (sausage, ground pork) | 10.0% | 0.023 | 0.047 (0.025–0.083) | 0.076 | −7.9% | −4.0%; −6.4% |
+| Loin (chops, roasts) | 23.1% | 0.071 | 0.146 (0.104–0.190) | 0.234 | −4.4% | −15%; −21% (share of the stream) |
+| Ham (mostly cured) | 22.3% | 0.083 | 0.169 (0.097–0.269) | 0.271 | −11.1% | −14%; −22% |
+| Belly (bacon) | 16.5% | 0.057 | 0.117 (0.079–0.158) | 0.188 | −11.0% | −9.8%; −15% |
+| Butt (shoulder, pulled pork) | 11.8% | 0.037 | 0.075 (0.053–0.097) | 0.120 | −2.2% | −7.5%; −11% (share of the stream) |
+| Spareribs | 8.0% | 0.025 | 0.050 (0.036–0.066) | 0.081 | −1.5% | −5.1%; −7.4% (share of the stream) |
+| Picnic, jowl, neck bones, trim (sausage, ground pork) | 10.0% | 0.023 | 0.047 (0.026–0.081) | 0.076 | −7.9% | −4.0%; −6.4% |
 | Drop credit (lard, offal, meals, plasma) | 7.0% | 0.008 | 0.016 (0.008–0.028) | 0.025 | −3.3% | −2.4%; −3.7% (share of the stream) |
 | Feet, tails | 1.2% | 0.001 | 0.003 (0.001–0.005) | 0.004 | −0.6% | −0.4%; −0.6% (share of the stream) |
-| All products together (bundle) | 100% | 0.305 | 0.622 (0.524–0.728) | 1.000 |  |  |
+| All products together (bundle) | 100% | 0.305 | 0.622 (0.528–0.731) | 1.000 |  |  |
 
 The hog's within-a-year factors are the highest of any land animal because hog supply responds within a year (elasticity 0.40 against 0.15 for cattle and 0.10 for broilers), and the gap between the horizons is the smallest. The pork cutout of September 2026 also shows how far relative prices move inside a carcass: the loin primal at $0.88 per lb was below 72% lean trim at $1.09 ([USDA AMS pork report](https://s3.amazonaws.com/barchart-news-store-prod/external_links/USDA/20261009-lsddhps.pdf)), so for a few weeks the chop was cheaper per pound than the leanest grinding material, although the sausage stream as a whole, picnics and jowls included, still averaged $0.66. Factors computed on that snapshot shift accordingly, and the workbook's inputs are there to be updated.
 
@@ -423,15 +423,15 @@ Processed fish shows the dynamic twice over. Fish fingers, breaded fillets and s
 | Roe | 7.8% | 0.000 | 0.004 (0.001–0.013) | n/a (quota) | −10.0% | −0.3%; n/a |
 | Fishmeal and fish oil | 11.6% | 0.000 | 0.001 (0.000–0.004) | n/a (quota) | −0.7% to −1.3% | −0.6%; n/a |
 | Headed and gutted | 5.0% | 0.000 | 0.002 (0.001–0.007) | n/a (quota) | −0.5% | −0.5%; n/a (share of the stream) |
-| All products together (bundle) | 100% | 0.000 | 0.040 (0.015–0.122) | n/a (quota) |  |  |
+| All products together (bundle) | 100% | 0.000 | 0.040 (0.014–0.122) | n/a (quota) |  |  |
 
 Farmed fish behaves like a land animal. Norwegian salmon is 97% flesh by value and 3% by-products, so the fillet carries a three-to-five-year factor of 0.44 and the heads, frames and trimmings that become oil, meal and pet food carry 0.004. The within-a-year factor is 0.09, because salmon supply within a cycle is set by the biomass already in the pens (Asheim et al. 2011); the five-year value depends on whether licensed biomass is binding, which in Norway it is, and a looser licence regime would raise it toward the 1.4 to 1.6 estimated for the 1990s. Fishmeal and fish oil are by-products at two levels: 34% of fishmeal and 54% of fish oil came from by-products in 2024 ([IFFO](https://www.iffo.com/product)), and the rest comes from reduction fisheries whose catch is set by quota and biology. A substitute for fishmeal lowers the fishmeal price and the by-product credit of the fillet industry; whether it reduces the catch of forage fish depends on the supply response of those fisheries, which the literature puts between slightly negative and 0.5.
 
 | Farmed salmon product | Share of animal value | DF within a year | DF 3–5 years (80% range) | DF constant-cost limit | Stream price change for a 10% replacement | Change in salmon if the product's market is lost: 3–5 years; constant-cost limit |
 | --- | --- | --- | --- | --- | --- | --- |
-| Salmon fillets and portions | 97.0% | 0.088 | 0.435 (0.200–0.698) | 0.990 | −5.6% | −89%; −100% |
+| Salmon fillets and portions | 97.0% | 0.088 | 0.435 (0.223–0.686) | 0.990 | −5.6% | −89%; −100% |
 | By-products (heads, frames, trimmings) | 3.0% | 0.001 | 0.004 (0.002–0.009) | 0.010 | −3.3% | −0.9%; −2.1% |
-| All products together (bundle) | 100% | 0.089 | 0.439 (0.203–0.706) | 1.000 |  |  |
+| All products together (bundle) | 100% | 0.089 | 0.439 (0.224–0.692) | 1.000 |  |  |
 
 ### 6.8 Price caps: the product-exit and animal-exit regimes
 
@@ -477,7 +477,7 @@ The hog's supply elasticity of 1.5 makes it the fastest to leave and the broiler
 
 ### 6.9 How robust the numbers are
 
-The 80% ranges in the tables come from the sampling described in section 5. For the primary products the range is roughly ×/÷1.4 around the point value, wider for broilers: cheese 0.18 to 0.37, chicken breast 0.12 to 0.37, shell eggs 0.36 to 0.53, beef middle meats 0.13 to 0.27. For the assumed by-product elasticities the range is wider in proportion, about ×/÷1.8: WPI at 2026 prices 0.007 to 0.026, separated egg white 0.016 to 0.045, mechanically separated chicken 0.001 to 0.006. The bundle factors range from 0.38 to 0.75 for dairy, 0.23 to 0.66 for broilers, 0.53 to 0.78 for eggs, 0.34 to 0.59 for fed cattle, 0.52 to 0.73 for hogs and 0.20 to 0.71 for salmon, almost entirely from the supply elasticity. In every draw the primary product of each animal carries a higher factor than any of its by-products; the largest by-product factor is below a tenth of the primary product's in nine draws out of ten for every animal except the hog, where the drop credit reaches a fifth of the loin's, and no by-product factor exceeds 0.08 in any draw. The order of the secondary products within an animal does change between draws, because their point values are close and their elasticities are drawn independently.
+The 80% ranges in the tables come from the sampling described in section 5. For the primary products the range is roughly ×/÷1.4 around the point value, wider for broilers: cheese 0.18 to 0.37, chicken breast 0.11 to 0.36, shell eggs 0.36 to 0.53, beef middle meats 0.13 to 0.26. For the assumed by-product elasticities the range is wider in proportion, about ×/÷1.8: WPI at 2026 prices 0.007 to 0.026, separated egg white 0.015 to 0.045, mechanically separated chicken 0.001 to 0.006. The bundle factors range from 0.38 to 0.75 for dairy, 0.22 to 0.66 for broilers, 0.53 to 0.78 for eggs, 0.35 to 0.59 for fed cattle, 0.53 to 0.73 for hogs and 0.22 to 0.69 for salmon, almost entirely from the supply elasticity. In every draw the primary product of each animal carries a higher factor than any of its by-products (the by-product streams are listed in `data/monte_carlo.toml`). In nine draws out of ten the largest by-product factor is below a tenth of the primary product's for fed cattle, laying hens, broilers, salmon and pollock, and below a sixth for the hog (drop credit) and for dairy at 2026 prices, where WPC 80 carries the largest by-product factor; the highest by-product factor in any draw is 0.095, for WPC 80 at 2026 prices. The order of the secondary products within an animal does change between draws, because their point values are close and their elasticities are drawn independently.
 
 ## 7. What price parity means for a novel ingredient
 

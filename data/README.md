@@ -10,7 +10,8 @@ Inputs used for figures that are not computed by the model. Every parameter the 
 | `technical_reachability.csv` | Technical reachability for biotechnology today (1 low, 2 low to medium, 3 medium, 4 high) and the product's displacement factor after three to five years | Reachability is the authors' judgement from the state of the technologies (paper, section 8); factors from the model | Figure 11 |
 
 The CSVs are read through `src/jpdm/data.py`, which checks columns, ranges, duplicates and (via `data.problems()`) that
-the carcass shares add to 100%. Known open finding: the broiler live-weight shares add to 89.8%; the author's numbers are
-needed to close the gap.
+the carcass shares add to 100%. The broiler parts in the Cobb 500 yield chart add to 89.8% of live
+weight; the remaining 10.2% is a labelled residual row (processing shrink, skin and fat trim not sold separately) with no
+value, so the weight shares add to 100% and no result changes.
 
 The feed-grade dry whey quote of $0.35 to $0.38 per lb (5 to 9 October 2026, USDA AMS) sets the floor shown in Figure 5.

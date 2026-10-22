@@ -577,6 +577,8 @@ def build(path=WORKBOOK, results=RESULTS):
     row = 5
     for key, label in [("dairy_2026", "Dairy (2026)"), ("dairy_2019", "Dairy (2019-21)"), ("beef", "Beef"), ("eggs_2019-21", "Eggs (2019-21)"), ("eggs_2025", "Eggs (2025)"), ("broiler", "Broiler"), ("pork", "Pork"), ("pollock", "Pollock"), ("salmon", "Salmon")]:
         for sub, d in MCR[key].items():
+            if sub == "__byproducts__":
+                continue
             name = "All products together (bundle)" if sub == "__bundle__" else sub
             put(wsr, row, 1, label, BLACK); put(wsr, row, 2, name, BLACK, wrap=True)
             put(wsr, row, 3, d["sr"]["p10"], BLACK, DF4); put(wsr, row, 4, d["sr"]["p50"], BLACK, DF4); put(wsr, row, 5, d["sr"]["p90"], BLACK, DF4)

@@ -30,12 +30,20 @@ def draw_branch(br, rng, cfg):
     return b, es_sr, es_lr
 
 
+def _byproduct_streams(br, cfg):
+    """By-product streams of this animal from data/monte_carlo.toml (keyed by the parameter-file stem)."""
+    fam = next((k for k in cfg.get("byproducts", {}) if br.key == k or br.key.startswith(k + "_")), None)
+    return cfg["byproducts"][fam] if fam else []
+
+
 def run(br, rng, cfg=None):
     cfg = cfg or settings()
     n = cfg["n"]
     subs = [s.name for s in br.subs]
     out = {s: {"sr": [], "lr": [], "lim": []} for s in subs}
     bundle = {"sr": [], "lr": []}
+    by_streams = _byproduct_streams(br, cfg)
+    dom = dict(primary_above_all=0, ratio=[], max_byproduct=0.0, max_byproduct_sub=None)
     for _ in range(n):
         b, es_sr, es_lr = draw_branch(br, rng, cfg)
         rs = b.results(es_sr) if es_sr > 0 else None
@@ -44,12 +52,27 @@ def run(br, rng, cfg=None):
             out[s]["sr"].append(rs[i]["DF"] if rs else 0.0)
             out[s]["lr"].append(rl[i]["DF"] if rl else 0.0)
             out[s]["lim"].append(rl[i]["DF_limit"] if rl else b.results(1.0)[i]["DF_limit"])
+        if by_streams:   # three-to-five-year factors (constant-cost limit where the long-run elasticity is zero)
+            rows, key = (rl, "DF") if rl else (b.results(1.0), "DF_limit")
+            top = max(r[key] for r in rows)
+            by = [r for r in rows if r["stream"] in by_streams]
+            bmax = max(by, key=lambda r: r[key])
+            dom["primary_above_all"] += all(top > r[key] for r in by)
+            dom["ratio"].append(bmax[key] / top)
+            if bmax[key] > dom["max_byproduct"]:
+                dom["max_byproduct"], dom["max_byproduct_sub"] = bmax[key], bmax["sub"]
         bundle["sr"].append(b.DF_bundle(es_sr) if es_sr > 0 else 0.0)
         bundle["lr"].append(b.DF_bundle(es_lr) if es_lr > 0 else 0.0)
     def pct(x):
         a = np.array(x); return dict(p10=float(np.percentile(a, 10)), p50=float(np.percentile(a, 50)), p90=float(np.percentile(a, 90)))
     res = {s: {h: pct(v) for h, v in d.items()} for s, d in out.items()}
     res["__bundle__"] = {h: pct(v) for h, v in bundle.items()}
+    if by_streams:
+        r = np.array(dom["ratio"])
+        res["__byproducts__"] = dict(streams=by_streams, share_primary_above_all=dom["primary_above_all"] / n,
+                                     share_largest_below_tenth=float(np.mean(r < 0.1)),
+                                     ratio_largest_to_primary=pct(r), max_byproduct=dom["max_byproduct"],
+                                     max_byproduct_sub=dom["max_byproduct_sub"])
     return res
 
 
@@ -66,7 +89,7 @@ def main(out_dir=RESULTS, verbose=False):
         print("==", br.name, "bundle LR p10/p50/p90", {k: round(v, 3) for k, v in r["__bundle__"]["lr"].items()})
         base = {x["sub"]: x for x in br.results(br.eps_s_lr)}
         for s, d in r.items():
-            if s == "__bundle__": continue
+            if s.startswith("__"): continue
             print(f"  {s[:40]:40s} point {base[s]['DF']:.4f}  LR p10 {d['lr']['p10']:.4f} p50 {d['lr']['p50']:.4f} p90 {d['lr']['p90']:.4f} | limit p10 {d['lim']['p10']:.3f} p90 {d['lim']['p90']:.3f} | SR p10 {d['sr']['p10']:.4f} p90 {d['sr']['p90']:.4f}")
     with open(out_dir / "mc_results.json", "w") as f:
         json.dump(allres, f, indent=0)

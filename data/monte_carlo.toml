@@ -5,3 +5,14 @@ seed = 20261017
 sigma_demand_sourced = 0.25   # demand elasticity of a stream tagged [S]
 sigma_demand_assumed = 0.45   # demand elasticity of a stream tagged [A]
 sigma_supply_sr = 0.5         # short-run supply elasticity, all animals
+
+# Streams counted as by-products when the Monte Carlo checks that each animal's primary product (its highest factor)
+# stays above its by-products in every draw. Keys are the parameter-file stems in data/params/.
+[byproducts]
+dairy = ["Whey protein", "Whey carbohydrate", "Cull cows", "Calves"]
+beef = ["Drop credit"]
+eggs = ["Egg white", "Spent hen"]
+broiler = ["Backs & necks (MSC)", "Giblets & paws", "Rendering"]
+pork = ["Variety meats & drop"]
+salmon = ["Salmon by-products"]
+pollock = ["Meal & oil"]

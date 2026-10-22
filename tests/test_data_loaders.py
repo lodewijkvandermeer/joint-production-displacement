@@ -4,15 +4,15 @@ from jpdm import data
 
 
 def test_shipped_files_load():
-    assert len(data.carcass_shares()) == 16
+    assert len(data.carcass_shares()) == 17
     assert {r["series"] for r in data.whey_prices()} == {"Dry whey", "WPC 34%"}
     assert all(1 <= r["reachability"] <= 4 for r in data.reachability())
 
 
 def test_known_data_quality_findings_are_exactly_these():
-    # Broiler live-weight shares add to 89.8%: a data gap to resolve with the author's numbers (not a loader bug).
-    # Update this list when the data is fixed.
-    assert data.problems() == ["Broiler: live weight shares add to 89.8%, not 100%"]
+    # The broiler parts in the Cobb 500 yield chart add to 89.8% of live weight; the remaining 10.2% is carried as a
+    # labelled residual row (processing shrink, skin and fat trim) with no value. Update this list if the data changes.
+    assert data.problems() == []
 
 
 def _write(tmp_path, monkeypatch, name, text):

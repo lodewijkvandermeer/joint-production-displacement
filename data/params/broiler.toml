@@ -1,4 +1,6 @@
 # BROILER (one 6.0 lb live bird; yields Cobb 500; prices AMS 24 Jan 2025)
+# Product weights add to 89.7% of live weight; the rest (processing shrink, skin and fat trim) is not sold separately
+# and carries no value in the model.
 # Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
 
 key = "broiler"

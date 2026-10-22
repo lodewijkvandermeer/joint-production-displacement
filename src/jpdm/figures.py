@@ -43,7 +43,7 @@ def _title(fig, title, subtitle=None):
     """Title and subtitle at the top left; returns the figure fraction left for the plot (pass to subplots_adjust top)."""
     import textwrap
     h = fig.get_figheight()
-    tl = textwrap.wrap(title, 84)
+    tl = textwrap.wrap(title, 70 if fig.get_figwidth() <= 8.5 else 84)
     fig.text(0.02, 1 - 0.14 / h, "\n".join(tl), ha="left", va="top", fontsize=12, fontweight="bold", color=INK, linespacing=1.25)
     y = 0.14 + 0.25 * len(tl) + 0.08
     if subtitle:
@@ -417,13 +417,14 @@ def fig10(out, results=RESULTS):
            "a line ends at the product's floor price and flattens once the substitute holds the whole market")
     fig.subplots_adjust(left=0.09, right=0.72, top=top, bottom=0.12)
     offs = {"Cheese": (6, 0, "left", "center"), "Shell eggs": (6, 0, "left", "center"), "Whey protein": (6, 0, "left", "center"),
-            "Egg white": (0, -16, "center", "top")}
+            "Egg white": (10, -14, "left", "top")}
     for b, s, lab, c in series:
         pts = sorted(((r["cap"], r["A"]) for r in cv if r["branch"] == b and r["stream"] == s and r["horizon"] == "LR"), reverse=True)
         ax.plot([p[0] for p in pts], [p[1] for p in pts], color=c)
         dx, dy, ha, va = offs[s]
         ax.annotate(f"{lab}\n{_pct(pts[-1][1], 1)} at {pts[-1][0]:.0%} of today's price", (pts[-1][0], pts[-1][1]), xytext=(dx, dy),
-                    textcoords="offset points", ha=ha, va=va, fontsize=8.3, color=INK, annotation_clip=False)
+                    textcoords="offset points", ha=ha, va=va, fontsize=8.3, color=INK, annotation_clip=False,
+                    arrowprops=dict(arrowstyle="-", color=AXIS, lw=0.8) if dy else None)
     ax.set_xlim(1.0, 0.0)
     ax.set_ylim(-0.5, 0.02)
     ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1))

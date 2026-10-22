@@ -215,6 +215,23 @@
 "p50": 0.5770492522296053,
 "p90": 0.7453025309122622
 }
+},
+"__byproducts__": {
+"streams": [
+"Whey protein",
+"Whey carbohydrate",
+"Cull cows",
+"Calves"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.513,
+"ratio_largest_to_primary": {
+"p10": 0.06672886817486111,
+"p50": 0.09882388660976427,
+"p90": 0.15295996595486444
+},
+"max_byproduct": 0.09518525231189416,
+"max_byproduct_sub": "WPC 80 (whey protein concentrate)"
 }
 },
 "dairy_2019": {
@@ -433,6 +450,23 @@
 "p50": 0.5991790731734303,
 "p90": 0.769294729218898
 }
+},
+"__byproducts__": {
+"streams": [
+"Whey protein",
+"Whey carbohydrate",
+"Cull cows",
+"Calves"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.877,
+"ratio_largest_to_primary": {
+"p10": 0.04627258040747322,
+"p50": 0.06693396974818056,
+"p90": 0.10463656292909446
+},
+"max_byproduct": 0.08738401718073714,
+"max_byproduct_sub": "Calves (beef-on-dairy, bull calves)"
 }
 },
 "beef": {
@@ -583,6 +617,20 @@
 "p50": 0.46567965608854184,
 "p90": 0.5858897191814881
 }
+},
+"__byproducts__": {
+"streams": [
+"Drop credit"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.9965,
+"ratio_largest_to_primary": {
+"p10": 0.015258036458551928,
+"p50": 0.02840316667475242,
+"p90": 0.05253565447275671
+},
+"max_byproduct": 0.02387166037636813,
+"max_byproduct_sub": "Edible offal (tongue, cheek, oxtail, liver, tripe, hearts, lips)"
 }
 },
 "eggs_2019-21": {
@@ -682,6 +730,21 @@
 "p50": 0.6651239585164264,
 "p90": 0.7807612049342953
 }
+},
+"__byproducts__": {
+"streams": [
+"Egg white",
+"Spent hen"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.9175,
+"ratio_largest_to_primary": {
+"p10": 0.03608253297526518,
+"p50": 0.06422710019992783,
+"p90": 0.09729074158489275
+},
+"max_byproduct": 0.07328452259897261,
+"max_byproduct_sub": "Liquid egg white (albumen): liquid, dried albumen, protein fractions"
 }
 },
 "eggs_2025": {
@@ -781,6 +844,21 @@
 "p50": 0.67134694400825,
 "p90": 0.7865732739136776
 }
+},
+"__byproducts__": {
+"streams": [
+"Egg white",
+"Spent hen"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.992,
+"ratio_largest_to_primary": {
+"p10": 0.020597250314934052,
+"p50": 0.04107216766216661,
+"p90": 0.07055021442393525
+},
+"max_byproduct": 0.059107598553130296,
+"max_byproduct_sub": "Liquid egg white (albumen): liquid, dried albumen, protein fractions"
 }
 },
 "broiler": {
@@ -931,6 +1009,22 @@
 "p50": 0.43092430305854024,
 "p90": 0.6565990340973771
 }
+},
+"__byproducts__": {
+"streams": [
+"Backs & necks (MSC)",
+"Giblets & paws",
+"Rendering"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.982,
+"ratio_largest_to_primary": {
+"p10": 0.017467791848216657,
+"p50": 0.034151906384881005,
+"p90": 0.06463000148962157
+},
+"max_byproduct": 0.04978639437465139,
+"max_byproduct_sub": "Paws (export)"
 }
 },
 "pork": {
@@ -1081,6 +1175,20 @@
 "p50": 0.635521787952428,
 "p90": 0.7306882086470255
 }
+},
+"__byproducts__": {
+"streams": [
+"Variety meats & drop"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.662,
+"ratio_largest_to_primary": {
+"p10": 0.038603829405576995,
+"p50": 0.07770178728888692,
+"p90": 0.16288283403129997
+},
+"max_byproduct": 0.07269300682554179,
+"max_byproduct_sub": "Drop credit (lard, offal, meals, plasma)"
 }
 },
 "pollock": {
@@ -1214,6 +1322,20 @@
 "p50": 0.06541164138773786,
 "p90": 0.12189026586530971
 }
+},
+"__byproducts__": {
+"streams": [
+"Meal & oil"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 0.9845,
+"ratio_largest_to_primary": {
+"p10": 0.017477435731924514,
+"p50": 0.0342793349754518,
+"p90": 0.06695973541937839
+},
+"max_byproduct": 0.006357025967627401,
+"max_byproduct_sub": "Fishmeal"
 }
 },
 "salmon": {
@@ -1262,6 +1384,20 @@
 "p50": 0.44204836074480325,
 "p90": 0.6921403776707128
 }
+},
+"__byproducts__": {
+"streams": [
+"Salmon by-products"
+],
+"share_primary_above_all": 1.0,
+"share_largest_below_tenth": 1.0,
+"ratio_largest_to_primary": {
+"p10": 0.005046664449178144,
+"p50": 0.01003120264370181,
+"p90": 0.01957839194257236
+},
+"max_byproduct": 0.027377717242302813,
+"max_byproduct_sub": "By-products (heads, frames, viscera, trimmings) -> oil, meal, pet food"
 }
 }
 }
