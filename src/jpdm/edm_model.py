@@ -33,7 +33,7 @@ Floor: stream k has an external outlet at price ratio phi_k = P_floor/P_k. Using
   the stream reaches its floor at kappa_floor = exp( ln(phi_k) / g_k ) - 1, where g_k = E(P_k)/kappa_k (price response per unit shift).
   Beyond the floor the outlet absorbs the quantity at the floor and further shifts in k do not move the animal.
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
 import math
 
@@ -56,6 +56,7 @@ class Stream:
     floor_ratio: Optional[float] = None   # None = no external floor (internal re-routing handled by routes)
     floor_note: str = ""
     elas_src: str = ""
+    basis: str = ""        # "S" sourced or "A" assumed; set by the parameter loader, used to size Monte Carlo spreads
 
 @dataclass
 class Branch:
@@ -70,6 +71,7 @@ class Branch:
     supply_src: str = ""
     price_tag: str = ""
     raw_shares: Optional[dict] = None   # route -> raw-volume share for fungible routes; routes absent are fixed to the animal
+    monte_carlo: dict = field(default_factory=dict)   # supply-elasticity spread for the Monte Carlo (see data/monte_carlo.toml)
 
     # ---- helpers
     def total(self): return sum(s.value for s in self.subs)

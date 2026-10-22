@@ -1,0 +1,128 @@
+# FED STEER (one 1,400 lb Choice steer; 882 lb carcass at 63%)
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "beef"
+name = "Fed steer (Oct 2026 prices)"
+unit = "per 1,400 lb Choice steer"
+eps_s_sr = 0.15
+eps_s_lr = 0.80
+monte_carlo = { supply_sigma_lr = 0.35 }
+notes = "Carcass cuts in fixed proportions (one route); grinding is a one-way re-route handled as a floor on whole-cut streams in the text."
+supply_src = "[S] Wohlgenant 1993 beef supply 0.15 (SR); Lusk & Norwood 2009 LR 0.82; Harrington & Dubman 2008: 1.07"
+price_tag = "USDA AMS boxed beef cutout 15 Oct 2026; by-product drop value 15 Oct 2026"
+
+[vars]
+live = 1400.0
+dress = 0.63
+carc = "live*dress"
+
+# [S] AMS yield factors (share of carcass, _y) and Choice primal values 15 Oct 2026 (US$/lb, _v)
+rib_y = 0.1140
+rib_v = 6.7612
+chuck_y = 0.2962
+chuck_v = 3.3740
+round_y = 0.2232
+round_v = 2.9522
+loin_y = 0.2126
+loin_v = 4.5003
+brisket_y = 0.0495
+brisket_v = 2.8783
+plate_y = 0.0710
+plate_v = 2.2219
+flank_y = 0.0335
+flank_v = 1.6028
+
+mid_y = "rib_y+loin_y"
+mid_v = "rib_y*rib_v+loin_y*loin_v"
+end_y = "chuck_y+round_y"
+end_v = "chuck_y*chuck_v+round_y*round_v"
+thin_y = "brisket_y+plate_y+flank_y"
+thin_v = "brisket_y*brisket_v+plate_y*plate_v+flank_y*flank_v"
+# [E] grinding material: 50% of chuck/round and 60% of thin meats, at a discount to whole-cut value
+grind_y = "end_y*0.5+thin_y*0.6"
+grind_v = "end_v*0.5*0.95+thin_v*0.6*0.90"
+
+[[subs]]
+name = "Middle meats: steaks and roasts from rib and loin"
+stream = "Middle meats (whole cut)"
+qty = "carc*mid_y"
+price = "mid_v/mid_y"
+src = "[S] AMS primals"
+
+[[subs]]
+name = "End-meat whole-muscle cuts (chuck/round roasts, steaks; 50% of chuck+round)"
+stream = "End meats (whole cut)"
+qty = "carc*end_y*0.5"
+price = "end_v/end_y*1.05"
+src = "[E] split of chuck/round"
+
+[[subs]]
+name = "Thin-meat whole-muscle (brisket, flank, skirt; 40% of thin meats)"
+stream = "End meats (whole cut)"
+qty = "carc*thin_y*0.4"
+price = "thin_v/thin_y*1.15"
+src = "[E]"
+
+[[subs]]
+name = "Grinding material: trim and ground chuck/round (minced beef)"
+stream = "Minced beef (grinding material)"
+qty = "carc*grind_y"
+price = "grind_v/grind_y"
+src = "[E] 50% of chuck/round + 60% of thin meats"
+
+# By-product drop credit values, US$ per cwt live weight (AMS 15 Oct 2026)
+[[subs]]
+name = "Hide"
+stream = "Drop credit"
+qty = 1.0
+price = "1.75*live/100"
+src = "[S] AMS drop value 15 Oct 2026"
+
+[[subs]]
+name = "Tallow and technical fat"
+stream = "Drop credit"
+qty = 1.0
+price = "(3.03+0.83)*live/100"
+src = "[S]"
+
+[[subs]]
+name = "Edible offal (tongue, cheek, oxtail, liver, tripe, hearts, lips)"
+stream = "Drop credit"
+qty = 1.0
+price = "(1.77+1.14+0.15+1.56+0.37+0.47+0.83+1.16+0.64+0.03+0.01)*live/100"
+src = "[S]"
+
+[[subs]]
+name = "Meat & bone meal, blood meal"
+stream = "Drop credit"
+qty = 1.0
+price = "(0.90+0.48)*live/100"
+src = "[S]"
+
+[[streams]]
+name = "Middle meats (whole cut)"
+route = "Carcass"
+elas = -1.00
+elas_src = "[S] beef 0.75 (Andreyeva); steaks more elastic in scanner data (Tonsor & Lusk 2024)"
+
+[[streams]]
+name = "End meats (whole cut)"
+route = "Carcass"
+elas = -0.90
+elas_src = "[A] as beef"
+
+[[streams]]
+name = "Minced beef (grinding material)"
+route = "Carcass"
+elas = -0.85
+floor = 0.30
+floor_note = "pet food / rendering"
+elas_src = "[S] beef 0.75; ground beef 1.25 (farmdoc 2021)"
+
+[[streams]]
+name = "Drop credit"
+route = "Carcass"
+elas = -2.50
+floor = 0.40
+floor_note = "rendering / disposal; hides already near disposal value"
+elas_src = "[A] traded by-products: hides, tallow, offal exports"

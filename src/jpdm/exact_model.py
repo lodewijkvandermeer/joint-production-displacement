@@ -55,28 +55,42 @@ class Exact:
     def route_value(self, r, q, kappa, cap):
         return sum(self.S[k] * self.price(k, q / self.a[r], kappa, cap) for k in self.streams if self.route_of[k] == r)
 
-    def q_bounds(self, r, v, kappa, cap, tol=1e-9):
+    @staticmethod
+    def _preimage(f, t, lo=1e-9, hi=1e3, n=70):
+        """(x_lo, x_hi): the interval of x on which the non-increasing continuous f equals t.
+
+        A cap or floor makes f flat, so the preimage of a level can be a whole interval, and a level that f never
+        takes (f jumps over it) has an empty interior; bisection on a single side then lands on one edge. Both ends
+        are located separately, with no tolerance, and the search-interval edges are returned when f never reaches t.
+        """
+        flo, fhi = f(lo), f(hi)
+        if fhi >= t:
+            x_hi = hi
+        elif flo < t:
+            x_hi = lo
+        else:
+            a, b = lo, hi
+            for _ in range(n):
+                m = 0.5 * (a + b)
+                if f(m) >= t: a = m
+                else: b = m
+            x_hi = 0.5 * (a + b)
+        if flo <= t:
+            x_lo = lo
+        elif fhi > t:
+            x_lo = hi
+        else:
+            a, b = lo, hi
+            for _ in range(n):
+                m = 0.5 * (a + b)
+                if f(m) <= t: b = m
+                else: a = m
+            x_lo = 0.5 * (a + b)
+        return min(x_lo, x_hi), x_hi
+
+    def q_bounds(self, r, v, kappa, cap):
         """[q_lo, q_hi]: the set of raw quantities at which route r's value index equals v (an interval where the value is flat)."""
-        lo, hi = 1e-9, 1e3
-        if self.route_value(r, hi, kappa, cap) >= v - tol:    # value never falls to v: route absorbs everything
-            return hi, hi
-        if self.route_value(r, lo, kappa, cap) <= v + tol:    # value never reaches v: route gets nothing
-            return lo, lo
-        # q_hi: largest q with value >= v - tol
-        a, b = lo, hi
-        for _ in range(60):
-            m = 0.5 * (a + b)
-            if self.route_value(r, m, kappa, cap) >= v - tol: a = m
-            else: b = m
-        q_hi = 0.5 * (a + b)
-        # q_lo: smallest q with value <= v + tol
-        a, b = lo, hi
-        for _ in range(60):
-            m = 0.5 * (a + b)
-            if self.route_value(r, m, kappa, cap) <= v + tol: b = m
-            else: a = m
-        q_lo = 0.5 * (a + b)
-        return min(q_lo, q_hi), q_hi
+        return self._preimage(lambda q: self.route_value(r, q, kappa, cap), v)
 
     def q_of_v(self, r, v, kappa, cap):
         return self.q_bounds(r, v, kappa, cap)[1]
@@ -90,75 +104,57 @@ class Exact:
         eps_s = self.br.eps_s_lr if eps_s is None else eps_s
         Wf = sum(self.W[r] for r in self.fung)
 
-        def A_given_v(v):
-            # A = (Wf v + fixed(A))^eps_s ; RHS decreasing in A -> bisection
+        def A_bounds(v):
+            """(A_lo, A_hi): the animal numbers that satisfy the supply condition at fungible-route value v.
+
+            Normally a single point. At constant cost with a capped or floored stream fixed to the animal, supply is
+            horizontal over an interval of A at one critical v, so it is a set.
+            """
             if constant_cost:
-                # P_A = 1 -> fixed(A) = 1 - Wf v ; fixed decreasing in A
-                target = 1.0 - Wf * v
-                if not self.fixed_streams:
-                    return None  # determined by balance alone
-                lo, hi = 1e-9, 1e3
-                for _ in range(70):
-                    mid = 0.5 * (lo + hi)
-                    if self.fixed_value(mid, kappa, cap) > target:
-                        lo = mid
-                    else:
-                        hi = mid
-                return 0.5 * (lo + hi)
+                # P_A = 1 -> fixed(A) = 1 - Wf v ; fixed is non-increasing in A
+                return self._preimage(lambda A: self.fixed_value(A, kappa, cap), 1.0 - Wf * v)
             lo, hi = 1e-9, 1e3
             for _ in range(70):
                 mid = 0.5 * (lo + hi)
                 PA = Wf * v + self.fixed_value(mid, kappa, cap)
-                As = PA ** eps_s
-                if As > mid:
+                if PA ** eps_s > mid:      # g(A) = P_A^eps_s - A is strictly decreasing: unique root
                     lo = mid
                 else:
                     hi = mid
-            return 0.5 * (lo + hi)
+            A = 0.5 * (lo + hi)
+            return A, A
 
         if not self.fung:
             # pure carcass: A from supply = demand
-            if constant_cost:
-                lo, hi = 1e-9, 1e3
-                for _ in range(70):
-                    mid = 0.5 * (lo + hi)
-                    if self.fixed_value(mid, kappa, cap) > 1.0:
-                        lo = mid
-                    else:
-                        hi = mid
-                A = 0.5 * (lo + hi)
-            else:
-                A = A_given_v(0.0)
+            A = A_bounds(0.0)[0] if not constant_cost else self._preimage(
+                lambda x: self.fixed_value(x, kappa, cap), 1.0)[1]
             v = None
             q = {}
+        elif constant_cost and not self.fixed_streams:
+            v = 1.0 / Wf                        # supply is flat at this value; the animal number follows from balance
+            q = {r: self.q_bounds(r, v, kappa, cap)[1] for r in self.fung}
+            A = sum(q.values())
         else:
-            # find v: sum_r q_hi_r(v) (decreasing) = A(v) (increasing)
+            # find v: sum_r q_hi_r(v) (non-increasing) crosses A_lo(v) (non-decreasing in v)
             lo, hi = 1e-6, 1e3
-            v = None
             for _ in range(70):
                 v = 0.5 * (lo + hi)
-                if constant_cost and not self.fixed_streams:
-                    v = 1.0 / Wf
-                    A = sum(self.q_bounds(r, v, kappa, cap)[1] for r in self.fung)
-                    break
-                A = A_given_v(v)
-                Qhi = sum(self.q_bounds(r, v, kappa, cap)[1] for r in self.fung)
-                if Qhi < A: hi = v
-                else: lo = v
+                if sum(self.q_bounds(r, v, kappa, cap)[1] for r in self.fung) < A_bounds(v)[0]:
+                    hi = v
+                else:
+                    lo = v
+            # at the crossing the routes and the supply may each be an interval; pick the point where the totals match
+            v = lo
+            up = {r: self.q_bounds(r, lo, kappa, cap)[1] for r in self.fung}
+            dn = {r: min(self.q_bounds(r, hi, kappa, cap)[0], up[r]) for r in self.fung}
+            sU, sL = sum(up.values()), sum(dn.values())
+            a_lo, a_hi = A_bounds(lo)[0], A_bounds(hi)[1]
+            if constant_cost:
+                A = max(min(a_hi, sU), max(a_lo, sL))
             else:
-                v = lo            # the feasible side of any discontinuity (flat route at v)
-                A = A_given_v(v)
-            bounds = {r: self.q_bounds(r, v, kappa, cap) for r in self.fung}
-            q = {r: b[0] for r, b in bounds.items()}
-            resid = A - sum(q.values())
-            slack = {r: max(0.0, b[1] - b[0]) for r, b in bounds.items()}
-            tot_slack = sum(slack.values())
-            if resid > 0 and tot_slack > 0:
-                for r in self.fung:
-                    q[r] += resid * slack[r] / tot_slack
-            tot = sum(q.values())
-            if tot > 0:
-                q = {r: x * A / tot for r, x in q.items()}
+                A = A_bounds(lo)[0]
+            th = min(1.0, max(0.0, (A - sL) / (sU - sL))) if sU > sL else 0.0
+            q = {r: dn[r] + th * (up[r] - dn[r]) for r in self.fung}
         # outputs
         out = dict(A=A, v=v, q=q, P={}, Q={}, cons={}, outlet={}, sub={}, sub_share={})
         for k in self.streams:
@@ -185,18 +181,28 @@ class Exact:
                 out["sub_share"][k] = 0.0
         out["PA"] = (sum(self.W[r] * v for r in self.fung) if self.fung else 0.0) + self.fixed_value(A, kappa, cap)
         out["revenue"] = out["PA"]   # revenue per animal unit, index
+        out["diag"] = self.residuals(out, kappa, cap, eps_s, constant_cost)
         return out
 
+    def residuals(self, out, kappa, cap, eps_s, constant_cost, edge=2e-9):
+        """How well a solution satisfies the model's own equilibrium conditions (all ~0 for a true equilibrium).
 
-RAW = {
-    "dairy": {"Fluid": 0.19, "Other manufactured": 0.08, "Butter & powder": 0.13, "Cheese route": 0.60},
-    "eggs": {"Shell": 0.68, "Products: whole": 0.32 * 0.64, "Products: separated": 0.32 * 0.36},
-}
+        supply   : A = P_A^eps_s (or P_A = 1 at constant cost)
+        balance  : the raw quantities sent to the fungible routes add up to A
+        value    : every route that receives raw commodity has the common value v
+        boundary : the solution sits on the edge of the solver's search interval, so it is an exit (A ~ 0) or an
+                   unbounded supply rather than a located root
+        """
+        A, v, q = out["A"], out["v"], out["q"]
+        boundary = A <= edge or A >= 1e3 * (1 - 1e-9)
+        supply = abs(out["PA"] - 1.0) if constant_cost else abs(A - out["PA"] ** eps_s)
+        value = max([abs(self.route_value(r, x, kappa, cap) - v) for r, x in q.items() if x > 1e-6] or [0.0])
+        return dict(supply=0.0 if boundary else supply, balance=abs(sum(q.values()) - A) if q else 0.0,
+                    value=value, boundary=boundary)
 
 
 def exact_for(br: M.Branch):
-    key = br.key.split("_")[0]
-    return Exact(br, RAW.get(key))
+    return Exact(br, br.raw_shares)
 
 
 def validate():

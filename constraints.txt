@@ -1,0 +1,9 @@
+# Versions the committed results/ were last checked against (Python 3.12). Used by the CI `reproduce` job:
+#   pip install -e . -c constraints.txt
+# The test matrix on older Pythons installs unpinned, so it keeps catching incompatibilities with new releases.
+numpy==2.5.4
+matplotlib==3.11.2
+openpyxl==3.1.5
+pillow==13.0.0
+contourpy==1.4.0
+pytest==9.1.1

@@ -2,7 +2,6 @@
 
 python -m jpdm figures   (writes paper/figures/fig01.png ... fig11.png)
 """
-import csv
 import json
 import math
 from pathlib import Path
@@ -13,10 +12,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.patches import FancyBboxPatch  # noqa: E402
 
-from . import params  # noqa: E402
-from .paths import FIGURES, RESULTS, ROOT  # noqa: E402
-
-DATA = ROOT / "data"
+from . import data, params  # noqa: E402
+from .paths import FIGURES, RESULTS  # noqa: E402
 
 # reference palette (light mode): surface, text, neutrals and the first categorical slots
 SURFACE = "#fcfcfb"
@@ -235,7 +232,7 @@ def fig03(out):
 
 # ---------------------------------------------------------------- figure 4
 def fig04(out):
-    rows = list(csv.DictReader(open(DATA / "carcass_weight_and_value_shares.csv")))
+    rows = data.carcass_shares()
     animals = ["Fed steer", "Broiler", "Hog"]
     heads = {"Fed steer": "Fed steer: the rib and loin are {w:.0f}% of live weight and {v:.0f}% of value",
              "Broiler": "Broiler: breast and tenders are {w:.0f}% of live weight and {v:.0f}% of value",
@@ -248,10 +245,10 @@ def fig04(out):
     for ax, a in zip(axes, animals):
         rs = [r for r in rows if r["animal"] == a]
         first = rs[0]
-        ax.set_title(heads[a].format(w=float(first["share_of_live_weight_pct"]), v=float(first["share_of_value_pct"])), loc="left", fontsize=9.5, color=INK, x=-0.45)
+        ax.set_title(heads[a].format(w=first["live_weight_pct"], v=first["value_pct"]), loc="left", fontsize=9.5, color=INK, x=-0.45)
         for i, r in enumerate(rs):
             y = len(rs) - 1 - i
-            w, v = float(r["share_of_live_weight_pct"]), float(r["share_of_value_pct"])
+            w, v = r["live_weight_pct"], r["value_pct"]
             ax.barh(y + 0.19, w, height=0.36, color=MUTED, edgecolor=SURFACE)
             ax.barh(y - 0.19, v, height=0.36, color=BLUE, edgecolor=SURFACE)
             ax.text(w + 0.6, y + 0.19, f"{w:.1f}%", va="center", fontsize=7.5, color=QUIET)
@@ -267,7 +264,7 @@ def fig04(out):
 
 # ---------------------------------------------------------------- figure 5
 def fig05(out):
-    rows = list(csv.DictReader(open(DATA / "whey_prices_central_us_2022_2026.csv")))
+    rows = data.whey_prices()
     t = lambda m: int(m[:4]) + (int(m[5:7]) - 1) / 12  # noqa: E731
     fig, ax = plt.subplots(figsize=(8, 4.6))
     top = _title(fig, "Whey prices swing between the feed-grade floor and three times it within three years",
@@ -278,7 +275,7 @@ def fig05(out):
     ax.axhline(floor, color=MUTED, lw=1, ls=(0, (4, 3)))
     ax.text(2024.4, floor - 0.1, r"feed-grade dry whey, October 2026: \$0.35 to \$0.38", fontsize=8.5, color=QUIET)
     for series, c in (("Dry whey", MUTED), ("WPC 34%", BLUE)):
-        pts = [(t(r["month"]), float(r["usd_per_lb"]), r["month"]) for r in rows if r["series"] == series]
+        pts = [(t(r["month"]), r["usd_per_lb"], r["month"]) for r in rows if r["series"] == series]
         ax.plot([p[0] for p in pts], [p[1] for p in pts], color=c)
         ax.text(pts[-1][0] + 0.05, pts[-1][1], series, va="center", fontsize=9, color=INK)
         if series == "Dry whey":
@@ -448,15 +445,15 @@ DY = {"Whey protein, 2026 prices": 1.0, "Separated egg white": 1.0, "Whey protei
 
 
 def fig11(out):
-    rows = list(csv.DictReader(open(DATA / "technical_reachability.csv")))
+    rows = data.reachability()
     fig, ax = plt.subplots(figsize=(8, 5.6))
     top = _title(fig, "The fractions biotechnology reaches first are the ones with the lowest displacement",
            "Displacement factor after three to five years (log scale) against technical reachability; reachability is a judgement (section 8)")
     fig.subplots_adjust(left=0.1, right=0.97, top=top, bottom=0.12)
     for r in rows:
-        x = int(r["reachability_1_to_4"]) + JITTER.get(r["product"], 0.0)
-        y = float(r["df_3_5_years"])
-        c = BLUE if y >= 0.10 else ORANGE if int(r["reachability_1_to_4"]) == 4 else MUTED
+        x = r["reachability"] + JITTER.get(r["product"], 0.0)
+        y = r["df_3_5_years"]
+        c = BLUE if y >= 0.10 else ORANGE if r["reachability"] == 4 else MUTED
         ax.plot([x], [y], "o", color=c, markersize=7, markeredgecolor=SURFACE, markeredgewidth=1.5)
         left = LABEL_SIDE.get(r["product"]) == "l"
         ax.text(x + (-0.07 if left else 0.07), y * DY.get(r["product"], 1.0), r["product"], ha="right" if left else "left", va="center", fontsize=7.6, color=INK)

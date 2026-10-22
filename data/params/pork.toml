@@ -1,0 +1,106 @@
+# HOG (one 280 lb live hog; 215 lb carcass; AMS primal yields; values week ending 25 Sep 2026)
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "pork"
+name = "Hog (Sep 2026 prices)"
+unit = "per 280 lb live hog"
+eps_s_sr = 0.40
+eps_s_lr = 1.50
+monte_carlo = { supply_sigma_lr = 0.3 }
+notes = "Carcass primals in fixed proportions."
+supply_src = "[S] Wohlgenant 1993 hog supply 0.40 (SR); Lusk & Norwood 2009 LR 1.56; Harrington & Dubman 0.79"
+price_tag = "USDA AMS pork cutout week ending 25 Sep 2026; hog by-product value 9 Oct 2026"
+
+[vars]
+carc = 215.0
+live = 280.0
+
+[[subs]]
+name = "Loin (chops, roasts)"
+stream = "Fresh pork cuts"
+qty = "carc*0.2517"
+price = 0.879
+src = "[S]"
+
+[[subs]]
+name = "Butt (shoulder)"
+stream = "Fresh pork cuts"
+qty = "carc*0.1016"
+price = 1.115
+src = "[S]"
+
+[[subs]]
+name = "Spareribs"
+stream = "Fresh pork cuts"
+qty = "carc*0.0481"
+price = 1.592
+src = "[S]"
+
+[[subs]]
+name = "Ham (mostly cured)"
+stream = "Ham"
+qty = "carc*0.2459"
+price = 0.869
+src = "[S]"
+
+[[subs]]
+name = "Belly (bacon)"
+stream = "Belly"
+qty = "carc*0.1628"
+price = 0.968
+src = "[S]"
+
+[[subs]]
+name = "Picnic, jowl, neck bones, trim -> sausage, ground pork"
+stream = "Sausage & trim"
+qty = "carc*(0.1137+0.0145+0.0169)"
+price = 0.66
+src = "[S] picnic; [E] jowl/neck"
+
+[[subs]]
+name = "Feet, tails (export, variety meats)"
+stream = "Variety meats & drop"
+qty = "carc*(0.0092+0.0123+0.0015)"
+price = 0.50
+src = "[A]"
+
+[[subs]]
+name = "Drop credit (lard, offal, meals, plasma)"
+stream = "Variety meats & drop"
+qty = 1.0
+price = "5.12*live/100"
+src = "[S] AMS hog by-product value 9 Oct 2026"
+
+[[streams]]
+name = "Fresh pork cuts"
+route = "Carcass"
+elas = -0.90
+elas_src = "[S] pork 0.72 (Andreyeva); loin 1.45 scanner (Tonsor & Lusk 2024)"
+
+[[streams]]
+name = "Ham"
+route = "Carcass"
+elas = -0.75
+elas_src = "[A] processed, inelastic"
+
+[[streams]]
+name = "Belly"
+route = "Carcass"
+elas = -0.80
+elas_src = "[S] bacon 0.83 scanner"
+
+[[streams]]
+name = "Sausage & trim"
+route = "Carcass"
+elas = -1.20
+floor = 0.30
+floor_note = "pet food / rendering"
+elas_src = "[A] trim competes with beef and poultry trim"
+
+[[streams]]
+name = "Variety meats & drop"
+route = "Carcass"
+elas = -2.50
+floor = 0.40
+floor_note = "rendering"
+elas_src = "[A]"

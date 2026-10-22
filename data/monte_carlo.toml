@@ -1,0 +1,7 @@
+# Settings shared by every animal in the Monte Carlo (src/jpdm/monte_carlo.py). Per-animal supply spreads live in
+# the `monte_carlo` entry of data/params/<animal>.toml. Draws are lognormal: value * exp(Normal(0, sigma)).
+n = 2000
+seed = 20261017
+sigma_demand_sourced = 0.25   # demand elasticity of a stream tagged [S]
+sigma_demand_assumed = 0.45   # demand elasticity of a stream tagged [A]
+sigma_supply_sr = 0.5         # short-run supply elasticity, all animals

@@ -45,7 +45,8 @@ cd joint-production-displacement
 pip install -e ".[test]"
 
 python -m jpdm summary      # every product's factor at three horizons
-pytest                      # about 70 tests, a few seconds
+pytest                      # about 150 tests, under 10 seconds
+python -m jpdm check        # regenerate results, tables and docs in a scratch directory and compare with the repository
 python -m jpdm all          # regenerate results, tables, workbook, figures and docs (about two minutes)
 ```
 
@@ -71,7 +72,7 @@ res["A"] - 1                                  # -0.044: milk output 4.4% lower a
 ```
 src/jpdm/
   edm_model.py     closed-form nested displacement model (Branch, Stream, Sub)
-  params.py        every animal's quantities, prices, elasticities and floors, each tagged [S] sourced, [E] estimated or [A] assumed
+  params.py        loader that turns data/params/*.toml into Branch objects (no numbers live in code)
   exact_model.py   exact non-linear equilibrium with floors and price caps
   exit_runs.py     price-cap, full-loss and route-exit scenarios on the exact model
   monte_carlo.py   80% ranges from 2,000 draws of the elasticities (fixed seed)
@@ -90,7 +91,7 @@ tests/             identities, headline numbers, exact-model checks, output cons
 
 ## Reproducing the results
 
-Every number in the paper and the workbook comes from `params.py` through the code above. The exact-model scenarios and the Monte Carlo ranges are deterministic (the Monte Carlo seed is fixed), so `python -m jpdm all` reproduces the committed files in `results/` exactly. The `reproduce` job in [.github/workflows/tests.yml](.github/workflows/tests.yml) regenerates them on every push and fails if the tables change.
+Every number in the paper and the workbook comes from `data/params/*.toml` through the code above. The exact-model scenarios and the Monte Carlo ranges are deterministic (the Monte Carlo seed is fixed), so `python -m jpdm all` reproduces the committed files in `results/` exactly. The `reproduce` job in [.github/workflows/tests.yml](.github/workflows/tests.yml) runs `python -m jpdm check` on every push: it regenerates the results, tables and docs in a scratch directory and fails if they differ from the committed files (numbers within a relative 1e-7, so a different numpy build does not trip it). It installs the versions in [constraints.txt](constraints.txt).
 
 ## The Excel workbook
 
@@ -98,7 +99,7 @@ Every number in the paper and the workbook comes from `params.py` through the co
 
 ## Changing an assumption
 
-Edit the value in `src/jpdm/params.py` (the comment beside it says where it came from), then run `python -m jpdm all`. The tests in `tests/test_headline_numbers.py` pin the published figures, so they will fail after a deliberate change; update them along with the paper. The demand elasticities of by-products are assumptions and are the main sensitivity; the paper's sections 11 and 12 list what a sceptical reader should test.
+Edit the value in the animal's file in `data/params/` (the comment beside it says where it came from), then run `python -m jpdm all`. The tests in `tests/test_headline_numbers.py` pin the published figures, so they will fail after a deliberate change; update them along with the paper. The demand elasticities of by-products are assumptions and are the main sensitivity; the paper's sections 11 and 12 list what a sceptical reader should test.
 
 ## Limitations
 

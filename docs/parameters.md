@@ -1,6 +1,6 @@
 # Parameters
 
-Generated from `src/jpdm/params.py` by `python -m jpdm docs`; do not edit by hand. Tags: **[S]** sourced (see [sources.md](sources.md)), **[E]** estimated from sourced inputs, **[A]** assumption. Prices are wholesale or first-handler, US$ unless stated; quantities are per the unit shown for each animal.
+Generated from `data/params/*.toml` by `python -m jpdm docs`; do not edit by hand. Tags: **[S]** sourced (see [sources.md](sources.md)), **[E]** estimated from sourced inputs, **[A]** assumption. Prices are wholesale or first-handler, US$ unless stated; quantities are per the unit shown for each animal.
 
 ## Dairy cow (2026 prices)
 

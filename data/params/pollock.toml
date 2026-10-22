@@ -1,0 +1,86 @@
+# ALASKA POLLOCK (wild, TAC; one tonne round weight; 2024 product mix, NOAA)
+# Tags: [S] sourced, [E] estimate derived from sourced inputs, [A] assumption.
+
+key = "pollock"
+name = "Alaska pollock (wild, TAC-managed)"
+unit = "per tonne round weight"
+eps_s_sr = 0.00
+eps_s_lr = 0.05
+# quota-managed capture: long-run supply uniform over this range, short-run fixed at 0
+monte_carlo = { supply_lr_uniform = [0.0, 0.17] }
+notes = "Flesh is allocated between fillets and surimi (fungible sub-products); roe and meal are joint by-products."
+supply_src = "[S] quota-managed capture: supply elasticity ~0 (World Bank 2013; estimates 0 to 0.17; can be negative)"
+price_tag = "NOAA 2024 production via SeafoodSource; GAPP surimi prices; EUMOFA fillet import prices"
+
+[vars]
+catch = 1430.0
+
+[[subs]]
+name = "Fillet blocks and fillets (fish fingers, portions)"
+stream = "Flesh (fillets, surimi, mince)"
+qty = "168.0/catch"
+price = 4500
+src = "[S] volumes; [E] prices"
+
+[[subs]]
+name = "H&G (headed and gutted)"
+stream = "Flesh (fillets, surimi, mince)"
+qty = "40.0/catch"
+price = 2000
+src = "[E]"
+
+[[subs]]
+name = "Surimi (crab sticks, kamaboko)"
+stream = "Flesh (fillets, surimi, mince)"
+qty = "170.3/catch"
+price = 2500
+src = "[S] GAPP ~$2,500-2,900/t"
+
+[[subs]]
+name = "Mince"
+stream = "Flesh (fillets, surimi, mince)"
+qty = "24.4/catch"
+price = 1500
+src = "[A]"
+
+[[subs]]
+name = "Roe"
+stream = "Roe"
+qty = "20.8/catch"
+price = 6000
+src = "[A]"
+
+[[subs]]
+name = "Fishmeal"
+stream = "Meal & oil"
+qty = "69.6/catch"
+price = 1700
+src = "[S] World Bank 2024-25 fishmeal ~$1,700/t"
+
+[[subs]]
+name = "Fish oil"
+stream = "Meal & oil"
+qty = "27.4/catch"
+price = 2500
+src = "[E]"
+
+[[streams]]
+name = "Flesh (fillets, surimi, mince)"
+route = "Fish"
+elas = -1.10
+elas_src = "[S] whitefish fillets ~-0.5 to -1.9 (Asche et al. 2007)"
+
+[[streams]]
+name = "Roe"
+route = "Fish"
+elas = -1.00
+floor = 0.30
+floor_note = "meal value"
+elas_src = "[A]"
+
+[[streams]]
+name = "Meal & oil"
+route = "Fish"
+elas = -5.00
+floor_note = "already the floor"
+elas_src = "[A] at the outlet price: near-perfectly elastic for one supplier; aggregate fishmeal demand is inelastic (Tveteras 2010)"

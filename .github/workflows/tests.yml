@@ -15,18 +15,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
       - run: pip install -e ".[test]"
       - run: pytest -q
 
   reproduce:
-    # regenerates every exact-model and Monte Carlo result (about two minutes) and checks the tables do not change
+    # regenerates every exact-model and Monte Carlo result, the tables and the docs in a scratch directory (about two
+    # minutes) and compares them with the committed files: JSON numerically, Markdown as text
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -e .
-      - run: python -m jpdm results
-      - run: python -m jpdm tables
-      - run: git diff --stat --exit-code results/tables
+          cache: pip
+          cache-dependency-path: constraints.txt
+      - run: pip install -e . -c constraints.txt
+      - run: python -m jpdm check
