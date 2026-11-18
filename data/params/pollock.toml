@@ -21,6 +21,7 @@ stream = "Flesh (fillets, surimi, mince)"
 qty = "168.0/catch"
 price = 4500
 src = "[S] volumes; [E] prices"
+kg = 1000.0
 
 [[subs]]
 name = "H&G (headed and gutted)"
@@ -28,6 +29,7 @@ stream = "Flesh (fillets, surimi, mince)"
 qty = "40.0/catch"
 price = 2000
 src = "[E]"
+kg = 1000.0
 
 [[subs]]
 name = "Surimi (crab sticks, kamaboko)"
@@ -35,6 +37,7 @@ stream = "Flesh (fillets, surimi, mince)"
 qty = "170.3/catch"
 price = 2500
 src = "[S] GAPP ~$2,500-2,900/t"
+kg = 1000.0
 
 [[subs]]
 name = "Mince"
@@ -42,6 +45,7 @@ stream = "Flesh (fillets, surimi, mince)"
 qty = "24.4/catch"
 price = 1500
 src = "[A]"
+kg = 1000.0
 
 [[subs]]
 name = "Roe"
@@ -49,6 +53,7 @@ stream = "Roe"
 qty = "20.8/catch"
 price = 6000
 src = "[A]"
+kg = 1000.0
 
 [[subs]]
 name = "Fishmeal"
@@ -56,6 +61,7 @@ stream = "Meal & oil"
 qty = "69.6/catch"
 price = 1700
 src = "[S] World Bank 2024-25 fishmeal ~$1,700/t"
+kg = 1000.0
 
 [[subs]]
 name = "Fish oil"
@@ -63,6 +69,7 @@ stream = "Meal & oil"
 qty = "27.4/catch"
 price = 2500
 src = "[E]"
+kg = 1000.0
 
 [[streams]]
 name = "Flesh (fillets, surimi, mince)"
@@ -84,3 +91,11 @@ route = "Fish"
 elas = -5.00
 floor_note = "already the floor"
 elas_src = "[A] at the outlet price: near-perfectly elastic for one supplier; aggregate fishmeal demand is inelastic (Tveteras 2010)"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = "1000/0.6"
+animal_label = "fish"
+animals_src = "[A] about 0.6 kg average round weight per fish"
+raw_kg_per_unit = 1000.0
+raw_label = "kg round weight"

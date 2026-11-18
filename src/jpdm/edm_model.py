@@ -14,7 +14,9 @@ Log-differential equilibrium (E(x) = dx/x), proportional processing margins:
   Raw-commodity demand elasticity (fungible routes, VOLUME-weighted):        eps_raw = sum_r a_r * eps_r
   Animal-level: H = sum_fixed s_k/|eps_k| + W_raw/|eps_raw|;  eps_bar = -1/H
   Animal quantity: E(A) = eps_s [ sum_fixed (s_k/|eps_k|) kappa_k + (W_raw/|eps_raw|) sum_r a_r kappa_r ] / (1 + eps_s H)
-  Displacement factor:  fixed stream k:          DF_k = eps_s (s_k/|eps_k|) / (1 + eps_s H)
+  Market-share factor DF (called the displacement factor in version 1.0): the % change in animal output per % of a
+  product's market displaced, E(A) = DF_k kappa_k. Per unit displaced it is DF_k / Q_k animal units (see per_unit.py).
+                        fixed stream k:          DF_k = eps_s (s_k/|eps_k|) / (1 + eps_s H)
                         stream k in route r:     DF_k = eps_s (W_raw/|eps_raw|) a_r |eps_r| (S_k/|eps_k|) / (1 + eps_s H)
                         sub-product i in k:      DF_i = w_i * DF_k
                         bundle (all products):   DF = eps_s H / (1 + eps_s H) = eps_s / (eps_s + |eps_bar|)
@@ -45,6 +47,9 @@ class Sub:
     stream: str
     note: str = ""
     src: str = ""
+    kg: Optional[float] = None          # kg of product per unit of qty (None where a weight is not meaningful)
+    protein: Optional[float] = None     # protein content, kg per kg of product (protein ingredients only)
+    full_yield: Optional[float] = None  # qty per animal unit if all of the raw commodity went to this product (naive rule)
     @property
     def value(self): return self.qty*self.price
 
@@ -72,6 +77,12 @@ class Branch:
     price_tag: str = ""
     raw_shares: Optional[dict] = None   # route -> raw-volume share for fungible routes; routes absent are fixed to the animal
     monte_carlo: dict = field(default_factory=dict)   # supply-elasticity spread for the Monte Carlo (see data/monte_carlo.toml)
+    # conversions for the per-unit outputs (see per_unit.py)
+    animals_per_unit: Optional[float] = None   # animals (or animal-years) per model unit
+    animal_label: str = ""                     # e.g. "cow-years", "birds"
+    animals_src: str = ""
+    raw_kg_per_unit: Optional[float] = None    # kg of raw commodity (milk, liquid egg, live weight) per model unit
+    raw_label: str = ""
 
     # ---- helpers
     def total(self): return sum(s.value for s in self.subs)
@@ -165,8 +176,10 @@ class Branch:
             DF = self.DF_stream(st.name, eps_s)
             pr = self.price_response(st.name, eps_s)
             g = pr["EPk"]
-            if st.floor_ratio is None or st.floor_ratio <= 0 or st.floor_ratio >= 1:
+            if st.floor_ratio is None or st.floor_ratio <= 0:
                 kfloor = None
+            elif st.floor_ratio >= 1:      # the floor is today's price: the stream cannot fall
+                kfloor = 0.0
             else:
                 kfloor = math.exp(math.log(st.floor_ratio)/g) - 1.0 if g != 0 else None
             for sub in [x for x in self.subs if x.stream == st.name]:
@@ -186,6 +199,55 @@ class Branch:
                                  kappa_floor_sub=(kfloor/w if kfloor is not None else None),
                                  full_replacement_effect=full_effect, animal_units_per_unit=DFi/sub.qty if sub.qty else None))
         return rows
+
+    # ---- per-unit outputs: animals removed per unit of product, and the discount against the naive rule
+    def sub(self, name): return next(x for x in self.subs if x.name == name)
+    def naive_yield(self, name):
+        """Units of the product per animal unit under the naive rule: all of the animal's raw commodity (or, for a product
+        fixed to the animal, the animal itself) attributed to this product. Default: qty for fixed streams, qty / a_r for
+        routed streams; products sharing a routed stream state their own full_yield."""
+        s = self.sub(name)
+        if s.full_yield is not None:
+            return s.full_yield
+        return s.qty if self.is_fixed(s.stream) else s.qty/self.a(self.get(s.stream).route)
+    def DF_sub(self, name, eps_s):
+        s = self.sub(name)
+        return s.value/self.stream_value(s.stream)*self.DF_stream(s.stream, eps_s)
+    def units_per_qty(self, name, eps_s):
+        """Animal units removed per unit of the product displaced (marginal): DF_i / Q_i."""
+        return self.DF_sub(name, eps_s)/self.sub(name).qty
+    def discount(self, name, eps_s):
+        """D = animals removed / animals the naive rule attributes, per unit displaced. 1/D is the multiplier: how many
+        animals' worth of the product must be displaced to remove one animal."""
+        return self.units_per_qty(name, eps_s)*self.naive_yield(name)
+    def multiplier(self, name, eps_s):
+        d = self.discount(name, eps_s)
+        return 1.0/d if d > 0 else None
+    def steps(self, name, eps_s):
+        """The discount D as a product of factors, one per level of the model:
+          value_within    the product's share of its stream's value (1 for a single-product stream)
+          yield_basis     naive yield / today's yield of the product per unit of the raw commodity behind it: above 1 when
+                          the naive rule credits the product with more raw material than today's output of it uses (WPI is
+                          credited with all the whey protein, of which about a fifth becomes WPI today); 1 otherwise
+          route_share     value share of the stream within its route (cheese and whey; white and yolk); routed only
+          route_elas      route elasticity / stream elasticity; routed only
+          animal_share    value share at the animal: the raw commodity (routed) or the stream (fixed)
+          animal_elas     |eps_bar| / |eps_raw| (routed) or |eps_bar| / |eps_k| (fixed)
+          horizon         eps_s H / (1 + eps_s H): the part not absorbed by buyers of all the animal's products
+        The elasticity terms exceed 1 when this product's buyers respond less to price than the buyers they are averaged
+        with. The factors multiply to discount(name, eps_s)."""
+        s = self.sub(name); st = self.get(s.stream); T = self.total()
+        w = s.value/self.stream_value(s.stream)
+        ebar = abs(self.eps_bar())
+        hz = self.DF_bundle(eps_s)
+        if self.is_fixed(s.stream):
+            return dict(value_within=w, yield_basis=self.naive_yield(name)/s.qty, animal_share=self.stream_value(s.stream)/T,
+                        animal_elas=ebar/abs(st.elas), horizon=hz)
+        r = st.route
+        return dict(value_within=w, yield_basis=self.naive_yield(name)*self.a(r)/s.qty, route_share=self.S(s.stream),
+                    route_elas=abs(self.eps_route(r))/abs(st.elas), animal_share=self.W_raw(),
+                    animal_elas=ebar/abs(self.eps_raw()), horizon=hz)
+
 
 def single_df(eps_s, eps_d):
     return eps_s/(eps_s+abs(eps_d))

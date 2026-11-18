@@ -200,6 +200,8 @@ def main(results=RESULTS, out_dir=TABLES, echo=False):
     open(out_dir / "bundle_cap.md", "w").write(bundle_table())
     open(out_dir / "horizons.md", "w").write(horizon_summary())
     json.dump(numbers(), open(out_dir / "numbers.json", "w"), indent=0, default=float)
+    from . import per_unit
+    per_unit.write_tables(results, out_dir)
     if echo:
         for f in ["horizons", "exit", "bundle_cap", "results_dairy_2026", "results_eggs_2019-21", "results_broiler"]:
             print("\n###", f); print(open(out_dir / f"{f}.md").read())

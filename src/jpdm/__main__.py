@@ -1,13 +1,14 @@
 """Command line: python -m jpdm <command>.
 
-  results    exact scenarios (price caps, full loss, curves) and Monte Carlo ranges -> results/*.json
-  tables     Markdown tables and headline numbers from the results -> results/tables/
+  results    exact scenarios (price caps, full loss, curves), Monte Carlo ranges and per-unit outputs (animals per kg,
+             multipliers) -> results/*.json
+  tables     Markdown tables, headline numbers and per-kg tables -> results/tables/
   workbook   the Excel model with live formulas -> workbook/joint_production_displacement_model.xlsx
   figures    the paper's figures as PNG -> paper/figures/
   docs       parameter and source tables -> docs/parameters.md, docs/sources.md
   check      regenerate results, tables and docs in a scratch directory and compare with the repository
   validate   print the exact solution against the closed form for 10% and 25% shifts
-  summary    print displacement factors for every product at three horizons
+  summary    print market-share factors and multipliers for every product at three horizons
   all        results, tables, workbook, figures and docs, in that order
 """
 import argparse
@@ -20,10 +21,12 @@ def summary():
     from . import params
     for br in params.ALL:
         print(f"\n{br.name}  (supply elasticity {br.eps_s_sr} within a year, {br.eps_s_lr} after 3-5 years)")
-        print(f"  {'product':58s} {'share':>7s} {'<1 yr':>7s} {'3-5 yr':>7s} {'limit':>7s}")
+        print(f"  {'product':50s} {'share':>6s} | market-share factor: {'<1 yr':>6s} {'3-5 yr':>6s} {'limit':>6s} | multiplier: {'3-5 yr':>6s} {'limit':>6s}")
         for sr, lr in zip(br.results(br.eps_s_sr) if br.eps_s_sr > 0 else [None] * len(br.subs), br.results(br.eps_s_lr)):
             dsr = sr["DF"] if sr else 0.0
-            print(f"  {lr['sub'][:58]:58s} {lr['share_total']:7.1%} {dsr:7.3f} {lr['DF']:7.3f} {lr['DF_limit']:7.3f}")
+            m_lr, m_lim = br.multiplier(lr["sub"], br.eps_s_lr), br.multiplier(lr["sub"], float("inf"))
+            f = lambda m: f"{m:6.1f}" if m is not None else "  none"  # noqa: E731
+            print(f"  {lr['sub'][:50]:50s} {lr['share_total']:6.1%} | {'':21s} {dsr:6.3f} {lr['DF']:6.3f} {lr['DF_limit']:6.3f} | {'':11s} {f(m_lr)} {f(m_lim)}")
         print(f"  {'all products together (bundle)':58s} {'100%':>7s} {br.DF_bundle(br.eps_s_sr) if br.eps_s_sr > 0 else 0:7.3f} {br.DF_bundle(br.eps_s_lr):7.3f} {1.0:7.3f}")
 
 
@@ -37,6 +40,8 @@ def main(argv=None):
         from . import exit_runs, monte_carlo
         print("scenarios (exact model) ..."); exit_runs.main(RESULTS, a.verbose)
         print("Monte Carlo ranges (2,000 draws per animal) ..."); monte_carlo.main(RESULTS, a.verbose)
+        from . import per_unit
+        print("per-unit outputs ..."); per_unit.write_json(RESULTS)
     if a.command in ("tables", "all"):
         from . import tables
         print("tables ..."); tables.main(RESULTS, TABLES, a.verbose)

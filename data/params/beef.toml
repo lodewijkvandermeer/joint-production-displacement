@@ -48,6 +48,7 @@ stream = "Middle meats (whole cut)"
 qty = "carc*mid_y"
 price = "mid_v/mid_y"
 src = "[S] AMS primals"
+kg = 0.45359237
 
 [[subs]]
 name = "End-meat whole-muscle cuts (chuck/round roasts, steaks; 50% of chuck+round)"
@@ -55,6 +56,7 @@ stream = "End meats (whole cut)"
 qty = "carc*end_y*0.5"
 price = "end_v/end_y*1.05"
 src = "[E] split of chuck/round"
+kg = 0.45359237
 
 [[subs]]
 name = "Thin-meat whole-muscle (brisket, flank, skirt; 40% of thin meats)"
@@ -62,6 +64,7 @@ stream = "End meats (whole cut)"
 qty = "carc*thin_y*0.4"
 price = "thin_v/thin_y*1.15"
 src = "[E]"
+kg = 0.45359237
 
 [[subs]]
 name = "Grinding material: trim and ground chuck/round (minced beef)"
@@ -69,6 +72,7 @@ stream = "Minced beef (grinding material)"
 qty = "carc*grind_y"
 price = "grind_v/grind_y"
 src = "[E] 50% of chuck/round + 60% of thin meats"
+kg = 0.45359237
 
 # By-product drop credit values, US$ per cwt live weight (AMS 15 Oct 2026)
 [[subs]]
@@ -126,3 +130,11 @@ elas = -2.50
 floor = 0.40
 floor_note = "rendering / disposal; hides already near disposal value"
 elas_src = "[A] traded by-products: hides, tallow, offal exports"
+
+# Conversions for the per-unit outputs (animals and raw commodity per model unit); see src/jpdm/per_unit.py
+[conversions]
+animals_per_unit = 1.0
+animal_label = "fed cattle"
+animals_src = "one fed steer per model unit; the cow-calf herd behind it is not counted"
+raw_kg_per_unit = "live*0.45359237"
+raw_label = "kg live weight"

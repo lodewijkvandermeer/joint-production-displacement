@@ -66,14 +66,17 @@ def whey_prices():
 
 
 def reachability():
-    """[{product, reachability (1..4), df_3_5_years}], in file order."""
+    """[{product, reachability (1..4), branch, item}], in file order. `branch` is a model key (params.ALL) and `item` a
+    stream name or the start of a product name in that branch; the figure computes the multiplier from the model."""
     name = "technical_reachability.csv"
     out = []
-    for i, r in enumerate(_read(name, ["product", "reachability_1_to_4", "df_3_5_years"]), 2):
+    for i, r in enumerate(_read(name, ["product", "reachability_1_to_4", "branch", "item"]), 2):
         level = _num(name, i, r, "reachability_1_to_4", 1, 4)
         if level != int(level):
             raise ValueError(f"{name} row {i}: reachability {level} is not a whole number")
-        out.append(dict(product=r["product"], reachability=int(level), df_3_5_years=_num(name, i, r, "df_3_5_years", 0, 1)))
+        if not r["branch"] or not r["item"]:
+            raise ValueError(f"{name} row {i}: branch and item are required")
+        out.append(dict(product=r["product"], reachability=int(level), branch=r["branch"], item=r["item"]))
     _unique(name, [r["product"] for r in out])
     return out
 

@@ -9,7 +9,7 @@ from .params import ALL, dairy, eggs
 from .sources import SOURCES
 from .paths import RESULTS, WORKBOOK
 
-VERSION_DATE = "2026-10-17"   # date of the parameter snapshot; fixed so that rebuilds are identical
+VERSION_DATE = "2026-10-22"   # date of the parameter snapshot; fixed so that rebuilds are identical
 FONT = "Arial"
 BLUE = Font(name=FONT, color="0000FF", size=10)
 BLACK = Font(name=FONT, color="000000", size=10)
@@ -51,7 +51,7 @@ def section(ws, row, text):
 def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None, unit_factor_note="", chart_title=None):
     ws = wb.create_sheet(sheetname)
     ws.sheet_properties.tabColor = "1F3864"
-    for col, w in zip("ABCDEFGHIJKLMNOPQRSTUVW", [52,26,20,12,16,12,14,12,10,10,10,10,10,10,10,10,12,12,12,12,12,12,40]):
+    for col, w in zip("ABCDEFGHIJKLMNOPQRSTUVWX", [52,26,20,12,16,12,14,12,10,10,10,10,10,10,10,10,12,12,12,12,12,12,40,14]):
         ws.column_dimensions[col].width = w
     put(ws, 1, 1, br.name, H1)
     put(ws, 2, 1, "Unit of analysis: " + br.unit, BLACK)
@@ -72,15 +72,21 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         out = inputs_writer(ws, r)
         r, qty_f, price_f = out[0], out[1], out[2]
         if len(out) > 3 and out[3]: raw_map = out[3]
+        floor_map = out[5] if len(out) > 5 and out[5] else {}
+        naive_map = out[6] if len(out) > 6 and out[6] else {}
     else:
         qty_f = price_f = lambda i: None
+        floor_map = {}
+        naive_map = {}
     # ---------------- sub-product table ----------------
     r = section(ws, r, "A. Products of one unit of the animal (sub-products). Blue = editable inputs; black = formulas.")
     heads = ["Sub-product", "Stream (fixed proportion within route)", "Route (fungible use of the raw commodity, or fixed to the animal)", "Quantity per unit", "Quantity unit",
              "Price", "Price unit", "Value", "Share of animal value", "Protein content (share of mass)", "w: share within stream",
              "DF short run (within a year)", "DF long run (3-5 years)", "DF constant-cost limit (supply perfectly elastic)", "DF LR, all-fixed variant", "DF LR, all-fungible variant",
              "Stream price change for the shift in col. B9", "Farm (animal) price change for that shift", "Shift at which stream hits its floor (as % of this product)",
-             "Animal change if this product is fully replaced (LR, floor-capped, linear)", "kg animal unit displaced per kg product (LR)", "kg animal unit per kg protein replaced (LR)", "Source / note"]
+             "Animal change if this product is fully replaced (LR, floor-capped, linear)", "Animal units removed per unit of product displaced (LR) = DF / quantity",
+             "Naive yield: units of product per animal unit if all the raw commodity (or, for a fixed part, the animal) went to it", "Source / note",
+             "Value share for the rule of thumb (share of everything made from the same raw material)"]
     for j, h in enumerate(heads, 1): hdr(ws, r, j, h)
     ws.row_dimensions[r].height = 72
     sub0 = r+1; n = len(br.subs); sub1 = sub0+n-1
@@ -115,13 +121,25 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         put(ws, row, 18, f"={lk('R')}*K{row}*{SHIFT}", BLACK, PCT2)
         put(ws, row, 19, f"=IF({lk('S')}=\"\",\"no external floor\",{lk('S')}/K{row})", BLACK, PCT)
         put(ws, row, 20, f"={lk('M')}*IF({lk('S')}=\"\",-K{row},MAX(-K{row},{lk('S')}))", BLACK, PCT2)
-        put(ws, row, 21, f"=IF(D{row}=0,\"\",M{row}/D{row}*{UNITF(br)})", BLACK, NUM2)
-        put(ws, row, 22, f"=IF(OR(J{row}=\"\",J{row}=0),\"\",U{row}/J{row})", BLACK, NUM2)
+        put(ws, row, 21, f"=IF(D{row}=0,\"\",M{row}/D{row})", BLACK, "0.000000")
+        if i in naive_map:
+            put(ws, row, 22, naive_map[i], BLACK, NUM3)
+        elif s.full_yield is not None:
+            put(ws, row, 22, s.full_yield, BLUE, NUM3)
+        elif br.is_fixed(s.stream):
+            put(ws, row, 22, f"=D{row}", BLACK, NUM3)
+        else:
+            put(ws, row, 22, f"=D{row}/INDEX($E${rt0}:$E${rt1},MATCH(C{row},$A${rt0}:$A${rt1},0))", BLACK, NUM3)
+        # value share for the rule of thumb: the product's share of what is made alongside it from the same raw material
+        if br.is_fixed(s.stream):
+            put(ws, row, 24, f"=I{row}", BLACK, PCT2)
+        else:
+            put(ws, row, 24, f"=K{row}*{lk('E')}*{WRAW}", BLACK, PCT2)
         put(ws, row, 23, s.src, BLACK, wrap=True)
     put(ws, sub1+1, 1, "Total value of one unit of the animal", BOLD)
     put(ws, sub1+1, 8, f"=SUM(H{sub0}:H{sub1})", BOLD, NUM3)
     put(ws, sub1+1, 9, f"=SUM(I{sub0}:I{sub1})", BOLD, PCT)
-    put(ws, sub1+2, 1, "Column U: " + (unit_factor_note or "animal-unit mass per unit of product; same ratio in any mass unit."), BLACK)
+    put(ws, sub1+2, 1, "Columns U, V and X feed the Per kg sheet (animals per tonne, multiplier, value-share rule). Naive yields in blue are technical yields typed in; the rest are formulas.", BLACK)
     # ---------------- stream table ----------------
     section(ws, st0-1, "B. Streams (the fixed-proportion joint products within a route). Edit demand elasticities and floor ratios here.")
     sh = ["Stream", "Route", "Stream value", "Share of animal value", "S_k: share within route", "Own-price demand elasticity (eps_k)", "Floor price ratio (P_floor / P_now; blank = no external floor)",
@@ -137,7 +155,10 @@ def write_branch(wb, br, sheetname, assump_row, inputs_writer=None, protein=None
         put(ws, row, 4, f"=C{row}/{TOTAL}", BLACK, PCT)
         put(ws, row, 5, f"=C{row}/SUMIF($B${st0}:$B${st1},B{row},$C${st0}:$C${st1})", BLACK, PCT)
         put(ws, row, 6, st.elas, BLUE, NUM2)
-        put(ws, row, 7, st.floor_ratio if st.floor_ratio is not None else "", BLUE, PCT)
+        if st.name in floor_map:
+            put(ws, row, 7, floor_map[st.name], BLACK, PCT)
+        else:
+            put(ws, row, 7, st.floor_ratio if st.floor_ratio is not None else "", BLUE, PCT)
         put(ws, row, 8, st.floor_note, BLACK, wrap=True)
         put(ws, row, 9, f"=E{row}/ABS(F{row})", BLACK, DF3)
         put(ws, row, 10, f"=INDEX($G${rt0}:$G${rt1},MATCH(B{row},$A${rt0}:$A${rt1},0))", BLACK, DF3)
@@ -220,6 +241,8 @@ def dairy_inputs(ws, r):
         ("protein_frac","Protein share of whey solids",0.13,0.13,"share","[S] 0.8% protein in 6.5% solids whey"),
         ("rec_protein","Share of whey protein recovered into WPC/WPI",0.50,0.50,"share","[E] NASS 2025 WPC+WPI protein vs liquid whey protein"),
         ("split_wpc80","Of recovered whey protein, share going to WPC(50-90%) (rest WPI), protein basis",0.61,0.61,"share","[S] NASS 2025: 381 m lb WPC x 0.8 vs 214 m lb WPI x 0.9"),
+        ("tech_rec","Naive rule: share of whey protein a WPC/WPI plant recovers",0.90,0.90,"share","[A] technical recovery"),
+        ("lactose_frac","Naive rule: lactose share of whey solids",0.74,0.74,"share","[S] sweet whey composition"),
         ("dry_whey_share","Whey solids sold as dry whey (share)",0.10,0.10,"share","[E] 845 m lb / ~8.4 bn lb solids"),
         ("lactose_share","Whey solids sold as lactose (share)",0.15,0.15,"share","[E] 1,137 m lb"),
         ("feed_share","Whey solids to permeate / condensed / feed (share)",0.25,0.25,"share","[E] remainder not recovered as food products"),
@@ -239,6 +262,7 @@ def dairy_inputs(ws, r):
         ("mk_wpc80","Processing allowance: WPC 80",1.50,1.20,"$/lb","[A] ultrafiltration + drying"),
         ("mk_wpi","Processing allowance: WPI",2.50,2.00,"$/lb","[A]"),
         ("mk_feed","Processing allowance: feed whey",0.10,0.10,"$/lb","[A]"),
+        ("theta_whey","Share of the WPC 80 / WPI premium over the protein's other-solids value counted as milk value (theta)",0.5,0.5,"share","[A] 0 = federal-order other-solids value only (premium is plant rent); 1 = product price less allowance (version 1.0)"),
         ("cattle_share","Cattle sales (cull cows + calves) as share of dairy gross value",0.078,0.07,"share","[S] ERS 2024: 1.94 of 24.94 $/cwt"),
         ("cull_split","Cull cows share of cattle sales (rest calves)",0.60,0.60,"share","[E]"),
     ]
@@ -249,6 +273,12 @@ def dairy_inputs(ws, r):
         ref[key] = f"$B${r}"; r += 1
     r += 1
     R = ref
+    put(ws, r, 1, "Other-solids price, FMMO formula: (dry whey price - make allowance) x 1.03", BOLD)
+    put(ws, r, 2, f"=({R['drywhey']}-{R['mk_drywhey']})*1.03", BLACK, NUM3); OS = f"$B${r}"; r += 1
+    put(ws, r, 1, "Farm value of WPC 80 per lb: 0.80 x other-solids price + theta x (WPC 80 price - allowance - 0.80 x other-solids price)", BOLD)
+    put(ws, r, 2, f"=0.8*{OS}+{R['theta_whey']}*({R['wpc80']}-{R['mk_wpc80']}-0.8*{OS})", BLACK, NUM3); V80 = f"$B${r}"; r += 1
+    put(ws, r, 1, "Farm value of WPI per lb: 0.90 x other-solids price + theta x (WPI price - allowance - 0.90 x other-solids price)", BOLD)
+    put(ws, r, 2, f"=0.9*{OS}+{R['theta_whey']}*({R['wpi']}-{R['mk_wpi']}-0.9*{OS})", BLACK, NUM3); VWPI = f"$B${r}"; r += 2
     prot = f"{R['whey_solids']}*{R['protein_frac']}*{R['rec_protein']}"
     qty = {0: f"={R['u_fluid']}", 1: f"={R['u_other']}", 2: f"={R['u_bp']}", 3: f"={R['u_bp']}", 4: f"={R['u_cheese']}*{R['cheese_yield']}",
            5: f"={R['u_cheese']}*{prot}*{R['split_wpc80']}/0.8", 6: f"={R['u_cheese']}*{prot}*(1-{R['split_wpc80']})/0.9",
@@ -257,11 +287,15 @@ def dairy_inputs(ws, r):
     # milk total (rows 0-9) needed for cattle; compute in a helper cell
     put(ws, r, 1, "Helper: milk value per cwt (sum of milk products, computed below)", BOLD); MILKTOT = f"$B${r}"; helper_row = r; r += 2
     price = {0: f"={R['classI']}", 1: f"={R['classII']}", 2: f"=3.5*{R['bfat']}", 3: f"=9.3*0.965*{R['nfs']}", 4: f"={R['cheese']}-{R['mk_cheese']}",
-             5: f"={R['wpc80']}-{R['mk_wpc80']}", 6: f"={R['wpi']}-{R['mk_wpi']}", 7: f"={R['drywhey']}-{R['mk_drywhey']}", 8: f"={R['lactose']}-{R['mk_lactose']}",
+             5: f"={V80}", 6: f"={VWPI}", 7: f"={R['drywhey']}-{R['mk_drywhey']}", 8: f"={R['lactose']}-{R['mk_lactose']}",
              9: f"={R['feedwhey']}-{R['mk_feed']}", 10: f"={MILKTOT}*{R['cattle_share']}/(1-{R['cattle_share']})*{R['cull_split']}",
              11: f"={MILKTOT}*{R['cattle_share']}/(1-{R['cattle_share']})*(1-{R['cull_split']})"}
     raw = {"Fluid": f"={R['u_fluid']}", "Other manufactured": f"={R['u_other']}", "Butter & powder": f"={R['u_bp']}", "Cheese route": f"={R['u_cheese']}"}
-    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row
+    floors = {"Whey protein": f"={OS}/({R['split_wpc80']}*{V80}/0.8+(1-{R['split_wpc80']})*{VWPI}/0.9)"}
+    naive = {4: f"={R['cheese_yield']}",
+             5: f"={R['whey_solids']}*{R['protein_frac']}*{R['tech_rec']}/0.8", 6: f"={R['whey_solids']}*{R['protein_frac']}*{R['tech_rec']}/0.9",
+             7: f"={R['whey_solids']}", 8: f"={R['whey_solids']}*{R['lactose_frac']}", 9: f"={R['whey_solids']}*(1-{R['protein_frac']})"}
+    return r, (lambda i: qty.get(i)), (lambda i: price.get(i)), raw, helper_row, floors, naive
 
 def eggs_inputs(ws, r):
     r = section(ws, r, "Inputs (two price scenarios; 1 = 2019-21 normal market, 2 = Sep 2025 HPAI-tight market). Blue = editable.")
@@ -378,6 +412,83 @@ PROTEIN = {"Fluid milk (Class I)":0.033,"Other dairy: yogurt, ice cream, etc. (C
            "Fillet blocks and fillets (fish fingers, portions)":0.17,"H&G (headed and gutted)":0.16,"Surimi (crab sticks, kamaboko)":0.15,"Mince":0.15,"Fishmeal":0.65,
            "Salmon HOG, fillets and portions":0.20}
 
+
+# --------------------------------------------------------------------------------------------
+# Per kg sheet: animals removed per tonne displaced and the multiplier, linked to the branch sheets
+# --------------------------------------------------------------------------------------------
+PERKG_SHEETS = [("Dairy", "dairy_2026"), ("Beef", "beef"), ("Eggs", "eggs_2019-21"), ("Broiler", "broiler"), ("Pork", "pork"),
+                ("Pollock", "pollock"), ("Salmon", "salmon")]
+
+
+def write_perkg(wb, refs):
+    ws = wb.create_sheet("Per kg"); ws.sheet_properties.tabColor = "00B050"
+    for col, w in zip("ABCDEFGHIJKLMNOP", [12, 56, 12, 10, 14, 13, 13, 13, 12, 12, 12, 14, 14, 14, 16, 16]):
+        ws.column_dimensions[col].width = w
+    put(ws, 1, 1, "Per kg: animals removed per tonne of animal product displaced, and the multiplier (animals' worth displaced per animal removed)", H1)
+    put(ws, 2, 1, "Units removed per unit displaced = DF / quantity per animal unit (branch sheet col. U). Multiplier = 1 / (units removed x naive yield): "
+                  "the naive rule attributes to a product all the raw material needed to make it (col. V of the branch sheet). Animals per tonne = units removed "
+                  "x animals per animal unit / kg per unit x 1000. All per kg of ANIMAL product displaced; per kg of a new product, multiply by the "
+                  "substitution ratio (yellow). Marginal figures: for a whole market lost see the Exit sheet.", BLACK, wrap=True)
+    ws.row_dimensions[2].height = 45
+    put(ws, 4, 1, "Substitution ratio: kg of animal product displaced per kg of new product sold", BOLD); put(ws, 4, 3, 1.0, BLUE, NUM2, fill=YELLOW)
+    SUBST = "$C$4"
+    put(ws, 5, 1, "Milk per cow-year (lb)", BOLD); put(ws, 5, 3, 24390, BLUE, NUM0)
+    put(ws, 5, 4, "[S] NASS Milk Production, Disposition and Income 2025", BLACK)
+    put(ws, 6, 1, "Eggs per hen-year", BOLD); put(ws, 6, 3, 288, BLUE, NUM0)
+    put(ws, 6, 4, "[S] NASS Chickens and Eggs 2025 (all layers)", BLACK)
+    conv = {"Dairy": ("cow-years", "=100/$C$5", "kg milk"), "Eggs": ("hen-years", "=12/$C$6", "kg liquid egg")}
+    for j, h in enumerate(["Branch", "Animals counted", "Animals per animal unit", "Raw commodity", "Raw kg per animal unit", "Source"], 1):
+        hdr(ws, 8, j, h)
+    crow = {}
+    r = 9
+    for sheet, key in PERKG_SHEETS:
+        br = next(x for x in ALL if x.key == key)
+        put(ws, r, 1, sheet, BLACK); put(ws, r, 2, br.animal_label, BLACK)
+        if sheet in conv:
+            put(ws, r, 3, conv[sheet][1], BLACK, "0.000000")
+        else:
+            put(ws, r, 3, br.animals_per_unit, BLUE, "0.000000")
+        put(ws, r, 4, br.raw_label, BLACK); put(ws, r, 5, br.raw_kg_per_unit, BLUE, NUM3); put(ws, r, 6, br.animals_src, BLACK)
+        crow[sheet] = r; r += 1
+    r += 1
+    heads = ["Branch", "Product", "kg per unit of quantity (blank = not a weight)", "Protein content", "Naive yield per animal unit",
+             "Units removed per unit, within a year", "3-5 years", "constant-cost limit", "Multiplier, within a year", "Multiplier, 3-5 years",
+             "Multiplier, constant-cost limit", "Animals per tonne displaced, 3-5 years", "Raw commodity kg per kg, 3-5 years",
+             "Animals per tonne of protein, 3-5 years", "Animals per tonne of NEW product, 3-5 years (x substitution ratio)", "Value-share rule: 1 / value share (branch col. X)"]
+    for j, h in enumerate(heads, 1): hdr(ws, r, j, h)
+    ws.row_dimensions[r].height = 75
+    r += 1
+    rows = {}
+    for sheet, key in PERKG_SHEETS:
+        br = next(x for x in ALL if x.key == key); rf = refs[sheet]
+        for i, sb in enumerate(br.subs):
+            sr = rf["sub0"] + i
+            C = f"$C${crow[sheet]}"; RAW = f"$E${crow[sheet]}"
+            put(ws, r, 1, sheet, BLACK); put(ws, r, 2, f"='{sheet}'!A{sr}", GREEN, wrap=True)
+            put(ws, r, 3, sb.kg if sb.kg else "", BLUE, "0.0000")
+            put(ws, r, 4, sb.protein if sb.protein else "", BLUE, PCT)
+            put(ws, r, 5, f"='{sheet}'!V{sr}", GREEN, NUM3)
+            put(ws, r, 6, f"='{sheet}'!L{sr}/'{sheet}'!D{sr}", GREEN, "0.000000")
+            put(ws, r, 7, f"='{sheet}'!U{sr}", GREEN, "0.000000")
+            put(ws, r, 8, f"='{sheet}'!N{sr}/'{sheet}'!D{sr}", GREEN, "0.000000")
+            for c_from, c_to in (("F", 9), ("G", 10), ("H", 11)):
+                put(ws, r, c_to, f"=IF({c_from}{r}*E{r}=0,\"none\",1/({c_from}{r}*E{r}))", BLACK, "#,##0.0")
+            put(ws, r, 12, f"=IF(C{r}=\"\",\"\",G{r}*{C}/C{r}*1000)", BLACK, "#,##0.000")
+            put(ws, r, 13, f"=IF(C{r}=\"\",\"\",G{r}*{RAW}/C{r})", BLACK, "#,##0.000")
+            put(ws, r, 14, f"=IF(OR(C{r}=\"\",D{r}=\"\"),\"\",L{r}/D{r})", BLACK, "#,##0.000")
+            put(ws, r, 15, f"=IF(C{r}=\"\",\"\",L{r}*{SUBST})", BLACK, "#,##0.000")
+            put(ws, r, 16, f"=IF('{sheet}'!X{sr}=0,\"\",1/'{sheet}'!X{sr})", GREEN, "#,##0.0")
+            if sheet == "Pollock":   # quota-managed: no constant-cost limit
+                put(ws, r, 8, "n/a (quota)", BLACK); put(ws, r, 11, "n/a (quota)", BLACK)
+            rows[(sheet, sb.name)] = r
+            r += 1
+        r += 1
+    put(ws, r, 1, "The value-share rule (col. P) is the long-run multiplier when all buyers respond alike; the model's multiplier also "
+                  "reflects buyers' price response, the horizon and, for products sharing a stream, the naive rule's yield basis (paper, section 4.5).", BLACK)
+    ws.freeze_panes = "C9"
+    return rows
+
+
 def build(path=WORKBOOK, results=RESULTS):
     wb = Workbook()
     # ---------------- README ----------------
@@ -388,14 +499,16 @@ def build(path=WORKBOOK, results=RESULTS):
         ("", BLACK),
         ("WHAT IT DOES", BOLD),
         ("For each animal (dairy cow, fed steer, layer hen, broiler, hog, Alaska pollock, farmed salmon) the workbook lists the products of one animal unit, their prices and value shares,", BLACK),
-        ("and computes for each product the displacement factor DF: the share of a demand reduction in that product (e.g. by a novel ingredient) that shows up as fewer animals produced,", BLACK),
-        ("in the short run and the long run. It also computes the price fall of the product, the floor price (next-best use) for by-products, and the animal reduction if the product were fully replaced.", BLACK),
+        ("and computes for each product the market-share factor DF (called the displacement factor in version 1.0): the % change in animal output per % of the product's market displaced,", BLACK),
+        ("at three horizons. The Per kg sheet turns it into animals removed per tonne of product displaced and the multiplier: how many animals' worth of the product must be displaced to remove one animal.", BLACK),
+        ("It also computes the price fall of the product, the floor price (next-best use) for by-products, and the animal reduction if the product were fully replaced.", BLACK),
         ("", BLACK),
         ("HOW TO USE", BOLD),
         ("1. Assumptions sheet: supply elasticities per animal (short run, long run) and the size of the demand shift. Blue cells are inputs.", BLACK),
         ("2. Branch sheets (Dairy, Beef, Eggs, Broiler, Pork, Pollock, Salmon): inputs block (yields, prices, allowances; blue), then table A (products), table B (streams: edit demand elasticities and floor ratios), table C (routes: raw-volume shares of fungible routes), table D (aggregates).", BLACK),
         ("3. Summary sheet: all products side by side, linked (green) to the branch sheets, with three horizons (within a year, 3-5 years, constant-cost limit). Sensitivity sheet: the single-product formula across elasticities, and a target calculator. Exit sheet: price-cap (perfect substitute) scenarios from the exact non-linear model. Ranges sheet: Monte Carlo 10th-90th percentiles over the elasticity ranges. The Exit and Ranges sheets are computed in the companion Python model and pasted as values.", BLACK),
-        ("4. Dairy and Eggs have a scenario selector (yellow cell) switching between two price years, because by-product value shares move a lot with prices.", BLACK),
+        ("4. Dairy and Eggs have a scenario selector (yellow cell) switching between two price years, because by-product value shares move a lot with prices. Dairy also has theta, the share of the WPC 80 / WPI premium over the protein's other-solids value counted as milk value (0.5 central; 0 and 1 are the bounds).", BLACK),
+        ("5. Per kg sheet: animals per tonne, raw commodity per kg, animals per tonne of protein and the multiplier for every product, with the substitution ratio (yellow) for a new product.", BLACK),
         ("Colour legend: blue = hard-coded input you can edit; black = formula; green = link to another sheet; yellow fill = scenario selector.", BLACK),
         ("", BLACK),
         ("MODEL (log-differential equilibrium displacement model, proportional processing margins)", BOLD),
@@ -431,7 +544,7 @@ def build(path=WORKBOOK, results=RESULTS):
     # ---------------- branch sheets ----------------
     refs = {}
     d = dairy("2026")
-    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: dairy_inputs(ws, r)[:4], protein=PROTEIN,
+    ws_d, refs["Dairy"] = write_branch(wb, d, "Dairy", arow["dairy_2026"], inputs_writer=lambda ws, r: (lambda o: o[:4] + (None, o[5], o[6]))(dairy_inputs(ws, r)), protein=PROTEIN,
                                        unit_factor_note="lb of raw milk displaced per lb of product replaced (long run).", chart_title="Where the dairy cow's revenue comes from (value share by stream)")
     # fill dairy helper cell: milk value = sum of first 10 sub rows
     s0 = refs["Dairy"]["sub0"]
@@ -456,13 +569,14 @@ def build(path=WORKBOOK, results=RESULTS):
     sa = [x for x in ALL if x.key == "salmon"][0]
     _, refs["Salmon"] = write_branch(wb, sa, "Salmon", arow["salmon"], inputs_writer=lambda ws, r: generic_inputs(SALMON_ROWS, SALMON_Q, SALMON_P, "Inputs (blue = editable)")(ws, r)[:4],
                                      protein=PROTEIN, unit_factor_note="kg HOG displaced per kg of product replaced (long run).", chart_title="Farmed salmon: value share by stream")
+    perkg_rows = write_perkg(wb, refs)
     # ---------------- Summary ----------------
     wsum = wb.create_sheet("Summary", 1); wsum.sheet_properties.tabColor = "00B050"
     for col, w in zip("ABCDEFGHIJKLMNO", [12, 56, 12, 10, 12, 12, 12, 12, 12, 14, 14, 30, 16, 12, 60]): wsum.column_dimensions[col].width = w
-    put(wsum, 1, 1, "Summary: displacement factors and floors by product (linked to branch sheets)", H1)
-    put(wsum, 2, 1, "DF = share of a demand reduction in the product that becomes a reduction in animals produced, at three horizons (within a year; 3-5 years; constant-cost limit, where supply is perfectly elastic). 1 - DF = the total discount, the elasticity discount 1/(1+eps_s*H) and the joint-production discount together; DF(3-5 years)/DF(limit) is the bundle factor, so 1 - that ratio is the elasticity discount alone. Floor = next-best use as a share of the current price.", BLACK)
-    heads = ["Branch", "Product", "Share of animal value", "Demand elasticity (stream)", "DF short run (within a year)", "DF long run (3-5 years)", "DF constant-cost limit", "Total discount (1-DF, 3-5 years)", "Stream price change for a 10% replacement",
-             "Animal change if fully replaced (LR, linear, floor-capped)", "Floor ratio (P_floor/P_now)", "Biotech route most likely to target it", "Technical reachability", "Animal mass per kg product (LR)", "Reading"]
+    put(wsum, 1, 1, "Summary: market-share factors, multipliers and floors by product (linked to branch sheets)", H1)
+    put(wsum, 2, 1, "DF = market-share factor: % change in animal output per % of the product's market displaced, at three horizons (within a year; 3-5 years; constant-cost limit, where supply is perfectly elastic). It is the share of each tonne displaced that leaves production only for products fixed to the animal (carcass parts, cull cows, spent hens); per tonne and the multiplier are on the Per kg sheet. DF(3-5 years)/DF(limit) is the bundle factor, so 1 - that ratio is the elasticity discount alone. Floor = next-best use as a share of the current price.", BLACK)
+    heads = ["Branch", "Product", "Share of animal value", "Demand elasticity (stream)", "DF short run (within a year)", "DF long run (3-5 years)", "DF constant-cost limit", "1 - DF (3-5 years)", "Stream price change for a 10% replacement",
+             "Animal change if fully replaced (LR, linear, floor-capped)", "Floor ratio (P_floor/P_now)", "Biotech route most likely to target it", "Technical reachability", "Multiplier, 3-5 years (Per kg sheet)", "Reading"]
     for j, h in enumerate(heads, 1): hdr(wsum, 4, j, h)
     wsum.row_dimensions[4].height = 60
     ROUTE = {"Fluid milk (Class I)":("Precision fermentation (whey+casein) / plant-based milks","Medium"),
@@ -515,8 +629,8 @@ def build(path=WORKBOOK, results=RESULTS):
             put(wsum, row, 11, f"=INDEX('{sheet}'!$G${rf['st0']}:$G${rf['st1']},MATCH('{sheet}'!B{sr},'{sheet}'!$A${rf['st0']}:$A${rf['st1']},0))", GREEN, PCT)
             rt = ROUTE.get(s.name, ("", ""))
             put(wsum, row, 12, rt[0], BLUE, wrap=True); put(wsum, row, 13, rt[1], BLUE)
-            put(wsum, row, 14, f"='{sheet}'!U{sr}", GREEN, NUM2)
-            put(wsum, row, 15, f"=IF(F{row}>=0.2,\"primary product: displacement is a fifth or more of the replaced volume\",IF(F{row}>=0.05,\"co-product: a twentieth to a fifth\",\"by-product or quota-limited: under a twentieth; price falls toward the floor instead\"))", BLACK, wrap=True)
+            put(wsum, row, 14, f"='Per kg'!J{perkg_rows[(sheet, s.name)]}", GREEN, "#,##0.0")
+            put(wsum, row, 15, f"=IF(ISNUMBER(N{row}),IF(N{row}<=5,\"under 5 animals' worth displaced per animal removed\",IF(N{row}<=20,\"5 to 20 animals' worth per animal removed\",\"over 20 animals' worth per animal removed: the price falls toward the floor instead\")),\"no animals removed at this horizon\")", BLACK, wrap=True)
             row += 1
         row += 1
     put(wsum, row+1, 1, "Bundle displacement (giving up every product of the animal), for comparison with 'cumulative elasticity' figures in the literature:", BOLD)
@@ -577,6 +691,8 @@ def build(path=WORKBOOK, results=RESULTS):
     row = 5
     for key, label in [("dairy_2026", "Dairy (2026)"), ("dairy_2019", "Dairy (2019-21)"), ("beef", "Beef"), ("eggs_2019-21", "Eggs (2019-21)"), ("eggs_2025", "Eggs (2025)"), ("broiler", "Broiler"), ("pork", "Pork"), ("pollock", "Pollock"), ("salmon", "Salmon")]:
         for sub, d in MCR[key].items():
+            if sub == "__byproducts__":
+                continue
             name = "All products together (bundle)" if sub == "__bundle__" else sub
             put(wsr, row, 1, label, BLACK); put(wsr, row, 2, name, BLACK, wrap=True)
             put(wsr, row, 3, d["sr"]["p10"], BLACK, DF4); put(wsr, row, 4, d["sr"]["p50"], BLACK, DF4); put(wsr, row, 5, d["sr"]["p90"], BLACK, DF4)

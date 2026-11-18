@@ -4,15 +4,15 @@ from jpdm import data
 
 
 def test_shipped_files_load():
-    assert len(data.carcass_shares()) == 16
+    assert len(data.carcass_shares()) == 17
     assert {r["series"] for r in data.whey_prices()} == {"Dry whey", "WPC 34%"}
     assert all(1 <= r["reachability"] <= 4 for r in data.reachability())
 
 
 def test_known_data_quality_findings_are_exactly_these():
-    # Broiler live-weight shares add to 89.8%: a data gap to resolve with the author's numbers (not a loader bug).
-    # Update this list when the data is fixed.
-    assert data.problems() == ["Broiler: live weight shares add to 89.8%, not 100%"]
+    # The broiler parts in the Cobb 500 yield chart add to 89.8% of live weight; the remaining 10.2% is carried as a
+    # labelled residual row (processing shrink, skin and fat trim) with no value. Update this list if the data changes.
+    assert data.problems() == []
 
 
 def _write(tmp_path, monkeypatch, name, text):
@@ -21,14 +21,14 @@ def _write(tmp_path, monkeypatch, name, text):
 
 
 def test_wrong_columns_are_rejected(tmp_path, monkeypatch):
-    _write(tmp_path, monkeypatch, "technical_reachability.csv", "product,level,df\nA,1,0.1\n")
+    _write(tmp_path, monkeypatch, "technical_reachability.csv", "product,level,branch\nA,1,beef\n")
     with pytest.raises(ValueError, match="columns"):
         data.reachability()
 
 
 def test_non_numeric_and_out_of_range_values_are_rejected(tmp_path, monkeypatch):
-    head = "product,reachability_1_to_4,df_3_5_years\n"
-    for row, msg in (("A,x,0.1", "not a number"), ("A,5,0.1", "outside"), ("A,2.5,0.1", "whole"), ("A,2,1.5", "outside")):
+    head = "product,reachability_1_to_4,branch,item\n"
+    for row, msg in (("A,x,beef,Hide", "not a number"), ("A,5,beef,Hide", "outside"), ("A,2.5,beef,Hide", "whole"), ("A,2,beef,", "required")):
         _write(tmp_path, monkeypatch, "technical_reachability.csv", head + row + "\n")
         with pytest.raises(ValueError, match=msg):
             data.reachability()

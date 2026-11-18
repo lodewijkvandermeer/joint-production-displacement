@@ -8,7 +8,7 @@ import math
 import tempfile
 from pathlib import Path
 
-from . import docs, exit_runs, monte_carlo, tables
+from . import docs, exit_runs, monte_carlo, per_unit, tables
 from .docs import DOCS
 from .paths import RESULTS, TABLES
 
@@ -60,6 +60,7 @@ def main(verbose=False):
             d.mkdir()
         exit_runs.main(res, verbose)
         monte_carlo.main(res, verbose)
+        per_unit.write_json(res)
         tables.main(res, tab, verbose)
         docs.main(doc)
         _compare(RESULTS, res, report)
